@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/DOM.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/DOM.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+Functions that generate Document Object Model (DOM) elements like dom.div(...) will live in el
+*/
+const dom = {}
+export default dom
+
+/**
+domElementFunction is the behind the scenes logic for the functions like dom.div(...)
+Below you will find the loop that uses domElementFunction
+*/
+dom.domElementFunction = function (tagName, ...params) {
+	// Create a boring DOM element
+	const element = document.createElement(tagName)
+
+	// A convenience function to allow chaining like `let fooDiv = dom.div().appendTo(document.body)`
+	element.appendTo = function (parent) {
+		parent.appendChild(this)
+		return this
+	}
+
+	// if element.parentElement exists, call removeChild(element) on it
+	element.remove = function () {
+		if (this.parentElement) {
+			this.parentElement.removeChild(this)
+		}
+		return this
+	}
+
+	// A convenience function to allow appending strings, dictionaries of attributes, arrays of subchildren, or children
+	element.append = function (child = null) {
+		if (child === null) {
+			return
+		}
+		if (typeof child === &apos;string&apos;) {
+			this.appendChild(document.createTextNode(child))
+		} else if (Array.isArray(child)) {
+			for (const subChild of child) {
+				this.append(subChild)
+			}
+			// If it&apos;s an object but not a DOM element, consider it a dictionary of attributes
+		} else if (typeof child === &apos;object&apos; &amp;&amp; typeof child.nodeType === &apos;undefined&apos;) {
+			for (const key in child) {
+				if (child.hasOwnProperty(key) == false) {
+					continue
+				}
+				this.setAttribute(key, child[key])
+			}
+		} else {
+			this.appendChild(child)
+		}
+		return this
+	}
+
+	element.documentPosition = function () {
+		return dom.documentOffset(this)
+	}
+
+	/*
+	Sort element.children *in place* using the comparator function
+	See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort for an explanation of the comparator function
+	*/
+	element.sort = function (comparator = dom.defaultComparator) {
+		// Populate the holding array while removing children from the DOM
+		const holdingArray = []
+		while (this.children.length &gt; 0) {
+			holdingArray.push(this.removeChild(this.children.item(0)))
+		}
+		holdingArray.sort(comparator)
+		for (const child of holdingArray) {
+			this.appendChild(child)
+		}
+		return this
+	}
+
+	// Sort element.children *in place* using child[attributeName] and the comparator function
+	element.sortByAttribute = function (attributeName, comparator = dom.defaultComparator) {
+		this.sort((el1, el2) =&gt; {
+			return comparator(el1.getAttribute(attributeName), el2.getAttribute(attributeName))
+		})
+		return this
+	}
+
+	// Convenience functions to add and remove classes from this element without duplication
+	element.addClass = function (...classNames) {
+		const classAttribute = this.getAttribute(&apos;class&apos;) || &apos;&apos;
+		const classes = classAttribute === &apos;&apos; ? [] : classAttribute.split(/\s+/)
+		for (const className of classNames) {
+			if (classes.indexOf(className) === -1) {
+				classes.push(className)
+			}
+		}
+		this.setAttribute(&apos;class&apos;, classes.join(&apos; &apos;))
+		return this
+	}
+	element.removeClass = function (...classNames) {
+		const classAttribute = this.getAttribute(&apos;class&apos;) || &apos;&apos;
+		const classes = classAttribute === &apos;&apos; ? [] : classAttribute.split(/\s+/)
+		for (const className of classNames) {
+			const index = classes.indexOf(className)
+			if (index !== -1) {
+				classes.splice(index, 1)
+			}
+		}
+		if (classes.length === 0) {
+			this.removeAttribute(&apos;class&apos;)
+		} else {
+			this.setAttribute(&apos;class&apos;, classes.join(&apos; &apos;))
+		}
+		return this
+	}
+
+	// Append the children parameters
+	for (const child of params) {
+		element.append(child)
+	}
+	return element
+}
+
+// This comparator stringifies the passed values and returns the comparison of those values
+dom.defaultComparator = function (el1, el2) {
+	if (el1 === el2) return 0
+	const str1 = &apos;&apos; + el1
+	const str2 = &apos;&apos; + el2
+	if (str1 == str2) return 0
+	if (str1 &lt; str2) return -1
+	return 1
+}
+
+// Traverse the document tree to calculate the offset in the entire document of this element
+dom.documentOffset = function (element) {
+	let left = 0
+	let top = 0
+	const findPos = function (obj) {
+		left += obj.offsetLeft
+		top += obj.offsetTop
+		if (obj.offsetParent) {
+			findPos(obj.offsetParent)
+		}
+	}
+	findPos(element)
+	return [left, top]
+}
+
+/** 
+The tag names that will be used to generate all of the element generating functions like dom.div(...) and dom.button(...)
+These names were ovingly copied from the excellent Laconic.js 
+@see https://github.com/joestelmach/laconic/blob/master/laconic.js
+*/
+dom.TAGS = [
+	&apos;a&apos;,
+	&apos;abbr&apos;,
+	&apos;address&apos;,
+	&apos;area&apos;,
+	&apos;article&apos;,
+	&apos;aside&apos;,
+	&apos;audio&apos;,
+	&apos;b&apos;,
+	&apos;base&apos;,
+	&apos;bdo&apos;,
+	&apos;blockquote&apos;,
+	&apos;body&apos;,
+	&apos;br&apos;,
+	&apos;button&apos;,
+	&apos;canvas&apos;,
+	&apos;caption&apos;,
+	&apos;cite&apos;,
+	&apos;code&apos;,
+	&apos;col&apos;,
+	&apos;colgroup&apos;,
+	&apos;command&apos;,
+	&apos;datalist&apos;,
+	&apos;dd&apos;,
+	&apos;del&apos;,
+	&apos;details&apos;,
+	&apos;dfn&apos;,
+	&apos;div&apos;,
+	&apos;dl&apos;,
+	&apos;dt&apos;,
+	&apos;em&apos;,
+	&apos;embed&apos;,
+	&apos;fieldset&apos;,
+	&apos;figcaption&apos;,
+	&apos;figure&apos;,
+	&apos;footer&apos;,
+	&apos;form&apos;,
+	&apos;h1&apos;,
+	&apos;h2&apos;,
+	&apos;h3&apos;,
+	&apos;h4&apos;,
+	&apos;h5&apos;,
+	&apos;h6&apos;,
+	&apos;head&apos;,
+	&apos;header&apos;,
+	&apos;hgroup&apos;,
+	&apos;hr&apos;,
+	&apos;html&apos;,
+	&apos;i&apos;,
+	&apos;iframe&apos;,
+	&apos;img&apos;,
+	&apos;input&apos;,
+	&apos;ins&apos;,
+	&apos;keygen&apos;,
+	&apos;kbd&apos;,
+	&apos;label&apos;,
+	&apos;legend&apos;,
+	&apos;li&apos;,
+	&apos;link&apos;,
+	&apos;map&apos;,
+	&apos;mark&apos;,
+	&apos;menu&apos;,
+	&apos;meta&apos;,
+	&apos;meter&apos;,
+	&apos;nav&apos;,
+	&apos;noscript&apos;,
+	&apos;object&apos;,
+	&apos;ol&apos;,
+	&apos;optgroup&apos;,
+	&apos;option&apos;,
+	&apos;output&apos;,
+	&apos;p&apos;,
+	&apos;picture&apos;,
+	&apos;param&apos;,
+	&apos;pre&apos;,
+	&apos;progress&apos;,
+	&apos;q&apos;,
+	&apos;rp&apos;,
+	&apos;rt&apos;,
+	&apos;ruby&apos;,
+	&apos;s&apos;,
+	&apos;samp&apos;,
+	&apos;script&apos;,
+	&apos;section&apos;,
+	&apos;select&apos;,
+	&apos;small&apos;,
+	&apos;source&apos;,
+	&apos;span&apos;,
+	&apos;strong&apos;,
+	&apos;style&apos;,
+	&apos;sub&apos;,
+	&apos;summary&apos;,
+	&apos;sup&apos;,
+	&apos;table&apos;,
+	&apos;tbody&apos;,
+	&apos;td&apos;,
+	&apos;textarea&apos;,
+	&apos;tfoot&apos;,
+	&apos;th&apos;,
+	&apos;thead&apos;,
+	&apos;time&apos;,
+	&apos;title&apos;,
+	&apos;tr&apos;,
+	&apos;ul&apos;,
+	&apos;var&apos;,
+	&apos;video&apos;,
+	&apos;wbr&apos;,
+]
+
+// This loop generates the element generating functions like dom.div(...)
+for (const tag of dom.TAGS) {
+	const innerTag = tag
+	dom[innerTag] = function (...params) {
+		return dom.domElementFunction(innerTag, ...params)
+	}
+}
+
+const CookieValueRegularExpressionParts = [&apos;(?:(?:^|.*;\\s*)&apos;, &apos;\\s*\\=\\s*([^;]*).*$)|^.*$&apos;]
+
+dom.getCookie = function (cookieName) {
+	const cookieRegExp = new RegExp(
+		`${CookieValueRegularExpressionParts[0]}${encodeURIComponent(cookieName)}${CookieValueRegularExpressionParts[1]}`
+	)
+	return document.cookie.replace(cookieRegExp, &apos;$1&apos;)
+}
+
+dom.setCookie = function (cookieName, value) {
+	document.cookie = `${encodeURIComponent(cookieName)}=${encodeURIComponent(value)}`
+}
+
+dom.removeCookie = function (cookieName) {
+	document.cookie = `${encodeURIComponent(cookieName)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT`
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

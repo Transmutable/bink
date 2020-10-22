@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/DataObject.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/DataObject.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import EventHandler from &apos;./EventHandler.js&apos;
+
+/**
+The abstract class for DataModel and DataCollection
+It holds the event mixin and the generic function of fetching data from a remote service
+*/
+const DataObject = class extends EventHandler {
+	/**
+	@param {Object} [options={}]
+	*/
+	constructor(options = {}) {
+		super()
+		this.options = options
+		this._new = true // True until the first fetch returns, regardless of http status
+		this.cleanedUp = false
+	}
+	cleanup() {
+		if (this.cleanedUp) return
+		this.cleanedUp = true
+		super.cleanup()
+	}
+	/** @type {boolean} true until a fetch (even a failed fetch) returns */
+	get isNew() {
+		return this._new
+	}
+	/** @type {string} the URL (relative or full) as a string for the endpoint used by this.fetch */
+	get url() {
+		throw new Error(&apos;Extending classes must implement url()&apos;)
+	}
+
+	/** Clear out old data and set it to data, should trigger a &apos;reset&apos; event */
+	reset(data = {}) {
+		throw new Error(&apos;Extending classes must implement reset&apos;)
+	}
+	parse(data) {
+		// Extending classes can override this to parse the data received via a fetch
+		return data
+	}
+	equals(obj) {
+		// Extending classes can override this to allow less strict equality
+		return this === obj
+	}
+	onFirstReset(func) {
+		// If already reset, immediately call func, otherwise wait until the first reset and then call func
+		if (this._new) {
+			this.addListener(
+				() =&gt; {
+					func(this)
+				},
+				&apos;reset&apos;,
+				true
+			)
+		} else {
+			func(this)
+		}
+	}
+	get fetchOptions() {
+		// Extending classes can override this to add headers, methods, etc to the fetch call
+		return {
+			credentials: &apos;same-origin&apos;,
+		}
+	}
+	fetch() {
+		// Ask the server for data for this model or collection
+		return new Promise(
+			function (resolve, reject) {
+				this.trigger(&apos;fetching&apos;, this)
+				this._innerFetch(this.url, this.fetchOptions)
+					.then((response) =&gt; {
+						if (response.status != 200) {
+							throw &apos;Fetch failed with status &apos; + response.status
+						}
+						return response.json()
+					})
+					.then((data) =&gt; {
+						data = this.parse(data)
+						this._new = false
+						this.reset(data)
+						this.trigger(&apos;fetched&apos;, this, data, null)
+						resolve(this)
+					})
+					.catch((err) =&gt; {
+						this._new = false
+						this.trigger(&apos;fetched&apos;, this, null, err)
+						reject(err)
+					})
+			}.bind(this)
+		)
+	}
+	/**
+	Use this to override the use of window.fetch
+	For example, MockService overrides this to intercept fetch calls and return its own responses for matched endpoints
+	*/
+	_innerFetch(...params) {
+		return fetch(...params)
+	}
+
+	/**
+	Fetch each DataObject and then wait for them all to return
+	Note: this resolves when the fetches complete, regardless of whether they succeed or fail.
+	*/
+	static fetchAll(...dataObjects) {
+		const allAreFetched = () =&gt; {
+			for (const dataObject of dataObjects) {
+				if (dataObject.isNew) return false
+			}
+			return true
+		}
+		return new Promise((resolve, reject) =&gt; {
+			if (allAreFetched()) {
+				resolve(...dataObjects)
+				return
+			}
+			for (const dataObject of dataObjects) {
+				dataObject
+					.fetch()
+					.then(() =&gt; {
+						if (allAreFetched()) resolve(...dataObjects)
+					})
+					.catch((err) =&gt; {
+						if (allAreFetched()) resolve(...dataObjects)
+					})
+			}
+		})
+	}
+	save() {
+		// Tell the server to create (POST) or update (PUT) this model or collection
+		return new Promise(
+			function (resolve, reject) {
+				this.trigger(&apos;saving&apos;, this)
+				const options = Object.assign({}, this.fetchOptions)
+				if (this.isNew) {
+					options.method = &apos;post&apos;
+				} else {
+					options.method = &apos;put&apos;
+				}
+				options.body = JSON.stringify(this.data)
+				this._innerFetch(this.url, options)
+					.then((response) =&gt; {
+						if (response.status != 200) {
+							throw &apos;Save failed with status &apos; + response.status
+						}
+						return response.json()
+					})
+					.then((data) =&gt; {
+						data = this.parse(data)
+						this.reset(data)
+						this._new = false
+						this.trigger(&apos;saved&apos;, this, data, null)
+						resolve(this)
+					})
+					.catch((err) =&gt; {
+						this.trigger(&apos;saved&apos;, this, null, err)
+						reject(err)
+					})
+			}.bind(this)
+		)
+	}
+	delete() {
+		return new Promise(
+			function (resolve, reject) {
+				this.trigger(&apos;deleting&apos;, this)
+				const options = Object.assign({}, this.fetchOptions)
+				options.method = &apos;delete&apos;
+				this._innerFetch(this.url, options)
+					.then((response) =&gt; {
+						if (response.status != 200) {
+							throw &apos;Delete failed with status &apos; + response.status
+						}
+						this.trigger(&apos;deleted&apos;, this, null)
+						resolve()
+					})
+					.catch((err) =&gt; {
+						this.trigger(&apos;deleted&apos;, this, err)
+						reject(err)
+					})
+			}.bind(this)
+		)
+	}
+}
+
+DataObject._NO_CHANGE = Symbol(&apos;no change&apos;)
+
+export default DataObject
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

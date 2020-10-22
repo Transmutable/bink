@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/DataCollection.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/DataCollection.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import DataModel from &apos;./DataModel.js&apos;
+import DataObject from &apos;./DataObject.js&apos;
+import EventHandler from &apos;./EventHandler&apos;
+
+/**
+	DataCollection represents an ordered list of DataModel instances
+*/
+const DataCollection = class extends DataObject {
+	/**
+	@param {Object[]} [data=null]
+	@param {Object} [options={}]
+	@param {class} [options.dataObject] the DataObject extending class to use to wrap each data item in this collection
+	*/
+	constructor(data = [], options = {}) {
+		super(options)
+		if (data == null) data = []
+		this._inReset = false
+		this._inAddBatch = false
+		this._boundRelayListener = this._relayListener.bind(this)
+		this.dataObjects = []
+		for (const datum of data) {
+			this.add(this.generateDataObject(datum))
+		}
+	}
+	cleanup() {
+		super.cleanup()
+		for (const obj of this.dataObjects) {
+			obj.removeListener(this._boundRelayListener)
+		}
+		this.dataObjects.length = 0
+	}
+	at(index) {
+		if (index &lt; 0 || index &gt; this.dataObjects.length - 1) {
+			throw new Error(`Index out of range: ${index}`)
+		}
+		return this.dataObjects[index]
+	}
+	create(data, options = {}) {
+		// Creates an child instance and POSTs it to the collection
+		return new Promise(
+			function (resolve, reject) {
+				const fetchOptions = Object.assign(options, this.fetchOptions)
+				fetchOptions.method = &apos;post&apos;
+				fetchOptions.body = JSON.stringify(data)
+				this._innerFetch(this.url, fetchOptions)
+					.then((response) =&gt; {
+						if (response.status != 200) {
+							throw &apos;Create failed with status &apos; + response.status
+						}
+						return response.json()
+					})
+					.then((data) =&gt; {
+						const dataObject = this.generateDataObject(data)
+						this.add(dataObject)
+						resolve(dataObject)
+					})
+					.catch(reject)
+			}.bind(this)
+		)
+	}
+	add(dataObject) {
+		if (dataObject instanceof DataObject == false) {
+			dataObject = this.generateDataObject(dataObject)
+		}
+		if (this.dataObjects.indexOf(dataObject) !== -1) {
+			// TODO stop using indexOf because equality doesn&apos;t work
+			return
+		}
+		this.dataObjects.push(dataObject)
+		dataObject.collection = this
+		this.trigger(&apos;added&apos;, this, dataObject)
+		if (this._comparator &amp;&amp; this._inReset == false &amp;&amp; this._inAddBatch == false) {
+			this.sort(this._comparator)
+		}
+		dataObject.addListener(EventHandler.ALL_EVENTS, this._boundRelayListener)
+	}
+	_relayListener(...params) {
+		this.trigger(...params)
+	}
+	// Add an array of DataObjects to the end of the collection
+	addBatch(dataObjects) {
+		this._inAddBatch = true
+		for (let dataObject in dataObjects) {
+			if (dataObject instanceof DataObject == false) {
+				dataObject = this.generateDataObject(dataObject)
+			}
+			this.add(dataObject)
+		}
+		this._inAddBatch = false
+	}
+	indexOf(dataObject) {
+		for (let i = 0; i &lt; this.dataObjects.length; i++) {
+			if (this.dataObjects[i].equals(dataObject)) {
+				return i
+			}
+		}
+		return -1
+	}
+	firstByField(dataField, value) {
+		for (const model of this) {
+			if (model.get(dataField) === value) {
+				return model
+			}
+		}
+		return null
+	}
+	remove(dataObject) {
+		const index = this.indexOf(dataObject)
+		if (index === -1) {
+			return
+		}
+		this.dataObjects[index].removeListener(EventHandler.ALL_EVENTS, this._boundRelayListener)
+		this.dataObjects.splice(index, 1)
+		dataObject.collection = null
+		this.trigger(&apos;removed&apos;, this, dataObject)
+	}
+	reset(data) {
+		this._inReset = true
+		for (const obj of this.dataObjects.slice()) {
+			this.remove(obj)
+		}
+		for (const datum of data) {
+			this.add(this.generateDataObject(datum))
+		}
+		this._inReset = false
+		if (this._comparator) {
+			this.sort(this._comparator)
+		}
+		this.trigger(&apos;reset&apos;, this)
+	}
+	sort(comparator = DataCollection.defaultComparator) {
+		this.dataObjects.sort(comparator)
+		this.trigger(&apos;sorted&apos;, this)
+	}
+	sortByAttribute(attributeName, comparator = DataCollection.defaultComparator) {
+		this.sort((obj1, obj2) =&gt; {
+			return comparator(obj1.get(attributeName), obj2.get(attributeName))
+		})
+	}
+	keepSortedByField(dataField, comparator = DataCollection.defaultComparator) {
+		this._comparator = (obj1, obj2) =&gt; {
+			return comparator(obj1.get(dataField), obj2.get(dataField))
+		}
+		this.addListener(&apos;changed:&apos; + dataField, () =&gt; {
+			if (this._comparator &amp;&amp; this._inReset == false &amp;&amp; this._inAddBatch == false) {
+				this.sort(this._comparator)
+			}
+		})
+	}
+	*[Symbol.iterator]() {
+		for (const obj of this.dataObjects) {
+			yield obj
+		}
+	}
+	get length() {
+		return this.dataObjects.length
+	}
+	generateDataObject(data) {
+		const options = { collection: this }
+		let dataObj
+		if (this.options.dataObject) {
+			dataObj = new this.options.dataObject(data, options)
+		} else {
+			dataObj = new DataModel(data, options)
+		}
+		dataObj._new = false
+		return dataObj
+	}
+}
+
+DataCollection.defaultComparator = function (dataObject1, dataObject2) {
+	if (dataObject1 === dataObject2) return 0
+	if (typeof dataObject1.equals === &apos;function&apos; &amp;&amp; dataObject1.equals(dataObject2)) return 0
+	if (typeof dataObject1.get === &apos;function&apos; &amp;&amp; typeof dataObject2.get === &apos;function&apos;) {
+		const val1 = dataObject1.get(&apos;id&apos;, -1)
+		const val2 = dataObject2.get(&apos;id&apos;, -1)
+		if (val1 === val2) return 0
+		if (val1 &lt; val2) return -1
+		return 1
+	}
+	if (dataObject1 &lt; dataObject2) return -1
+	return 1
+}
+
+export default DataCollection
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/DataModel.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/DataModel.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import DataObject from &apos;./DataObject.js&apos;
+
+/**
+	DataModel holds a map of string,value pairs, sometimes fetched from or sent to a back-end server.
+
+	It fires events when values are changed so that {Component}s and other logic can react.
+*/
+export default class extends DataObject {
+	/**
+	@param {Object} [data={}]
+	@param {Object} [options={}]
+	@param {Object} [fieldDataObjects=null] a map of dataField (string) to DataObject (class), used to create sub-objects in this Model&apos;s data
+	*/
+	constructor(data = {}, options = {}) {
+		super(options)
+		if (typeof this.options.fieldDataObjects === &apos;undefined&apos;) {
+			this.options.fieldDataObjects = {}
+		}
+		this.data = {}
+		this.collection = null // set or unset by a DataCollection that claims or releases the model
+		this.setBatch(data)
+	}
+	cleanup() {
+		super.cleanup()
+		this.data = null
+	}
+	has(dataField) {
+		return typeof this.data[dataField] !== &apos;undefined&apos;
+	}
+	/**
+	Find a value held within this DataModel. 
+	@return may be native types or, if mapped by options.fieldDataObjects, another DataObject
+	*/
+	get(dataField, defaultValue = null) {
+		if (typeof this.data[dataField] === &apos;undefined&apos; || this.data[dataField] === null || this.data[dataField] === &apos;&apos;) {
+			return defaultValue
+		}
+		return this.data[dataField]
+	}
+	/**
+	Set a key/value pair
+	*/
+	set(dataField, value) {
+		const batch = {}
+		batch[dataField] = value
+		return this.setBatch(batch)
+	}
+
+	/**
+	Set a group of values. The &apos;values&apos; parameter should be an object that works in for(key in values) loops like a dictionary: {}
+	If a key is in options.fieldDataObjects then the value will be used to contruct a DataObject and that will be the saved value.
+	*/
+	setBatch(values) {
+		const changes = {}
+		let changed = false
+		for (const key in values) {
+			const result = this._set(key, values[key])
+			if (result !== DataObject._NO_CHANGE) {
+				changed = true
+				changes[key] = result
+				this.trigger(`changed:${key}`, this, key, result)
+			}
+		}
+		if (changed) {
+			this.trigger(&apos;changed&apos;, this, changes)
+		}
+		return changes
+	}
+	increment(dataField, amount = 1) {
+		const currentVal = dataField in this.data ? this.data[dataField] : 0
+		this.set(dataField, currentVal + amount)
+	}
+	_set(dataField, data) {
+		// _set does not fire any events, so you probably want to use set or setBatch
+		if (data instanceof DataObject) {
+			if (this.data[dataField] instanceof DataObject) {
+				this.data[dataField].reset(data.data)
+			} else {
+				this.data[dataField] = data
+			}
+		} else if (this.options.fieldDataObjects[dataField]) {
+			if (this.data[dataField]) {
+				this.data[dataField].reset(data)
+			} else {
+				this.data[dataField] = new this.options.fieldDataObjects[dataField](data)
+			}
+		} else {
+			if (this.data[dataField] === data) {
+				return DataObject._NO_CHANGE
+			}
+			if (this.data[dataField] instanceof DataObject) {
+				this.data[dataField].reset(data)
+			} else {
+				this.data[dataField] = data
+			}
+		}
+		return this.data[dataField]
+	}
+	delete() {
+		return new Promise((resolve, reject) =&gt; {
+			super
+				.delete()
+				.then((...params) =&gt; {
+					if (this.collection !== null) {
+						this.collection.remove(this)
+					}
+					resolve(...params)
+				})
+				.catch((...params) =&gt; {
+					reject(...params)
+				})
+		})
+	}
+	reset(data = {}) {
+		for (const key in this.data) {
+			if (typeof data[key] === &apos;undefined&apos;) {
+				this.data[key] = null
+			}
+		}
+		this.setBatch(data)
+		this.trigger(&apos;reset&apos;, this)
+	}
+	equals(obj) {
+		if (obj === null || typeof obj === &apos;undefined&apos;) return false
+		if (this === obj) return true
+		if (typeof obj !== typeof this) return false
+		if (obj.get(&apos;id&apos;) === this.get(&apos;id&apos;)) return true
+		return false
+	}
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

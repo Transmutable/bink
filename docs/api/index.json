@@ -1,0 +1,5140 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/App.js",
+    "content": "import dom from './DOM.js'\nimport Router from './Router.js'\nimport Component from './Component.js'\nimport Localizer from './Localizer.js'\nimport EventHandler from './EventHandler.js'\n\n/**\n * App contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.\n * App communicates these changes to {@link Component}s via events so that they may react.\n */\nconst App = class extends EventHandler {\n\t/**\n\t@param {Object} [options]\n\t*/\n\tconstructor(options = {}) {\n\t\tsuper()\n\t\tthis._options = options\n\t\tthis._router = new Router()\n\n\t\tthis._dom = dom.div({ class: 'app' })\n\t}\n\n\t/** @type {Router} */\n\tget router() {\n\t\treturn this._router\n\t}\n\t/** @type {HTMLElement} */\n\tget dom() {\n\t\treturn this._dom\n\t}\n\n\t/**\n\tappendComponent adds the childComponent's dom to this Component's equivalent attributes.\n\t@param {Component} childComponent\n\t*/\n\tappendComponent(childComponent) {\n\t\tthis._dom.appendChild(childComponent.dom)\n\t}\n\n\t/*\n\tremoveComponent removes the childComponent's DOM from this Component's equivalent attributes.\n\t@param {Component} childComponent\n\t*/\n\tremoveComponent(childComponent) {\n\t\tthis._dom.removeChild(childComponent.dom)\n\t}\n\n\tset localizerGathering(shouldGather) {\n\t\tLocalizer.Singleton.gathering = shouldGather\n\t}\n\n\tget localizerGathering() {\n\t\treturn Localizer.Singleton.gathering\n\t}\n\n\tget localizerGatheredData() {\n\t\treturn Localizer.Singleton.gatheredData\n\t}\n}\n\nexport default App\nexport { App }\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/App.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "App",
+    "memberof": "src/App.js",
+    "static": true,
+    "longname": "src/App.js~App",
+    "access": "public",
+    "export": true,
+    "importPath": "bink",
+    "importStyle": "App",
+    "description": "App contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.\nApp communicates these changes to {@link Component}s via events so that they may react.",
+    "lineNumber": 11,
+    "interface": false,
+    "extends": [
+      "src/EventHandler.js~EventHandler"
+    ]
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 15,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "_options",
+    "memberof": "src/App.js~App",
+    "static": false,
+    "longname": "src/App.js~App#_options",
+    "access": "private",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "member",
+    "name": "_router",
+    "memberof": "src/App.js~App",
+    "static": false,
+    "longname": "src/App.js~App#_router",
+    "access": "private",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "_dom",
+    "memberof": "src/App.js~App",
+    "static": false,
+    "longname": "src/App.js~App#_dom",
+    "access": "private",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "get",
+    "name": "router",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#router",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Router"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "get",
+    "name": "dom",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#dom",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": [
+        "HTMLElement"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "appendComponent",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#appendComponent",
+    "access": "public",
+    "description": "appendComponent adds the childComponent's dom to this Component's equivalent attributes.",
+    "lineNumber": 36,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Component"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "childComponent",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "removeComponent",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#removeComponent",
+    "access": "public",
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "params": [
+      {
+        "name": "childComponent",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 58,
+    "kind": "set",
+    "name": "localizerGathering",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#localizerGathering",
+    "access": "public",
+    "description": null,
+    "lineNumber": 48,
+    "undocument": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "get",
+    "name": "localizerGathering",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#localizerGathering",
+    "access": "public",
+    "description": null,
+    "lineNumber": 52,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "get",
+    "name": "localizerGatheredData",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#localizerGatheredData",
+    "access": "public",
+    "description": null,
+    "lineNumber": 56,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "name": "src/Component.js",
+    "content": "import dom from './DOM.js'\nimport EventHandler from './EventHandler.js'\n\n/**\n`Component` contains the reactive logic for a responsive UI element.\n*/\nconst Component = class extends EventHandler {\n\t/**\n\t@param {DataObject} [dataObject]\n\t@param {Object} [options]\n\t@param {HTMLElement} [options.dom]\n\t@param {HTMLElement} [options.portalDOM]\n\t*/\n\tconstructor(dataObject = null, options = {}) {\n\t\tsuper()\n\t\tthis.dataObject = dataObject // a DataModel or DataCollection\n\t\tthis.options = Object.assign(\n\t\t\t{\n\t\t\t\tdom: null,\n\t\t\t},\n\t\t\toptions\n\t\t)\n\t\tthis.cleanedUp = false\n\t\tthis.dom = this.options.dom || dom.div()\n\t\t// See the Binder class below for info\n\t\tthis._binder = new Binder(this)\n\t\tthis.addClass('component')\n\t\tif (this.options.name) {\n\t\t\tthis.setName(this.options.name)\n\t\t}\n\t}\n\n\t/**\n\tCalled to dispose of any resources used by this component.\n\tExtending classes *should* override and call cleanup on sub-Components.\n\t*/\n\tcleanup() {\n\t\tif (this.cleanedUp) return\n\t\tthis.cleanedUp = true\n\t\tsuper.cleanup()\n\t\tthis._binder.cleanup()\n\t\treturn this\n\t}\n\n\t/** @type {HTMLElement} */\n\tget dom() {\n\t\treturn this._dom\n\t}\n\n\t/**\n\tappendComponent adds the childComponent's dom to this Component's dom\n\t@param {Component} childComponent\n\t*/\n\tappendComponent(childComponent) {\n\t\tthis._dom.appendChild(childComponent.dom)\n\t\treturn this\n\t}\n\t/**\n\tremoveComponent removes the childComponent's dom from this Component's dom.\n\t@param {Component} childComponent\n\t@param {boolean} [clean]\n\t*/\n\tremoveComponent(childComponent, clean = true) {\n\t\tthis._dom.removeChild(childComponent.dom)\n\t\tif (clean) childComponent.cleanup()\n\t\treturn this\n\t}\n\n\t/**\n\tA handy method for quick creation and setting of a parent:\n\tthis._fooComponent = new FooComponent().appendTo(parentComponent)\n\t@param {Component} parentComponent\n\t*/\n\tappendTo(parentComponent) {\n\t\tparentComponent.appendComponent(this)\n\t\treturn this\n\t}\n\n\t/**\n\tSets the data-name attribute on the dom\n\t*/\n\tsetName(name) {\n\t\tthis._dom.setAttribute('data-name', name)\n\t\treturn this\n\t}\n\n\t/**\n\tadd class attributes to dom elements\n\t@param {string[]} classNames\n\t*/\n\taddClass(...classNames) {\n\t\tthis._dom.addClass(...classNames)\n\t\treturn this\n\t}\n\n\t/**\n\tremove class attributes to the dom\n\t@param {string[]} classNames\n\t*/\n\tremoveClass(...classNames) {\n\t\tthis._dom.removeClass(...classNames)\n\t\treturn this\n\t}\n\n\t/**\n\tListen to a DOM or Component event.\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} listener\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t*/\n\tlistenTo(eventName, target, listener, once = false) {\n\t\tthis._binder.listenTo(eventName, target, callback, once)\n\t}\n\n\t/**\n\t@param {string} dataField\n\t@param {HTMLElement or Object3D} target\n\t@param {function} formatter\n\t@param {DataModel} dataModel\n\t*/\n\tbindText(dataField, target, formatter = null, dataModel = this.dataObject) {\n\t\tthis._binder.bindText(dataField, target, formatter, dataModel)\n\t}\n\n\t/*\n\tSet an attribute of target DOM to the value of dataModel.get(dataField) as it changes\n\tformatter defaults to the identity function but can be any function that accepts the value and returns a string\n\n\t@param {string} dataField\n\t@param {HTMLElement} target\n\t@param {string} attributeName\n\t@param {function} formatter\n\t@param {DataModel} dataModel\n\t*/\n\tbindAttribute(dataField, target, attributeName, formatter = null, dataModel = this.dataObject) {\n\t\tthis._binder.bindAttribute(dataField, target, attributeName, formatter, dataModel)\n\t}\n}\n\n/**\nBinder listens for events on {@link EventHandler}s or DOM elements and changes characteristics of an HTMLElement or Component in response.\nThis is part of what makes a Component \"reactive\".\n*/\nconst Binder = class {\n\tconstructor(component) {\n\t\tthis._component = component\n\t\tthis._boundCallbacks = [] // { callback, dataObject } to be unbound during cleanup\n\t\tthis._eventCallbacks = [] // { callback, eventName, target } to be unregistered during cleanup\n\t}\n\tcleanup() {\n\t\tfor (const bindInfo of this._boundCallbacks) {\n\t\t\tbindInfo.dataObject.removeListener(bindInfo.callback)\n\t\t}\n\t\tfor (const info of this._eventCallbacks) {\n\t\t\tif (info.target instanceof EventHandler) {\n\t\t\t\tinfo.target.removeListener(info.callback, info.eventName)\n\t\t\t} else {\n\t\t\t\tinfo.target.removeEventListener(info.eventName, info.callback)\n\t\t\t}\n\t\t}\n\t}\n\n\t/**\n\tListen to a DOM or EventHandler event.\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} callback\n\t@param {boolean} [once]\n\t*/\n\tlistenTo(eventName, target, callback, once = false) {\n\t\tconst info = {\n\t\t\teventName: eventName,\n\t\t\ttarget: target,\n\t\t\tcallback: callback,\n\t\t\tonce: once,\n\t\t}\n\t\tif (target instanceof EventHandler) {\n\t\t\ttarget.addListener(eventName, info.callback)\n\t\t} else {\n\t\t\ttarget.addEventListener(eventName, info.callback)\n\t\t}\n\t\tthis._eventCallbacks.push(info)\n\t}\n\n\t/**\n\t@param {string} dataField\n\t@param {HTMLElement or Object3D} target\n\t@param {function} formatter\n\t@param {DataModel} dataModel\n\t*/\n\tbindText(dataField, target, formatter = null, dataModel = this._component.dataObject) {\n\t\tif (formatter === null) {\n\t\t\tformatter = (value) => {\n\t\t\t\tif (value === null) return ''\n\t\t\t\tif (typeof value === 'string') return value\n\t\t\t\treturn '' + value\n\t\t\t}\n\t\t}\n\t\tconst callback = () => {\n\t\t\tconst result = formatter(dataModel.get(dataField))\n\t\t\ttarget.innerText = typeof result === 'string' ? result : ''\n\t\t}\n\t\tdataModel.addListener(`changed:${dataField}`, callback)\n\t\tcallback()\n\t\tthis._boundCallbacks.push({\n\t\t\tcallback: callback,\n\t\t\tdataObject: dataModel,\n\t\t})\n\t}\n\n\t/*\n\tSet the attributeName attribute of target DOM or SOM to the value of dataModel.get(dataField) as it changes\n\tformatter defaults to the identity function but can be any function that accepts the value and returns a string\n\n\t@param {string} dataField\n\t@param {HTMLElement or Object3D} target\n\t@param {string} attributeName\n\t@param {function} formatter\n\t@param {DataModel} dataModel\n\t*/\n\tbindAttribute(dataField, target, attributeName, formatter = null, dataModel = this._component.dataObject) {\n\t\tif (formatter === null) {\n\t\t\tformatter = (value) => {\n\t\t\t\tif (value === null) return ''\n\t\t\t\tif (typeof value === 'string') return value\n\t\t\t\treturn '' + value\n\t\t\t}\n\t\t}\n\t\tconst callback = () => {\n\t\t\ttarget.setAttribute(attributeName, formatter(dataModel.get(dataField)))\n\t\t}\n\t\tdataModel.addListener(`changed:${dataField}`, callback)\n\t\tcallback()\n\t\tthis._boundCallbacks.push({\n\t\t\tcallback: callback,\n\t\t\tdataObject: dataModel,\n\t\t})\n\t}\n}\n\nexport default Component\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/Component.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "class",
+    "name": "Binder",
+    "memberof": "src/Component.js",
+    "static": true,
+    "longname": "src/Component.js~Binder",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/Component.js",
+    "importStyle": null,
+    "description": "Binder listens for events on {@link EventHandler}s or DOM elements and changes characteristics of an HTMLElement or Component in response.\nThis is part of what makes a Component \"reactive\".",
+    "lineNumber": 152,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Component.js~Binder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Binder#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 153,
+    "undocument": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "_component",
+    "memberof": "src/Component.js~Binder",
+    "static": false,
+    "longname": "src/Component.js~Binder#_component",
+    "access": "private",
+    "description": null,
+    "lineNumber": 154,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "_boundCallbacks",
+    "memberof": "src/Component.js~Binder",
+    "static": false,
+    "longname": "src/Component.js~Binder#_boundCallbacks",
+    "access": "private",
+    "description": null,
+    "lineNumber": 155,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "member",
+    "name": "_eventCallbacks",
+    "memberof": "src/Component.js~Binder",
+    "static": false,
+    "longname": "src/Component.js~Binder#_eventCallbacks",
+    "access": "private",
+    "description": null,
+    "lineNumber": 156,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "cleanup",
+    "memberof": "src/Component.js~Binder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Binder#cleanup",
+    "access": "public",
+    "description": null,
+    "lineNumber": 158,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "listenTo",
+    "memberof": "src/Component.js~Binder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Binder#listenTo",
+    "access": "public",
+    "description": "Listen to a DOM or EventHandler event.\nFor example:\nthis.buttonDOM = dom.button()\nthis.listenTo('click', this.buttonDOM, this.handleClick)\n\nthis.textComponent = new TextComponent(...)\nthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })",
+    "lineNumber": 185,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "eventName",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement or EventHandler"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "once",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "bindText",
+    "memberof": "src/Component.js~Binder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Binder#bindText",
+    "access": "public",
+    "description": "",
+    "lineNumber": 206,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dataField",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement or Object3D"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formatter",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "DataModel"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dataModel",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "bindAttribute",
+    "memberof": "src/Component.js~Binder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Binder#bindAttribute",
+    "access": "public",
+    "description": null,
+    "lineNumber": 236,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "target",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "attributeName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "formatter",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      },
+      {
+        "name": "dataModel",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 71,
+    "kind": "class",
+    "name": "Component",
+    "memberof": "src/Component.js",
+    "static": true,
+    "longname": "src/Component.js~Component",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Component.js",
+    "importStyle": "Component",
+    "description": "`Component` contains the reactive logic for a responsive UI element.",
+    "lineNumber": 7,
+    "interface": false,
+    "extends": [
+      "src/EventHandler.js~EventHandler"
+    ]
+  },
+  {
+    "__docId__": 72,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "DataObject"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "dataObject",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.dom",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.portalDOM",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 73,
+    "kind": "member",
+    "name": "dataObject",
+    "memberof": "src/Component.js~Component",
+    "static": false,
+    "longname": "src/Component.js~Component#dataObject",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "member",
+    "name": "options",
+    "memberof": "src/Component.js~Component",
+    "static": false,
+    "longname": "src/Component.js~Component#options",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "member",
+    "name": "cleanedUp",
+    "memberof": "src/Component.js~Component",
+    "static": false,
+    "longname": "src/Component.js~Component#cleanedUp",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "member",
+    "name": "_binder",
+    "memberof": "src/Component.js~Component",
+    "static": false,
+    "longname": "src/Component.js~Component#_binder",
+    "access": "private",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "cleanup",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#cleanup",
+    "access": "public",
+    "description": "Called to dispose of any resources used by this component.\nExtending classes *should* override and call cleanup on sub-Components.",
+    "lineNumber": 37,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "get",
+    "name": "dom",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#dom",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "type": {
+      "nullable": null,
+      "types": [
+        "HTMLElement"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "name": "appendComponent",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#appendComponent",
+    "access": "public",
+    "description": "appendComponent adds the childComponent's dom to this Component's dom",
+    "lineNumber": 54,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Component"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "childComponent",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "name": "removeComponent",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#removeComponent",
+    "access": "public",
+    "description": "removeComponent removes the childComponent's dom from this Component's dom.",
+    "lineNumber": 63,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Component"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "childComponent",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "clean",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "appendTo",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#appendTo",
+    "access": "public",
+    "description": "A handy method for quick creation and setting of a parent:\nthis._fooComponent = new FooComponent().appendTo(parentComponent)",
+    "lineNumber": 74,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Component"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "parentComponent",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "method",
+    "name": "setName",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#setName",
+    "access": "public",
+    "description": "Sets the data-name attribute on the dom",
+    "lineNumber": 82,
+    "params": [
+      {
+        "name": "name",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "name": "addClass",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#addClass",
+    "access": "public",
+    "description": "add class attributes to dom elements",
+    "lineNumber": 91,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "classNames",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "name": "removeClass",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#removeClass",
+    "access": "public",
+    "description": "remove class attributes to the dom",
+    "lineNumber": 100,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "classNames",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "listenTo",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#listenTo",
+    "access": "public",
+    "description": "Listen to a DOM or Component event.\nFor example:\nthis.buttonDOM = dom.button()\nthis.listenTo('click', this.buttonDOM, this.handleClick)\n\nthis.textComponent = new TextComponent(...)\nthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })",
+    "lineNumber": 119,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "eventName",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement or EventHandler"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "once",
+        "description": "only listen to the first event, then unbind"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "bindText",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#bindText",
+    "access": "public",
+    "description": "",
+    "lineNumber": 129,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dataField",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement or Object3D"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formatter",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "DataModel"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dataModel",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "bindAttribute",
+    "memberof": "src/Component.js~Component",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Component.js~Component#bindAttribute",
+    "access": "public",
+    "description": null,
+    "lineNumber": 143,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "target",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "attributeName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "formatter",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      },
+      {
+        "name": "dataModel",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
+    "name": "src/DOM.js",
+    "content": "/**\nFunctions that generate Document Object Model (DOM) elements like dom.div(...) will live in el\n*/\nconst dom = {}\nexport default dom\n\n/**\ndomElementFunction is the behind the scenes logic for the functions like dom.div(...)\nBelow you will find the loop that uses domElementFunction\n*/\ndom.domElementFunction = function (tagName, ...params) {\n\t// Create a boring DOM element\n\tconst element = document.createElement(tagName)\n\n\t// A convenience function to allow chaining like `let fooDiv = dom.div().appendTo(document.body)`\n\telement.appendTo = function (parent) {\n\t\tparent.appendChild(this)\n\t\treturn this\n\t}\n\n\t// if element.parentElement exists, call removeChild(element) on it\n\telement.remove = function () {\n\t\tif (this.parentElement) {\n\t\t\tthis.parentElement.removeChild(this)\n\t\t}\n\t\treturn this\n\t}\n\n\t// A convenience function to allow appending strings, dictionaries of attributes, arrays of subchildren, or children\n\telement.append = function (child = null) {\n\t\tif (child === null) {\n\t\t\treturn\n\t\t}\n\t\tif (typeof child === 'string') {\n\t\t\tthis.appendChild(document.createTextNode(child))\n\t\t} else if (Array.isArray(child)) {\n\t\t\tfor (const subChild of child) {\n\t\t\t\tthis.append(subChild)\n\t\t\t}\n\t\t\t// If it's an object but not a DOM element, consider it a dictionary of attributes\n\t\t} else if (typeof child === 'object' && typeof child.nodeType === 'undefined') {\n\t\t\tfor (const key in child) {\n\t\t\t\tif (child.hasOwnProperty(key) == false) {\n\t\t\t\t\tcontinue\n\t\t\t\t}\n\t\t\t\tthis.setAttribute(key, child[key])\n\t\t\t}\n\t\t} else {\n\t\t\tthis.appendChild(child)\n\t\t}\n\t\treturn this\n\t}\n\n\telement.documentPosition = function () {\n\t\treturn dom.documentOffset(this)\n\t}\n\n\t/*\n\tSort element.children *in place* using the comparator function\n\tSee https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort for an explanation of the comparator function\n\t*/\n\telement.sort = function (comparator = dom.defaultComparator) {\n\t\t// Populate the holding array while removing children from the DOM\n\t\tconst holdingArray = []\n\t\twhile (this.children.length > 0) {\n\t\t\tholdingArray.push(this.removeChild(this.children.item(0)))\n\t\t}\n\t\tholdingArray.sort(comparator)\n\t\tfor (const child of holdingArray) {\n\t\t\tthis.appendChild(child)\n\t\t}\n\t\treturn this\n\t}\n\n\t// Sort element.children *in place* using child[attributeName] and the comparator function\n\telement.sortByAttribute = function (attributeName, comparator = dom.defaultComparator) {\n\t\tthis.sort((el1, el2) => {\n\t\t\treturn comparator(el1.getAttribute(attributeName), el2.getAttribute(attributeName))\n\t\t})\n\t\treturn this\n\t}\n\n\t// Convenience functions to add and remove classes from this element without duplication\n\telement.addClass = function (...classNames) {\n\t\tconst classAttribute = this.getAttribute('class') || ''\n\t\tconst classes = classAttribute === '' ? [] : classAttribute.split(/\\s+/)\n\t\tfor (const className of classNames) {\n\t\t\tif (classes.indexOf(className) === -1) {\n\t\t\t\tclasses.push(className)\n\t\t\t}\n\t\t}\n\t\tthis.setAttribute('class', classes.join(' '))\n\t\treturn this\n\t}\n\telement.removeClass = function (...classNames) {\n\t\tconst classAttribute = this.getAttribute('class') || ''\n\t\tconst classes = classAttribute === '' ? [] : classAttribute.split(/\\s+/)\n\t\tfor (const className of classNames) {\n\t\t\tconst index = classes.indexOf(className)\n\t\t\tif (index !== -1) {\n\t\t\t\tclasses.splice(index, 1)\n\t\t\t}\n\t\t}\n\t\tif (classes.length === 0) {\n\t\t\tthis.removeAttribute('class')\n\t\t} else {\n\t\t\tthis.setAttribute('class', classes.join(' '))\n\t\t}\n\t\treturn this\n\t}\n\n\t// Append the children parameters\n\tfor (const child of params) {\n\t\telement.append(child)\n\t}\n\treturn element\n}\n\n// This comparator stringifies the passed values and returns the comparison of those values\ndom.defaultComparator = function (el1, el2) {\n\tif (el1 === el2) return 0\n\tconst str1 = '' + el1\n\tconst str2 = '' + el2\n\tif (str1 == str2) return 0\n\tif (str1 < str2) return -1\n\treturn 1\n}\n\n// Traverse the document tree to calculate the offset in the entire document of this element\ndom.documentOffset = function (element) {\n\tlet left = 0\n\tlet top = 0\n\tconst findPos = function (obj) {\n\t\tleft += obj.offsetLeft\n\t\ttop += obj.offsetTop\n\t\tif (obj.offsetParent) {\n\t\t\tfindPos(obj.offsetParent)\n\t\t}\n\t}\n\tfindPos(element)\n\treturn [left, top]\n}\n\n/** \nThe tag names that will be used to generate all of the element generating functions like dom.div(...) and dom.button(...)\nThese names were ovingly copied from the excellent Laconic.js \n@see https://github.com/joestelmach/laconic/blob/master/laconic.js\n*/\ndom.TAGS = [\n\t'a',\n\t'abbr',\n\t'address',\n\t'area',\n\t'article',\n\t'aside',\n\t'audio',\n\t'b',\n\t'base',\n\t'bdo',\n\t'blockquote',\n\t'body',\n\t'br',\n\t'button',\n\t'canvas',\n\t'caption',\n\t'cite',\n\t'code',\n\t'col',\n\t'colgroup',\n\t'command',\n\t'datalist',\n\t'dd',\n\t'del',\n\t'details',\n\t'dfn',\n\t'div',\n\t'dl',\n\t'dt',\n\t'em',\n\t'embed',\n\t'fieldset',\n\t'figcaption',\n\t'figure',\n\t'footer',\n\t'form',\n\t'h1',\n\t'h2',\n\t'h3',\n\t'h4',\n\t'h5',\n\t'h6',\n\t'head',\n\t'header',\n\t'hgroup',\n\t'hr',\n\t'html',\n\t'i',\n\t'iframe',\n\t'img',\n\t'input',\n\t'ins',\n\t'keygen',\n\t'kbd',\n\t'label',\n\t'legend',\n\t'li',\n\t'link',\n\t'map',\n\t'mark',\n\t'menu',\n\t'meta',\n\t'meter',\n\t'nav',\n\t'noscript',\n\t'object',\n\t'ol',\n\t'optgroup',\n\t'option',\n\t'output',\n\t'p',\n\t'picture',\n\t'param',\n\t'pre',\n\t'progress',\n\t'q',\n\t'rp',\n\t'rt',\n\t'ruby',\n\t's',\n\t'samp',\n\t'script',\n\t'section',\n\t'select',\n\t'small',\n\t'source',\n\t'span',\n\t'strong',\n\t'style',\n\t'sub',\n\t'summary',\n\t'sup',\n\t'table',\n\t'tbody',\n\t'td',\n\t'textarea',\n\t'tfoot',\n\t'th',\n\t'thead',\n\t'time',\n\t'title',\n\t'tr',\n\t'ul',\n\t'var',\n\t'video',\n\t'wbr',\n]\n\n// This loop generates the element generating functions like dom.div(...)\nfor (const tag of dom.TAGS) {\n\tconst innerTag = tag\n\tdom[innerTag] = function (...params) {\n\t\treturn dom.domElementFunction(innerTag, ...params)\n\t}\n}\n\nconst CookieValueRegularExpressionParts = ['(?:(?:^|.*;\\\\s*)', '\\\\s*\\\\=\\\\s*([^;]*).*$)|^.*$']\n\ndom.getCookie = function (cookieName) {\n\tconst cookieRegExp = new RegExp(\n\t\t`${CookieValueRegularExpressionParts[0]}${encodeURIComponent(cookieName)}${CookieValueRegularExpressionParts[1]}`\n\t)\n\treturn document.cookie.replace(cookieRegExp, '$1')\n}\n\ndom.setCookie = function (cookieName, value) {\n\tdocument.cookie = `${encodeURIComponent(cookieName)}=${encodeURIComponent(value)}`\n}\n\ndom.removeCookie = function (cookieName) {\n\tdocument.cookie = `${encodeURIComponent(cookieName)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT`\n}\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/DOM.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 91,
+    "kind": "function",
+    "name": "domElementFunction",
+    "memberof": "src/DOM.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DOM.js~domElementFunction",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": null,
+    "description": "domElementFunction is the behind the scenes logic for the functions like dom.div(...)\nBelow you will find the loop that uses domElementFunction",
+    "lineNumber": 11,
+    "params": [
+      {
+        "name": "tagName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "params",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "function",
+    "name": "defaultComparator",
+    "memberof": "src/DOM.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DOM.js~defaultComparator",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 120,
+    "undocument": true,
+    "params": [
+      {
+        "name": "el1",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "el2",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "function",
+    "name": "documentOffset",
+    "memberof": "src/DOM.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DOM.js~documentOffset",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 130,
+    "undocument": true,
+    "params": [
+      {
+        "name": "element",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "undefined[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "variable",
+    "name": "CookieValueRegularExpressionParts",
+    "memberof": "src/DOM.js",
+    "static": true,
+    "longname": "src/DOM.js~CookieValueRegularExpressionParts",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 266,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 95,
+    "kind": "function",
+    "name": "getCookie",
+    "memberof": "src/DOM.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DOM.js~getCookie",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 268,
+    "undocument": true,
+    "params": [
+      {
+        "name": "cookieName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 96,
+    "kind": "function",
+    "name": "setCookie",
+    "memberof": "src/DOM.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DOM.js~setCookie",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 275,
+    "undocument": true,
+    "params": [
+      {
+        "name": "cookieName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 97,
+    "kind": "function",
+    "name": "removeCookie",
+    "memberof": "src/DOM.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DOM.js~removeCookie",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 279,
+    "undocument": true,
+    "params": [
+      {
+        "name": "cookieName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 98,
+    "kind": "variable",
+    "name": "dom",
+    "memberof": "src/DOM.js",
+    "static": true,
+    "longname": "src/DOM.js~dom",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/DOM.js",
+    "importStyle": "dom",
+    "description": "Functions that generate Document Object Model (DOM) elements like dom.div(...) will live in el",
+    "lineNumber": 4,
+    "type": {
+      "types": [
+        "{}"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "file",
+    "name": "src/DataCollection.js",
+    "content": "import DataModel from './DataModel.js'\nimport DataObject from './DataObject.js'\nimport EventHandler from './EventHandler'\n\n/**\n\tDataCollection represents an ordered list of DataModel instances\n*/\nconst DataCollection = class extends DataObject {\n\t/**\n\t@param {Object[]} [data=null]\n\t@param {Object} [options={}]\n\t@param {class} [options.dataObject] the DataObject extending class to use to wrap each data item in this collection\n\t*/\n\tconstructor(data = [], options = {}) {\n\t\tsuper(options)\n\t\tif (data == null) data = []\n\t\tthis._inReset = false\n\t\tthis._inAddBatch = false\n\t\tthis._boundRelayListener = this._relayListener.bind(this)\n\t\tthis.dataObjects = []\n\t\tfor (const datum of data) {\n\t\t\tthis.add(this.generateDataObject(datum))\n\t\t}\n\t}\n\tcleanup() {\n\t\tsuper.cleanup()\n\t\tfor (const obj of this.dataObjects) {\n\t\t\tobj.removeListener(this._boundRelayListener)\n\t\t}\n\t\tthis.dataObjects.length = 0\n\t}\n\tat(index) {\n\t\tif (index < 0 || index > this.dataObjects.length - 1) {\n\t\t\tthrow new Error(`Index out of range: ${index}`)\n\t\t}\n\t\treturn this.dataObjects[index]\n\t}\n\tcreate(data, options = {}) {\n\t\t// Creates an child instance and POSTs it to the collection\n\t\treturn new Promise(\n\t\t\tfunction (resolve, reject) {\n\t\t\t\tconst fetchOptions = Object.assign(options, this.fetchOptions)\n\t\t\t\tfetchOptions.method = 'post'\n\t\t\t\tfetchOptions.body = JSON.stringify(data)\n\t\t\t\tthis._innerFetch(this.url, fetchOptions)\n\t\t\t\t\t.then((response) => {\n\t\t\t\t\t\tif (response.status != 200) {\n\t\t\t\t\t\t\tthrow 'Create failed with status ' + response.status\n\t\t\t\t\t\t}\n\t\t\t\t\t\treturn response.json()\n\t\t\t\t\t})\n\t\t\t\t\t.then((data) => {\n\t\t\t\t\t\tconst dataObject = this.generateDataObject(data)\n\t\t\t\t\t\tthis.add(dataObject)\n\t\t\t\t\t\tresolve(dataObject)\n\t\t\t\t\t})\n\t\t\t\t\t.catch(reject)\n\t\t\t}.bind(this)\n\t\t)\n\t}\n\tadd(dataObject) {\n\t\tif (dataObject instanceof DataObject == false) {\n\t\t\tdataObject = this.generateDataObject(dataObject)\n\t\t}\n\t\tif (this.dataObjects.indexOf(dataObject) !== -1) {\n\t\t\t// TODO stop using indexOf because equality doesn't work\n\t\t\treturn\n\t\t}\n\t\tthis.dataObjects.push(dataObject)\n\t\tdataObject.collection = this\n\t\tthis.trigger('added', this, dataObject)\n\t\tif (this._comparator && this._inReset == false && this._inAddBatch == false) {\n\t\t\tthis.sort(this._comparator)\n\t\t}\n\t\tdataObject.addListener(EventHandler.ALL_EVENTS, this._boundRelayListener)\n\t}\n\t_relayListener(...params) {\n\t\tthis.trigger(...params)\n\t}\n\t// Add an array of DataObjects to the end of the collection\n\taddBatch(dataObjects) {\n\t\tthis._inAddBatch = true\n\t\tfor (let dataObject in dataObjects) {\n\t\t\tif (dataObject instanceof DataObject == false) {\n\t\t\t\tdataObject = this.generateDataObject(dataObject)\n\t\t\t}\n\t\t\tthis.add(dataObject)\n\t\t}\n\t\tthis._inAddBatch = false\n\t}\n\tindexOf(dataObject) {\n\t\tfor (let i = 0; i < this.dataObjects.length; i++) {\n\t\t\tif (this.dataObjects[i].equals(dataObject)) {\n\t\t\t\treturn i\n\t\t\t}\n\t\t}\n\t\treturn -1\n\t}\n\tfirstByField(dataField, value) {\n\t\tfor (const model of this) {\n\t\t\tif (model.get(dataField) === value) {\n\t\t\t\treturn model\n\t\t\t}\n\t\t}\n\t\treturn null\n\t}\n\tremove(dataObject) {\n\t\tconst index = this.indexOf(dataObject)\n\t\tif (index === -1) {\n\t\t\treturn\n\t\t}\n\t\tthis.dataObjects[index].removeListener(EventHandler.ALL_EVENTS, this._boundRelayListener)\n\t\tthis.dataObjects.splice(index, 1)\n\t\tdataObject.collection = null\n\t\tthis.trigger('removed', this, dataObject)\n\t}\n\treset(data) {\n\t\tthis._inReset = true\n\t\tfor (const obj of this.dataObjects.slice()) {\n\t\t\tthis.remove(obj)\n\t\t}\n\t\tfor (const datum of data) {\n\t\t\tthis.add(this.generateDataObject(datum))\n\t\t}\n\t\tthis._inReset = false\n\t\tif (this._comparator) {\n\t\t\tthis.sort(this._comparator)\n\t\t}\n\t\tthis.trigger('reset', this)\n\t}\n\tsort(comparator = DataCollection.defaultComparator) {\n\t\tthis.dataObjects.sort(comparator)\n\t\tthis.trigger('sorted', this)\n\t}\n\tsortByAttribute(attributeName, comparator = DataCollection.defaultComparator) {\n\t\tthis.sort((obj1, obj2) => {\n\t\t\treturn comparator(obj1.get(attributeName), obj2.get(attributeName))\n\t\t})\n\t}\n\tkeepSortedByField(dataField, comparator = DataCollection.defaultComparator) {\n\t\tthis._comparator = (obj1, obj2) => {\n\t\t\treturn comparator(obj1.get(dataField), obj2.get(dataField))\n\t\t}\n\t\tthis.addListener('changed:' + dataField, () => {\n\t\t\tif (this._comparator && this._inReset == false && this._inAddBatch == false) {\n\t\t\t\tthis.sort(this._comparator)\n\t\t\t}\n\t\t})\n\t}\n\t*[Symbol.iterator]() {\n\t\tfor (const obj of this.dataObjects) {\n\t\t\tyield obj\n\t\t}\n\t}\n\tget length() {\n\t\treturn this.dataObjects.length\n\t}\n\tgenerateDataObject(data) {\n\t\tconst options = { collection: this }\n\t\tlet dataObj\n\t\tif (this.options.dataObject) {\n\t\t\tdataObj = new this.options.dataObject(data, options)\n\t\t} else {\n\t\t\tdataObj = new DataModel(data, options)\n\t\t}\n\t\tdataObj._new = false\n\t\treturn dataObj\n\t}\n}\n\nDataCollection.defaultComparator = function (dataObject1, dataObject2) {\n\tif (dataObject1 === dataObject2) return 0\n\tif (typeof dataObject1.equals === 'function' && dataObject1.equals(dataObject2)) return 0\n\tif (typeof dataObject1.get === 'function' && typeof dataObject2.get === 'function') {\n\t\tconst val1 = dataObject1.get('id', -1)\n\t\tconst val2 = dataObject2.get('id', -1)\n\t\tif (val1 === val2) return 0\n\t\tif (val1 < val2) return -1\n\t\treturn 1\n\t}\n\tif (dataObject1 < dataObject2) return -1\n\treturn 1\n}\n\nexport default DataCollection\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/DataCollection.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 100,
+    "kind": "function",
+    "name": "defaultComparator",
+    "memberof": "src/DataCollection.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DataCollection.js~defaultComparator",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/DataCollection.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 171,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataObject1",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "dataObject2",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 101,
+    "kind": "class",
+    "name": "DataCollection",
+    "memberof": "src/DataCollection.js",
+    "static": true,
+    "longname": "src/DataCollection.js~DataCollection",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/DataCollection.js",
+    "importStyle": "DataCollection",
+    "description": "DataCollection represents an ordered list of DataModel instances",
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/DataObject.js~DataObject"
+    ]
+  },
+  {
+    "__docId__": 102,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object[]"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "data",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "class"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.dataObject",
+        "description": "the DataObject extending class to use to wrap each data item in this collection"
+      }
+    ]
+  },
+  {
+    "__docId__": 103,
+    "kind": "member",
+    "name": "_inReset",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#_inReset",
+    "access": "private",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "member",
+    "name": "_inAddBatch",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#_inAddBatch",
+    "access": "private",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "member",
+    "name": "_boundRelayListener",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#_boundRelayListener",
+    "access": "private",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "member",
+    "name": "dataObjects",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#dataObjects",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "cleanup",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#cleanup",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "at",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#at",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "params": [
+      {
+        "name": "index",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "method",
+    "name": "create",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#create",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "add",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#add",
+    "access": "public",
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataObject",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 111,
+    "kind": "method",
+    "name": "_relayListener",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#_relayListener",
+    "access": "private",
+    "description": null,
+    "lineNumber": 77,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 112,
+    "kind": "method",
+    "name": "addBatch",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#addBatch",
+    "access": "public",
+    "description": null,
+    "lineNumber": 81,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataObjects",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 115,
+    "kind": "method",
+    "name": "indexOf",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#indexOf",
+    "access": "public",
+    "description": null,
+    "lineNumber": 91,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataObject",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "firstByField",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#firstByField",
+    "access": "public",
+    "description": null,
+    "lineNumber": 99,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "method",
+    "name": "remove",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#remove",
+    "access": "public",
+    "description": null,
+    "lineNumber": 107,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataObject",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 118,
+    "kind": "method",
+    "name": "reset",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#reset",
+    "access": "public",
+    "description": null,
+    "lineNumber": 117,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 121,
+    "kind": "method",
+    "name": "sort",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#sort",
+    "access": "public",
+    "description": null,
+    "lineNumber": 131,
+    "undocument": true,
+    "params": [
+      {
+        "name": "comparator",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 122,
+    "kind": "method",
+    "name": "sortByAttribute",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#sortByAttribute",
+    "access": "public",
+    "description": null,
+    "lineNumber": 135,
+    "undocument": true,
+    "params": [
+      {
+        "name": "attributeName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "comparator",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 123,
+    "kind": "method",
+    "name": "keepSortedByField",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#keepSortedByField",
+    "access": "public",
+    "description": null,
+    "lineNumber": 140,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "comparator",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 124,
+    "kind": "member",
+    "name": "_comparator",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#_comparator",
+    "access": "private",
+    "description": null,
+    "lineNumber": 141,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "method",
+    "name": "[Symbol.iterator]",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": true,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#[Symbol.iterator]",
+    "access": "public",
+    "description": null,
+    "lineNumber": 150,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 126,
+    "kind": "get",
+    "name": "length",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#length",
+    "access": "public",
+    "description": null,
+    "lineNumber": 155,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "method",
+    "name": "generateDataObject",
+    "memberof": "src/DataCollection.js~DataCollection",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataCollection.js~DataCollection#generateDataObject",
+    "access": "public",
+    "description": null,
+    "lineNumber": 158,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "file",
+    "name": "src/DataModel.js",
+    "content": "import DataObject from './DataObject.js'\n\n/**\n\tDataModel holds a map of string,value pairs, sometimes fetched from or sent to a back-end server.\n\n\tIt fires events when values are changed so that {Component}s and other logic can react.\n*/\nexport default class extends DataObject {\n\t/**\n\t@param {Object} [data={}]\n\t@param {Object} [options={}]\n\t@param {Object} [fieldDataObjects=null] a map of dataField (string) to DataObject (class), used to create sub-objects in this Model's data\n\t*/\n\tconstructor(data = {}, options = {}) {\n\t\tsuper(options)\n\t\tif (typeof this.options.fieldDataObjects === 'undefined') {\n\t\t\tthis.options.fieldDataObjects = {}\n\t\t}\n\t\tthis.data = {}\n\t\tthis.collection = null // set or unset by a DataCollection that claims or releases the model\n\t\tthis.setBatch(data)\n\t}\n\tcleanup() {\n\t\tsuper.cleanup()\n\t\tthis.data = null\n\t}\n\thas(dataField) {\n\t\treturn typeof this.data[dataField] !== 'undefined'\n\t}\n\t/**\n\tFind a value held within this DataModel. \n\t@return may be native types or, if mapped by options.fieldDataObjects, another DataObject\n\t*/\n\tget(dataField, defaultValue = null) {\n\t\tif (typeof this.data[dataField] === 'undefined' || this.data[dataField] === null || this.data[dataField] === '') {\n\t\t\treturn defaultValue\n\t\t}\n\t\treturn this.data[dataField]\n\t}\n\t/**\n\tSet a key/value pair\n\t*/\n\tset(dataField, value) {\n\t\tconst batch = {}\n\t\tbatch[dataField] = value\n\t\treturn this.setBatch(batch)\n\t}\n\n\t/**\n\tSet a group of values. The 'values' parameter should be an object that works in for(key in values) loops like a dictionary: {}\n\tIf a key is in options.fieldDataObjects then the value will be used to contruct a DataObject and that will be the saved value.\n\t*/\n\tsetBatch(values) {\n\t\tconst changes = {}\n\t\tlet changed = false\n\t\tfor (const key in values) {\n\t\t\tconst result = this._set(key, values[key])\n\t\t\tif (result !== DataObject._NO_CHANGE) {\n\t\t\t\tchanged = true\n\t\t\t\tchanges[key] = result\n\t\t\t\tthis.trigger(`changed:${key}`, this, key, result)\n\t\t\t}\n\t\t}\n\t\tif (changed) {\n\t\t\tthis.trigger('changed', this, changes)\n\t\t}\n\t\treturn changes\n\t}\n\tincrement(dataField, amount = 1) {\n\t\tconst currentVal = dataField in this.data ? this.data[dataField] : 0\n\t\tthis.set(dataField, currentVal + amount)\n\t}\n\t_set(dataField, data) {\n\t\t// _set does not fire any events, so you probably want to use set or setBatch\n\t\tif (data instanceof DataObject) {\n\t\t\tif (this.data[dataField] instanceof DataObject) {\n\t\t\t\tthis.data[dataField].reset(data.data)\n\t\t\t} else {\n\t\t\t\tthis.data[dataField] = data\n\t\t\t}\n\t\t} else if (this.options.fieldDataObjects[dataField]) {\n\t\t\tif (this.data[dataField]) {\n\t\t\t\tthis.data[dataField].reset(data)\n\t\t\t} else {\n\t\t\t\tthis.data[dataField] = new this.options.fieldDataObjects[dataField](data)\n\t\t\t}\n\t\t} else {\n\t\t\tif (this.data[dataField] === data) {\n\t\t\t\treturn DataObject._NO_CHANGE\n\t\t\t}\n\t\t\tif (this.data[dataField] instanceof DataObject) {\n\t\t\t\tthis.data[dataField].reset(data)\n\t\t\t} else {\n\t\t\t\tthis.data[dataField] = data\n\t\t\t}\n\t\t}\n\t\treturn this.data[dataField]\n\t}\n\tdelete() {\n\t\treturn new Promise((resolve, reject) => {\n\t\t\tsuper\n\t\t\t\t.delete()\n\t\t\t\t.then((...params) => {\n\t\t\t\t\tif (this.collection !== null) {\n\t\t\t\t\t\tthis.collection.remove(this)\n\t\t\t\t\t}\n\t\t\t\t\tresolve(...params)\n\t\t\t\t})\n\t\t\t\t.catch((...params) => {\n\t\t\t\t\treject(...params)\n\t\t\t\t})\n\t\t})\n\t}\n\treset(data = {}) {\n\t\tfor (const key in this.data) {\n\t\t\tif (typeof data[key] === 'undefined') {\n\t\t\t\tthis.data[key] = null\n\t\t\t}\n\t\t}\n\t\tthis.setBatch(data)\n\t\tthis.trigger('reset', this)\n\t}\n\tequals(obj) {\n\t\tif (obj === null || typeof obj === 'undefined') return false\n\t\tif (this === obj) return true\n\t\tif (typeof obj !== typeof this) return false\n\t\tif (obj.get('id') === this.get('id')) return true\n\t\treturn false\n\t}\n}\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/DataModel.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 129,
+    "kind": "class",
+    "name": "DataModel",
+    "memberof": "src/DataModel.js",
+    "static": true,
+    "longname": "src/DataModel.js~DataModel",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/DataModel.js",
+    "importStyle": "DataModel",
+    "description": "DataModel holds a map of string,value pairs, sometimes fetched from or sent to a back-end server.\n\nIt fires events when values are changed so that {Component}s and other logic can react.",
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/DataObject.js~DataObject"
+    ]
+  },
+  {
+    "__docId__": 130,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "data",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "fieldDataObjects",
+        "description": "a map of dataField (string) to DataObject (class), used to create sub-objects in this Model's data"
+      }
+    ]
+  },
+  {
+    "__docId__": 131,
+    "kind": "member",
+    "name": "data",
+    "memberof": "src/DataModel.js~DataModel",
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#data",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{}"
+      ]
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "member",
+    "name": "collection",
+    "memberof": "src/DataModel.js~DataModel",
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#collection",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "method",
+    "name": "cleanup",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#cleanup",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 135,
+    "kind": "method",
+    "name": "has",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#has",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "method",
+    "name": "get",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#get",
+    "access": "public",
+    "description": "Find a value held within this DataModel. ",
+    "lineNumber": 34,
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "may be native types or, if mapped by options.fieldDataObjects, another DataObject"
+    },
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ]
+  },
+  {
+    "__docId__": 137,
+    "kind": "method",
+    "name": "set",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#set",
+    "access": "public",
+    "description": "Set a key/value pair",
+    "lineNumber": 43,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 138,
+    "kind": "method",
+    "name": "setBatch",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#setBatch",
+    "access": "public",
+    "description": "Set a group of values. The 'values' parameter should be an object that works in for(key in values) loops like a dictionary: {}\nIf a key is in options.fieldDataObjects then the value will be used to contruct a DataObject and that will be the saved value.",
+    "lineNumber": 53,
+    "params": [
+      {
+        "name": "values",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 139,
+    "kind": "method",
+    "name": "increment",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#increment",
+    "access": "public",
+    "description": null,
+    "lineNumber": 69,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "types": [
+          "number"
+        ],
+        "defaultRaw": 1,
+        "defaultValue": "1"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 140,
+    "kind": "method",
+    "name": "_set",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#_set",
+    "access": "private",
+    "description": null,
+    "lineNumber": 73,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "dataField",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#delete",
+    "access": "public",
+    "description": null,
+    "lineNumber": 99,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "method",
+    "name": "reset",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#reset",
+    "access": "public",
+    "description": null,
+    "lineNumber": 114,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 143,
+    "kind": "method",
+    "name": "equals",
+    "memberof": "src/DataModel.js~DataModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataModel.js~DataModel#equals",
+    "access": "public",
+    "description": null,
+    "lineNumber": 123,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "file",
+    "name": "src/DataObject.js",
+    "content": "import EventHandler from './EventHandler.js'\n\n/**\nThe abstract class for DataModel and DataCollection\nIt holds the event mixin and the generic function of fetching data from a remote service\n*/\nconst DataObject = class extends EventHandler {\n\t/**\n\t@param {Object} [options={}]\n\t*/\n\tconstructor(options = {}) {\n\t\tsuper()\n\t\tthis.options = options\n\t\tthis._new = true // True until the first fetch returns, regardless of http status\n\t\tthis.cleanedUp = false\n\t}\n\tcleanup() {\n\t\tif (this.cleanedUp) return\n\t\tthis.cleanedUp = true\n\t\tsuper.cleanup()\n\t}\n\t/** @type {boolean} true until a fetch (even a failed fetch) returns */\n\tget isNew() {\n\t\treturn this._new\n\t}\n\t/** @type {string} the URL (relative or full) as a string for the endpoint used by this.fetch */\n\tget url() {\n\t\tthrow new Error('Extending classes must implement url()')\n\t}\n\n\t/** Clear out old data and set it to data, should trigger a 'reset' event */\n\treset(data = {}) {\n\t\tthrow new Error('Extending classes must implement reset')\n\t}\n\tparse(data) {\n\t\t// Extending classes can override this to parse the data received via a fetch\n\t\treturn data\n\t}\n\tequals(obj) {\n\t\t// Extending classes can override this to allow less strict equality\n\t\treturn this === obj\n\t}\n\tonFirstReset(func) {\n\t\t// If already reset, immediately call func, otherwise wait until the first reset and then call func\n\t\tif (this._new) {\n\t\t\tthis.addListener(\n\t\t\t\t() => {\n\t\t\t\t\tfunc(this)\n\t\t\t\t},\n\t\t\t\t'reset',\n\t\t\t\ttrue\n\t\t\t)\n\t\t} else {\n\t\t\tfunc(this)\n\t\t}\n\t}\n\tget fetchOptions() {\n\t\t// Extending classes can override this to add headers, methods, etc to the fetch call\n\t\treturn {\n\t\t\tcredentials: 'same-origin',\n\t\t}\n\t}\n\tfetch() {\n\t\t// Ask the server for data for this model or collection\n\t\treturn new Promise(\n\t\t\tfunction (resolve, reject) {\n\t\t\t\tthis.trigger('fetching', this)\n\t\t\t\tthis._innerFetch(this.url, this.fetchOptions)\n\t\t\t\t\t.then((response) => {\n\t\t\t\t\t\tif (response.status != 200) {\n\t\t\t\t\t\t\tthrow 'Fetch failed with status ' + response.status\n\t\t\t\t\t\t}\n\t\t\t\t\t\treturn response.json()\n\t\t\t\t\t})\n\t\t\t\t\t.then((data) => {\n\t\t\t\t\t\tdata = this.parse(data)\n\t\t\t\t\t\tthis._new = false\n\t\t\t\t\t\tthis.reset(data)\n\t\t\t\t\t\tthis.trigger('fetched', this, data, null)\n\t\t\t\t\t\tresolve(this)\n\t\t\t\t\t})\n\t\t\t\t\t.catch((err) => {\n\t\t\t\t\t\tthis._new = false\n\t\t\t\t\t\tthis.trigger('fetched', this, null, err)\n\t\t\t\t\t\treject(err)\n\t\t\t\t\t})\n\t\t\t}.bind(this)\n\t\t)\n\t}\n\t/**\n\tUse this to override the use of window.fetch\n\tFor example, MockService overrides this to intercept fetch calls and return its own responses for matched endpoints\n\t*/\n\t_innerFetch(...params) {\n\t\treturn fetch(...params)\n\t}\n\n\t/**\n\tFetch each DataObject and then wait for them all to return\n\tNote: this resolves when the fetches complete, regardless of whether they succeed or fail.\n\t*/\n\tstatic fetchAll(...dataObjects) {\n\t\tconst allAreFetched = () => {\n\t\t\tfor (const dataObject of dataObjects) {\n\t\t\t\tif (dataObject.isNew) return false\n\t\t\t}\n\t\t\treturn true\n\t\t}\n\t\treturn new Promise((resolve, reject) => {\n\t\t\tif (allAreFetched()) {\n\t\t\t\tresolve(...dataObjects)\n\t\t\t\treturn\n\t\t\t}\n\t\t\tfor (const dataObject of dataObjects) {\n\t\t\t\tdataObject\n\t\t\t\t\t.fetch()\n\t\t\t\t\t.then(() => {\n\t\t\t\t\t\tif (allAreFetched()) resolve(...dataObjects)\n\t\t\t\t\t})\n\t\t\t\t\t.catch((err) => {\n\t\t\t\t\t\tif (allAreFetched()) resolve(...dataObjects)\n\t\t\t\t\t})\n\t\t\t}\n\t\t})\n\t}\n\tsave() {\n\t\t// Tell the server to create (POST) or update (PUT) this model or collection\n\t\treturn new Promise(\n\t\t\tfunction (resolve, reject) {\n\t\t\t\tthis.trigger('saving', this)\n\t\t\t\tconst options = Object.assign({}, this.fetchOptions)\n\t\t\t\tif (this.isNew) {\n\t\t\t\t\toptions.method = 'post'\n\t\t\t\t} else {\n\t\t\t\t\toptions.method = 'put'\n\t\t\t\t}\n\t\t\t\toptions.body = JSON.stringify(this.data)\n\t\t\t\tthis._innerFetch(this.url, options)\n\t\t\t\t\t.then((response) => {\n\t\t\t\t\t\tif (response.status != 200) {\n\t\t\t\t\t\t\tthrow 'Save failed with status ' + response.status\n\t\t\t\t\t\t}\n\t\t\t\t\t\treturn response.json()\n\t\t\t\t\t})\n\t\t\t\t\t.then((data) => {\n\t\t\t\t\t\tdata = this.parse(data)\n\t\t\t\t\t\tthis.reset(data)\n\t\t\t\t\t\tthis._new = false\n\t\t\t\t\t\tthis.trigger('saved', this, data, null)\n\t\t\t\t\t\tresolve(this)\n\t\t\t\t\t})\n\t\t\t\t\t.catch((err) => {\n\t\t\t\t\t\tthis.trigger('saved', this, null, err)\n\t\t\t\t\t\treject(err)\n\t\t\t\t\t})\n\t\t\t}.bind(this)\n\t\t)\n\t}\n\tdelete() {\n\t\treturn new Promise(\n\t\t\tfunction (resolve, reject) {\n\t\t\t\tthis.trigger('deleting', this)\n\t\t\t\tconst options = Object.assign({}, this.fetchOptions)\n\t\t\t\toptions.method = 'delete'\n\t\t\t\tthis._innerFetch(this.url, options)\n\t\t\t\t\t.then((response) => {\n\t\t\t\t\t\tif (response.status != 200) {\n\t\t\t\t\t\t\tthrow 'Delete failed with status ' + response.status\n\t\t\t\t\t\t}\n\t\t\t\t\t\tthis.trigger('deleted', this, null)\n\t\t\t\t\t\tresolve()\n\t\t\t\t\t})\n\t\t\t\t\t.catch((err) => {\n\t\t\t\t\t\tthis.trigger('deleted', this, err)\n\t\t\t\t\t\treject(err)\n\t\t\t\t\t})\n\t\t\t}.bind(this)\n\t\t)\n\t}\n}\n\nDataObject._NO_CHANGE = Symbol('no change')\n\nexport default DataObject\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/DataObject.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 145,
+    "kind": "class",
+    "name": "DataObject",
+    "memberof": "src/DataObject.js",
+    "static": true,
+    "longname": "src/DataObject.js~DataObject",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/DataObject.js",
+    "importStyle": "DataObject",
+    "description": "The abstract class for DataModel and DataCollection\nIt holds the event mixin and the generic function of fetching data from a remote service",
+    "lineNumber": 7,
+    "interface": false,
+    "extends": [
+      "src/EventHandler.js~EventHandler"
+    ]
+  },
+  {
+    "__docId__": 146,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "options",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "name": "options",
+    "memberof": "src/DataObject.js~DataObject",
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#options",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "member",
+    "name": "_new",
+    "memberof": "src/DataObject.js~DataObject",
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#_new",
+    "access": "private",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "member",
+    "name": "cleanedUp",
+    "memberof": "src/DataObject.js~DataObject",
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#cleanedUp",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 150,
+    "kind": "method",
+    "name": "cleanup",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#cleanup",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 152,
+    "kind": "get",
+    "name": "isNew",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#isNew",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "get",
+    "name": "url",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#url",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "method",
+    "name": "reset",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#reset",
+    "access": "public",
+    "description": "Clear out old data and set it to data, should trigger a 'reset' event",
+    "lineNumber": 32,
+    "params": [
+      {
+        "name": "data",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 155,
+    "kind": "method",
+    "name": "parse",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#parse",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "method",
+    "name": "equals",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#equals",
+    "access": "public",
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "method",
+    "name": "onFirstReset",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#onFirstReset",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "params": [
+      {
+        "name": "func",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 158,
+    "kind": "get",
+    "name": "fetchOptions",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#fetchOptions",
+    "access": "public",
+    "description": null,
+    "lineNumber": 57,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"credentials\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "method",
+    "name": "fetch",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#fetch",
+    "access": "public",
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "method",
+    "name": "_innerFetch",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#_innerFetch",
+    "access": "private",
+    "description": "Use this to override the use of window.fetch\nFor example, MockService overrides this to intercept fetch calls and return its own responses for matched endpoints",
+    "lineNumber": 94,
+    "ignore": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "method",
+    "name": "fetchAll",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/DataObject.js~DataObject.fetchAll",
+    "access": "public",
+    "description": "Fetch each DataObject and then wait for them all to return\nNote: this resolves when the fetches complete, regardless of whether they succeed or fail.",
+    "lineNumber": 102,
+    "params": [
+      {
+        "name": "dataObjects",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "method",
+    "name": "save",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#save",
+    "access": "public",
+    "description": null,
+    "lineNumber": 126,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/DataObject.js~DataObject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DataObject.js~DataObject#delete",
+    "access": "public",
+    "description": null,
+    "lineNumber": 159,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 167,
+    "kind": "file",
+    "name": "src/EventHandler.js",
+    "content": "/**\nEventListener holds information about listeners on an object with the EventHandler\n*/\nconst EventListener = class {\n\tconstructor(eventName, callback, once = false) {\n\t\tthis.eventName = eventName\n\t\tthis.callback = callback\n\t\tthis.once = once\n\t}\n\tmatches(eventName) {\n\t\treturn this.eventName === EventHandler.ALL_EVENTS || eventName === this.eventName\n\t}\n\tdistributeEvent(eventName, ...params) {\n\t\tif (this.matches(eventName)) {\n\t\t\tthis.callback(eventName, ...params)\n\t\t\treturn true\n\t\t}\n\t\treturn false\n\t}\n}\n\n/**\nEventHandler is the base class that implements event distribution\n*/\nconst EventHandler = class {\n\t/** Send an event to listeners */\n\ttrigger(eventName, ...params) {\n\t\tconst listenersToRemove = []\n\t\tfor (const listener of this.listeners) {\n\t\t\tif (listener.distributeEvent(eventName, ...params) && listener.once) {\n\t\t\t\tlistenersToRemove.push(listener)\n\t\t\t}\n\t\t}\n\t\tfor (const listener of listenersToRemove) {\n\t\t\tthis.removeListener(listener.callback, listener.eventName)\n\t\t}\n\t}\n\n\t/**\n\t@param {Object|Symbol} [eventName] a string or Symbol indicating the event to watch\n\t@param {function(eventName: string, eventSource: EventHandler)} callback often includes more parameters that are specific to the event\n\t@param {boolean} [once=false] If true then the listener is removed after receiving one event\n\t*/\n\taddListener(eventName, callback, once = false) {\n\t\tthis.listeners.push(new EventListener(eventName, callback, once))\n\t}\n\n\tremoveListener(eventName, callback) {\n\t\tlet remove = false\n\t\tfor (let i = 0; i < this.listeners.length; i++) {\n\t\t\tremove = false\n\t\t\tif (this.listeners[i].callback === callback) {\n\t\t\t\tif (eventName == EventHandler.ALL_EVENTS) {\n\t\t\t\t\tremove = true\n\t\t\t\t} else if (this.listeners[i].matches(eventName)) {\n\t\t\t\t\tremove = true\n\t\t\t\t}\n\t\t\t}\n\t\t\tif (remove) {\n\t\t\t\tthis.listeners.splice(i, 1)\n\t\t\t\ti -= 1\n\t\t\t}\n\t\t}\n\t}\n\n\t/** @return {EventListener[]} */\n\tget listeners() {\n\t\tif (typeof this._listeners == 'undefined') {\n\t\t\tthis._listeners = []\n\t\t}\n\t\treturn this._listeners\n\t}\n\n\tcleanup() {\n\t\tif (typeof this._listeners !== 'undefined') {\n\t\t\tthis._listeners.length = 0\n\t\t}\n\t}\n}\nEventHandler.ALL_EVENTS = Symbol('all events')\n\nexport default EventHandler\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/EventHandler.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 168,
+    "kind": "class",
+    "name": "EventListener",
+    "memberof": "src/EventHandler.js",
+    "static": true,
+    "longname": "src/EventHandler.js~EventListener",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/EventHandler.js",
+    "importStyle": null,
+    "description": "EventListener holds information about listeners on an object with the EventHandler",
+    "lineNumber": 4,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 169,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/EventHandler.js~EventListener",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventListener#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true
+  },
+  {
+    "__docId__": 170,
+    "kind": "member",
+    "name": "eventName",
+    "memberof": "src/EventHandler.js~EventListener",
+    "static": false,
+    "longname": "src/EventHandler.js~EventListener#eventName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 171,
+    "kind": "member",
+    "name": "callback",
+    "memberof": "src/EventHandler.js~EventListener",
+    "static": false,
+    "longname": "src/EventHandler.js~EventListener#callback",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 172,
+    "kind": "member",
+    "name": "once",
+    "memberof": "src/EventHandler.js~EventListener",
+    "static": false,
+    "longname": "src/EventHandler.js~EventListener#once",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 173,
+    "kind": "method",
+    "name": "matches",
+    "memberof": "src/EventHandler.js~EventListener",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventListener#matches",
+    "access": "public",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [
+      {
+        "name": "eventName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 174,
+    "kind": "method",
+    "name": "distributeEvent",
+    "memberof": "src/EventHandler.js~EventListener",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventListener#distributeEvent",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [
+      {
+        "name": "eventName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "params",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 175,
+    "kind": "class",
+    "name": "EventHandler",
+    "memberof": "src/EventHandler.js",
+    "static": true,
+    "longname": "src/EventHandler.js~EventHandler",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/EventHandler.js",
+    "importStyle": "EventHandler",
+    "description": "EventHandler is the base class that implements event distribution",
+    "lineNumber": 25,
+    "interface": false
+  },
+  {
+    "__docId__": 176,
+    "kind": "method",
+    "name": "trigger",
+    "memberof": "src/EventHandler.js~EventHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventHandler#trigger",
+    "access": "public",
+    "description": "Send an event to listeners",
+    "lineNumber": 27,
+    "params": [
+      {
+        "name": "eventName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "params",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 177,
+    "kind": "method",
+    "name": "addListener",
+    "memberof": "src/EventHandler.js~EventHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventHandler#addListener",
+    "access": "public",
+    "description": "",
+    "lineNumber": 44,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object",
+          "Symbol"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "eventName",
+        "description": "a string or Symbol indicating the event to watch"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(eventName: string, eventSource: EventHandler)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "often includes more parameters that are specific to the event"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "once",
+        "description": "If true then the listener is removed after receiving one event"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 178,
+    "kind": "method",
+    "name": "removeListener",
+    "memberof": "src/EventHandler.js~EventHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventHandler#removeListener",
+    "access": "public",
+    "description": null,
+    "lineNumber": 48,
+    "undocument": true,
+    "params": [
+      {
+        "name": "eventName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "callback",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 179,
+    "kind": "get",
+    "name": "listeners",
+    "memberof": "src/EventHandler.js~EventHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventHandler#listeners",
+    "access": "public",
+    "description": null,
+    "lineNumber": 67,
+    "return": {
+      "nullable": null,
+      "types": [
+        "EventListener[]"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 180,
+    "kind": "member",
+    "name": "_listeners",
+    "memberof": "src/EventHandler.js~EventHandler",
+    "static": false,
+    "longname": "src/EventHandler.js~EventHandler#_listeners",
+    "access": "private",
+    "description": null,
+    "lineNumber": 69,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 181,
+    "kind": "method",
+    "name": "cleanup",
+    "memberof": "src/EventHandler.js~EventHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventHandler.js~EventHandler#cleanup",
+    "access": "public",
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 182,
+    "kind": "file",
+    "name": "src/Localizer.js",
+    "content": "import EventHandler from './EventHandler.js'\nimport dom from './DOM.js'\n\nlet Singleton = null\nlet MonthNames = null // [locale, [names]]\nlet DateFieldOrder = null\n\nconst TestDateMilliseconds = 1517385600000\n\nconst GatheringCookieName = 'potassiumes-localizer-gathering'\n/**\nLocalizer provides the functionality necessary to:\n\n- pick a string translation based on language\n- format dates based on locale and time zone\n\n@todo detect language, locale, and timezone\n@todo load translations\n*/\nconst Localizer = class extends EventHandler {\n\tconstructor() {\n\t\tsuper()\n\t\t/** @type {Map<{string},{Translation}>} */\n\t\tthis._translations = new Map()\n\t\tthis._defaultLocales = navigator.languages ? navigator.languages : [navigator.language]\n\t\tthis._defaultTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone\n\n\t\tthis._dateTimeFormatter = new Intl.DateTimeFormat(this._defaultLocales)\n\n\t\tthis._gathering = dom.getCookie(GatheringCookieName) === 'true'\n\t\tthis._gatheredStrings = this._gathering ? [] : null\n\t}\n\n\tget defaultLocales() {\n\t\treturn this._defaultLocales\n\t}\n\n\tget defaultTimeZone() {\n\t\treturn this._defaultTimeZone\n\t}\n\n\t/**\n\tThis should NOT be turned on in production because it continuously grows in memory.\n\t@return {boolean} true if the Localizer is accumulating strings to translate\n\t*/\n\tget gathering() {\n\t\treturn this._gathering\n\t}\n\n\tset gathering(val) {\n\t\tif (!!val) {\n\t\t\tif (this._gathering) return\n\t\t\tdom.setCookie(GatheringCookieName, 'true')\n\t\t\tthis._gathering = true\n\t\t\tthis._gatheredStrings = []\n\t\t} else {\n\t\t\tif (this._gathering === false) return\n\t\t\tdom.removeCookie(GatheringCookieName)\n\t\t\tthis._gathering = false\n\t\t\tthis._gatheredStrings = null\n\t\t}\n\t}\n\n\tget gatheredData() {\n\t\tif (this._gathering === false) return null\n\t\treturn {\n\t\t\tstrings: this._gatheredStrings,\n\t\t}\n\t}\n\n\t_gatherString(key, value, defaultValue) {\n\t\tif (!key || !key.trim()) return\n\t\tthis._gatheredStrings.push({\n\t\t\tkey: key,\n\t\t\tvalue: value,\n\t\t\tdefaultValue: defaultValue,\n\t\t})\n\t}\n\n\ttranslate(key, defaultValue = null) {\n\t\tconst translation = this._translations.get(key)\n\t\tif (!translation) {\n\t\t\tif (this._gathering) this._gatherString(key, null, defaultValue)\n\t\t\treturn defaultValue !== null ? defaultValue : key\n\t\t}\n\t\tconst value = translation.get(key)\n\t\tif (!value) {\n\t\t\tif (this._gathering) this._gatherString(key, null, defaultValue)\n\t\t\treturn defaultValue !== null ? defaultValue : key\n\t\t}\n\t\tif (this._gathering) this._gatherString(key, value, defaultValue)\n\t\treturn value\n\t}\n\n\tget monthNames() {\n\t\tif (MonthNames === null || MonthNames[0] !== this._defaultLocales[0]) {\n\t\t\tMonthNames = []\n\t\t\tMonthNames[0] = this._defaultLocales\n\t\t\tMonthNames[1] = []\n\t\t\tconst options = {\n\t\t\t\tmonth: 'long',\n\t\t\t}\n\t\t\tconst date = new Date()\n\t\t\tdate.setDate(1)\n\t\t\tfor (let i = 0; i < 12; i++) {\n\t\t\t\tdate.setMonth(i)\n\t\t\t\tMonthNames[1].push(date.toLocaleString(this._defaultLocales, options))\n\t\t\t}\n\t\t}\n\t\treturn MonthNames[1]\n\t}\n\n\t/**\n\tDifferent locales order their dates in various ways: mm/dd/yyyy or yyyy.mm.dd or 2012년 12월 20일 목요일\n\t@return {string[]} - a length 3 array of 'day', 'month', and 'year' in the order that this locale renders date fields\n\t*/\n\tget dateFieldOrder() {\n\t\tif (DateFieldOrder !== null) return DateFieldOrder\n\n\t\tif (typeof this._dateTimeFormatter.formatToParts === 'function') {\n\t\t\tDateFieldOrder = this._dateTimeFormatter\n\t\t\t\t.formatToParts(new Date(), {\n\t\t\t\t\tyear: 'numeric',\n\t\t\t\t\tmonth: 'numeric',\n\t\t\t\t\tday: 'numeric',\n\t\t\t\t})\n\t\t\t\t.filter((part) => part.type !== 'literal')\n\t\t\t\t.map((part) => part.type)\n\t\t\treturn DateFieldOrder\n\t\t}\n\n\t\t// Ok the correct but less supported function is not there, try this hack\n\t\tconst tokens = new Date(TestDateMilliseconds)\n\t\t\t.toLocaleDateString(this._defaultLocales, {\n\t\t\t\tday: 'numeric',\n\t\t\t\tmonth: 'numeric',\n\t\t\t\tyear: 'numeric',\n\t\t\t})\n\t\t\t.split(/[\\/ \\.]/)\n\t\t\t.filter((token) => token.trim().length > 0)\n\t\tlet monthIndex = 0\n\t\tlet yearIndex = 0\n\t\tfor (let i = 1; i < 3; i++) {\n\t\t\tif (tokens[i].length < tokens[monthIndex].length) monthIndex = i\n\t\t\tif (tokens[i].length > tokens[yearIndex].length) yearIndex = i\n\t\t}\n\t\tDateFieldOrder = []\n\t\tDateFieldOrder[monthIndex] = 'month'\n\t\tDateFieldOrder[yearIndex] = 'year'\n\t\tfor (let i = 0; i < 3; i++) {\n\t\t\tif (!DateFieldOrder[i]) {\n\t\t\t\tDateFieldOrder[i] = 'day'\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t\treturn DateFieldOrder\n\t}\n\n\tformatDateObject(date, options) {\n\t\treturn date.toLocaleDateString(this._defaultLocales, options)\n\t}\n\n\tformatDate(date, long = false, options = null) {\n\t\treturn this.formatDateObject(\n\t\t\tdate,\n\t\t\toptions || {\n\t\t\t\tyear: 'numeric',\n\t\t\t\tmonth: long ? 'long' : 'numeric',\n\t\t\t\tday: 'numeric',\n\t\t\t}\n\t\t)\n\t}\n\n\tformatDateTime(date, long = false, options = null) {\n\t\treturn this.formatDateObject(\n\t\t\tdate,\n\t\t\toptions || {\n\t\t\t\thour: 'numeric',\n\t\t\t\tminute: 'numeric',\n\t\t\t\tsecond: 'numeric',\n\t\t\t\thour12: false,\n\t\t\t\ttimeZone: this._defaultTimeZone,\n\t\t\t\tyear: 'numeric',\n\t\t\t\tmonth: long ? 'long' : 'numeric',\n\t\t\t\tday: 'numeric',\n\t\t\t}\n\t\t)\n\t}\n\n\tstatic get Singleton() {\n\t\tif (Singleton === null) {\n\t\t\tSingleton = new Localizer()\n\t\t}\n\t\treturn Singleton\n\t}\n}\n\n/**\nTranslation holds a map of source phrases to translated phrases in a given language\n*/\nconst Translation = class {\n\tconstructor(language) {\n\t\tthis._language = language\n\t\t/** @type {Map<{string} key, {string} value>} */\n\t\tthis._map = new Map()\n\t}\n\tget language() {\n\t\treturn this._language\n\t}\n\n\tget(key) {\n\t\treturn this._map.get(key)\n\t}\n}\n\n/**\nA shorthand function for getting a translation\n\n@param {string} key the source phrase, like 'Hello!'\n@param {string} [defaultValue=null] the value to return if there is no translation\n@return {string} a translation, like '¡Hola!'\n*/\nfunction lt(key, defaultValue) {\n\treturn Localizer.Singleton.translate(key, defaultValue)\n}\n\n/**\nA shorthand function for getting a localized date\n\n@param {Date} date\n@param {boolean} [long=true]\n@param {options} [options=null]\n@return {string} a localized string representing the date\n*/\nfunction ld(date, long = true, options = null) {\n\treturn Localizer.Singleton.formatDate(date, long, options)\n}\n\n/**\nA shorthand function for getting a localized date and time\n\n@param {Date} date\n@param {boolean} [long=true]\n@param {options} [options=null]\n@return {string} a localized string representing the date and time\n*/\nfunction ldt(date, long = true, options = null) {\n\treturn Localizer.Singleton.formatDateTime(date, long, options)\n}\n\n/**\nA shorthand function for getting a localized date or time string using your own options\n@see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString\n\n@param {Date} date\n@param {options} [options=null]\n@return {string} a localized string representing the date\n*/\nfunction ldo(date, options = null) {\n\treturn Localizer.Singleton.formatDateObject(date, options)\n}\n\nexport default Localizer\nexport { Localizer, Translation, lt, ld, ldt, ldo }\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/Localizer.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 183,
+    "kind": "variable",
+    "name": "Singleton",
+    "memberof": "src/Localizer.js",
+    "static": true,
+    "longname": "src/Localizer.js~Singleton",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 184,
+    "kind": "variable",
+    "name": "MonthNames",
+    "memberof": "src/Localizer.js",
+    "static": true,
+    "longname": "src/Localizer.js~MonthNames",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 185,
+    "kind": "variable",
+    "name": "DateFieldOrder",
+    "memberof": "src/Localizer.js",
+    "static": true,
+    "longname": "src/Localizer.js~DateFieldOrder",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 186,
+    "kind": "variable",
+    "name": "TestDateMilliseconds",
+    "memberof": "src/Localizer.js",
+    "static": true,
+    "longname": "src/Localizer.js~TestDateMilliseconds",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 187,
+    "kind": "variable",
+    "name": "GatheringCookieName",
+    "memberof": "src/Localizer.js",
+    "static": true,
+    "longname": "src/Localizer.js~GatheringCookieName",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 188,
+    "kind": "class",
+    "name": "Localizer",
+    "memberof": "src/Localizer.js",
+    "static": true,
+    "longname": "src/Localizer.js~Localizer",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": "Localizer",
+    "description": "Localizer provides the functionality necessary to:\n\n- pick a string translation based on language\n- format dates based on locale and time zone",
+    "lineNumber": 20,
+    "todo": [
+      "detect language, locale, and timezone",
+      "load translations"
+    ],
+    "interface": false,
+    "extends": [
+      "src/EventHandler.js~EventHandler"
+    ]
+  },
+  {
+    "__docId__": 189,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true
+  },
+  {
+    "__docId__": 190,
+    "kind": "member",
+    "name": "_translations",
+    "memberof": "src/Localizer.js~Localizer",
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#_translations",
+    "access": "private",
+    "description": null,
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Map<{string},{Translation}>"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 191,
+    "kind": "member",
+    "name": "_defaultLocales",
+    "memberof": "src/Localizer.js~Localizer",
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#_defaultLocales",
+    "access": "private",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 192,
+    "kind": "member",
+    "name": "_defaultTimeZone",
+    "memberof": "src/Localizer.js~Localizer",
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#_defaultTimeZone",
+    "access": "private",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 193,
+    "kind": "member",
+    "name": "_dateTimeFormatter",
+    "memberof": "src/Localizer.js~Localizer",
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#_dateTimeFormatter",
+    "access": "private",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 194,
+    "kind": "member",
+    "name": "_gathering",
+    "memberof": "src/Localizer.js~Localizer",
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#_gathering",
+    "access": "private",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 195,
+    "kind": "member",
+    "name": "_gatheredStrings",
+    "memberof": "src/Localizer.js~Localizer",
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#_gatheredStrings",
+    "access": "private",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 196,
+    "kind": "get",
+    "name": "defaultLocales",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#defaultLocales",
+    "access": "public",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 197,
+    "kind": "get",
+    "name": "defaultTimeZone",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#defaultTimeZone",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 198,
+    "kind": "get",
+    "name": "gathering",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#gathering",
+    "access": "public",
+    "description": "This should NOT be turned on in production because it continuously grows in memory.",
+    "lineNumber": 46,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "true if the Localizer is accumulating strings to translate"
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 199,
+    "kind": "set",
+    "name": "gathering",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#gathering",
+    "access": "public",
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true
+  },
+  {
+    "__docId__": 204,
+    "kind": "get",
+    "name": "gatheredData",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#gatheredData",
+    "access": "public",
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"strings\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 205,
+    "kind": "method",
+    "name": "_gatherString",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#_gatherString",
+    "access": "private",
+    "description": null,
+    "lineNumber": 71,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "defaultValue",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 206,
+    "kind": "method",
+    "name": "translate",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#translate",
+    "access": "public",
+    "description": null,
+    "lineNumber": 80,
+    "undocument": true,
+    "params": [
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "defaultValue",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 207,
+    "kind": "get",
+    "name": "monthNames",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#monthNames",
+    "access": "public",
+    "description": null,
+    "lineNumber": 95,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 208,
+    "kind": "get",
+    "name": "dateFieldOrder",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#dateFieldOrder",
+    "access": "public",
+    "description": "Different locales order their dates in various ways: mm/dd/yyyy or yyyy.mm.dd or 2012년 12월 20일 목요일",
+    "lineNumber": 117,
+    "return": {
+      "nullable": null,
+      "types": [
+        "string[]"
+      ],
+      "spread": false,
+      "description": "a length 3 array of 'day', 'month', and 'year' in the order that this locale renders date fields"
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 209,
+    "kind": "method",
+    "name": "formatDateObject",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#formatDateObject",
+    "access": "public",
+    "description": null,
+    "lineNumber": 159,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 210,
+    "kind": "method",
+    "name": "formatDate",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#formatDate",
+    "access": "public",
+    "description": null,
+    "lineNumber": 163,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "long",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 211,
+    "kind": "method",
+    "name": "formatDateTime",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Localizer#formatDateTime",
+    "access": "public",
+    "description": null,
+    "lineNumber": 174,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "long",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 212,
+    "kind": "get",
+    "name": "Singleton",
+    "memberof": "src/Localizer.js~Localizer",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Localizer.js~Localizer.Singleton",
+    "access": "public",
+    "description": null,
+    "lineNumber": 190,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 213,
+    "kind": "class",
+    "name": "Translation",
+    "memberof": "src/Localizer.js",
+    "static": true,
+    "longname": "src/Localizer.js~Translation",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": "{Translation}",
+    "description": "Translation holds a map of source phrases to translated phrases in a given language",
+    "lineNumber": 201,
+    "interface": false
+  },
+  {
+    "__docId__": 214,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Localizer.js~Translation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Translation#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 202,
+    "undocument": true
+  },
+  {
+    "__docId__": 215,
+    "kind": "member",
+    "name": "_language",
+    "memberof": "src/Localizer.js~Translation",
+    "static": false,
+    "longname": "src/Localizer.js~Translation#_language",
+    "access": "private",
+    "description": null,
+    "lineNumber": 203,
+    "undocument": true,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 216,
+    "kind": "member",
+    "name": "_map",
+    "memberof": "src/Localizer.js~Translation",
+    "static": false,
+    "longname": "src/Localizer.js~Translation#_map",
+    "access": "private",
+    "description": null,
+    "lineNumber": 205,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Map<{string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 217,
+    "kind": "get",
+    "name": "language",
+    "memberof": "src/Localizer.js~Translation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Translation#language",
+    "access": "public",
+    "description": null,
+    "lineNumber": 207,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 218,
+    "kind": "method",
+    "name": "get",
+    "memberof": "src/Localizer.js~Translation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Localizer.js~Translation#get",
+    "access": "public",
+    "description": null,
+    "lineNumber": 211,
+    "undocument": true,
+    "params": [
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 219,
+    "kind": "function",
+    "name": "lt",
+    "memberof": "src/Localizer.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Localizer.js~lt",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": "{lt}",
+    "description": "A shorthand function for getting a translation",
+    "lineNumber": 223,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": "the source phrase, like 'Hello!'"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "defaultValue",
+        "description": "the value to return if there is no translation"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "a translation, like '¡Hola!'"
+    }
+  },
+  {
+    "__docId__": 220,
+    "kind": "function",
+    "name": "ld",
+    "memberof": "src/Localizer.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Localizer.js~ld",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": "{ld}",
+    "description": "A shorthand function for getting a localized date",
+    "lineNumber": 235,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Date"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "date",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "long",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "options"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "options",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "a localized string representing the date"
+    }
+  },
+  {
+    "__docId__": 221,
+    "kind": "function",
+    "name": "ldt",
+    "memberof": "src/Localizer.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Localizer.js~ldt",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": "{ldt}",
+    "description": "A shorthand function for getting a localized date and time",
+    "lineNumber": 247,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Date"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "date",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "long",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "options"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "options",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "a localized string representing the date and time"
+    }
+  },
+  {
+    "__docId__": 222,
+    "kind": "function",
+    "name": "ldo",
+    "memberof": "src/Localizer.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Localizer.js~ldo",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Localizer.js",
+    "importStyle": "{ldo}",
+    "description": "A shorthand function for getting a localized date or time string using your own options",
+    "see": [
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString"
+    ],
+    "lineNumber": 259,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Date"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "date",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "options"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "options",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "a localized string representing the date"
+    }
+  },
+  {
+    "__docId__": 223,
+    "kind": "file",
+    "name": "src/MockService.js",
+    "content": "import DataObject from './DataObject.js'\n\n/*\nMockService attaches itself to DataObject and will service fetches if it has a matching endpoint, otherwise it uses window.fetch.\n\n\tlet service = new MockService()\n\tservice.addEndpoint(/^blog\\/([0-9a-z]+)$/, (...params) => {\n\t\tvar debug = {hello: \"world\"}\n\t\tlet blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'});\n\t\treturn new Response(blob, { \"status\" : 200 , \"statusText\" : \"OK\" })\n\t})\n\tservice.attachToDataObject()\n\n*/\nexport default class MockService {\n\tconstructor() {\n\t\tthis.endpoints = []\n\t}\n\n\t/*\n\tAdd an endpoint with a service function that must return a Response \n\t*/\n\taddEndpoint(urlRegex, serviceFunction) {\n\t\tthis.endpoints.push(new MockEndpoint(urlRegex, serviceFunction))\n\t}\n\n\t/*\n\tAdd an endpoint with a service function that should return a JSON serializable data structure\n\t*/\n\taddJSONEndpoint(urlRegex, jsonServiceFunction) {\n\t\tthis.addEndpoint(urlRegex, (url, ...params) => {\n\t\t\tconst json = jsonServiceFunction(url, ...params)\n\t\t\tif (json === null) {\n\t\t\t\treturn new Response(new Blob(), { status: 404, statusText: 'File not found, yo' })\n\t\t\t} else {\n\t\t\t\treturn new Response(new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' }), {\n\t\t\t\t\tstatus: 200,\n\t\t\t\t\tstatusText: 'OK',\n\t\t\t\t})\n\t\t\t}\n\t\t})\n\t}\n\n\t/*\n\tTake over DataObject.protocol._innerFetch to intercept fetches and service with endpoints if possible\n\t*/\n\tattachToDataObject() {\n\t\tDataObject.prototype._innerFetch = (url, ...params) => {\n\t\t\tfor (const endpoint of this.endpoints) {\n\t\t\t\tif (endpoint.match(url)) {\n\t\t\t\t\treturn new Promise((resolve, reject) => {\n\t\t\t\t\t\tresolve(endpoint.service(url, ...params))\n\t\t\t\t\t})\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn fetch(url, ...params)\n\t\t}\n\t}\n}\n\n/*\nMockEndpoint is instantiated during the MockService.addEndpoint call, just to wrap the data and provide handy URL matching and servicing\n*/\nconst MockEndpoint = class {\n\tconstructor(urlRegex, serviceFunction) {\n\t\tthis.urlRegex = urlRegex\n\t\tthis.serviceFunction = serviceFunction\n\t}\n\tmatch(url) {\n\t\treturn url.match(this.urlRegex)\n\t}\n\tservice(...params) {\n\t\treturn this.serviceFunction(...params)\n\t}\n}\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/MockService.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 224,
+    "kind": "class",
+    "name": "MockService",
+    "memberof": "src/MockService.js",
+    "static": true,
+    "longname": "src/MockService.js~MockService",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/MockService.js",
+    "importStyle": "MockService",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 225,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/MockService.js~MockService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MockService.js~MockService#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true
+  },
+  {
+    "__docId__": 226,
+    "kind": "member",
+    "name": "endpoints",
+    "memberof": "src/MockService.js~MockService",
+    "static": false,
+    "longname": "src/MockService.js~MockService#endpoints",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 227,
+    "kind": "method",
+    "name": "addEndpoint",
+    "memberof": "src/MockService.js~MockService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MockService.js~MockService#addEndpoint",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [
+      {
+        "name": "urlRegex",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "serviceFunction",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 228,
+    "kind": "method",
+    "name": "addJSONEndpoint",
+    "memberof": "src/MockService.js~MockService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MockService.js~MockService#addJSONEndpoint",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "params": [
+      {
+        "name": "urlRegex",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "jsonServiceFunction",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 229,
+    "kind": "method",
+    "name": "attachToDataObject",
+    "memberof": "src/MockService.js~MockService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MockService.js~MockService#attachToDataObject",
+    "access": "public",
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 230,
+    "kind": "class",
+    "name": "MockEndpoint",
+    "memberof": "src/MockService.js",
+    "static": true,
+    "longname": "src/MockService.js~MockEndpoint",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/MockService.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 231,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/MockService.js~MockEndpoint",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MockService.js~MockEndpoint#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 65,
+    "undocument": true
+  },
+  {
+    "__docId__": 232,
+    "kind": "member",
+    "name": "urlRegex",
+    "memberof": "src/MockService.js~MockEndpoint",
+    "static": false,
+    "longname": "src/MockService.js~MockEndpoint#urlRegex",
+    "access": "public",
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 233,
+    "kind": "member",
+    "name": "serviceFunction",
+    "memberof": "src/MockService.js~MockEndpoint",
+    "static": false,
+    "longname": "src/MockService.js~MockEndpoint#serviceFunction",
+    "access": "public",
+    "description": null,
+    "lineNumber": 67,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 234,
+    "kind": "method",
+    "name": "match",
+    "memberof": "src/MockService.js~MockEndpoint",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MockService.js~MockEndpoint#match",
+    "access": "public",
+    "description": null,
+    "lineNumber": 69,
+    "undocument": true,
+    "params": [
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 235,
+    "kind": "method",
+    "name": "service",
+    "memberof": "src/MockService.js~MockEndpoint",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/MockService.js~MockEndpoint#service",
+    "access": "public",
+    "description": null,
+    "lineNumber": 72,
+    "undocument": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 236,
+    "kind": "file",
+    "name": "src/Router.js",
+    "content": "import EventHandler from './EventHandler.js'\n\n/*\n\tRouter maps window.history events and URL path fragments to events\n\tFor example, routing /^blog\\/([0-9]+)\\/app\\/([0-9a-z]+)$/ to an event with parameters for blog and app IDs:\n\n\t\tlet router = new Router()\n\n\t\t// Set up a couple of routes, each with a URL matching regexs and a route name\n\t\trouter.addRoute(/^$/, 'default') // matches http://<domain>/<path> and http://<domain>/<path>#\n\t\trouter.addRoute(/^blog\\/([0-9]+)\\/app\\/([0-9a-z\\-]+)$/, 'blog-app') // matches http://<domain>/<path>#blog/1123/app/abc-123\n\n\t\t// Listen for the route\n\t\trouter.addListener((routeName, hash, ...regexMatches) => {\n\t\t\t// If this was an event triggered by routing to #blog/1123/app/abc-123 then:\n\t\t\t// `routeName` would be 'blog-app'\n\t\t\t// `hash` would be 'blog/1123/app/abc-123'\n\t\t\t// `regexMatches` would be ['1123', 'abc-123']\n\t\t}, 'blog-app')\n*/\nconst Router = class extends EventHandler {\n\tconstructor() {\n\t\tsuper()\n\t\tthis.cleanedUp = false\n\t\tthis.routes = []\n\t\tthis.hashListener = this._checkHash.bind(this)\n\t\twindow.addEventListener('hashchange', this.hashListener, false)\n\t}\n\tcleanup() {\n\t\tif (this.cleanedUp) return\n\t\tthis.cleanedUp = true\n\t\twindow.removeEventListener('hashchange', this.hashListener)\n\t\tsuper.cleanup()\n\t}\n\taddRoute(regex, eventName, ...parameters) {\n\t\tthis.routes.push(new Route(regex, eventName, ...parameters))\n\t}\n\tstart() {\n\t\tthis._checkHash()\n\t}\n\t_checkHash() {\n\t\tthis._handleNewPath(document.location.hash.slice(1))\n\t}\n\t_handleNewPath(path) {\n\t\tfor (const route of this.routes) {\n\t\t\tconst matches = route.matches(path)\n\t\t\tif (matches == null) {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tthis.trigger(route.eventName, ...matches, ...route.parameters)\n\t\t\treturn\n\t\t}\n\t\tthis.trigger(Router.UnknownRouteEvent, path)\n\t}\n}\n\nRouter.RouteAddedEvent = 'route-added'\nRouter.StartedRoutingEvent = 'started-routing'\nRouter.UnknownRouteEvent = 'unknown-route'\n\nexport default Router\n\n/*\n\tRoute tracks routes for Router\n*/\nconst Route = class {\n\tconstructor(regex, eventName, ...parameters) {\n\t\tthis.regex = regex\n\t\tthis.eventName = eventName\n\t\tthis.parameters = parameters\n\t}\n\tmatches(path) {\n\t\treturn path.match(this.regex)\n\t}\n}\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/Router.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 237,
+    "kind": "class",
+    "name": "Route",
+    "memberof": "src/Router.js",
+    "static": true,
+    "longname": "src/Router.js~Route",
+    "access": "public",
+    "export": false,
+    "importPath": "bink/src/Router.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 238,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Router.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Route#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 67,
+    "undocument": true
+  },
+  {
+    "__docId__": 239,
+    "kind": "member",
+    "name": "regex",
+    "memberof": "src/Router.js~Route",
+    "static": false,
+    "longname": "src/Router.js~Route#regex",
+    "access": "public",
+    "description": null,
+    "lineNumber": 68,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 240,
+    "kind": "member",
+    "name": "eventName",
+    "memberof": "src/Router.js~Route",
+    "static": false,
+    "longname": "src/Router.js~Route#eventName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 69,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 241,
+    "kind": "member",
+    "name": "parameters",
+    "memberof": "src/Router.js~Route",
+    "static": false,
+    "longname": "src/Router.js~Route#parameters",
+    "access": "public",
+    "description": null,
+    "lineNumber": 70,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 242,
+    "kind": "method",
+    "name": "matches",
+    "memberof": "src/Router.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Route#matches",
+    "access": "public",
+    "description": null,
+    "lineNumber": 72,
+    "undocument": true,
+    "params": [
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 243,
+    "kind": "class",
+    "name": "Router",
+    "memberof": "src/Router.js",
+    "static": true,
+    "longname": "src/Router.js~Router",
+    "access": "public",
+    "export": true,
+    "importPath": "bink/src/Router.js",
+    "importStyle": "Router",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/EventHandler.js~EventHandler"
+    ]
+  },
+  {
+    "__docId__": 244,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Router.js~Router",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Router#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true
+  },
+  {
+    "__docId__": 245,
+    "kind": "member",
+    "name": "cleanedUp",
+    "memberof": "src/Router.js~Router",
+    "static": false,
+    "longname": "src/Router.js~Router#cleanedUp",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 246,
+    "kind": "member",
+    "name": "routes",
+    "memberof": "src/Router.js~Router",
+    "static": false,
+    "longname": "src/Router.js~Router#routes",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 247,
+    "kind": "member",
+    "name": "hashListener",
+    "memberof": "src/Router.js~Router",
+    "static": false,
+    "longname": "src/Router.js~Router#hashListener",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 248,
+    "kind": "method",
+    "name": "cleanup",
+    "memberof": "src/Router.js~Router",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Router#cleanup",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 250,
+    "kind": "method",
+    "name": "addRoute",
+    "memberof": "src/Router.js~Router",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Router#addRoute",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "params": [
+      {
+        "name": "regex",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "eventName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "parameters",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 251,
+    "kind": "method",
+    "name": "start",
+    "memberof": "src/Router.js~Router",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Router#start",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 252,
+    "kind": "method",
+    "name": "_checkHash",
+    "memberof": "src/Router.js~Router",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Router#_checkHash",
+    "access": "private",
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 253,
+    "kind": "method",
+    "name": "_handleNewPath",
+    "memberof": "src/Router.js~Router",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Router.js~Router#_handleNewPath",
+    "access": "private",
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 254,
+    "kind": "file",
+    "name": "src/module.js",
+    "content": "import App from './App.js'\nimport dom from './DOM.js'\nimport Router from './Router.js'\nimport Component from './Component.js'\nimport DataModel from './DataModel.js'\nimport Localizer from './Localizer.js'\nimport DataObject from './DataObject.js'\nimport MockService from './MockService.js'\nimport DataCollection from './DataCollection.js'\n\n/**\n * This is used by rollup to create a handy all-in-one ES module\n */\n\nexport { App, dom, Router, Component, DataModel, Localizer, DataObject, MockService, DataCollection }\n",
+    "static": true,
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/module.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "kind": "index",
+    "content": "# Bink: A sleek reactive framework for web pages\n\n",
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n\t\"name\": \"bink\",\n\t\"version\": \"0.1.0\",\n\t\"description\": \"A sleek and reactive framework for web pages\",\n\t\"main\": \"src/App.js\",\n\t\"scripts\": {\n\t\t\"build\": \"rollup -c rollup.config.js\",\n\t\t\"docs\": \"./node_modules/.bin/esdoc\",\n\t\t\"lint\": \"eslint src\",\n\t\t\"lint-fix\": \"eslint src --fix\",\n\t\t\"prettier\": \"prettier --write src/*.js src/**/*.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/Transmutable/bink.git\"\n\t},\n\t\"keywords\": [\n\t\t\"javascript-framework\",\n\t\t\"responsive-web\"\n\t],\n\t\"author\": \"Trevor F. Smith <trevor@transmutable.com>\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/Transmutable/bink/issues\"\n\t},\n\t\"homepage\": \"https://github.com/Transmutable/bink#readme\",\n\t\"prettier\": {\n\t\t\"semi\": false,\n\t\t\"useTabs\": true,\n\t\t\"printWidth\": 120,\n\t\t\"singleQuote\": true\n\t},\n\t\"eslintConfig\": {\n\t\t\"parserOptions\": {\n\t\t\t\"ecmaVersion\": 2017,\n\t\t\t\"sourceType\": \"module\"\n\t\t},\n\t\t\"plugins\": [\n\t\t\t\"prettier\"\n\t\t],\n\t\t\"extends\": [\n\t\t\t\"prettier\"\n\t\t],\n\t\t\"rules\": {\n\t\t\t\"prettier/prettier\": \"error\",\n\t\t\t\"prefer-const\": \"error\",\n\t\t\t\"no-var\": \"error\"\n\t\t}\n\t},\n\t\"husky\": {\n\t\t\"hooks\": {\n\t\t\t\"pre-commit\": \"lint-staged\"\n\t\t}\n\t},\n\t\"lint-staged\": {\n\t\t\"linters\": {\n\t\t\t\"src/**/*.js\": [\n\t\t\t\t\"prettier --write\",\n\t\t\t\t\"eslint --fix\",\n\t\t\t\t\"git add\"\n\t\t\t],\n\t\t\t\"test/**/*.js\": [\n\t\t\t\t\"prettier --write\",\n\t\t\t\t\"eslint --fix\",\n\t\t\t\t\"git add\"\n\t\t\t]\n\t\t},\n\t\t\"relative\": true\n\t},\n\t\"devDependencies\": {\n\t\t\"cross-env\": \"^7.0.2\",\n\t\t\"esdoc\": \"^1.1.0\",\n\t\t\"@rollup/plugin-commonjs\": \"^15.1.0\",\n\t\t\"@rollup/plugin-node-resolve\": \"^9.0.0\",\n\t\t\"@rollup/plugin-replace\": \"^2.3.3\",\n\t\t\"esdoc-standard-plugin\": \"^1.0.0\",\n\t\t\"eslint\": \"^7.11.0\",\n\t\t\"eslint-config-prettier\": \"^6.14.0\",\n\t\t\"eslint-plugin-prettier\": \"^3.1.4\",\n\t\t\"husky\": \"^4.3.0\",\n\t\t\"lint-staged\": \"^10.4.2\",\n\t\t\"prettier\": \"^2.1.2\",\n\t\t\"rollup\": \"^2.32.1\",\n\t\t\"rollup-plugin-cleanup\": \"^3.2.1\"\n\t},\n\t\"dependencies\": {}\n}\n",
+    "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

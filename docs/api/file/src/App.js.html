@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/App.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/App.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;./DOM.js&apos;
+import Router from &apos;./Router.js&apos;
+import Component from &apos;./Component.js&apos;
+import Localizer from &apos;./Localizer.js&apos;
+import EventHandler from &apos;./EventHandler.js&apos;
+
+/**
+ * App contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.
+ * App communicates these changes to {@link Component}s via events so that they may react.
+ */
+const App = class extends EventHandler {
+	/**
+	@param {Object} [options]
+	*/
+	constructor(options = {}) {
+		super()
+		this._options = options
+		this._router = new Router()
+
+		this._dom = dom.div({ class: &apos;app&apos; })
+	}
+
+	/** @type {Router} */
+	get router() {
+		return this._router
+	}
+	/** @type {HTMLElement} */
+	get dom() {
+		return this._dom
+	}
+
+	/**
+	appendComponent adds the childComponent&apos;s dom to this Component&apos;s equivalent attributes.
+	@param {Component} childComponent
+	*/
+	appendComponent(childComponent) {
+		this._dom.appendChild(childComponent.dom)
+	}
+
+	/*
+	removeComponent removes the childComponent&apos;s DOM from this Component&apos;s equivalent attributes.
+	@param {Component} childComponent
+	*/
+	removeComponent(childComponent) {
+		this._dom.removeChild(childComponent.dom)
+	}
+
+	set localizerGathering(shouldGather) {
+		Localizer.Singleton.gathering = shouldGather
+	}
+
+	get localizerGathering() {
+		return Localizer.Singleton.gathering
+	}
+
+	get localizerGatheredData() {
+		return Localizer.Singleton.gatheredData
+	}
+}
+
+export default App
+export { App }
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/Component.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Component.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;./DOM.js&apos;
+import EventHandler from &apos;./EventHandler.js&apos;
+
+/**
+`Component` contains the reactive logic for a responsive UI element.
+*/
+const Component = class extends EventHandler {
+	/**
+	@param {DataObject} [dataObject]
+	@param {Object} [options]
+	@param {HTMLElement} [options.dom]
+	@param {HTMLElement} [options.portalDOM]
+	*/
+	constructor(dataObject = null, options = {}) {
+		super()
+		this.dataObject = dataObject // a DataModel or DataCollection
+		this.options = Object.assign(
+			{
+				dom: null,
+			},
+			options
+		)
+		this.cleanedUp = false
+		this.dom = this.options.dom || dom.div()
+		// See the Binder class below for info
+		this._binder = new Binder(this)
+		this.addClass(&apos;component&apos;)
+		if (this.options.name) {
+			this.setName(this.options.name)
+		}
+	}
+
+	/**
+	Called to dispose of any resources used by this component.
+	Extending classes *should* override and call cleanup on sub-Components.
+	*/
+	cleanup() {
+		if (this.cleanedUp) return
+		this.cleanedUp = true
+		super.cleanup()
+		this._binder.cleanup()
+		return this
+	}
+
+	/** @type {HTMLElement} */
+	get dom() {
+		return this._dom
+	}
+
+	/**
+	appendComponent adds the childComponent&apos;s dom to this Component&apos;s dom
+	@param {Component} childComponent
+	*/
+	appendComponent(childComponent) {
+		this._dom.appendChild(childComponent.dom)
+		return this
+	}
+	/**
+	removeComponent removes the childComponent&apos;s dom from this Component&apos;s dom.
+	@param {Component} childComponent
+	@param {boolean} [clean]
+	*/
+	removeComponent(childComponent, clean = true) {
+		this._dom.removeChild(childComponent.dom)
+		if (clean) childComponent.cleanup()
+		return this
+	}
+
+	/**
+	A handy method for quick creation and setting of a parent:
+	this._fooComponent = new FooComponent().appendTo(parentComponent)
+	@param {Component} parentComponent
+	*/
+	appendTo(parentComponent) {
+		parentComponent.appendComponent(this)
+		return this
+	}
+
+	/**
+	Sets the data-name attribute on the dom
+	*/
+	setName(name) {
+		this._dom.setAttribute(&apos;data-name&apos;, name)
+		return this
+	}
+
+	/**
+	add class attributes to dom elements
+	@param {string[]} classNames
+	*/
+	addClass(...classNames) {
+		this._dom.addClass(...classNames)
+		return this
+	}
+
+	/**
+	remove class attributes to the dom
+	@param {string[]} classNames
+	*/
+	removeClass(...classNames) {
+		this._dom.removeClass(...classNames)
+		return this
+	}
+
+	/**
+	Listen to a DOM or Component event.
+	For example:
+		this.buttonDOM = dom.button()
+		this.listenTo(&apos;click&apos;, this.buttonDOM, this.handleClick)
+
+		this.textComponent = new TextComponent(...)
+		this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) =&gt; { ... })
+
+	@param {string} eventName
+	@param {HTMLElement or EventHandler} target
+	@param {function} listener
+	@param {boolean} [once] only listen to the first event, then unbind
+	*/
+	listenTo(eventName, target, listener, once = false) {
+		this._binder.listenTo(eventName, target, callback, once)
+	}
+
+	/**
+	@param {string} dataField
+	@param {HTMLElement or Object3D} target
+	@param {function} formatter
+	@param {DataModel} dataModel
+	*/
+	bindText(dataField, target, formatter = null, dataModel = this.dataObject) {
+		this._binder.bindText(dataField, target, formatter, dataModel)
+	}
+
+	/*
+	Set an attribute of target DOM to the value of dataModel.get(dataField) as it changes
+	formatter defaults to the identity function but can be any function that accepts the value and returns a string
+
+	@param {string} dataField
+	@param {HTMLElement} target
+	@param {string} attributeName
+	@param {function} formatter
+	@param {DataModel} dataModel
+	*/
+	bindAttribute(dataField, target, attributeName, formatter = null, dataModel = this.dataObject) {
+		this._binder.bindAttribute(dataField, target, attributeName, formatter, dataModel)
+	}
+}
+
+/**
+Binder listens for events on {@link EventHandler}s or DOM elements and changes characteristics of an HTMLElement or Component in response.
+This is part of what makes a Component &quot;reactive&quot;.
+*/
+const Binder = class {
+	constructor(component) {
+		this._component = component
+		this._boundCallbacks = [] // { callback, dataObject } to be unbound during cleanup
+		this._eventCallbacks = [] // { callback, eventName, target } to be unregistered during cleanup
+	}
+	cleanup() {
+		for (const bindInfo of this._boundCallbacks) {
+			bindInfo.dataObject.removeListener(bindInfo.callback)
+		}
+		for (const info of this._eventCallbacks) {
+			if (info.target instanceof EventHandler) {
+				info.target.removeListener(info.callback, info.eventName)
+			} else {
+				info.target.removeEventListener(info.eventName, info.callback)
+			}
+		}
+	}
+
+	/**
+	Listen to a DOM or EventHandler event.
+	For example:
+		this.buttonDOM = dom.button()
+		this.listenTo(&apos;click&apos;, this.buttonDOM, this.handleClick)
+
+		this.textComponent = new TextComponent(...)
+		this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) =&gt; { ... })
+
+	@param {string} eventName
+	@param {HTMLElement or EventHandler} target
+	@param {function} callback
+	@param {boolean} [once]
+	*/
+	listenTo(eventName, target, callback, once = false) {
+		const info = {
+			eventName: eventName,
+			target: target,
+			callback: callback,
+			once: once,
+		}
+		if (target instanceof EventHandler) {
+			target.addListener(eventName, info.callback)
+		} else {
+			target.addEventListener(eventName, info.callback)
+		}
+		this._eventCallbacks.push(info)
+	}
+
+	/**
+	@param {string} dataField
+	@param {HTMLElement or Object3D} target
+	@param {function} formatter
+	@param {DataModel} dataModel
+	*/
+	bindText(dataField, target, formatter = null, dataModel = this._component.dataObject) {
+		if (formatter === null) {
+			formatter = (value) =&gt; {
+				if (value === null) return &apos;&apos;
+				if (typeof value === &apos;string&apos;) return value
+				return &apos;&apos; + value
+			}
+		}
+		const callback = () =&gt; {
+			const result = formatter(dataModel.get(dataField))
+			target.innerText = typeof result === &apos;string&apos; ? result : &apos;&apos;
+		}
+		dataModel.addListener(`changed:${dataField}`, callback)
+		callback()
+		this._boundCallbacks.push({
+			callback: callback,
+			dataObject: dataModel,
+		})
+	}
+
+	/*
+	Set the attributeName attribute of target DOM or SOM to the value of dataModel.get(dataField) as it changes
+	formatter defaults to the identity function but can be any function that accepts the value and returns a string
+
+	@param {string} dataField
+	@param {HTMLElement or Object3D} target
+	@param {string} attributeName
+	@param {function} formatter
+	@param {DataModel} dataModel
+	*/
+	bindAttribute(dataField, target, attributeName, formatter = null, dataModel = this._component.dataObject) {
+		if (formatter === null) {
+			formatter = (value) =&gt; {
+				if (value === null) return &apos;&apos;
+				if (typeof value === &apos;string&apos;) return value
+				return &apos;&apos; + value
+			}
+		}
+		const callback = () =&gt; {
+			target.setAttribute(attributeName, formatter(dataModel.get(dataField)))
+		}
+		dataModel.addListener(`changed:${dataField}`, callback)
+		callback()
+		this._boundCallbacks.push({
+			callback: callback,
+			dataObject: dataModel,
+		})
+	}
+}
+
+export default Component
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
