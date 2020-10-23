@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/components/molecules/FormComponent.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-throttle">throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-throttledConsoleLog">throttledConsoleLog</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-atoms">components/atoms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/AudioComponent.js~AudioComponent.html">AudioComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ButtonComponent.js~ButtonComponent.html">ButtonComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SliderComponent.js~SliderComponent.html">SliderComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SwitchComponent.js~SwitchComponent.html">SwitchComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html">TextComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextInputComponent.js~TextInputComponent.html">TextInputComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ToggleComponent.js~ToggleComponent.html">ToggleComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/VideoComponent.js~VideoComponent.html">VideoComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-molecules">components/molecules</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/AudioPlayerComponent.js~AudioPlayerComponent.html">AudioPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ButtonGroupComponent.js~ButtonGroupComponent.html">ButtonGroupComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/CardComponent.js~CardComponent.html">CardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~DateFieldComponent.html">DateFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormComponent.html">FormComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormFieldComponent.html">FormFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SelectionFieldComponent.html">SelectionFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SwitchFieldComponent.html">SwitchFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~TextInputFieldComponent.html">TextInputFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ImageCardComponent.js~ImageCardComponent.html">ImageCardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/MenuComponent.js~MenuComponent.html">MenuComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ModalComponent.js~ModalComponent.html">ModalComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/PaginationComponent.js~PaginationComponent.html">PaginationComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ToolTipComponent.js~ToolTipComponent.html">ToolTipComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/components/molecules/FormComponent.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;../../DOM.js&apos;
+import Component from &apos;../../Component.js&apos;
+import { throttle } from &apos;../../throttle.js&apos;
+import { lt, ld, Localizer } from &apos;../../Localizer.js&apos;
+
+import LabelComponent from &apos;../atoms/LabelComponent.js&apos;
+import SwitchComponent from &apos;../atoms/SwitchComponent.js&apos;
+import ButtonComponent from &apos;../atoms/ButtonComponent.js&apos;
+import HeadingComponent from &apos;../atoms/HeadingComponent.js&apos;
+import TextInputComponent from &apos;../atoms/TextInputComponent.js&apos;
+import SelectionComponent from &apos;../atoms/SelectionComponent.js&apos;
+
+import WaitComponent from &apos;./WaitComponent.js&apos;
+
+/**
+FormComponent holds a set of sub-Components related to filling out information in a form.
+It also handles marshalling and unmarshalling data for communication with the server.
+It also handles input checking and the display of per-field and form-wide error messages.
+*/
+const FormComponent = class extends Component {
+	/**
+	@param {DataObject} [dataObject]
+	@param {Object} [options] see the {@Component} for inherited options
+	@param {string} [options.heading] the heading text for this form
+	*/
+	constructor(dataObject = null, options = {}) {
+		super(dataObject, options)
+		this.setName(&apos;FormComponent&apos;)
+		this.addClass(&apos;form-component&apos;)
+
+		this._headingComponent = new HeadingComponent(
+			undefined,
+			{ dom: dom.h2() }
+		).appendTo(this)
+		if (!options.heading) {
+			this._headingComponent.hide()
+		}
+
+		this._fieldsComponent = new Component().appendTo(this)
+		this._fieldsComponent.setName(&apos;FieldsComponent&apos;)
+		this._fieldsComponent.addClass(&apos;fields-component&apos;)
+
+		this._waitComponent = new WaitComponent().appendTo(this)
+	}
+
+	/** @type {Component} in which you should place your field Components */
+	get fieldsComponent() {
+		return this._fieldsComponent
+	}
+}
+
+/**
+FormFieldComponent is the base Component for fields in a FormComponent
+*/
+const FormFieldComponent = class extends Component {
+	/**
+	@param {string}   [options.label] the display text for this input field
+	@param {string}   [options.dataField] the field name for the {@link DataModel} in this.dataObject
+	*/
+	constructor(dataObject = null, options = {}) {
+		super(
+			dataObject,
+			Object.assign(
+				{
+					label: null,
+					dataField: null
+				},
+				options
+			)
+		)
+		this.setName(&apos;FormFieldComponent&apos;)
+		this.addClass(&apos;form-field-component&apos;)
+
+		this._label = new LabelComponent(undefined, {
+			text: this.options.label || &apos;&apos;
+		}).appendTo(this)
+		if (!this.options.label) this._label.hide()
+	}
+}
+
+const SelectionFieldComponent = class extends FormFieldComponent {
+	/**
+	@param {DataModel} dataObject
+	@param {Object} options see {@link FormFieldComponent} for more options
+	@param {string} options.dataField
+	@param {Object[]} options.items an array of [display name, value] to be used as choices in the selector
+	*/
+	constructor(dataObject, options) {
+		super(dataObject, options)
+		this.setName(&apos;SelectionFieldComponent&apos;)
+		this.addClass(&apos;selection-field-component&apos;)
+
+		this._selectionComponent = new SelectionComponent(
+			this.dataObject,
+			{
+				items: options.items
+			}
+		).appendTo(this)
+		this._selectionComponent.selectedIndex = 0
+
+		if (this.dataObject &amp;&amp; this.options.dataField) {
+			this._updateInputFromModel()
+			this.listenTo(SelectionComponent.SELECTION_INDEX_CHANGED, this._selectionComponent, () =&gt; {
+				this._updateModelFromInput()
+			})
+		}
+	}
+
+	_updateInputFromModel() {
+		if (!this.dataObject || !this.options.dataField) return
+		const data = Number.parseInt(this.dataObject.get(this.options.dataField, 0))
+		if (Number.isNaN(data)) {
+			this._selectionComponent.selectedIndex = 0
+			return
+		}
+		this._selectionComponent.selectedIndex = Number.parseInt(data)
+	}
+
+	_updateModelFromInput() {
+		if (!this.dataObject || !this.options.dataField) return
+		this.dataObject.set(this.options.dataField, this._selectionComponent.selectedIndex)
+	}
+}
+
+const SwitchFieldComponent = class extends FormFieldComponent {
+	/**
+	@param {DataModel} [dataObject]
+	@param {Object}    [options] see {@link FormFieldComponent} for more options
+	*/
+	constructor(dataObject = null, options = {}) {
+		super(dataObject, options)
+		this.setName(&apos;SwitchFieldComponent&apos;)
+		this.addClass(&apos;switch-field-component&apos;)
+
+		this._switchComponent = new SwitchComponent(
+			this.dataObject,
+			{
+				dataField: this.options.dataField
+			}
+		).appendTo(this)
+	}
+}
+
+/**
+DateFieldComponent
+*/
+const DateFieldComponent = class extends FormFieldComponent {
+	/**
+	@param {DataModel} [dataObject]
+	@param {Object}    [options] see {@link FormFieldComponent} for more options
+	*/
+	constructor(dataObject = null, options = {}) {
+		super(dataObject, options)
+		this.setName(&apos;DateFieldComponent&apos;)
+		this.addClass(&apos;date-field-component&apos;)
+		this._throttledUpdateModelFromInput = throttle(this._updateModelFromInput.bind(this), 1000, false, true)
+
+		this._dayInputComponent = new TextInputComponent(
+			this.dataObject,
+			{
+				placeholder: lt(&apos;dd&apos;)
+			}
+		)
+			.addClass(&apos;day-input-component&apos;)
+			.setName(&apos;DayInputComponent&apos;)
+
+		this._monthInputComponent = new TextInputComponent(
+			this.dataObject,
+			{
+				placeholder: lt(&apos;mm&apos;)
+			}
+		)
+			.addClass(&apos;month-input-component&apos;)
+			.setName(&apos;MonthInputComponent&apos;)
+
+		this._yearInputComponent = new TextInputComponent(
+			this.dataObject,
+			{
+				placeholder: lt(&apos;yyyy&apos;)
+			}
+		)
+			.addClass(&apos;year-input-component&apos;)
+			.setName(&apos;YearInputComponent&apos;)
+
+		// Different places have different orders for their date fields, so handle that here
+		Localizer.Singleton.dateFieldOrder.forEach((fieldName) =&gt; {
+			switch (fieldName) {
+				case &apos;month&apos;:
+					this.appendComponent(this._monthInputComponent)
+					break
+				case &apos;day&apos;:
+					this.appendComponent(this._dayInputComponent)
+					break
+				case &apos;year&apos;:
+					this.appendComponent(this._yearInputComponent)
+					break
+			}
+		})
+
+		this._dateLabelComponent = new LabelComponent(this.dataObject, {})
+			.appendTo(this)
+			.addClass(&apos;date-label-component&apos;)
+			.setName(&apos;DateLabelComponent&apos;)
+
+		if (this.dataObject &amp;&amp; this.options.dataField) {
+			this._updateInputFromModel()
+			this.listenTo(`changed:${this.options.dataField}`, this.dataObject, () =&gt; {
+				this._updateLabelFromModel()
+			})
+			this._updateLabelFromModel()
+			this.listenTo(TextInputComponent.TextChangeEvent, this._dayInputComponent, this._throttledUpdateModelFromInput)
+			this.listenTo(TextInputComponent.TextChangeEvent, this._monthInputComponent, this._throttledUpdateModelFromInput)
+			this.listenTo(TextInputComponent.TextChangeEvent, this._yearInputComponent, this._throttledUpdateModelFromInput)
+		}
+	}
+
+	/** @return {Date?} the date specified in the input fields or null if it is not parsed */
+	get inputDate() {
+		const day = Number.parseInt(this._dayInputComponent.text)
+		if (Number.isNaN(day)) return null
+		let month = Number.parseInt(this._monthInputComponent.text)
+		if (Number.isNaN(month)) return null
+		month = month - 1 // Date uses zero indexed months
+		let year = Number.parseInt(this._yearInputComponent.text)
+		if (Number.isNaN(year)) return null
+		if (year &lt; 100) year = year + 1900 // Fix up two digit years
+
+		// Dates should always be serialized into UTC
+		const result = new Date(Date.UTC(year, month, day, 0, 0, 0))
+		if (Number.isNaN(result.getTime())) return null
+		return result
+	}
+
+	_updateLabelFromModel() {
+		const modelData = this.dataObject.get(this.options.dataField, null)
+		if (modelData === null) {
+			this._dateLabelComponent.text = &apos;---------&apos;
+			return
+		}
+		const modelDate = new Date(modelData)
+		if (Number.isNaN(modelDate.getTime())) {
+			this._dateLabelComponent.text = &apos;---------&apos;
+			return
+		}
+		this._dateLabelComponent.text = ld(
+			new Date(modelDate.getUTCFullYear(), modelDate.getUTCMonth(), modelDate.getUTCDate(), 0, 0, 0)
+		)
+	}
+
+	_updateModelFromInput() {
+		if (!this.dataObject || !this.options.dataField) return
+		const inputDate = this.inputDate
+		// Set the data field to an ISO string date or remove it if the input is invalid
+		this.dataObject.set(this.options.dataField, inputDate ? inputDate.toISOString() : undefined)
+	}
+
+	_clearInput() {
+		this._dateLabelComponent.text = &apos;&apos;
+		this._dayInputComponent.text = &apos;&apos;
+		this._monthInputComponent.text = &apos;&apos;
+		this._yearInputComponent.text = &apos;&apos;
+	}
+
+	_updateInputFromModel() {
+		if (!this.dataObject || !this.options.dataField) return
+		const modelData = this.dataObject.get(this.options.dataField, null)
+		if (modelData === null) {
+			this._clearInput()
+			return
+		}
+		const modelDate = new Date(modelData)
+		if (Number.isNaN(modelDate.getTime())) {
+			this._clearInput()
+			console.error(&apos;invalid date data&apos;, modelData)
+			return
+		}
+		this._updateInputFromDate(new Date(modelData))
+	}
+
+	/**
+	@param {string or Date} date
+	*/
+	_updateInputFromDate(date) {
+		if (!date) {
+			this._clearInput()
+			return
+		}
+		if (typeof date === &apos;string&apos;) {
+			date = new Date(date)
+		}
+		if (date instanceof Date === false) {
+			this._clearInput()
+			return
+		}
+		if (Number.isNaN(date.getTime())) {
+			this._clearInput()
+			return
+		}
+		this._dayInputComponent.text = date.getUTCDate()
+		this._monthInputComponent.text = date.getUTCMonth() + 1
+		this._yearInputComponent.text = date.getUTCFullYear()
+	}
+}
+
+/**
+TextInputFieldComponent provides a text field, natch
+*/
+const TextInputFieldComponent = class extends FormFieldComponent {
+	/**
+	@param {DataModel} [dataObject]
+	@param {Object}    [options] see {@link FormFieldComponent} for more options
+	@param {string}    [options.placeholder] the text displayed in the field when there is no value text
+	*/
+	constructor(dataObject = null, options = {}) {
+		super(
+			dataObject,
+			Object.assign(
+				{
+					placeholder: null
+				},
+				options
+			)
+		)
+		this.setName(&apos;TextInputFieldComponent&apos;)
+		this.addClass(&apos;text-input-field-component&apos;)
+
+		this._textInputComponent = new TextInputComponent(dataObject, {
+			placeholder: this.options.placeholder,
+			dataField: this.options.dataField
+		}).appendTo(this)
+		this.listenTo(TextInputComponent.TextChangeEvent, this._textInputComponent, (eventName, value) =&gt; {
+			this._handleInputChange(value)
+		})
+
+		if (this.dataObject &amp;&amp; this.options.dataField) {
+			this.listenTo(`changed:${this.options.dataField}`, this.dataObject, (eventName, model, dataField, value) =&gt; {
+				this._handleModelChange(value)
+			})
+		}
+	}
+
+	_handleInputChange(value) {
+		if (!this.dataObject || !this.options.dataField) return
+		if (this.dataObject.get(this.options.dataField) === value) return
+		this.dataObject.set(this.options.dataField, value)
+	}
+
+	_handleModelChange(value) {
+		if (this._textInputComponent.text === value) return
+		this._textInputComponent.text = value
+	}
+}
+
+export default FormComponent
+export { FormComponent, DateFieldComponent, SwitchFieldComponent, SelectionFieldComponent, TextInputFieldComponent }
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
