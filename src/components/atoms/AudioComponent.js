@@ -47,6 +47,8 @@ const AudioComponent = class extends Component {
 		this._domImage.setName('AudioImage')
 	}
 
+
+	/** @type {HTMLAudioElement} */
 	get audio() {
 		return this._audioDOM
 	}

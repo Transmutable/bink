@@ -2,7 +2,7 @@
 	"name": "bink",
 	"version": "0.1.0",
 	"description": "A sleek and reactive framework for web pages",
-	"main": "src/App.js",
+	"main": "src/index.js",
 	"scripts": {
 		"build": "rollup -c rollup.config.js",
 		"docs": "./node_modules/.bin/esdoc",
@@ -55,13 +55,10 @@
 	"lint-staged": {
 		"linters": {
 			"src/**/*.js": [
+				"esdoc",
 				"prettier --write",
 				"eslint --fix",
-				"git add"
-			],
-			"test/**/*.js": [
-				"prettier --write",
-				"eslint --fix",
+				"git add docs",
 				"git add"
 			]
 		},

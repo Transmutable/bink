@@ -61,6 +61,12 @@ const Localizer = class extends EventHandler {
 		}
 	}
 
+	/**
+	@return {Object[]} the gathered string translation
+	@property {string} key
+	@property {string} value
+	@property {string} defaultValue
+	*/
 	get gatheredData() {
 		if (this._gathering === false) return null
 		return {
