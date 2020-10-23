@@ -7,7 +7,7 @@ let DateFieldOrder = null
 
 const TestDateMilliseconds = 1517385600000
 
-const GatheringCookieName = 'potassiumes-localizer-gathering'
+const GatheringCookieName = 'bink-localizer-gathering'
 /**
 Localizer provides the functionality necessary to:
 

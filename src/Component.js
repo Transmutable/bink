@@ -9,7 +9,6 @@ const Component = class extends EventHandler {
 	@param {DataObject} [dataObject]
 	@param {Object} [options]
 	@param {HTMLElement} [options.dom]
-	@param {HTMLElement} [options.portalDOM]
 	*/
 	constructor(dataObject = null, options = {}) {
 		super()
@@ -101,6 +100,23 @@ const Component = class extends EventHandler {
 		this._dom.removeClass(...classNames)
 		return this
 	}
+
+	/**
+	hides the dom
+	*/
+	hide() {
+		this.addClass('hidden')
+		return this
+	}
+
+	/**
+	shows the dom
+	*/
+	show() {
+		this.removeClass('hidden')
+		return this
+	}
+
 
 	/**
 	Listen to a DOM or Component event.
