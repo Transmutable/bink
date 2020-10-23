@@ -22,7 +22,7 @@ const AudioComponent = class extends Component {
 			Object.assign(
 				{
 					audio: null,
-					audioDOM: null
+					audioDOM: null,
 				},
 				options
 			)
@@ -35,17 +35,14 @@ const AudioComponent = class extends Component {
 		} else {
 			this._audioDOM = dom.audio(
 				dom.source({
-					src: this.options.audio || ''
+					src: this.options.audio || '',
 				})
 			)
 		}
 
-		this._domImage = new ImageComponent(
-			undefined,
-			{
-				// TODO define an audio image
-			}
-		).appendTo(this)
+		this._domImage = new ImageComponent(undefined, {
+			// TODO define an audio image
+		}).appendTo(this)
 		this._domImage.addClass('audio-image')
 		this._domImage.setName('AudioImage')
 	}

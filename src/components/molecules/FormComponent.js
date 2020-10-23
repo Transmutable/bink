@@ -28,10 +28,7 @@ const FormComponent = class extends Component {
 		this.setName('FormComponent')
 		this.addClass('form-component')
 
-		this._headingComponent = new HeadingComponent(
-			undefined,
-			{ dom: dom.h2() }
-		).appendTo(this)
+		this._headingComponent = new HeadingComponent(undefined, { dom: dom.h2() }).appendTo(this)
 		if (!options.heading) {
 			this._headingComponent.hide()
 		}
@@ -63,7 +60,7 @@ const FormFieldComponent = class extends Component {
 			Object.assign(
 				{
 					label: null,
-					dataField: null
+					dataField: null,
 				},
 				options
 			)
@@ -72,7 +69,7 @@ const FormFieldComponent = class extends Component {
 		this.addClass('form-field-component')
 
 		this._label = new LabelComponent(undefined, {
-			text: this.options.label || ''
+			text: this.options.label || '',
 		}).appendTo(this)
 		if (!this.options.label) this._label.hide()
 	}
@@ -90,12 +87,9 @@ const SelectionFieldComponent = class extends FormFieldComponent {
 		this.setName('SelectionFieldComponent')
 		this.addClass('selection-field-component')
 
-		this._selectionComponent = new SelectionComponent(
-			this.dataObject,
-			{
-				items: options.items
-			}
-		).appendTo(this)
+		this._selectionComponent = new SelectionComponent(this.dataObject, {
+			items: options.items,
+		}).appendTo(this)
 		this._selectionComponent.selectedIndex = 0
 
 		if (this.dataObject && this.options.dataField) {
@@ -132,12 +126,9 @@ const SwitchFieldComponent = class extends FormFieldComponent {
 		this.setName('SwitchFieldComponent')
 		this.addClass('switch-field-component')
 
-		this._switchComponent = new SwitchComponent(
-			this.dataObject,
-			{
-				dataField: this.options.dataField
-			}
-		).appendTo(this)
+		this._switchComponent = new SwitchComponent(this.dataObject, {
+			dataField: this.options.dataField,
+		}).appendTo(this)
 	}
 }
 
@@ -155,30 +146,21 @@ const DateFieldComponent = class extends FormFieldComponent {
 		this.addClass('date-field-component')
 		this._throttledUpdateModelFromInput = throttle(this._updateModelFromInput.bind(this), 1000, false, true)
 
-		this._dayInputComponent = new TextInputComponent(
-			this.dataObject,
-			{
-				placeholder: lt('dd')
-			}
-		)
+		this._dayInputComponent = new TextInputComponent(this.dataObject, {
+			placeholder: lt('dd'),
+		})
 			.addClass('day-input-component')
 			.setName('DayInputComponent')
 
-		this._monthInputComponent = new TextInputComponent(
-			this.dataObject,
-			{
-				placeholder: lt('mm')
-			}
-		)
+		this._monthInputComponent = new TextInputComponent(this.dataObject, {
+			placeholder: lt('mm'),
+		})
 			.addClass('month-input-component')
 			.setName('MonthInputComponent')
 
-		this._yearInputComponent = new TextInputComponent(
-			this.dataObject,
-			{
-				placeholder: lt('yyyy')
-			}
-		)
+		this._yearInputComponent = new TextInputComponent(this.dataObject, {
+			placeholder: lt('yyyy'),
+		})
 			.addClass('year-input-component')
 			.setName('YearInputComponent')
 
@@ -316,7 +298,7 @@ const TextInputFieldComponent = class extends FormFieldComponent {
 			dataObject,
 			Object.assign(
 				{
-					placeholder: null
+					placeholder: null,
 				},
 				options
 			)
@@ -326,7 +308,7 @@ const TextInputFieldComponent = class extends FormFieldComponent {
 
 		this._textInputComponent = new TextInputComponent(dataObject, {
 			placeholder: this.options.placeholder,
-			dataField: this.options.dataField
+			dataField: this.options.dataField,
 		}).appendTo(this)
 		this.listenTo(TextInputComponent.TextChangeEvent, this._textInputComponent, (eventName, value) => {
 			this._handleInputChange(value)

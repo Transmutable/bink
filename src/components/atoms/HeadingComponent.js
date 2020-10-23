@@ -11,13 +11,7 @@ const HeadingComponent = class extends TextComponent {
 	@param {Object} options see the {@link TextComponent} options
 	*/
 	constructor(dataObject = null, options = {}) {
-		super(
-			dataObject,
-			Object.assign(
-				{ dom: dom.h1() },
-				options
-			)
-		)
+		super(dataObject, Object.assign({ dom: dom.h1() }, options))
 		this.addClass('heading-component')
 		this.setName('HeadingComponent')
 	}

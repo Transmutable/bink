@@ -17,7 +17,7 @@ const ToggleComponent = class extends Component {
 			Object.assign(
 				{
 					dom: dom.div('Toggle'),
-					name: 'ToggleComponent.js'
+					name: 'ToggleComponent.js',
 				},
 				options
 			)

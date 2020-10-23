@@ -18,7 +18,7 @@ const ImageComponent = class extends Component {
 				{
 					image: null,
 					imageField: null,
-					dom: dom.img()
+					dom: dom.img(),
 				},
 				options
 			)

@@ -18,7 +18,7 @@ const SelectionComponent = class extends Component {
 			Object.assign(
 				{
 					items: [],
-					dom: dom.select()
+					dom: dom.select(),
 				},
 				options
 			)
@@ -72,4 +72,3 @@ SelectionComponent.SELECTION_INDEX_CHANGED = 'selection-index-changed'
 
 export default SelectionComponent
 export { SelectionComponent }
-

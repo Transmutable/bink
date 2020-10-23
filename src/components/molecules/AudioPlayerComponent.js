@@ -22,13 +22,10 @@ const AudioPlayerComponent = class extends Component {
 		this.setName('AudioPlayerComponent')
 		this._updateDisplay = this._updateDisplay.bind(this)
 
-		this._audioComponent = new AudioComponent(
-			this.dataObject,
-			{
-				audio: this.options.audio,
-				audioDOM: this.options.audioDOM
-			}
-		).appendTo(this)
+		this._audioComponent = new AudioComponent(this.dataObject, {
+			audio: this.options.audio,
+			audioDOM: this.options.audioDOM,
+		}).appendTo(this)
 
 		this._toggleButton = new ButtonComponent()
 			.appendTo(this)

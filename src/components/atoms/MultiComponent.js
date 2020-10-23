@@ -12,13 +12,7 @@ const MultiComponent = class extends Component {
 	@param {Component[]} [options.components=[]]
 	*/
 	constructor(dataObject = null, options = {}) {
-		super(
-			dataObject,
-			Object.assign(
-				{ components: [] },
-				options
-			)
-		)
+		super(dataObject, Object.assign({ components: [] }, options))
 		this.addClass('multi-component')
 		this.setName('MultiComponent')
 

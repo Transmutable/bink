@@ -107,10 +107,7 @@ const SliderComponent = class extends Component {
 		this._pointerDown = false
 		this._handleComponent.dom.removeEventListener('mousemove', this._handleMouseMove)
 		this.dom.removeEventListener('mousemove', this._handleMouseMove)
-		this.valueFraction = this._getValueFractionFromHandlePosition(
-			this._handleComponent.dom,
-			this._barComponent.dom
-		)
+		this.valueFraction = this._getValueFractionFromHandlePosition(this._handleComponent.dom, this._barComponent.dom)
 		this.trigger(SliderComponent.VALUE_CHANGE_VIA_INPUT, this.valueFraction)
 	}
 
@@ -137,4 +134,3 @@ SliderComponent.VALUE_CHANGE_VIA_INPUT = 'value-changed-via-input'
 
 export default SliderComponent
 export { SliderComponent }
-

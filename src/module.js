@@ -13,15 +13,4 @@ import DataCollection from './DataCollection.js'
  * This is used by rollup to create a handy all-in-one ES module
  */
 
-export {
-	App,
-	dom,
-	Router,
-	throttle,
-	Component,
-	DataModel,
-	Localizer,
-	DataObject,
-	MockService,
-	DataCollection
-}
+export { App, dom, Router, throttle, Component, DataModel, Localizer, DataObject, MockService, DataCollection }

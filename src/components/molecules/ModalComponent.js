@@ -20,8 +20,8 @@ const ModalComponent = class extends Component {
 					columns: ['key', 'value'],
 					buttons: [
 						{ name: lt('Go'), id: 'go' },
-						{ name: lt('Cancel'), id: 'cancel' }
-					]
+						{ name: lt('Cancel'), id: 'cancel' },
+					],
 				},
 				options
 			)
@@ -34,7 +34,7 @@ const ModalComponent = class extends Component {
 				undefined,
 				{
 					id: buttonInfo.id,
-					text: buttonInfo.name
+					text: buttonInfo.name,
 				},
 				this.inheritedOptions
 			).appendTo(this)

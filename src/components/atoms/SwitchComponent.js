@@ -16,7 +16,7 @@ const SwitchComponent = class extends Component {
 			dataObject,
 			Object.assign(
 				{
-					dataField: null
+					dataField: null,
 				},
 				options
 			)
@@ -27,7 +27,7 @@ const SwitchComponent = class extends Component {
 
 		this._handle = dom
 			.div({
-				class: 'handle'
+				class: 'handle',
 			})
 			.appendTo(this.dom)
 
@@ -89,4 +89,3 @@ const SwitchComponent = class extends Component {
 
 export default SwitchComponent
 export { SwitchComponent }
-

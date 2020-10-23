@@ -99,7 +99,7 @@ const _states = [
 	WaitComponent.NOTHING_HAPPENING,
 	WaitComponent.PROCESSING,
 	WaitComponent.FAILED,
-	WaitComponent.SUCCEEDED
+	WaitComponent.SUCCEEDED,
 ]
 
 export default WaitComponent

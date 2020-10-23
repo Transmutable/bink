@@ -117,7 +117,6 @@ const Component = class extends EventHandler {
 		return this
 	}
 
-
 	/**
 	Listen to a DOM or Component event.
 	For example:

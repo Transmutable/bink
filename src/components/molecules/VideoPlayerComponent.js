@@ -23,7 +23,7 @@ const VideoPlayerComponent = class extends Component {
 			Object.assign(
 				{
 					video: '',
-					mimeType: ''
+					mimeType: '',
 				},
 				options
 			)
@@ -36,13 +36,10 @@ const VideoPlayerComponent = class extends Component {
 		this._backdropComponent.addClass('backdrop-component')
 		this._backdropComponent.setName('BackdropComponent')
 
-		this._videoComponent = new VideoComponent(
-			undefined,
-			{
-				video: this.options.video,
-				mimeType: this.options.mimeType
-			}
-		).appendTo(this._backdropComponent)
+		this._videoComponent = new VideoComponent(undefined, {
+			video: this.options.video,
+			mimeType: this.options.mimeType,
+		}).appendTo(this._backdropComponent)
 		this.listenTo(VideoComponent.VIDEO_INITIALIZED, this._videoComponent, (eventName, component) => {
 			this._addEventListeners()
 		})
@@ -55,11 +52,9 @@ const VideoPlayerComponent = class extends Component {
 			.appendTo(this._controlsComponent)
 			.addClass('toggle-button-component')
 			.setName('ToggleButtonComponent')
-		this.listenTo(
-			'click',
-			this._toggleButtonComponent.dom,
-			(ev) => { this._videoComponent.toggle() }
-		)
+		this.listenTo('click', this._toggleButtonComponent.dom, (ev) => {
+			this._videoComponent.toggle()
+		})
 
 		this._sliderComponent = new SliderComponent().appendTo(this._controlsComponent)
 		this.listenTo(SliderComponent.VALUE_CHANGE_VIA_INPUT, this._sliderComponent, (eventName, newFraction) => {

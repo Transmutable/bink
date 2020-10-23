@@ -21,7 +21,7 @@ const PaginationComponent = class extends Component {
 			Object.assign(
 				{
 					totalCount: 1,
-					currentIndex: 1
+					currentIndex: 1,
 				},
 				options
 			)
@@ -32,37 +32,23 @@ const PaginationComponent = class extends Component {
 		this._totalCount = this.options.totalCount
 		this._currentIndex = this.options.currentIndex
 
-		this._leftArrow = new TextComponent(
-			undefined,
-			{ text: lt('Left') }
-		)
+		this._leftArrow = new TextComponent(undefined, { text: lt('Left') })
 			.appendTo(this)
 			.addClass('left-arrow')
 			.setName('LeftArrow')
-		this.listenTo(
-			'click',
-			this._leftArrow.dom,
-			(ev) => {
-				this.currentIndex = this.currentIndex - 1
-			}
-		)
+		this.listenTo('click', this._leftArrow.dom, (ev) => {
+			this.currentIndex = this.currentIndex - 1
+		})
 
 		this._statusLabel = new LabelComponent().appendTo(this)
 
-		this._rightArrow = new IconComponent(
-			undefined,
-			{ text: lt('Right') }
-		)
+		this._rightArrow = new IconComponent(undefined, { text: lt('Right') })
 			.appendTo(this)
 			.addClass('right-arrow')
 			.setName('RightArrow')
-		this.listenTo(
-			'click',
-			this._rightArrow.dom,
-			(ev) => {
-				this.currentIndex = this.currentIndex + 1
-			}
-		)
+		this.listenTo('click', this._rightArrow.dom, (ev) => {
+			this.currentIndex = this.currentIndex + 1
+		})
 		this._updateDisplay()
 	}
 

@@ -20,7 +20,7 @@ const ProgressComponent = class extends Component {
 			Object.assign(
 				{
 					initialValue: 0,
-					dataField: null
+					dataField: null,
 				},
 				options
 			)
@@ -29,10 +29,7 @@ const ProgressComponent = class extends Component {
 		this.addClass('progress-component')
 		this.setName('ProgressComponent')
 
-		this._trackComponent = new Component(null, {})
-			.appendTo(this)
-			.addClass('track-component')
-			.setName('TrackComponent')
+		this._trackComponent = new Component(null, {}).appendTo(this).addClass('track-component').setName('TrackComponent')
 		this._fillComponent = new Component(null, {})
 			.appendTo(this._trackComponent)
 			.addClass('fill-component')

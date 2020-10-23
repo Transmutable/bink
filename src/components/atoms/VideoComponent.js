@@ -21,7 +21,7 @@ const VideoComponent = class extends CubeComponent {
 				{
 					preview: null,
 					video: null,
-					mimeType: null
+					mimeType: null,
 				},
 				options
 			)
@@ -99,7 +99,7 @@ const VideoComponent = class extends CubeComponent {
 
 		this._source = dom.source({
 			src: this.options.video,
-			type: this.options.mimeType
+			type: this.options.mimeType,
 		})
 		this._video = dom.video(this._source)
 

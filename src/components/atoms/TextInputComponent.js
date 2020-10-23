@@ -21,7 +21,7 @@ const TextInputComponent = class extends Component {
 					placeholder: '',
 					dom: dom.input({ type: 'text' }),
 					name: 'TextInputComponent',
-					submitOnEnter: true
+					submitOnEnter: true,
 				},
 				options
 			)

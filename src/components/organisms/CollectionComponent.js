@@ -17,10 +17,7 @@ const DefaultItemComponent = class extends Component {
 		this.setName('DefaultItemComponent')
 
 		const itemName = dataObject.getFirst('title', 'name', 'text') || new String(dataObject)
-		this._labelComponent = new LabelComponent(
-			undefined,
-			{ text: lt('Item: ') + itemName }
-		).appendTo(this)
+		this._labelComponent = new LabelComponent(undefined, { text: lt('Item: ') + itemName }).appendTo(this)
 	}
 }
 
@@ -35,13 +32,7 @@ CollectionComponent provides a generic list UI for DataCollections.
 */
 const CollectionComponent = class extends Component {
 	constructor(dataObject = null, options = {}) {
-		super(
-			dataObject,
-			Object.assign(
-				{ dom: dom.ul() },
-				options
-			)
-		)
+		super(dataObject, Object.assign({ dom: dom.ul() }, options))
 		this.addClass('collection-component')
 		this.setName('CollectionComponent')
 

@@ -19,7 +19,7 @@ const CardComponent = class extends Component {
 			Object.assign(
 				{
 					titleField: 'title',
-					captionField: 'caption'
+					captionField: 'caption',
 				},
 				options
 			)
@@ -32,22 +32,16 @@ const CardComponent = class extends Component {
 		this._mainComponent.addClass('main-component')
 		this._mainComponent.setName('MainComponent')
 
-		this._titleComponent = new HeadingComponent(
-			dataObject,
-			{
-				textField: this.options.titleField
-			}
-		)
+		this._titleComponent = new HeadingComponent(dataObject, {
+			textField: this.options.titleField,
+		})
 			.appendTo(this)
 			.addClass('card-title-component')
 			.setName('CardTitleComponent')
 
-		this._captionComponent = new LabelComponent(
-			dataObject,
-			{
-				textField: this.options.captionField
-			}
-		)
+		this._captionComponent = new LabelComponent(dataObject, {
+			textField: this.options.captionField,
+		})
 			.appendTo(this)
 			.addClass('card-caption-component')
 			.setName('CardCaptionComponent')

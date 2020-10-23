@@ -63,7 +63,7 @@ const MastheadComponent = class extends Component {
 						null,
 						{
 							text: item.name,
-							activationAnchor: item.anchor
+							activationAnchor: item.anchor,
 						},
 						this.inheritedOptions
 					)
