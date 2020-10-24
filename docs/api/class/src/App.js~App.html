@@ -84,13 +84,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import App from &apos;<span><a href="file/src/App.js.html#lineNumber11">bink</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import App from &apos;<span><a href="file/src/App.js.html#lineNumber12">bink/src/App.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/App.js.html#lineNumber11">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/App.js.html#lineNumber12">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -110,8 +110,8 @@
 
   
   
-  <div class="description" data-ice="description"><p>App contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.
-App communicates these changes to <span><a href="class/src/Component.js~Component.html">Component</a></span>s via events so that they may react.</p>
+  <div class="description" data-ice="description"><p>App contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.</p>
+<p>App communicates these changes to <span><a href="class/src/Component.js~Component.html">Component</a></span>s via events so that they may react.</p>
 </div>
   
 
@@ -207,7 +207,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-get-localizerGatheredData">localizerGatheredData</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-get-localizerGatheredData">localizerGatheredData</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
         </p>
       </div>
       <div>
@@ -235,7 +235,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-set-localizerGathering">localizerGathering</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-set-localizerGathering">localizerGathering</a></span></span><span class="code" data-ice="signature">(shouldGather: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>
         </p>
       </div>
       <div>
@@ -263,7 +263,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-get-localizerGathering">localizerGathering</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-get-localizerGathering">localizerGathering</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
         </p>
       </div>
       <div>
@@ -326,7 +326,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-method-appendComponent">appendComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-method-appendComponent">appendComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
         </p>
       </div>
       <div>
@@ -355,13 +355,14 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-method-removeComponent">removeComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-method-removeComponent">removeComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>removeComponent removes the childComponent&apos;s DOM from this Component&apos;s equivalent attributes.</p>
+</div>
       </div>
     </td>
     <td>
@@ -419,7 +420,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
@@ -447,7 +448,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span>
         </p>
       </div>
       <div>
@@ -475,7 +476,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span>*</span>, callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
@@ -538,7 +539,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
@@ -561,7 +562,8 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
       <td data-ice="name" class="code" data-depth="0">options</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>not used by App but handy for extending classes</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -600,7 +602,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber28">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
@@ -639,11 +641,11 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     
     
     
-    <span class="code" data-ice="name">localizerGatheredData</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">localizerGatheredData</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber56">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber67">source</a></span></span>
     </span>
   </h3>
 
@@ -682,11 +684,11 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     
     
     
-    <span class="code" data-ice="name">localizerGathering</span>
+    <span class="code" data-ice="name">localizerGathering</span><span class="code" data-ice="signature">(shouldGather: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber48">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber57">source</a></span></span>
     </span>
   </h3>
 
@@ -700,7 +702,19 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -725,11 +739,11 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     
     
     
-    <span class="code" data-ice="name">localizerGathering</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">localizerGathering</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber52">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber62">source</a></span></span>
     </span>
   </h3>
 
@@ -772,7 +786,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber25">source</a></span></span>
     </span>
   </h3>
 
@@ -814,11 +828,11 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     
     
     
-    <span class="code" data-ice="name">appendComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>)</span>
+    <span class="code" data-ice="name">appendComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber36">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber38">source</a></span></span>
     </span>
   </h3>
 
@@ -849,7 +863,20 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
 </div>
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/App.js~App.html">App</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>the component, handy for chaining</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -874,18 +901,19 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     
     
     
-    <span class="code" data-ice="name">removeComponent</span><span class="code" data-ice="signature">(childComponent: <span>*</span>)</span>
+    <span class="code" data-ice="name">removeComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber44">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/App.js.html#lineNumber48">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>removeComponent removes the childComponent&apos;s DOM from this Component&apos;s equivalent attributes.</p>
+</div>
 
   
 
@@ -899,7 +927,7 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">childComponent</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -908,7 +936,20 @@ App communicates these changes to <span><a href="class/src/Component.js~Componen
 </div>
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/App.js~App.html">App</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>the component, handy for chaining</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 

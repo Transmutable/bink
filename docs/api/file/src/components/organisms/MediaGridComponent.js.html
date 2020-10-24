@@ -106,7 +106,7 @@ const MediaGridComponent = class extends Component {
 			Object.assign(
 				{
 					itemOptions: {},
-					itemComponent: CardComponent
+					itemComponent: CardComponent,
 				},
 				options
 			)
@@ -114,13 +114,10 @@ const MediaGridComponent = class extends Component {
 		this.addClass(&apos;media-grid-component&apos;)
 		this.setName(&apos;MediaGridComponent&apos;)
 
-		this._collectionComponent = new CollectionComponent(
-			dataObject,
-			{
-				itemComponent: this.options.itemComponent,
-				itemOptions: this.options.itemOptions
-			}
-		).appendTo(this)
+		this._collectionComponent = new CollectionComponent(dataObject, {
+			itemComponent: this.options.itemComponent,
+			itemOptions: this.options.itemOptions,
+		}).appendTo(this)
 		/** @todo add pagination */
 	}
 }

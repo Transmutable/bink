@@ -106,7 +106,7 @@ const ImageCardComponent = class extends CardComponent {
 				{
 					imageField: &apos;image&apos;,
 					titleField: &apos;title&apos;,
-					captionField: &apos;caption&apos;
+					captionField: &apos;caption&apos;,
 				},
 				options
 			)
@@ -114,12 +114,9 @@ const ImageCardComponent = class extends CardComponent {
 		this.addClass(&apos;image-card-component&apos;)
 		this.setName(&apos;ImageCardComponent&apos;)
 
-		this._imageComponent = new ImageComponent(
-			dataObject,
-			{
-				imageField: this.options.imageField
-			}
-		).appendTo(this.mainComponent)
+		this._imageComponent = new ImageComponent(dataObject, {
+			imageField: this.options.imageField,
+		}).appendTo(this.mainComponent)
 	}
 }
 

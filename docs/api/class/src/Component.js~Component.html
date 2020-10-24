@@ -206,7 +206,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-member-dataObject">dataObject</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-member-dataObject">dataObject</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span>
         </p>
       </div>
       <div>
@@ -262,7 +262,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-member-options">options</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-member-options">options</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
@@ -297,13 +297,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-addClass">addClass</a></span></span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-addClass">addClass</a></span></span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>add class attributes to dom elements</p>
+        <div data-ice="description"><p>Add class attributes to this component&apos;s dom</p>
 </div>
       </div>
     </td>
@@ -326,13 +326,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-appendComponent">appendComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-appendComponent">appendComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>appendComponent adds the childComponent&apos;s dom to this Component&apos;s dom</p>
+        <div data-ice="description"><p>&apos;appendComponent&apos; adds the childComponent&apos;s dom to this Component&apos;s dom</p>
 </div>
       </div>
     </td>
@@ -355,7 +355,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-appendTo">appendTo</a></span></span><span class="code" data-ice="signature">(parentComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-appendTo">appendTo</a></span></span><span class="code" data-ice="signature">(parentComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
@@ -385,7 +385,37 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-bindAttribute">bindAttribute</a></span></span><span class="code" data-ice="signature">(dataField: <span>*</span>, target: <span>*</span>, attributeName: <span>*</span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>, dataModel: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-bindAttribute">bindAttribute</a></span></span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, target: <span>HTMLElement</span>, attributeName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, dataModel: <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Set an attribute of target DOM to the value of dataModel.get(dataField) as it changes
+formatter defaults to the identity function but can be any function that accepts the value and returns a string</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-bindText">bindText</a></span></span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, target: <span>HTMLElement</span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, dataModel: <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>)</span>
         </p>
       </div>
       <div>
@@ -413,35 +443,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-bindText">bindText</a></span></span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, target: <span>HTMLElement or Object3D</span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, dataModel: <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
@@ -470,13 +472,13 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-hide">hide</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-hide">hide</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>hides the dom</p>
+        <div data-ice="description"><p>Hides the dom by setting the &apos;hidden&apos; class</p>
 </div>
       </div>
     </td>
@@ -528,13 +530,13 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-removeClass">removeClass</a></span></span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-removeClass">removeClass</a></span></span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>remove class attributes to the dom</p>
+        <div data-ice="description"><p>Remove class attributes on the dom</p>
 </div>
       </div>
     </td>
@@ -557,7 +559,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-removeComponent">removeComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>, clean: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-removeComponent">removeComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>, clean: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
@@ -586,13 +588,13 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-setName">setName</a></span></span><span class="code" data-ice="signature">(name: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-setName">setName</a></span></span><span class="code" data-ice="signature">(name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Sets the data-name attribute on the dom</p>
+        <div data-ice="description"><p>Sets the data-name attribute on this component&apos;s dom</p>
 </div>
       </div>
     </td>
@@ -615,13 +617,13 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-show">show</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-show">show</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>shows the dom</p>
+        <div data-ice="description"><p>Shows the dom by removing the &apos;hidden&apos; class</p>
 </div>
       </div>
     </td>
@@ -680,7 +682,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
@@ -708,7 +710,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span>
         </p>
       </div>
       <div>
@@ -736,7 +738,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span>*</span>, callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
@@ -873,7 +875,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber22">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber28">source</a></span></span>
     </span>
   </h3>
 
@@ -912,11 +914,11 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">dataObject</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">dataObject</span><span class="code" data-ice="signature">: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
@@ -959,7 +961,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber45">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber54">source</a></span></span>
     </span>
   </h3>
 
@@ -998,11 +1000,11 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">options</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">options</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
@@ -1013,7 +1015,24 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">dom</td>
+      <td data-ice="type" class="code"><span>HTMLElement</span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: null</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -1044,18 +1063,18 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">addClass</span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span>*</span></span>
+    <span class="code" data-ice="name">addClass</span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber90">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber107">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>add class attributes to dom elements</p>
+  <div data-ice="description"><p>Add class attributes to this component&apos;s dom</p>
 </div>
 
   
@@ -1084,8 +1103,9 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1116,18 +1136,18 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">appendComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span>*</span></span>
+    <span class="code" data-ice="name">appendComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber53">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber63">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>appendComponent adds the childComponent&apos;s dom to this Component&apos;s dom</p>
+  <div data-ice="description"><p>&apos;appendComponent&apos; adds the childComponent&apos;s dom to this Component&apos;s dom</p>
 </div>
 
   
@@ -1156,8 +1176,9 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1188,11 +1209,11 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">appendTo</span><span class="code" data-ice="signature">(parentComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span>*</span></span>
+    <span class="code" data-ice="name">appendTo</span><span class="code" data-ice="signature">(parentComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber73">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber86">source</a></span></span>
     </span>
   </h3>
 
@@ -1229,8 +1250,9 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1261,18 +1283,20 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">bindAttribute</span><span class="code" data-ice="signature">(dataField: <span>*</span>, target: <span>*</span>, attributeName: <span>*</span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>, dataModel: <span>*</span>)</span>
+    <span class="code" data-ice="name">bindAttribute</span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, target: <span>HTMLElement</span>, attributeName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, dataModel: <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber159">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber179">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Set an attribute of target DOM to the value of dataModel.get(dataField) as it changes
+formatter defaults to the identity function but can be any function that accepts the value and returns a string</p>
+</div>
 
   
 
@@ -1286,33 +1310,32 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataField</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>HTMLElement</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">attributeName</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">formatter</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: undefined</li></ul></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
+      <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataModel</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="type" class="code"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></td>
+      <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 </tbody>
@@ -1345,11 +1368,11 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">bindText</span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, target: <span>HTMLElement or Object3D</span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, dataModel: <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>)</span>
+    <span class="code" data-ice="name">bindText</span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, target: <span>HTMLElement</span>, formatter: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, dataModel: <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber145">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber165">source</a></span></span>
     </span>
   </h3>
 
@@ -1376,7 +1399,7 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>HTMLElement or Object3D</span></td>
+      <td data-ice="type" class="code"><span>HTMLElement</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -1422,19 +1445,19 @@ this._fooComponent = new FooComponent().appendTo(parentComponent)</p>
     
     
     
-    <span class="code" data-ice="name">cleanup</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">cleanup</span><span class="code" data-ice="signature">(): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber36">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber45">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Called to dispose of any resources used by this component.
-Extending classes <em>should</em> override and call cleanup on sub-Components.</p>
+  <div data-ice="description"><p>Called to dispose of any resources used by this component.</p>
+<p>Extending classes <em>should</em> override and clean any resources that they control.</p>
 </div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">EventHandler#cleanup</a></span></div>
@@ -1447,8 +1470,9 @@ Extending classes <em>should</em> override and call cleanup on sub-Components.</
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>the Component should not be used after this but the return is useful for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1479,18 +1503,18 @@ Extending classes <em>should</em> override and call cleanup on sub-Components.</
     
     
     
-    <span class="code" data-ice="name">hide</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">hide</span><span class="code" data-ice="signature">(): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber107">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber126">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>hides the dom</p>
+  <div data-ice="description"><p>Hides the dom by setting the &apos;hidden&apos; class</p>
 </div>
 
   
@@ -1503,8 +1527,9 @@ Extending classes <em>should</em> override and call cleanup on sub-Components.</
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1539,15 +1564,15 @@ Extending classes <em>should</em> override and call cleanup on sub-Components.</
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber135">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber155">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Listen to a DOM or Component event.
-For example:
+  <div data-ice="description"><p>Listen to a DOM or Component event.</p>
+<p>For example:
 this.buttonDOM = dom.button()
 this.listenTo(&apos;click&apos;, this.buttonDOM, this.handleClick)</p>
 <p>this.textComponent = new TextComponent(...)
@@ -1619,18 +1644,18 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     
     
     
-    <span class="code" data-ice="name">removeClass</span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span>*</span></span>
+    <span class="code" data-ice="name">removeClass</span><span class="code" data-ice="signature">(classNames: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span><span>[]</span></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber99">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber117">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>remove class attributes to the dom</p>
+  <div data-ice="description"><p>Remove class attributes on the dom</p>
 </div>
 
   
@@ -1659,8 +1684,9 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1691,11 +1717,11 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     
     
     
-    <span class="code" data-ice="name">removeComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>, clean: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span>*</span></span>
+    <span class="code" data-ice="name">removeComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>, clean: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber62">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber73">source</a></span></span>
     </span>
   </h3>
 
@@ -1737,8 +1763,9 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1769,18 +1796,18 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     
     
     
-    <span class="code" data-ice="name">setName</span><span class="code" data-ice="signature">(name: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">setName</span><span class="code" data-ice="signature">(name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber81">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber97">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Sets the data-name attribute on the dom</p>
+  <div data-ice="description"><p>Sets the data-name attribute on this component&apos;s dom</p>
 </div>
 
   
@@ -1795,7 +1822,7 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">name</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -1809,8 +1836,9 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1841,18 +1869,18 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     
     
     
-    <span class="code" data-ice="name">show</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">show</span><span class="code" data-ice="signature">(): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber115">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber135">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>shows the dom</p>
+  <div data-ice="description"><p>Shows the dom by removing the &apos;hidden&apos; class</p>
 </div>
 
   
@@ -1865,8 +1893,9 @@ this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...param
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Component.js~Component.html">Component</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for chaining</p>
+</td>
         </tr>
       </tbody>
     </table>

@@ -105,11 +105,9 @@ const ToolTipComponent = class extends Component {
 
 		this._closeComponent = new LabelComponent(undefined, { text: &apos;X&apos; }).appendTo(this)
 		this._closeComponent.addClass(&apos;close-component&apos;)
-		this.listenTo(
-			&apos;click&apos;,
-			this._closeComponent.dom,
-			(ev) =&gt; { this.hide() }
-		)
+		this.listenTo(&apos;click&apos;, this._closeComponent.dom, (ev) =&gt; {
+			this.hide()
+		})
 
 		if (this.options.component) {
 			options.component.addClass(&apos;info-component&apos;)

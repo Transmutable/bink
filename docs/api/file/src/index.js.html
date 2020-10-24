@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../../../">
-  <title data-ice="title">src/components/atoms/SelectionComponent.js | bink</title>
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/index.js | bink</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -83,81 +83,23 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/components/atoms/SelectionComponent.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;../../DOM.js&apos;
-import Component from &apos;../../Component.js&apos;
-
-import LabelComponent from &apos;./LabelComponent.js&apos;
-import ToggleComponent from &apos;./ToggleComponent.js&apos;
+<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import App from &apos;./App.js&apos;
+import dom from &apos;./DOM.js&apos;
+import Router from &apos;./Router.js&apos;
+import Component from &apos;./Component.js&apos;
+import DataModel from &apos;./DataModel.js&apos;
+import Localizer from &apos;./Localizer.js&apos;
+import { throttle } from &apos;./throttle.js&apos;
+import DataObject from &apos;./DataObject.js&apos;
+import MockService from &apos;./MockService.js&apos;
+import DataCollection from &apos;./DataCollection.js&apos;
 
 /**
-SelectionComponent offers the user a set of choices for single or multiple selection.
-*/
-const SelectionComponent = class extends Component {
-	/**
-	@param {Object} [options]
-	@param {string[] | Array&lt;{name {string}, value {string}}&gt;} [options.items]
-	*/
-	constructor(dataObject = null, options = {}) {
-		super(
-			dataObject,
-			Object.assign(
-				{
-					items: [],
-					dom: dom.select(),
-				},
-				options
-			)
-		)
-		this.addClass(&apos;selection-component&apos;)
-		this.setName(&apos;SelectionComponent&apos;)
+ * This is used by rollup to create a handy all-in-one ES module
+ */
 
-		// Normalize the items to all be [name, value]
-		this.options.items = this.options.items.map((item) =&gt; {
-			if (typeof item === &apos;string&apos;) return [item, item]
-			return item
-		})
-
-		this.options.items.forEach((item, index) =&gt; {
-			this.dom.appendChild(dom.option({ value: item[1] }, item[0]))
-		})
-
-		this.listenTo(&apos;input&apos;, this.dom, (ev) =&gt; {
-			this.selectedIndex = this.dom.selectedIndex
-		})
-	}
-
-	get selectedIndex() {
-		return this.dom.selectedIndex
-	}
-
-	set selectedIndex(index) {
-		if (index &gt;= this.dom.children.length) {
-			console.error(&apos;No such index&apos;, index)
-			return
-		}
-		let changed = false
-		if (this.dom.selectedIndex !== index) {
-			changed = true
-			this.dom.selectedIndex = index
-		}
-		if (changed) {
-			this.trigger(SelectionComponent.SELECTION_INDEX_CHANGED, this.dom.selectedIndex)
-		}
-	}
-}
-
-class SelectionItemComponent extends LabelComponent {
-	constructor(dataObject = null, options = {}) {
-		super(dataObject, options)
-		this.addClass(&apos;selection-item&apos;)
-	}
-}
-
-SelectionComponent.SELECTION_INDEX_CHANGED = &apos;selection-index-changed&apos;
-
-export default SelectionComponent
-export { SelectionComponent }
+export { App, dom, Router, throttle, Component, DataModel, Localizer, DataObject, MockService, DataCollection }
 </code></pre>
 
 </div>

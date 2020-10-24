@@ -31,22 +31,27 @@ const Localizer = class extends EventHandler {
 		this._gatheredStrings = this._gathering ? [] : null
 	}
 
+	/** @type {Array<DOMString>} */
 	get defaultLocales() {
 		return this._defaultLocales
 	}
 
+	/** @type {Intl.DateTimeFormat} */
 	get defaultTimeZone() {
 		return this._defaultTimeZone
 	}
 
 	/**
-	This should NOT be turned on in production because it continuously grows in memory.
-	@return {boolean} true if the Localizer is accumulating strings to translate
+	@type {boolean} true if the Localizer is accumulating strings to translate
 	*/
 	get gathering() {
 		return this._gathering
 	}
 
+	/**
+	This should NOT be turned on in production because it continuously grows in memory.
+	@param {boolean} val - true if the Localizer should accumulate strings to translate
+	*/
 	set gathering(val) {
 		if (!!val) {
 			if (this._gathering) return
@@ -62,7 +67,7 @@ const Localizer = class extends EventHandler {
 	}
 
 	/**
-	@return {Object[]} the gathered string translation
+	@type {Array<Object>} the gathered string translation
 	@property {string} key
 	@property {string} value
 	@property {string} defaultValue
@@ -83,6 +88,11 @@ const Localizer = class extends EventHandler {
 		})
 	}
 
+	/**
+	@param {string} key
+	@param {string} [defaultValue=null]
+	@return {string} the translated string
+	*/
 	translate(key, defaultValue = null) {
 		const translation = this._translations.get(key)
 		if (!translation) {
@@ -98,6 +108,7 @@ const Localizer = class extends EventHandler {
 		return value
 	}
 
+	/** @type {Array<string>} */
 	get monthNames() {
 		if (MonthNames === null || MonthNames[0] !== this._defaultLocales[0]) {
 			MonthNames = []
@@ -118,7 +129,7 @@ const Localizer = class extends EventHandler {
 
 	/**
 	Different locales order their dates in various ways: mm/dd/yyyy or yyyy.mm.dd or 2012년 12월 20일 목요일
-	@return {string[]} - a length 3 array of 'day', 'month', and 'year' in the order that this locale renders date fields
+	@type {string[]} - a length 3 array of 'day', 'month', and 'year' in the order that this locale renders date fields
 	*/
 	get dateFieldOrder() {
 		if (DateFieldOrder !== null) return DateFieldOrder
@@ -162,10 +173,21 @@ const Localizer = class extends EventHandler {
 		return DateFieldOrder
 	}
 
+	/**
+	@param {Date} date
+	@param {Object} options
+	@return {string} - the date in locale form
+	*/
 	formatDateObject(date, options) {
 		return date.toLocaleDateString(this._defaultLocales, options)
 	}
 
+	/**
+	@param {Date} date
+	@param {boolean} long - true if the month should be long form
+	@param {Object} options
+	@return {string} - the date in locale form
+	*/
 	formatDate(date, long = false, options = null) {
 		return this.formatDateObject(
 			date,
@@ -177,6 +199,12 @@ const Localizer = class extends EventHandler {
 		)
 	}
 
+	/**
+	@param {Date} date
+	@param {boolean} [long=false] - true if the month should be long form
+	@param {Object} options
+	@return {string} - the date and time in locale form
+	*/
 	formatDateTime(date, long = false, options = null) {
 		return this.formatDateObject(
 			date,
@@ -193,6 +221,7 @@ const Localizer = class extends EventHandler {
 		)
 	}
 
+	/** @type {Localizer} */
 	static get Singleton() {
 		if (Singleton === null) {
 			Singleton = new Localizer()

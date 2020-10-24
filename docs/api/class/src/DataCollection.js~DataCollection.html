@@ -143,7 +143,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(data: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span><span>[]</span></span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&gt;, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
@@ -178,7 +178,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-member-dataObjects">dataObjects</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-member-dataObjects">dataObjects</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -206,7 +206,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-get-length">length</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-get-length">length</a></span></span><span class="code" data-ice="signature">: <span>int</span></span>
         </p>
       </div>
       <div>
@@ -241,7 +241,7 @@
           
           
           <span data-ice="generator">*</span>
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-[Symbol.iterator]">[Symbol.iterator]</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-[Symbol.iterator]">[Symbol.iterator]</a></span></span><span class="code" data-ice="signature">(): <span>Iterator</span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -269,7 +269,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-add">add</a></span></span><span class="code" data-ice="signature">(dataObject: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-add">add</a></span></span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>): <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span>
         </p>
       </div>
       <div>
@@ -297,13 +297,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-addBatch">addBatch</a></span></span><span class="code" data-ice="signature">(dataObjects: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-addBatch">addBatch</a></span></span><span class="code" data-ice="signature">(dataObjects: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Add an array of DataObjects to the end of the collection</p>
+</div>
       </div>
     </td>
     <td>
@@ -325,7 +326,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-at">at</a></span></span><span class="code" data-ice="signature">(index: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-at">at</a></span></span><span class="code" data-ice="signature">(index: <span>int</span>): <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span>
         </p>
       </div>
       <div>
@@ -381,7 +382,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-create">create</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, options: {}): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-create">create</a></span></span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -409,7 +410,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-firstByField">firstByField</a></span></span><span class="code" data-ice="signature">(dataField: <span>*</span>, value: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-firstByField">firstByField</a></span></span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, value: <span>*</span>): <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
@@ -437,7 +438,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-generateDataObject">generateDataObject</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-indexOf">indexOf</a></span></span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>): <span>int</span> | <span>-1</span></span>
         </p>
       </div>
       <div>
@@ -465,7 +466,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-indexOf">indexOf</a></span></span><span class="code" data-ice="signature">(dataObject: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-keepSortedByField">keepSortedByField</a></span></span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, comparator: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>)</span>
         </p>
       </div>
       <div>
@@ -493,7 +494,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-keepSortedByField">keepSortedByField</a></span></span><span class="code" data-ice="signature">(dataField: <span>*</span>, comparator: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-remove">remove</a></span></span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>): <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span>
         </p>
       </div>
       <div>
@@ -521,7 +522,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-remove">remove</a></span></span><span class="code" data-ice="signature">(dataObject: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-reset">reset</a></span></span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&gt;)</span>
         </p>
       </div>
       <div>
@@ -549,7 +550,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-reset">reset</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-sort">sort</a></span></span><span class="code" data-ice="signature">(comparator: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>)</span>
         </p>
       </div>
       <div>
@@ -577,35 +578,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-sort">sort</a></span></span><span class="code" data-ice="signature">(comparator: <span>*</span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-sortByAttribute">sortByAttribute</a></span></span><span class="code" data-ice="signature">(attributeName: <span>*</span>, comparator: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html#instance-method-sortByAttribute">sortByAttribute</a></span></span><span class="code" data-ice="signature">(attributeName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, comparator: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>)</span>
         </p>
       </div>
       <div>
@@ -669,7 +642,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
@@ -697,7 +670,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span>
         </p>
       </div>
       <div>
@@ -725,7 +698,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span>*</span>, callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
@@ -789,7 +762,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#static-method-fetchAll">fetchAll</a></span></span><span class="code" data-ice="signature">(dataObjects: ...<span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#static-method-fetchAll">fetchAll</a></span></span><span class="code" data-ice="signature">(dataObjects: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>DataObjects</span>&gt;, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -819,13 +792,14 @@ Note: this resolves when the fetches complete, regardless of whether they succee
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-get-fetchOptions">fetchOptions</a></span></span><span class="code" data-ice="signature">: {&quot;credentials&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>}</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-get-fetchOptions">fetchOptions</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>: {&quot;credentials&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>}</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Extending classes can override this to add headers, methods, etc to the fetch call</p>
+</div>
       </div>
     </td>
     <td>
@@ -959,7 +933,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-cleanup">cleanup</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span>
         </p>
       </div>
       <div>
@@ -987,7 +961,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-delete">delete</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-delete">delete</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -1021,7 +995,8 @@ Note: this resolves when the fetches complete, regardless of whether they succee
       <div>
         
         
-        
+        <div data-ice="description"><p>Extending classes can override this to allow less strict equality</p>
+</div>
       </div>
     </td>
     <td>
@@ -1043,13 +1018,14 @@ Note: this resolves when the fetches complete, regardless of whether they succee
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-fetch">fetch</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-fetch">fetch</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Ask the server for data for this model or collection</p>
+</div>
       </div>
     </td>
     <td>
@@ -1071,7 +1047,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-onFirstReset">onFirstReset</a></span></span><span class="code" data-ice="signature">(func: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-onFirstReset">onFirstReset</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
         </p>
       </div>
       <div>
@@ -1105,7 +1081,8 @@ Note: this resolves when the fetches complete, regardless of whether they succee
       <div>
         
         
-        
+        <div data-ice="description"><p>Extending classes can override this to parse the data received via a fetch</p>
+</div>
       </div>
     </td>
     <td>
@@ -1156,13 +1133,14 @@ Note: this resolves when the fetches complete, regardless of whether they succee
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-save">save</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-save">save</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Tell the server to create (POST) or update (PUT) this model or collection</p>
+</div>
       </div>
     </td>
     <td>
@@ -1186,7 +1164,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(data: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span><span>[]</span></span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&gt;, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
@@ -1211,10 +1189,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span><span>[]</span></span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&gt;</td>
       <td data-ice="appendix"><ul><li>optional</li>
 <li>default: null</li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>An array of data objects that are loaded into <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>s</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">options</td>
@@ -1226,7 +1205,8 @@ Note: this resolves when the fetches complete, regardless of whether they succee
 <tr data-ice="property" data-depth="1">
       <td data-ice="name" class="code" data-depth="1">options.dataObject</td>
       <td data-ice="type" class="code"><span>class</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: null</li></ul></td>
       <td data-ice="description"><p>the DataObject extending class to use to wrap each data item in this collection</p>
 </td>
     </tr>
@@ -1263,11 +1243,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">dataObjects</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">dataObjects</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber20">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber18">source</a></span></span>
     </span>
   </h3>
 
@@ -1306,11 +1286,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">length</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">length</span><span class="code" data-ice="signature">: <span>int</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber155">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber219">source</a></span></span>
     </span>
   </h3>
 
@@ -1352,11 +1332,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     <span data-ice="generator">*</span>
-    <span class="code" data-ice="name">[Symbol.iterator]</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">[Symbol.iterator]</span><span class="code" data-ice="signature">(): <span>Iterator</span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber150">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber212">source</a></span></span>
     </span>
   </h3>
 
@@ -1370,7 +1350,19 @@ Note: this resolves when the fetches complete, regardless of whether they succee
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>Iterator</span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1395,11 +1387,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">add</span><span class="code" data-ice="signature">(dataObject: <span>*</span>)</span>
+    <span class="code" data-ice="name">add</span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>): <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber61">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber81">source</a></span></span>
     </span>
   </h3>
 
@@ -1420,7 +1412,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataObject</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -1429,7 +1421,20 @@ Note: this resolves when the fetches complete, regardless of whether they succee
 </div>
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for easy chaining</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1454,18 +1459,19 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">addBatch</span><span class="code" data-ice="signature">(dataObjects: <span>*</span>)</span>
+    <span class="code" data-ice="name">addBatch</span><span class="code" data-ice="signature">(dataObjects: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber81">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber106">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Add an array of DataObjects to the end of the collection</p>
+</div>
 
   
 
@@ -1479,7 +1485,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataObjects</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;</td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -1513,11 +1519,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">at</span><span class="code" data-ice="signature">(index: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">at</span><span class="code" data-ice="signature">(index: <span>int</span>): <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber32">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber41">source</a></span></span>
     </span>
   </h3>
 
@@ -1538,7 +1544,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">index</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>int</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -1552,7 +1558,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></td>
           
         </tr>
       </tbody>
@@ -1565,7 +1571,19 @@ Note: this resolves when the fetches complete, regardless of whether they succee
 
   
 
-  
+  <div data-ice="throwWrap">
+    <h4>Throw:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="throw" data-ice="throw">
+        <td><p data-ice="throwName"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span></p></td>
+        <td data-ice="throwDesc"><p>throw when index is out of range</p>
+</td>
+      </tr>
+</tbody>
+    </table>
+  </div>
 
   
 
@@ -1588,7 +1606,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber28">source</a></span></span>
     </span>
   </h3>
 
@@ -1627,11 +1645,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">create</span><span class="code" data-ice="signature">(data: <span>*</span>, options: {}): <span>*</span></span>
+    <span class="code" data-ice="name">create</span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber38">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber53">source</a></span></span>
     </span>
   </h3>
 
@@ -1652,16 +1670,18 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the data used to create a new DataModel in this collection</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">options</td>
-      <td data-ice="type" class="code">{}</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"><ul><li>optional</li>
 <li>default: {}</li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the options passed into <span><a href="class/src/DataModel.js~DataModel.html#instance-constructor-constructor">DataModel.constructor</a></span></p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1673,7 +1693,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</td>
           
         </tr>
       </tbody>
@@ -1705,11 +1725,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">firstByField</span><span class="code" data-ice="signature">(dataField: <span>*</span>, value: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">firstByField</span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, value: <span>*</span>): <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber99">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber135">source</a></span></span>
     </span>
   </h3>
 
@@ -1730,15 +1750,17 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataField</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the name of the DataModel data field to look in</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">value</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the value of the field to match using <code>===</code></p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1750,78 +1772,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-generateDataObject">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">generateDataObject</span><span class="code" data-ice="signature">(data: <span>*</span>): <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber158">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></td>
           
         </tr>
       </tbody>
@@ -1853,11 +1804,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">indexOf</span><span class="code" data-ice="signature">(dataObject: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">indexOf</span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>): <span>int</span> | <span>-1</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber91">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber121">source</a></span></span>
     </span>
   </h3>
 
@@ -1878,7 +1829,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataObject</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -1892,7 +1843,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span>int</span> | <span>-1</span></td>
           
         </tr>
       </tbody>
@@ -1924,11 +1875,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">keepSortedByField</span><span class="code" data-ice="signature">(dataField: <span>*</span>, comparator: <span>*</span>)</span>
+    <span class="code" data-ice="name">keepSortedByField</span><span class="code" data-ice="signature">(dataField: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, comparator: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber140">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber200">source</a></span></span>
     </span>
   </h3>
 
@@ -1949,14 +1900,15 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataField</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">comparator</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="type" class="code"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: DataCollection.defaultComparator</li></ul></td>
       <td data-ice="description"></td>
     </tr>
 </tbody>
@@ -1989,11 +1941,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">remove</span><span class="code" data-ice="signature">(dataObject: <span>*</span>)</span>
+    <span class="code" data-ice="name">remove</span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>): <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber107">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber148">source</a></span></span>
     </span>
   </h3>
 
@@ -2014,7 +1966,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataObject</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -2023,7 +1975,20 @@ Note: this resolves when the fetches complete, regardless of whether they succee
 </div>
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns <code>this</code> for easy chaining</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -2048,11 +2013,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">reset</span><span class="code" data-ice="signature">(data: <span>*</span>)</span>
+    <span class="code" data-ice="name">reset</span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&gt;)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber117">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber163">source</a></span></span>
     </span>
   </h3>
 
@@ -2074,9 +2039,10 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&gt;</td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>used like the <code>data</code> parameter of the contructor to reset the state of the collection</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2108,11 +2074,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">sort</span><span class="code" data-ice="signature">(comparator: <span>*</span>)</span>
+    <span class="code" data-ice="name">sort</span><span class="code" data-ice="signature">(comparator: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber131">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber181">source</a></span></span>
     </span>
   </h3>
 
@@ -2133,8 +2099,8 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">comparator</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="type" class="code"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span></td>
+      <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 </tbody>
@@ -2167,11 +2133,11 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">sortByAttribute</span><span class="code" data-ice="signature">(attributeName: <span>*</span>, comparator: <span>*</span>)</span>
+    <span class="code" data-ice="name">sortByAttribute</span><span class="code" data-ice="signature">(attributeName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, comparator: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber135">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataCollection.js.html#lineNumber190">source</a></span></span>
     </span>
   </h3>
 
@@ -2192,14 +2158,15 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">attributeName</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">comparator</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="type" class="code"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(dataObject1: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, dataObject2: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: DataCollection.defaultComparator</li></ul></td>
       <td data-ice="description"></td>
     </tr>
 </tbody>

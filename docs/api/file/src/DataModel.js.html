@@ -87,35 +87,49 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import DataObject from &apos;./DataObject.js&apos;
 
 /**
-	DataModel holds a map of string,value pairs, sometimes fetched from or sent to a back-end server.
+	DataModel holds a map of &lt;string, value&gt; pairs, sometimes fetched from or sent to a back-end server.
 
-	It fires events when values are changed so that {Component}s and other logic can react.
+	It fires events when values are changed so that {@link Component}s and other logic can react.
 */
-export default class extends DataObject {
+const DataModel = class extends DataObject {
 	/**
 	@param {Object} [data={}]
 	@param {Object} [options={}]
-	@param {Object} [fieldDataObjects=null] a map of dataField (string) to DataObject (class), used to create sub-objects in this Model&apos;s data
+	@param {Object} [options.fieldDataObjects=null] a map of dataField (string) to DataObject (class), used to create sub-objects in this Model&apos;s data
 	*/
 	constructor(data = {}, options = {}) {
 		super(options)
 		if (typeof this.options.fieldDataObjects === &apos;undefined&apos;) {
 			this.options.fieldDataObjects = {}
 		}
+		/** @type {Object&lt;string,*&gt;} */
 		this.data = {}
+		/** @type {DataCollection|null} */
 		this.collection = null // set or unset by a DataCollection that claims or releases the model
+
 		this.setBatch(data)
 	}
+
 	cleanup() {
 		super.cleanup()
+		// TODO - need to clean up any sub-DataObjects
 		this.data = null
 	}
+
+	/**
+	@param {string} dataField
+	@return {boolean} true if this model contains a field with the name of `dataField`
+	*/
 	has(dataField) {
 		return typeof this.data[dataField] !== &apos;undefined&apos;
 	}
+
 	/**
-	Find a value held within this DataModel. 
-	@return may be native types or, if mapped by options.fieldDataObjects, another DataObject
+	Find a value held within this DataModel.
+
+	@param {string} dataField
+	@param {*} [defaultValue=null] a value to return if the field value is `undefined`, `null`, or the empty string
+	@return {*} may be native types or, if mapped by options.fieldDataObjects, another DataObject
 	*/
 	get(dataField, defaultValue = null) {
 		if (typeof this.data[dataField] === &apos;undefined&apos; || this.data[dataField] === null || this.data[dataField] === &apos;&apos;) {
@@ -123,8 +137,12 @@ export default class extends DataObject {
 		}
 		return this.data[dataField]
 	}
+
 	/**
 	Set a key/value pair
+
+	@param {string} dataField
+	@param {*} value - the new value of the field
 	*/
 	set(dataField, value) {
 		const batch = {}
@@ -152,10 +170,19 @@ export default class extends DataObject {
 		}
 		return changes
 	}
+
+	/**
+	Add a value to a field, creating the value if necessary
+	@param {string} dataField
+	@param {int} [amount=1]
+	@return {*} the new value of the field
+	*/
 	increment(dataField, amount = 1) {
 		const currentVal = dataField in this.data ? this.data[dataField] : 0
 		this.set(dataField, currentVal + amount)
+		return this.get(dataField)
 	}
+
 	_set(dataField, data) {
 		// _set does not fire any events, so you probably want to use set or setBatch
 		if (data instanceof DataObject) {
@@ -182,6 +209,11 @@ export default class extends DataObject {
 		}
 		return this.data[dataField]
 	}
+
+	/**
+	Calls the DELETE method on the service resource
+	@return {Promise}
+	*/
 	delete() {
 		return new Promise((resolve, reject) =&gt; {
 			super
@@ -197,6 +229,10 @@ export default class extends DataObject {
 				})
 		})
 	}
+
+	/**
+	@param {Object} [data={}]
+	*/
 	reset(data = {}) {
 		for (const key in this.data) {
 			if (typeof data[key] === &apos;undefined&apos;) {
@@ -206,6 +242,10 @@ export default class extends DataObject {
 		this.setBatch(data)
 		this.trigger(&apos;reset&apos;, this)
 	}
+
+	/**
+	@param {*} obj - the value to compare to `this` or `this.get(&apos;id&apos;)`
+	*/
 	equals(obj) {
 		if (obj === null || typeof obj === &apos;undefined&apos;) return false
 		if (this === obj) return true
@@ -214,6 +254,9 @@ export default class extends DataObject {
 		return false
 	}
 }
+
+export default DataModel
+export { DataModel }
 </code></pre>
 
 </div>

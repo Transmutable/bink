@@ -12,7 +12,13 @@ const Component = class extends EventHandler {
 	*/
 	constructor(dataObject = null, options = {}) {
 		super()
+		/** @type {DataObject} */
 		this.dataObject = dataObject // a DataModel or DataCollection
+
+		/**
+		@type {Object}
+		@property {HTMLElement} [dom=null]
+		*/
 		this.options = Object.assign(
 			{
 				dom: null,
@@ -20,7 +26,7 @@ const Component = class extends EventHandler {
 			options
 		)
 		this.cleanedUp = false
-		this.dom = this.options.dom || dom.div()
+		this._dom = this.options.dom || dom.div()
 		// See the Binder class below for info
 		this._binder = new Binder(this)
 		this.addClass('component')
@@ -31,7 +37,10 @@ const Component = class extends EventHandler {
 
 	/**
 	Called to dispose of any resources used by this component.
-	Extending classes *should* override and call cleanup on sub-Components.
+
+	Extending classes *should* override and clean any resources that they control.
+
+	@return {Component} - the Component should not be used after this but the return is useful for chaining
 	*/
 	cleanup() {
 		if (this.cleanedUp) return
@@ -47,8 +56,9 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	appendComponent adds the childComponent's dom to this Component's dom
+	'appendComponent' adds the childComponent's dom to this Component's dom
 	@param {Component} childComponent
+	@return {Component} returns `this` for chaining
 	*/
 	appendComponent(childComponent) {
 		this._dom.appendChild(childComponent.dom)
@@ -58,6 +68,7 @@ const Component = class extends EventHandler {
 	removeComponent removes the childComponent's dom from this Component's dom.
 	@param {Component} childComponent
 	@param {boolean} [clean]
+	@return {Component} returns `this` for chaining
 	*/
 	removeComponent(childComponent, clean = true) {
 		this._dom.removeChild(childComponent.dom)
@@ -68,7 +79,9 @@ const Component = class extends EventHandler {
 	/**
 	A handy method for quick creation and setting of a parent:
 	this._fooComponent = new FooComponent().appendTo(parentComponent)
+
 	@param {Component} parentComponent
+	@return {Component} returns `this` for chaining
 	*/
 	appendTo(parentComponent) {
 		parentComponent.appendComponent(this)
@@ -76,7 +89,10 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Sets the data-name attribute on the dom
+	Sets the data-name attribute on this component's dom
+
+	@param {string} name
+	@return {Component} returns `this` for chaining
 	*/
 	setName(name) {
 		this._dom.setAttribute('data-name', name)
@@ -84,8 +100,9 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	add class attributes to dom elements
+	Add class attributes to this component's dom
 	@param {string[]} classNames
+	@return {Component} returns `this` for chaining
 	*/
 	addClass(...classNames) {
 		this._dom.addClass(...classNames)
@@ -93,8 +110,9 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	remove class attributes to the dom
+	Remove class attributes on the dom
 	@param {string[]} classNames
+	@return {Component} returns `this` for chaining
 	*/
 	removeClass(...classNames) {
 		this._dom.removeClass(...classNames)
@@ -102,7 +120,8 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	hides the dom
+	Hides the dom by setting the 'hidden' class
+	@return {Component} returns `this` for chaining
 	*/
 	hide() {
 		this.addClass('hidden')
@@ -110,7 +129,8 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	shows the dom
+	Shows the dom by removing the 'hidden' class
+	@return {Component} returns `this` for chaining
 	*/
 	show() {
 		this.removeClass('hidden')
@@ -119,6 +139,7 @@ const Component = class extends EventHandler {
 
 	/**
 	Listen to a DOM or Component event.
+
 	For example:
 		this.buttonDOM = dom.button()
 		this.listenTo('click', this.buttonDOM, this.handleClick)
@@ -137,7 +158,7 @@ const Component = class extends EventHandler {
 
 	/**
 	@param {string} dataField
-	@param {HTMLElement or Object3D} target
+	@param {HTMLElement} target
 	@param {function} formatter
 	@param {DataModel} dataModel
 	*/
@@ -145,7 +166,7 @@ const Component = class extends EventHandler {
 		this._binder.bindText(dataField, target, formatter, dataModel)
 	}
 
-	/*
+	/**
 	Set an attribute of target DOM to the value of dataModel.get(dataField) as it changes
 	formatter defaults to the identity function but can be any function that accepts the value and returns a string
 
@@ -165,11 +186,15 @@ Binder listens for events on {@link EventHandler}s or DOM elements and changes c
 This is part of what makes a Component "reactive".
 */
 const Binder = class {
+	/**
+	@param {Component} component
+	*/
 	constructor(component) {
 		this._component = component
 		this._boundCallbacks = [] // { callback, dataObject } to be unbound during cleanup
 		this._eventCallbacks = [] // { callback, eventName, target } to be unregistered during cleanup
 	}
+
 	cleanup() {
 		for (const bindInfo of this._boundCallbacks) {
 			bindInfo.dataObject.removeListener(bindInfo.callback)
@@ -269,3 +294,4 @@ const Binder = class {
 }
 
 export default Component
+export { Component }

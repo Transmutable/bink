@@ -1,8 +1,8 @@
 window.esdocSearchIndex = [
   [
-    "bink~app",
+    "bink/src/app.js~app",
     "class/src/App.js~App.html",
-    "<span>App</span> <span class=\"search-result-import-path\">bink</span>",
+    "<span>App</span> <span class=\"search-result-import-path\">bink/src/App.js</span>",
     "class"
   ],
   [
@@ -807,12 +807,6 @@ window.esdocSearchIndex = [
     "src/datacollection.js~datacollection#firstbyfield",
     "class/src/DataCollection.js~DataCollection.html#instance-method-firstByField",
     "src/DataCollection.js~DataCollection#firstByField",
-    "method"
-  ],
-  [
-    "src/datacollection.js~datacollection#generatedataobject",
-    "class/src/DataCollection.js~DataCollection.html#instance-method-generateDataObject",
-    "src/DataCollection.js~DataCollection#generateDataObject",
     "method"
   ],
   [
@@ -2070,9 +2064,9 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "src/module.js",
-    "file/src/module.js.html",
-    "src/module.js",
+    "src/index.js",
+    "file/src/index.js.html",
+    "src/index.js",
     "file"
   ],
   [

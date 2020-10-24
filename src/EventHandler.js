@@ -17,6 +17,12 @@ const EventListener = class {
 		}
 		return false
 	}
+
+	cleanup() {
+		delete this.eventName
+		delete this.callback
+		delete this.once
+	}
 }
 
 /**
@@ -38,13 +44,17 @@ const EventHandler = class {
 
 	/**
 	@param {Object|Symbol} [eventName] a string or Symbol indicating the event to watch
-	@param {function(eventName: string, eventSource: EventHandler)} callback often includes more parameters that are specific to the event
+	@param {function(eventName: string, eventSource: EventHandler): undefined} callback often includes more parameters that are specific to the event
 	@param {boolean} [once=false] If true then the listener is removed after receiving one event
 	*/
 	addListener(eventName, callback, once = false) {
 		this.listeners.push(new EventListener(eventName, callback, once))
 	}
 
+	/**
+	@param {string} eventName
+	@param {function} callback
+	*/
 	removeListener(eventName, callback) {
 		let remove = false
 		for (let i = 0; i < this.listeners.length; i++) {
@@ -57,6 +67,7 @@ const EventHandler = class {
 				}
 			}
 			if (remove) {
+				this.listeners[i].cleanup()
 				this.listeners.splice(i, 1)
 				i -= 1
 			}
@@ -71,12 +82,20 @@ const EventHandler = class {
 		return this._listeners
 	}
 
+	/**
+	@return {EventHandler} returns `this` for chaining
+	*/
 	cleanup() {
 		if (typeof this._listeners !== 'undefined') {
+			for (let i = 0; i < this._listeners.length; i++) {
+				this._listeners[i].cleanup()
+			}
 			this._listeners.length = 0
 		}
+		return this
 	}
 }
 EventHandler.ALL_EVENTS = Symbol('all events')
 
 export default EventHandler
+export { EventHandler }

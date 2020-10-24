@@ -14,15 +14,22 @@ const DataObject = class extends EventHandler {
 		this._new = true // True until the first fetch returns, regardless of http status
 		this.cleanedUp = false
 	}
+
+	/**
+	@return {DataObject} returns `this` for easy chaining
+	*/
 	cleanup() {
 		if (this.cleanedUp) return
 		this.cleanedUp = true
 		super.cleanup()
+		return this
 	}
+
 	/** @type {boolean} true until a fetch (even a failed fetch) returns */
 	get isNew() {
 		return this._new
 	}
+
 	/** @type {string} the URL (relative or full) as a string for the endpoint used by this.fetch */
 	get url() {
 		throw new Error('Extending classes must implement url()')
@@ -32,36 +39,52 @@ const DataObject = class extends EventHandler {
 	reset(data = {}) {
 		throw new Error('Extending classes must implement reset')
 	}
+
+	/** Extending classes can override this to parse the data received via a fetch */
 	parse(data) {
-		// Extending classes can override this to parse the data received via a fetch
 		return data
 	}
+
+	/** Extending classes can override this to allow less strict equality */
 	equals(obj) {
-		// Extending classes can override this to allow less strict equality
 		return this === obj
 	}
-	onFirstReset(func) {
-		// If already reset, immediately call func, otherwise wait until the first reset and then call func
+
+	/*
+	If already reset, immediately call callback, otherwise wait until the first reset and then call callback
+	@param {func(dataObject: DataObject)} callback
+	*/
+	onFirstReset(callback) {
 		if (this._new) {
 			this.addListener(
-				() => {
-					func(this)
-				},
 				'reset',
+				() => {
+					callback(this)
+				},
 				true
 			)
 		} else {
-			func(this)
+			callback(this)
 		}
 	}
+	/**
+	Extending classes can override this to add headers, methods, etc to the fetch call
+
+	By default the only fetch options is to set `credentials` to 'same-origin'
+
+	@return {Object}
+	*/
 	get fetchOptions() {
-		// Extending classes can override this to add headers, methods, etc to the fetch call
 		return {
 			credentials: 'same-origin',
 		}
 	}
+
+	/**
+	Ask the server for data for this model or collection
+	@return {Promise<DataObject, Error>}
+	*/
 	fetch() {
-		// Ask the server for data for this model or collection
 		return new Promise(
 			function (resolve, reject) {
 				this.trigger('fetching', this)
@@ -87,6 +110,7 @@ const DataObject = class extends EventHandler {
 			}.bind(this)
 		)
 	}
+
 	/**
 	Use this to override the use of window.fetch
 	For example, MockService overrides this to intercept fetch calls and return its own responses for matched endpoints
@@ -98,6 +122,8 @@ const DataObject = class extends EventHandler {
 	/**
 	Fetch each DataObject and then wait for them all to return
 	Note: this resolves when the fetches complete, regardless of whether they succeed or fail.
+	@param {Array<DataObject>} dataObjects
+	@return {Promise<Array<DataObjects>,Error>}
 	*/
 	static fetchAll(...dataObjects) {
 		const allAreFetched = () => {
@@ -123,8 +149,12 @@ const DataObject = class extends EventHandler {
 			}
 		})
 	}
+
+	/**
+	Tell the server to create (POST) or update (PUT) this model or collection
+	@return {Promise<DataObject,Error>}
+	*/
 	save() {
-		// Tell the server to create (POST) or update (PUT) this model or collection
 		return new Promise(
 			function (resolve, reject) {
 				this.trigger('saving', this)
@@ -156,6 +186,10 @@ const DataObject = class extends EventHandler {
 			}.bind(this)
 		)
 	}
+
+	/**
+	@return {Promise<undefined,Error>}
+	*/
 	delete() {
 		return new Promise(
 			function (resolve, reject) {

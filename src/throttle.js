@@ -45,6 +45,9 @@ const throttle = function (func, wait, leading = true, trailing = true) {
 	return throttled
 }
 
+/**
+A handy utility function for throttling console logging
+*/
 const throttledConsoleLog = throttle(function (...params) {
 	console.log(...params)
 }, 1000)
