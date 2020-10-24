@@ -94,7 +94,7 @@ LabelComponent displays a single line of text
 const LabelComponent = class extends TextComponent {
 	/**
 	@param {DataObject} [dataObject=null]
-	@param {Object} [options=null]
+	@param {Object} [options={}]
 	*/
 	constructor(dataObject = null, options = {}) {
 		super(dataObject, Object.assign({ dom: dom.label() }, options))

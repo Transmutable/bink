@@ -57,3 +57,4 @@ const ImageComponent = class extends Component {
 }
 
 export default ImageComponent
+export { ImageComponent }

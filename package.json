@@ -53,16 +53,13 @@
 		}
 	},
 	"lint-staged": {
-		"linters": {
-			"src/**/*.js": [
-				"esdoc",
-				"prettier --write",
-				"eslint --fix",
-				"git add docs",
-				"git add"
-			]
-		},
-		"relative": true
+		"src/**/*.js": [
+			"esdoc",
+			"prettier --write",
+			"eslint --fix",
+			"git add docs",
+			"git add"
+		]
 	},
 	"devDependencies": {
 		"cross-env": "^7.0.2",
