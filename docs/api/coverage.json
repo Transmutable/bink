@@ -1,7 +1,7 @@
 {
-  "coverage": "42.53%",
+  "coverage": "42.76%",
   "expectCount": 449,
-  "actualCount": 191,
+  "actualCount": 192,
   "files": {
     "src/App.js": {
       "expectCount": 12,
@@ -64,10 +64,10 @@
       "expectCount": 18,
       "actualCount": 14,
       "undocumentLines": [
-        13,
         14,
         15,
-        57
+        16,
+        58
       ]
     },
     "src/EventHandler.js": {
@@ -486,10 +486,8 @@
     },
     "src/throttle.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        8
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     }
   }
 }

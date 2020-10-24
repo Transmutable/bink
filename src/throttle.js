@@ -1,11 +1,15 @@
-/*
-Rate limit a function call. Wait is the minimum number of milliseconds between calls.
-If leading is true, the first call to the throttled function is immediately called.
-If trailing is true, once the wait time has passed the function is called. 
+/**
+`throttle` will rate limit a function call.
 
 This code is cribbed from https://github.com/jashkenas/underscore
+
+@param {function} func
+@param {int} wait - the minimum number of milliseconds between calls.
+@param {boolean} [leading=true] - if true, the first call to the throttled function is immediately called.
+@param {boolean} [trailing=true] - if true, once the wait time has passed the function is called. 
+@return {function} - the throttled function
 */
-const throttle = function (func, wait, leading = true, trailing = true) {
+function throttle(func, wait, leading = true, trailing = true) {
 	let timeout, context, args, result
 	let previous = 0
 

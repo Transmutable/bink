@@ -3,7 +3,7 @@ import DataObject from './DataObject.js'
 import EventHandler from './EventHandler'
 
 /**
-	DataCollection represents an ordered list of DataModel instances
+	`DataCollection` represents an ordered list of DataModel instances
 */
 const DataCollection = class extends DataObject {
 	/**

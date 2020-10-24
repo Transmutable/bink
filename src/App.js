@@ -5,7 +5,7 @@ import Localizer from './Localizer.js'
 import EventHandler from './EventHandler.js'
 
 /**
- * App contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.
+ * `App` contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.
  *
  * App communicates these changes to {@link Component}s via events so that they may react.
  */

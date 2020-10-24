@@ -1,7 +1,7 @@
 import DataObject from './DataObject.js'
 
 /**
-	DataModel holds a map of <string, value> pairs, sometimes fetched from or sent to a back-end server.
+	`DataModel` holds a map of <string, value> pairs, sometimes fetched from or sent to a back-end server.
 
 	It fires events when values are changed so that {@link Component}s and other logic can react.
 */

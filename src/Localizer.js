@@ -9,7 +9,7 @@ const TestDateMilliseconds = 1517385600000
 
 const GatheringCookieName = 'bink-localizer-gathering'
 /**
-Localizer provides the functionality necessary to:
+`Localizer` provides the functionality necessary to:
 
 - pick a string translation based on language
 - format dates based on locale and time zone

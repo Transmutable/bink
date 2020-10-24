@@ -1,8 +1,9 @@
 import EventHandler from './EventHandler.js'
 
 /**
-The abstract class for DataModel and DataCollection
-It holds the event mixin and the generic function of fetching data from a remote service
+`DataObject` is the base class for DataModel and DataCollection.
+
+It holds the event handling and the generic function of fetching data from a remote service
 */
 const DataObject = class extends EventHandler {
 	/**

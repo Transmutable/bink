@@ -26,7 +26,7 @@ const EventListener = class {
 }
 
 /**
-EventHandler is the base class that implements event distribution
+`EventHandler` is the base class that implements event distribution
 */
 const EventHandler = class {
 	/** Send an event to listeners */

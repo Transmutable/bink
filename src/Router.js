@@ -1,7 +1,7 @@
 import EventHandler from './EventHandler.js'
 
 /*
-	Router maps window.history events and URL path fragments to events
+	`Router` maps window.history events and URL path fragments to events
 	For example, routing /^blog\/([0-9]+)\/app\/([0-9a-z]+)$/ to an event with parameters for blog and app IDs:
 
 		let router = new Router()

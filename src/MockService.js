@@ -1,7 +1,7 @@
 import DataObject from './DataObject.js'
 
 /*
-MockService attaches itself to DataObject and will service fetches if it has a matching endpoint, otherwise it uses window.fetch.
+`MockService` attaches itself to DataObject and will service fetches if it has a matching endpoint, otherwise it uses window.fetch.
 
 	let service = new MockService()
 	service.addEndpoint(/^blog\/([0-9a-z]+)$/, (...params) => {
