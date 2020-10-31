@@ -1,5 +1,4 @@
 import dom from '../../DOM.js'
-import * as paths from '../../Paths.js'
 
 import Component from '../../Component.js'
 
@@ -28,7 +27,6 @@ const ButtonComponent = class extends Component {
 		this._text = ''
 
 		// TODO implement events
-
 		this.text = this.options.text || ''
 	}
 

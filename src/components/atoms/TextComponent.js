@@ -36,7 +36,6 @@ const TextComponent = class extends Component {
 	set text(value) {
 		if (this._text === value) return
 		this._text = value || ''
-		this._updateDisplayFromText()
 		this.dom.innerText = this._text
 	}
 
@@ -51,3 +50,4 @@ const TextComponent = class extends Component {
 }
 
 export default TextComponent
+export { TextComponent }

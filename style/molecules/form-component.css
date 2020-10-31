@@ -1,0 +1,60 @@
+/*** FormComponent ***/
+
+.form-component {
+	padding: var(--inner-element-padding);
+	border-radius: var(--container-border-radius);
+	border: solid var(--container-border-width) var(--primary-color);
+}
+
+.form-field-component {
+	display: block;
+	margin-bottom: var(--outer-container-padding);
+}
+
+.form-group {
+	display: block;
+	margin-bottom: calc(var(--inner-element-gap) / 2);
+}
+
+.form-group .label-component {
+	line-height: 1.9em;
+	margin-right: 10px;
+}
+
+.form-field-component.text-input-field-component > .label-component,
+.form-field-component.selection-field-component > .label-component,
+.form-field-component.text-input-field-component > .text-input-component,
+.form-field-component.date-field-component > .label-component:first-child {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-field-component.text-input-field-component > .label-component,
+.form-field-component.selection-field-component > .label-component,
+.form-field-component.date-field-component > .label-component:first-child {
+	margin: 0;
+	line-height: 1.2em;
+}
+
+.date-field-component > .month-input-component,
+.date-field-component > .day-input-component,
+.date-field-component > .year-input-component {
+	text-align: center;
+}
+
+.date-field-component > .month-input-component,
+.date-field-component > .day-input-component {
+	width: 2.4em;
+	margin-right: var(--inner-element-padding);
+}
+
+.date-field-component > .year-input-component {
+	width: 3em;
+}
+
+.date-field-component > .date-label-component {
+	display: block;
+	font-size: var(--font-size-0);
+	min-height: 1em;
+}
+

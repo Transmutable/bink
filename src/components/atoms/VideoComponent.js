@@ -1,11 +1,12 @@
 import dom from '../../DOM.js'
+import Component from '../../Component.js'
 
 /**
 VideoComponent displays a single video.
 
 If you want to display controls, use {@link VideoPlayerComponent}.
 */
-const VideoComponent = class extends CubeComponent {
+const VideoComponent = class extends Component {
 	/**
 	@param {DataObject} [dataObject=null]
 	@param {Object} [options={}]
@@ -103,8 +104,8 @@ const VideoComponent = class extends CubeComponent {
 		})
 		this._video = dom.video(this._source)
 
-		this.dom.removeChild(this._preview)
-		this.dom.appendChild(this._video)
+		this.removeChild(this._preview)
+		this.appendChild(this._video)
 
 		this._video.crossOrigin = 'anonymous'
 		this._video.addEventListener('canplay', this._handleVideoCanPlay, false)

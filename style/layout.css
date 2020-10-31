@@ -1,0 +1,27 @@
+:root {
+	--container-border-radius:					10px;
+	--container-border-width:					1px;
+
+	--outer-container-margin:					0px;
+	--outer-container-outline:					none;
+	--outer-container-border:					solid var(--container-border-width) var(--primary-color);
+	--outer-container-padding:					20px;
+
+	--major-direction-gap:						35px;
+	--major-direction-container-margin:			0px;
+	--major-direction-container-outline:		none;
+	--major-direction-container-border:			solid var(--container-border-width) var(--secondary-color);
+	--major-direction-container-padding:		10px;
+
+	--minor-direction-gap:						25px;
+	--minor-direction-container-margin:			0px;
+	--minor-direction-container-outline:		none;
+	--minor-direction-container-border:			solid var(--container-border-width) var(--primary-color);
+	--minor-direction-container-padding:		12px;
+
+	--inner-element-gap:						20px;
+	--inner-element-margin:						0px;
+	--inner-element-outline:					none;
+	--inner-element-border:						solid var(--container-border-width) var(--primary-color);
+	--inner-element-padding:					12px;
+}

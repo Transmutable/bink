@@ -1,5 +1,4 @@
 import dom from '../../DOM.js'
-import * as paths from '../../Paths.js'
 import Component from '../../Component.js'
 
 import ImageComponent from './ImageComponent.js'

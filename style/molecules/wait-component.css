@@ -1,0 +1,45 @@
+/* WaitComponent */
+
+:root {
+	--animating-border-width: 6px;
+	--animating-padding: 7px;
+	--static-padding: 12px;
+}
+
+.wait-component {
+	text-align: center;
+	padding: var(--static-padding);
+	border: solid 1px var(--primary-color);
+	border-radius: var(--container-border-radius);
+}
+
+.wait-component.nothing-happening {
+	padding: 0;
+	border: none;
+}
+
+.wait-component.wait-top,
+.wait-component.wait-right,
+.wait-component.wait-bottom,
+.wait-component.wait-left {
+	border-color: var(--background-color);
+	padding: var(--animating-padding);
+	border-width: var(--animating-border-width);
+}
+
+
+.wait-component.wait-top {
+	border-top-color: var(--secondary-color);
+}
+
+.wait-component.wait-right {
+	border-right-color: var(--secondary-color);
+}
+
+.wait-component.wait-bottom {
+	border-bottom-color: var(--secondary-color);
+}
+
+.wait-component.wait-left {
+	border-left-color: var(--secondary-color);
+}

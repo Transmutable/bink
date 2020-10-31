@@ -1332,6 +1332,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "src/components/atoms/imagecomponent.js~imagecomponent#src",
+    "class/src/components/atoms/ImageComponent.js~ImageComponent.html#instance-member-src",
+    "src/components/atoms/ImageComponent.js~ImageComponent#src",
+    "member"
+  ],
+  [
     "src/components/atoms/labelcomponent.js",
     "file/src/components/atoms/LabelComponent.js.html",
     "src/components/atoms/LabelComponent.js",
@@ -1554,6 +1560,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "src/components/atoms/textinputcomponent.js~textinputcomponent#value",
+    "class/src/components/atoms/TextInputComponent.js~TextInputComponent.html#instance-member-value",
+    "src/components/atoms/TextInputComponent.js~TextInputComponent#value",
+    "member"
+  ],
+  [
     "src/components/atoms/togglecomponent.js",
     "file/src/components/atoms/ToggleComponent.js.html",
     "src/components/atoms/ToggleComponent.js",
@@ -1678,6 +1690,12 @@ window.esdocSearchIndex = [
     "class/src/components/atoms/VideoComponent.js~VideoComponent.html#instance-get-video",
     "src/components/atoms/VideoComponent.js~VideoComponent#video",
     "member"
+  ],
+  [
+    "src/components/index.js",
+    "file/src/components/index.js.html",
+    "src/components/index.js",
+    "file"
   ],
   [
     "src/components/molecules/audioplayercomponent.js",

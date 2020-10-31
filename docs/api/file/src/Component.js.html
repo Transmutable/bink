@@ -235,10 +235,10 @@ const Component = class extends EventHandler {
 
 	@param {string} eventName
 	@param {HTMLElement or EventHandler} target
-	@param {function} listener
+	@param {function} callback
 	@param {boolean} [once] only listen to the first event, then unbind
 	*/
-	listenTo(eventName, target, listener, once = false) {
+	listenTo(eventName, target, callback, once = false) {
 		this._binder.listenTo(eventName, target, callback, once)
 	}
 

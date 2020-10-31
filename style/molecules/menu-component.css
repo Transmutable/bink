@@ -1,0 +1,51 @@
+/* MenuComponent */
+
+.menu-component {
+	z-index: 7;
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.menu-component > .menu-items-component {
+	display: none;
+	grid-auto-rows: auto;
+	grid-template: auto / auto;
+	gap: 0;
+	position: relative;
+
+	top: 45px;
+	right: 13px;
+	min-width: 6em;
+	text-align: center;
+	position: absolute;
+	background-color: var(--background-color);
+	border-radius: var(--container-border-radius);
+	border: solid var(--container-border-width) var(--primary-color);
+}
+
+.menu-component.open > .menu-items-component {
+	display: grid;
+}
+
+.menu-component > .menu-items-component > .selected {
+	color: var(--primary-color);
+	z-index: 7;
+}
+
+.menu-component > .menu-items-component > .component {
+	border-top: solid var(--container-border-width) var(--secondary-color);
+	padding: var(--inner-element-padding);
+}
+
+.menu-component > .menu-items-component > .component:first-child {
+	border-top: none;
+}
+
+.menu-component > .menu-items-component > .component:hover {
+	color: var(--secondary-color);
+}
+
+.menu-component > .menu-items-component > .component:active {
+	color: var(--dark-secondary-color);
+}

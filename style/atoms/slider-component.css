@@ -1,0 +1,23 @@
+
+/* SliderComponent */
+
+.slider-component {
+	width: 100%;
+}
+
+.slider-component > .slider-handle {
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 32px;
+	background-color: var(--primary-color);
+	border-radius: var(--container-border-radius);
+}
+
+.slider-component > .slider-bar {
+	margin-top: 5px;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: var(--secondary-color);
+}

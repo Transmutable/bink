@@ -1,0 +1,33 @@
+:root {
+	/* Named colors */
+	--light-pink: rgb(255, 152, 203);
+	--pink: rgb(255, 102, 153); /* #FF6699 */
+	--dark-pink: rgb(205, 52, 103); /* #CD3467 */
+
+	--light-orange: rgb(255, 173, 107);
+	--orange: rgb(255, 123, 57); /* #FF7B39 */
+	--dark-orange: rgb(205, 73, 07);
+
+	--light-blue: rgb(150, 200, 255);
+	--blue: rgb(50, 100, 255);
+	--dark-blue: rgb(50, 50, 120);
+
+	/* color scheme */
+	--light-primary-color:		var(--light-pink);
+	--primary-color:			var(--pink);
+	--dark-primary-color:		var(--dark-pink);
+
+	--light-secondary-color:	var(--light-orange);
+	--secondary-color:			var(--orange);
+	--dark-secondary-color:		var(--dark-orange);
+
+	--light-tertiary-color:		var(--light-blue);
+	--tertiary-color:			var(--blue);
+	--dark-tertiary-color:		var(--dark-blue);
+
+	--light-base-color:			rgb(110, 110, 110);
+	--base-color:				rgb(95, 95, 95);
+	--dark-base-color:			rgb(55, 55, 55);
+
+	--background-color: 		#FFFFFF;
+}

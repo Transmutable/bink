@@ -85,13 +85,14 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/atoms/VideoComponent.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;../../DOM.js&apos;
+import Component from &apos;../../Component.js&apos;
 
 /**
 VideoComponent displays a single video.
 
 If you want to display controls, use {@link VideoPlayerComponent}.
 */
-const VideoComponent = class extends CubeComponent {
+const VideoComponent = class extends Component {
 	/**
 	@param {DataObject} [dataObject=null]
 	@param {Object} [options={}]
@@ -189,8 +190,8 @@ const VideoComponent = class extends CubeComponent {
 		})
 		this._video = dom.video(this._source)
 
-		this.dom.removeChild(this._preview)
-		this.dom.appendChild(this._video)
+		this.removeChild(this._preview)
+		this.appendChild(this._video)
 
 		this._video.crossOrigin = &apos;anonymous&apos;
 		this._video.addEventListener(&apos;canplay&apos;, this._handleVideoCanPlay, false)

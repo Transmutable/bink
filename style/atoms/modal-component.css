@@ -1,0 +1,33 @@
+/* ModalComponent */
+
+.modal-component {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	padding: 20px;
+	background-color: var(--background-color);
+	border: solid 2px var(--dark-primary-color);
+}
+
+.modal-component > button {
+	cursor: pointer;
+	background-color: #FFFFFF;
+	padding: 3px 15px;
+	border: solid 2px var(--dark-primary-color);
+	border-radius: 15px;
+	margin: 5px;
+}
+
+.modal-component > button:hover {
+	background-color: var(--secondary-color);
+}
+
+.modal-component > button:active {
+	background-color: var(--light-secondary-color);
+}
+
+.modal-component > button.selected {
+	background-color: var(--light-secondary-color);
+}

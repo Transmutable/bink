@@ -1,0 +1,28 @@
+/* ButtonComponent styles */
+
+button.button-component {
+	cursor: pointer;
+	padding: 3px 15px;
+	background-color: var(--background-color);
+	border-radius: var(--container-border-radius);
+	border: solid var(--container-border-width) var(--primary-color);
+}
+
+button.button-component:hover {
+	border-color: var(--light-secondary-color);
+}
+
+button.button-component:active {
+	border-color: var(--dark-secondary-color);
+}
+
+button.button-component.selected {
+	background-color: var(--dark-primary-color);
+}
+
+button.button-component.small {
+	padding: 2px 8px;
+	font-size: var(--font-size-0);
+	line-height: 1em;
+	text-transform: uppercase;
+}

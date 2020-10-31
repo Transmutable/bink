@@ -1,5 +1,4 @@
 import dom from '../../DOM.js'
-import * as paths from '../../Paths.js'
 import Component from '../../Component.js'
 
 /**
@@ -31,14 +30,14 @@ const TextInputComponent = class extends Component {
 
 		this._placeholderText = this.options.placeholder
 		if (this._placeholderText) {
-			this.dom.setAttribute('placeholder', this._placeholderText)
+			this.setAttribute('placeholder', this._placeholderText)
 		}
 
 		this._text = null
 		this._shifted = false
 
 		this.listenTo('input', this.dom, (ev) => {
-			this.text = this.dom.value
+			this.text = this.value
 		})
 		this.listenTo('keyup', this.dom, (ev) => {
 			if (this.options.submitOnEnter && ev.keyCode === 13) {
@@ -72,7 +71,7 @@ const TextInputComponent = class extends Component {
 		} else {
 			this.removeClass('placeholder')
 		}
-		this.dom.value = this._text
+		this.value = this._text
 		if (this.dataObject && this.options.dataField && this.dataObject.get(this.options.dataField) !== this._text) {
 			this.dataObject.set(this.options.dataField, this._text)
 		}

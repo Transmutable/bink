@@ -2,7 +2,6 @@ import dom from '../../DOM.js'
 import Component from '../../Component.js'
 import { lt, ld, ldt } from '../../Localizer.js'
 
-import IconComponent from '../atoms/IconComponent.js'
 import LabelComponent from '../atoms/LabelComponent.js'
 
 /**
@@ -42,7 +41,7 @@ const PaginationComponent = class extends Component {
 
 		this._statusLabel = new LabelComponent().appendTo(this)
 
-		this._rightArrow = new IconComponent(undefined, { text: lt('Right') })
+		this._rightArrow = new TextComponent(undefined, { text: lt('Right') })
 			.appendTo(this)
 			.addClass('right-arrow')
 			.setName('RightArrow')

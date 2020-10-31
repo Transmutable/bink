@@ -1,0 +1,29 @@
+/* SwitchComponent */
+
+.switch-component {
+	position: relative;
+	background-color: var(--background-color);
+	border: solid 1px var(--secondary-color);
+	height: 30px;
+	width: 42px;
+	cursor:  pointer;
+}
+
+.switch-component .handle {
+	color: var(--background-color);
+	text-align: center;
+	line-height: 34px;
+	background-color: var(--primary-color);
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.switch-component.on .handle {
+	left: 0;
+}
+
+.switch-component.off .handle {
+	right: 0;
+}

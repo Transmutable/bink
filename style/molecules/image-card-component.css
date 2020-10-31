@@ -1,0 +1,12 @@
+/*** ImageCardComponent ***/
+
+.image-card-component > .main-component > .image-component {
+	max-width: 100%;
+	background-color: var(--background-color);
+}
+
+.image-card-component > .main-component > :first-child {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

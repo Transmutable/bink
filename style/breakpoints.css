@@ -1,0 +1,11 @@
+:root {
+	/*
+	These variables are the lower bounds of each size range.
+	Sadly, these are not usable in DOM media queries.
+	*/
+	--extra-small-breakpoint:	0px;
+	--small-breakpoint:			576px;
+	--medium-breakpoint:		768px;
+	--large-breakpoint:			992px;
+	--extra-large-breakpoint:	1200px;
+}

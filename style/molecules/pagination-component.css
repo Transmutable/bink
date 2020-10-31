@@ -1,0 +1,26 @@
+/* PaginationComponent */
+
+:root {
+	--arrow-inner-margin: 0.4cm;
+	--arrow-top-margin: 0.2cm;
+}
+
+.pagination-component > .left-arrow,
+.pagination-component > .right-arrow {
+	width: 33px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.pagination-component > .left-arrow.disabled,
+.pagination-component > .right-arrow.disabled {
+	opacity: 0.1;
+}
+
+
+.pagination-component > .label-component {
+	text-align: center;
+	min-width: 2em;
+	margin: 0 5px;
+}

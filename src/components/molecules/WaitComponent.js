@@ -41,8 +41,8 @@ const WaitComponent = class extends LabelComponent {
 		if (this._animationInterval !== null) return
 		this._animationIndex = 0
 		this._animationInterval = setInterval(() => {
-			this.dom.removeClass(..._animationClassNames)
-			this.dom.addClass(_animationClassNames[this._animationIndex])
+			this.removeClass(..._animationClassNames)
+			this.addClass(_animationClassNames[this._animationIndex])
 			this._animationIndex = (this._animationIndex + 1) % _animationClassNames.length
 		}, _animationTicks)
 	}

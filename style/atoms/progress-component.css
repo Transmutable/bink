@@ -1,0 +1,20 @@
+/* ProgressComponent */
+
+.progress-component {
+	display: inline;
+} 
+
+.progress-component > .track-component {
+	display: block;
+	width: 100%;
+	height: 1em;
+	border: solid var(--container-border-width) var(--secondary-color);
+	border-radius: var(--container-border-radius);
+}
+
+.progress-component > .track-component > .fill-component {
+	display: block;
+	height: 1em;
+	background-color: var(--primary-color);	
+	border-radius: var(--container-border-radius);
+}

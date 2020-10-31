@@ -85,7 +85,6 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/atoms/TextInputComponent.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;../../DOM.js&apos;
-import * as paths from &apos;../../Paths.js&apos;
 import Component from &apos;../../Component.js&apos;
 
 /**
@@ -117,14 +116,14 @@ const TextInputComponent = class extends Component {
 
 		this._placeholderText = this.options.placeholder
 		if (this._placeholderText) {
-			this.dom.setAttribute(&apos;placeholder&apos;, this._placeholderText)
+			this.setAttribute(&apos;placeholder&apos;, this._placeholderText)
 		}
 
 		this._text = null
 		this._shifted = false
 
 		this.listenTo(&apos;input&apos;, this.dom, (ev) =&gt; {
-			this.text = this.dom.value
+			this.text = this.value
 		})
 		this.listenTo(&apos;keyup&apos;, this.dom, (ev) =&gt; {
 			if (this.options.submitOnEnter &amp;&amp; ev.keyCode === 13) {
@@ -158,7 +157,7 @@ const TextInputComponent = class extends Component {
 		} else {
 			this.removeClass(&apos;placeholder&apos;)
 		}
-		this.dom.value = this._text
+		this.value = this._text
 		if (this.dataObject &amp;&amp; this.options.dataField &amp;&amp; this.dataObject.get(this.options.dataField) !== this._text) {
 			this.dataObject.set(this.options.dataField, this._text)
 		}

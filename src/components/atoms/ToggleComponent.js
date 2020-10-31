@@ -16,8 +16,8 @@ const ToggleComponent = class extends Component {
 			dataObject,
 			Object.assign(
 				{
-					dom: dom.div('Toggle'),
-					name: 'ToggleComponent.js',
+					dom: dom.div('▶'),
+					name: 'ToggleComponent',
 				},
 				options
 			)

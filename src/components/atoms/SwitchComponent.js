@@ -39,20 +39,9 @@ const SwitchComponent = class extends Component {
 			this.on = true
 		}
 
-		this.listenTo(
-			Component.ActionEvent,
-			this,
-			(eventName, actionName, active, value, actionParameters, filterParameters) => {
-				if (active == false) return
-				switch (actionName) {
-					case '/action/activate':
-						if (active) {
-							this.on = !this.on
-						}
-						break
-				}
-			}
-		)
+		this.listenTo('click', this.dom, (ev) => {
+			this.on = !this.on
+		})
 	}
 
 	get on() {

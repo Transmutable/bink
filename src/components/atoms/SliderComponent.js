@@ -120,8 +120,8 @@ const SliderComponent = class extends Component {
 	}
 
 	_updateHandlePosition() {
-		const barWidth = this._barComponent.dom.clientWidth
-		const handleWidth = this._handleComponent.dom.clientWidth
+		const barWidth = this._barComponent.clientWidth
+		const handleWidth = this._handleComponent.clientWidth
 		if (barWidth === 0 || handleWidth === 0) return // Not on the page yet
 		const startX = 0
 		const endX = barWidth - handleWidth

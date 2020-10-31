@@ -37,7 +37,7 @@ const SelectionComponent = class extends Component {
 		})
 
 		this.listenTo('input', this.dom, (ev) => {
-			this.selectedIndex = this.dom.selectedIndex
+			this.selectedIndex = this.selectedIndex
 		})
 	}
 
@@ -58,13 +58,6 @@ const SelectionComponent = class extends Component {
 		if (changed) {
 			this.trigger(SelectionComponent.SELECTION_INDEX_CHANGED, this.dom.selectedIndex)
 		}
-	}
-}
-
-class SelectionItemComponent extends LabelComponent {
-	constructor(dataObject = null, options = {}) {
-		super(dataObject, options)
-		this.addClass('selection-item')
 	}
 }
 

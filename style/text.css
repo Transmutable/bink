@@ -1,0 +1,79 @@
+:root {
+	--font-family: sans-serif;
+
+	--light-font-weight: 300;
+	--medium-font-weight: 400;
+	--heavy-font-weight: 600;
+
+	--font-weight-base: var(--light-font-weight);
+	--line-height-base: 1.1em;
+	--letter-spacing-base: normal;
+	--font-size-base: 20px;
+
+	--font-weight-5: var(--light-font-weight);
+	--line-height-5: 1em;
+	--letter-spacing-5: normal;
+	--font-size-5: calc(var(--font-size-base) + 1.6em);
+
+	--font-weight-4: var(--light-font-weight);
+	--line-height-4: 1em;
+	--letter-spacing-4: normal;
+	--font-size-4: calc(var(--font-size-base) + 1.2em);
+
+	--font-weight-3: var(--light-font-weight);
+	--line-height-3: 1em;
+	--letter-spacing-3: normal;
+	--font-size-3: calc(var(--font-size-base) + 0.8em);
+
+	--font-weight-2: var(--light-font-weight);
+	--line-height-2: 1em;
+	--letter-spacing-2: normal;
+	--font-size-2: calc(var(--font-size-base) + 0.4em);
+
+	--font-weight-0: var(--light-font-weight);
+	--line-height-0: 1em;
+	--letter-spacing-0: normal;
+	--font-size-0: calc(var(--font-size-base) - 0.4em);
+}
+
+.font-5 {
+	font-size: var(--font-size-5);
+	font-weight: var(--font-weight-5);
+	line-height: var(--line-height-5);
+	letter-spacing: var(--letter-spacing-5);
+}
+
+.font-4 {
+	font-size: var(--font-size-4);
+	font-weight: var(--font-weight-4);
+	line-height: var(--line-height-4);
+	letter-spacing: var(--letter-spacing-4);
+}
+
+.font-3 {
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-3);
+	line-height: var(--line-height-3);
+	letter-spacing: var(--letter-spacing-3);
+}
+
+.font-2 {
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-2);
+	line-height: var(--line-height-2);
+	letter-spacing: var(--letter-spacing-2);
+}
+
+.font-base {
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-base);
+	line-height: var(--line-height-base);
+	letter-spacing: var(--letter-spacing-base);
+}
+
+.font-0 {
+	font-size: var(--font-size-0);
+	font-weight: var(--font-weight-0);
+	line-height: var(--line-height-0);
+	letter-spacing: var(--letter-spacing-0);
+}

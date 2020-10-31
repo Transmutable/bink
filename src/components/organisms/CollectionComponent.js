@@ -63,8 +63,8 @@ const CollectionComponent = class extends Component {
 	at(index) {
 		// Returns the Component at index, or null if index is out of bounds
 		if (index < 0) return null
-		if (index >= this.dom.children.length) return null
-		return this.dom.children.item(index).component
+		if (index >= this.children.length) return null
+		return this.children.item(index).component
 	}
 	componentForDataObject(dataObject) {
 		return this._dataObjectComponents.get(dataObject.get('id'))
@@ -134,7 +134,7 @@ const CollectionComponent = class extends Component {
 	_remove(itemComponent) {
 		this._dataObjectComponents.delete(itemComponent.dataObject.get('id'))
 		this.removeComponent(itemComponent)
-		itemComponent.dom.removeEventListener('click', null)
+		itemComponent.removeEventListener('click', null)
 		itemComponent.cleanup()
 	}
 	_handleDeleted(eventName, dataObject, error) {

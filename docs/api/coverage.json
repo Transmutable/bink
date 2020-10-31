@@ -150,15 +150,15 @@
       "expectCount": 5,
       "actualCount": 3,
       "undocumentLines": [
-        34,
-        43
+        33,
+        42
       ]
     },
     "src/components/atoms/ButtonComponent.js": {
       "expectCount": 6,
       "actualCount": 5,
       "undocumentLines": [
-        28
+        27
       ]
     },
     "src/components/atoms/HeadingComponent.js": {
@@ -167,10 +167,11 @@
       "undocumentLines": []
     },
     "src/components/atoms/ImageComponent.js": {
-      "expectCount": 6,
+      "expectCount": 7,
       "actualCount": 4,
       "undocumentLines": [
         30,
+        50,
         53
       ]
     },
@@ -201,11 +202,9 @@
       ]
     },
     "src/components/atoms/SelectionComponent.js": {
-      "expectCount": 6,
+      "expectCount": 4,
       "actualCount": 2,
       "undocumentLines": [
-        64,
-        65,
         44,
         48
       ]
@@ -241,10 +240,10 @@
       "undocumentLines": [
         26,
         28,
-        58,
-        62,
-        71,
-        77
+        51,
+        55,
+        64,
+        70
       ]
     },
     "src/components/atoms/TextComponent.js": {
@@ -252,19 +251,20 @@
       "actualCount": 4,
       "undocumentLines": [
         20,
-        43
+        42
       ]
     },
     "src/components/atoms/TextInputComponent.js": {
-      "expectCount": 8,
+      "expectCount": 9,
       "actualCount": 2,
       "undocumentLines": [
-        32,
+        31,
+        36,
         37,
-        38,
-        58,
-        62,
-        65
+        57,
+        61,
+        64,
+        74
       ]
     },
     "src/components/atoms/ToggleComponent.js": {
@@ -282,26 +282,26 @@
       "expectCount": 23,
       "actualCount": 3,
       "undocumentLines": [
-        33,
         34,
         35,
-        37,
+        36,
         38,
         39,
-        42,
-        45,
-        49,
-        53,
-        57,
-        62,
-        67,
-        72,
-        77,
-        82,
-        87,
-        96,
-        132,
-        142
+        40,
+        43,
+        46,
+        50,
+        54,
+        58,
+        63,
+        68,
+        73,
+        78,
+        83,
+        88,
+        97,
+        133,
+        143
       ]
     },
     "src/components/molecules/AudioPlayerComponent.js": {
@@ -394,16 +394,16 @@
       "expectCount": 12,
       "actualCount": 2,
       "undocumentLines": [
+        31,
         32,
-        33,
-        35,
-        43,
-        45,
-        55,
-        58,
-        64,
-        67,
-        75
+        34,
+        42,
+        44,
+        54,
+        57,
+        63,
+        66,
+        74
       ]
     },
     "src/components/molecules/ToolTipComponent.js": {

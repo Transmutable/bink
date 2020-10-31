@@ -1,0 +1,9 @@
+/* VideoComponent */
+
+.video-component > video {
+	max-width: 100%;
+}
+
+.video-component > .preview-image {
+	width: 100%;
+}

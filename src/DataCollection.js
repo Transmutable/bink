@@ -1,6 +1,6 @@
 import DataModel from './DataModel.js'
 import DataObject from './DataObject.js'
-import EventHandler from './EventHandler'
+import EventHandler from './EventHandler.js'
 
 /**
 	`DataCollection` represents an ordered list of DataModel instances

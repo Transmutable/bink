@@ -35,8 +35,8 @@ const ToolTipComponent = class extends Component {
 		this.dom.style.position = 'relative'
 		this.dom.style.left = 0
 		this.dom.style.top = 0
-		const targetPosition = target.dom.documentPosition()
-		const position = this.dom.documentPosition()
+		const targetPosition = target.documentPosition()
+		const position = this.documentPosition()
 		this.dom.style.left = targetPosition[0] - position[0]
 		this.dom.style.top = targetPosition[1] - position[1]
 	}

@@ -4846,7 +4846,7 @@
                     "trailingComments": [
                       {
                         "type": "CommentBlock",
-                        "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} listener\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
+                        "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} callback\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
                         "start": 3156,
                         "end": 3620,
                         "loc": {
@@ -4949,9 +4949,9 @@
                             "line": 155,
                             "column": 37
                           },
-                          "identifierName": "listener"
+                          "identifierName": "callback"
                         },
-                        "name": "listener"
+                        "name": "callback"
                       },
                       {
                         "type": "AssignmentPattern",
@@ -5205,7 +5205,7 @@
                     "leadingComments": [
                       {
                         "type": "CommentBlock",
-                        "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} listener\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
+                        "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} callback\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
                         "start": 3156,
                         "end": 3620,
                         "loc": {
@@ -16784,7 +16784,7 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} listener\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
+                          "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} callback\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
                           "start": 3156,
                           "end": 3620,
                           "loc": {
@@ -16887,9 +16887,9 @@
                               "line": 155,
                               "column": 37
                             },
-                            "identifierName": "listener"
+                            "identifierName": "callback"
                           },
-                          "name": "listener"
+                          "name": "callback"
                         },
                         {
                           "type": "AssignmentPattern",
@@ -17143,7 +17143,7 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} listener\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
+                          "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} callback\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
                           "start": 3156,
                           "end": 3620,
                           "loc": {
@@ -18380,7 +18380,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} listener\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
+      "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} callback\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
       "start": 3156,
       "end": 3620,
       "loc": {
@@ -26434,7 +26434,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} listener\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
+      "value": "*\n\tListen to a DOM or Component event.\n\n\tFor example:\n\t\tthis.buttonDOM = dom.button()\n\t\tthis.listenTo('click', this.buttonDOM, this.handleClick)\n\n\t\tthis.textComponent = new TextComponent(...)\n\t\tthis.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })\n\n\t@param {string} eventName\n\t@param {HTMLElement or EventHandler} target\n\t@param {function} callback\n\t@param {boolean} [once] only listen to the first event, then unbind\n\t",
       "start": 3156,
       "end": 3620,
       "loc": {
@@ -26615,7 +26615,7 @@
         "postfix": false,
         "binop": null
       },
-      "value": "listener",
+      "value": "callback",
       "start": 3650,
       "end": 3658,
       "loc": {
