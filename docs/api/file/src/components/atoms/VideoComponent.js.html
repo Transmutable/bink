@@ -86,6 +86,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/atoms/VideoComponent.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;../../DOM.js&apos;
 import Component from &apos;../../Component.js&apos;
+import { lt, ld, ldt } from &apos;../../Localizer.js&apos;
 
 /**
 VideoComponent displays a single video.
@@ -116,6 +117,7 @@ const VideoComponent = class extends Component {
 		this.addClass(&apos;video-component&apos;)
 		this.setName(&apos;VideoComponent&apos;)
 		this._handleVideoCanPlay = this._handleVideoCanPlay.bind(this)
+		this._videoCanPlay = false // False until the video is loaded
 
 		this._videoRequested = false // False until the video is asked to load or play
 		this._source = null
@@ -126,7 +128,22 @@ const VideoComponent = class extends Component {
 		this._ratio = null
 		this.resize(VideoComponent.RATIO_16x9)
 
-		this._preview = dom.img({ src: this.options.preview }).appendTo(this.dom).addClass(&apos;preview-image&apos;)
+		if (this.options.preview) {
+			this._preview = dom.img({ src: this.options.preview }).appendTo(this.dom).addClass(&apos;preview&apos;)
+		} else {
+			this._preview = dom.span(lt(&apos;Click to play&apos;)).appendTo(this.dom).addClass(&apos;preview&apos;)
+		}
+		this.listenTo(&apos;click&apos;, this._preview, ev =&gt; {
+			if (this._videoCanPlay === false){
+				this.loadVideo() // Will nop if already requested
+				this.listenTo(VideoComponent.VIDEO_CAN_PLAY, this, () =&gt; {
+					this._video.play()
+				}, true)
+			} else {
+				this._video.play()
+			}
+
+		})
 	}
 
 	cleanup() {
@@ -190,8 +207,8 @@ const VideoComponent = class extends Component {
 		})
 		this._video = dom.video(this._source)
 
-		this.removeChild(this._preview)
-		this.appendChild(this._video)
+		this.dom.removeChild(this._preview)
+		this.dom.appendChild(this._video)
 
 		this._video.crossOrigin = &apos;anonymous&apos;
 		this._video.addEventListener(&apos;canplay&apos;, this._handleVideoCanPlay, false)
@@ -224,6 +241,8 @@ const VideoComponent = class extends Component {
 			return
 		}
 		this.resize(videoWidth / videoHeight)
+		this._videoCanPlay = true
+		this.trigger(VideoComponent.VIDEO_CAN_PLAY, this)
 	}
 
 	resize(ratio) {
@@ -233,6 +252,7 @@ const VideoComponent = class extends Component {
 	}
 }
 
+VideoComponent.VIDEO_CAN_PLAY = &apos;video-can-play&apos;
 VideoComponent.VIDEO_INITIALIZED = &apos;video-component-initialized&apos;
 
 VideoComponent.RATIO_16x9 = 16 / 9

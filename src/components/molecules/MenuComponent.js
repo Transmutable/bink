@@ -31,7 +31,7 @@ const MenuComponent = class extends Component {
 		})
 
 		/* terrible hack to prevent selection of the toggle, but the user-select CSS is non-standard and needs browser prefixes 😢 */
-		this.setAttribute('onselectstart', 'return false;')
+		this.dom.setAttribute('onselectstart', 'return false;')
 
 		this._menuItemsComponent = new Component()
 			.appendTo(this)

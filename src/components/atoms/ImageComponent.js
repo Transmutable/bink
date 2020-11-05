@@ -47,7 +47,7 @@ const ImageComponent = class extends Component {
 	set imageURL(value) {
 		if (value === this._imageURL) return
 		this._imageURL = value
-		this.src = this._imageURL
+		this.dom.src = this._imageURL
 	}
 
 	_updateFromData() {

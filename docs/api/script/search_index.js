@@ -1332,12 +1332,6 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "src/components/atoms/imagecomponent.js~imagecomponent#src",
-    "class/src/components/atoms/ImageComponent.js~ImageComponent.html#instance-member-src",
-    "src/components/atoms/ImageComponent.js~ImageComponent#src",
-    "member"
-  ],
-  [
     "src/components/atoms/labelcomponent.js",
     "file/src/components/atoms/LabelComponent.js.html",
     "src/components/atoms/LabelComponent.js",

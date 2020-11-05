@@ -1,5 +1,6 @@
 import dom from '../../DOM.js'
 import Component from '../../Component.js'
+import { lt, ld, ldt } from '../../Localizer.js'
 
 /**
 VideoComponent displays a single video.
@@ -30,6 +31,7 @@ const VideoComponent = class extends Component {
 		this.addClass('video-component')
 		this.setName('VideoComponent')
 		this._handleVideoCanPlay = this._handleVideoCanPlay.bind(this)
+		this._videoCanPlay = false // False until the video is loaded
 
 		this._videoRequested = false // False until the video is asked to load or play
 		this._source = null
@@ -40,7 +42,26 @@ const VideoComponent = class extends Component {
 		this._ratio = null
 		this.resize(VideoComponent.RATIO_16x9)
 
-		this._preview = dom.img({ src: this.options.preview }).appendTo(this.dom).addClass('preview-image')
+		if (this.options.preview) {
+			this._preview = dom.img({ src: this.options.preview }).appendTo(this.dom).addClass('preview')
+		} else {
+			this._preview = dom.span(lt('Click to play')).appendTo(this.dom).addClass('preview')
+		}
+		this.listenTo('click', this._preview, (ev) => {
+			if (this._videoCanPlay === false) {
+				this.loadVideo() // Will nop if already requested
+				this.listenTo(
+					VideoComponent.VIDEO_CAN_PLAY,
+					this,
+					() => {
+						this._video.play()
+					},
+					true
+				)
+			} else {
+				this._video.play()
+			}
+		})
 	}
 
 	cleanup() {
@@ -104,8 +125,8 @@ const VideoComponent = class extends Component {
 		})
 		this._video = dom.video(this._source)
 
-		this.removeChild(this._preview)
-		this.appendChild(this._video)
+		this.dom.removeChild(this._preview)
+		this.dom.appendChild(this._video)
 
 		this._video.crossOrigin = 'anonymous'
 		this._video.addEventListener('canplay', this._handleVideoCanPlay, false)
@@ -138,6 +159,8 @@ const VideoComponent = class extends Component {
 			return
 		}
 		this.resize(videoWidth / videoHeight)
+		this._videoCanPlay = true
+		this.trigger(VideoComponent.VIDEO_CAN_PLAY, this)
 	}
 
 	resize(ratio) {
@@ -147,6 +170,7 @@ const VideoComponent = class extends Component {
 	}
 }
 
+VideoComponent.VIDEO_CAN_PLAY = 'video-can-play'
 VideoComponent.VIDEO_INITIALIZED = 'video-component-initialized'
 
 VideoComponent.RATIO_16x9 = 16 / 9

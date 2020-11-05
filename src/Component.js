@@ -8,7 +8,8 @@ const Component = class extends EventHandler {
 	/**
 	@param {DataObject} [dataObject]
 	@param {Object} [options]
-	@param {HTMLElement} [options.dom]
+	@param {HTMLElement} [options.dom=div]
+	@param {string} [options.anchor=null]
 	*/
 	constructor(dataObject = null, options = {}) {
 		super()
@@ -22,16 +23,25 @@ const Component = class extends EventHandler {
 		this.options = Object.assign(
 			{
 				dom: null,
+				anchor: null,
 			},
 			options
 		)
 		this.cleanedUp = false
 		this._dom = this.options.dom || dom.div()
+		this._anchor = this.options.anchor
+
 		// See the Binder class below for info
 		this._binder = new Binder(this)
 		this.addClass('component')
 		if (this.options.name) {
 			this.setName(this.options.name)
+		}
+
+		if (this._anchor) {
+			this.listenTo('click', this.dom, (ev) => {
+				document.location.href = this._anchor
+			})
 		}
 	}
 

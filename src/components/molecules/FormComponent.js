@@ -29,7 +29,7 @@ const FormComponent = class extends Component {
 		this.addClass('form-component')
 
 		this._headingComponent = new HeadingComponent(undefined, { dom: dom.h2() }).appendTo(this)
-		if (!options.heading) {
+		if (!this.options.heading) {
 			this._headingComponent.hide()
 		}
 

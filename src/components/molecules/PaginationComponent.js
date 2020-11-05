@@ -2,6 +2,7 @@ import dom from '../../DOM.js'
 import Component from '../../Component.js'
 import { lt, ld, ldt } from '../../Localizer.js'
 
+import TextComponent from '../atoms/TextComponent.js'
 import LabelComponent from '../atoms/LabelComponent.js'
 
 /**

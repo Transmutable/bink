@@ -9,41 +9,12 @@ import * as components from '../../src/components/index.js'
 
 import { MediaGridComponent } from '../../src/components/organisms/MediaGridComponent.js'
 
-class SplashApp extends App {
-	constructor(options={}) {
-		super(options)
-		this._headingComponent = new components.HeadingComponent(undefined, {
-			text: lt('Components')
-		}).appendTo(this)
-
-		this._atomsComponent = new AtomsComponent().appendTo(this)
-	}
-}
-
-class ComponentCardComponent extends components.CardComponent {
-	constructor(dataObject=null, options={}) {
-		super(dataObject, Object.assign({
-			dom: dom.li()
-		}, options))
-		this.addClass('component-card-component')
-
-		const clazz = this.dataObject.get('clazz')
-		const optionz = this.dataObject.get('options', null)
-		const dataz = this.dataObject.get('data', null)
-		this._targetComponent = new clazz(dataz, optionz).appendTo(this.mainComponent)
-		this.titleComponent.text = this._targetComponent.dom.getAttribute('data-name')
-	}
-}
-
 class AtomsComponent extends MediaGridComponent {
 	constructor(dataObject=null, options={}) {
 		super(new DataCollection([
 			{
-				clazz: components.AudioPlayerComponent
-			},
-			{
 				clazz: components.ButtonComponent,
-				options: { text: 'Go go' }
+				options: { text: lt('Go go') }
 			},
 			{
 				clazz: components.HeadingComponent,
@@ -51,11 +22,11 @@ class AtomsComponent extends MediaGridComponent {
 			},
 			{
 				clazz: components.ImageComponent,
-				options: { }
+				options: { image: '/examples/media/test-image.jpg' }
 			},
 			{
 				clazz: components.LabelComponent,
-				options: { text: 'Label' }
+				options: { text: lt('Label') }
 			},
 			{
 				clazz: components.ProgressComponent,
@@ -82,11 +53,13 @@ class AtomsComponent extends MediaGridComponent {
 			},
 			{
 				clazz: components.TextComponent,
-				options: { text: 'Text' }
+				options: { text: lt('Text') }
 			},
 			{
 				clazz: components.TextInputComponent,
-				options: { }
+				options: {
+					placeholder: lt('Enter text here')
+				}
 			},
 			{
 				clazz: components.ToggleComponent,
@@ -94,12 +67,154 @@ class AtomsComponent extends MediaGridComponent {
 			},
 			{
 				clazz: components.VideoComponent,
-				options: { }
+				options: {
+					mimeType: 'video/mp4',
+					video: '/examples/media/test16x9video.mov'
+				}
 			}
 		]), Object.assign({
 			itemComponent: ComponentCardComponent
 		}), options)
 		this.addClass('atoms-component', 'view-component')
+	}
+}
+
+class MoleculesComponent extends MediaGridComponent {
+	constructor(dataObject=null, options={}) {
+		super(new DataCollection([
+			{
+				clazz: components.AudioPlayerComponent
+			},
+			{
+				clazz: components.ButtonGroupComponent
+			},
+			{
+				clazz: components.FormComponent
+			},
+			{
+				clazz: components.ImageCardComponent,
+				options: {
+					title: lt('Image title'),
+					image: '/examples/media/test-image.jpg'
+				}
+			},
+			{
+				clazz: components.MenuComponent
+			},
+			{
+				clazz: components.ModalComponent
+			},
+			{
+				clazz: components.PaginationComponent
+			},
+			{
+				clazz: components.ToolTipComponent
+			},
+			{
+				options: {
+					mimeType: 'video/mp4',
+					video: '/examples/media/test16x9video.mov'
+				},
+				clazz: components.VideoPlayerComponent
+			},
+			{
+				clazz: components.WaitComponent
+			}
+		]), Object.assign({
+			itemComponent: ComponentCardComponent
+		}), options)
+		this.addClass('molecules-component', 'view-component')
+	}
+}
+
+class OrganismsComponent extends MediaGridComponent {
+	constructor(dataObject=null, options={}) {
+		super(new DataCollection([
+			{
+				data: new DataCollection(),
+				clazz: components.CollectionComponent
+			},
+			{
+				clazz: components.MastheadComponent,
+				options: {
+					brand: 'Brand',
+					brandAnchor: './',
+					menuItems: [
+						{ name: 'One', anchor: '#one' },
+						{ name: 'Two', anchor: '#two' },
+						{ name: 'Three', anchor: '#three' }
+					]
+				}
+			}
+		]), Object.assign({
+			itemComponent: ComponentCardComponent
+		}), options)
+		this.addClass('organisms-component', 'view-component')
+	}
+}
+
+const ViewInfo = []
+ViewInfo.push({
+	name: 'Atoms',
+	anchor: './#atoms',
+	route: /^atoms$/,
+	component: AtomsComponent
+})
+ViewInfo.push({
+	name: 'Molecules',
+	anchor: './#molecules',
+	route: /^molecules$/,
+	component: MoleculesComponent
+})
+ViewInfo.push({
+	name: 'Organisms',
+	anchor: './#organisms',
+	route: /^organisms$/,
+	component: OrganismsComponent
+})
+
+
+class SplashApp extends App {
+	constructor(options={}) {
+		super(options)
+
+
+		this._headingComponent = new components.HeadingComponent(undefined, {
+			text: lt('Components')
+		}).appendTo(this)
+
+		new components.HeadingComponent(undefined, {
+			dom: dom.h2(),
+			text: lt('Atoms')
+		}).appendTo(this).addClass('section-heading')
+		this._atomsComponent = new AtomsComponent().appendTo(this)
+
+		new components.HeadingComponent(undefined, {
+			dom: dom.h2(),
+			text: lt('Molecules')
+		}).appendTo(this).addClass('section-heading')
+		this._moleculesComponent = new MoleculesComponent().appendTo(this)
+
+		new components.HeadingComponent(undefined, {
+			dom: dom.h2(),
+			text: lt('Organisms')
+		}).appendTo(this).addClass('section-heading')
+		this._organismsComponent = new OrganismsComponent().appendTo(this)
+	}
+}
+
+class ComponentCardComponent extends components.CardComponent {
+	constructor(dataObject=null, options={}) {
+		super(dataObject, Object.assign({
+			dom: dom.li()
+		}, options))
+		this.addClass('component-card-component')
+
+		const clazz = this.dataObject.get('clazz')
+		const optionz = this.dataObject.get('options', null)
+		const dataz = this.dataObject.get('data', null)
+		this._targetComponent = new clazz(dataz, optionz).appendTo(this.mainComponent)
+		this.titleComponent.text = this._targetComponent.dom.getAttribute('data-name')
 	}
 }
 

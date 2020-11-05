@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2394,
+  "end": 2395,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2394,
+    "end": 2395,
     "loc": {
       "start": {
         "line": 1,
@@ -2439,7 +2439,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 1817,
-        "end": 2393,
+        "end": 2394,
         "loc": {
           "start": {
             "line": 32,
@@ -9867,6 +9867,32 @@
     },
     {
       "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2391,
+      "end": 2392,
+      "loc": {
+        "start": {
+          "line": 63,
+          "column": 19
+        },
+        "end": {
+          "line": 63,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
         "label": "}",
         "beforeExpr": false,
         "startsExpr": false,
@@ -9877,8 +9903,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2392,
-      "end": 2393,
+      "start": 2393,
+      "end": 2394,
       "loc": {
         "start": {
           "line": 64,
@@ -9903,8 +9929,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2394,
-      "end": 2394,
+      "start": 2395,
+      "end": 2395,
       "loc": {
         "start": {
           "line": 65,

@@ -10,6 +10,7 @@ CardComponent contains a list of Audio-, Video-, or Image- Components and a capt
 const CardComponent = class extends Component {
 	/**
 	@param {Object} [options]
+	@param {string} [options.title=null]
 	@param {string} [options.titleField=title]
 	@param {string} [options.captionField=caption]
 	*/
@@ -18,6 +19,7 @@ const CardComponent = class extends Component {
 			dataObject,
 			Object.assign(
 				{
+					title: null,
 					titleField: 'title',
 					captionField: 'caption',
 				},
@@ -33,6 +35,7 @@ const CardComponent = class extends Component {
 		this._mainComponent.setName('MainComponent')
 
 		this._titleComponent = new HeadingComponent(dataObject, {
+			text: this.options.title,
 			textField: this.options.titleField,
 		})
 			.appendTo(this)

@@ -30,7 +30,7 @@ const TextInputComponent = class extends Component {
 
 		this._placeholderText = this.options.placeholder
 		if (this._placeholderText) {
-			this.setAttribute('placeholder', this._placeholderText)
+			this.dom.setAttribute('placeholder', this._placeholderText)
 		}
 
 		this._text = null
