@@ -57,9 +57,7 @@
 		"src/**/*.js": [
 			"esdoc",
 			"prettier --write",
-			"eslint --fix",
-			"git add docs",
-			"git add"
+			"eslint --fix"
 		]
 	},
 	"devDependencies": {
