@@ -72,6 +72,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "bink/src/components/organisms/collectioncomponent.js~defaultitemcomponent",
+    "class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html",
+    "<span>DefaultItemComponent</span> <span class=\"search-result-import-path\">bink/src/components/organisms/CollectionComponent.js</span>",
+    "class"
+  ],
+  [
     "bink/src/eventhandler.js~eventhandler",
     "class/src/EventHandler.js~EventHandler.html",
     "<span>EventHandler</span> <span class=\"search-result-import-path\">bink/src/EventHandler.js</span>",
@@ -646,6 +652,18 @@ window.esdocSearchIndex = [
     "class/src/Component.js~Component.html#instance-method-addClass",
     "src/Component.js~Component#addClass",
     "method"
+  ],
+  [
+    "src/component.js~component#anchor",
+    "class/src/Component.js~Component.html#instance-get-anchor",
+    "src/Component.js~Component#anchor",
+    "member"
+  ],
+  [
+    "src/component.js~component#anchor",
+    "class/src/Component.js~Component.html#instance-set-anchor",
+    "src/Component.js~Component#anchor",
+    "member"
   ],
   [
     "src/component.js~component#appendcomponent",
@@ -2043,6 +2061,12 @@ window.esdocSearchIndex = [
     "src/components/organisms/collectioncomponent.js~collectioncomponent#filter",
     "class/src/components/organisms/CollectionComponent.js~CollectionComponent.html#instance-method-filter",
     "src/components/organisms/CollectionComponent.js~CollectionComponent#filter",
+    "method"
+  ],
+  [
+    "src/components/organisms/collectioncomponent.js~defaultitemcomponent#constructor",
+    "class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html#instance-constructor-constructor",
+    "src/components/organisms/CollectionComponent.js~DefaultItemComponent#constructor",
     "method"
   ],
   [

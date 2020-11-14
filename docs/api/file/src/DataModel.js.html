@@ -77,6 +77,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
 </ul>
@@ -87,9 +88,20 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import DataObject from &apos;./DataObject.js&apos;
 
 /**
-	`DataModel` holds a map of &lt;string, value&gt; pairs, sometimes fetched from or sent to a back-end server.
+Holds a map of &lt;string, value&gt; pairs, sometimes fetched from or sent to a back-end server.
 
-	It fires events when values are changed so that {@link Component}s and other logic can react.
+@example &lt;caption&gt;Directly loading data&lt;/caption&gt;
+this.model = new DataModel({ id: 42, something: &apos;different&apos; })
+this.model.get(&apos;id&apos;) // returns 42
+this.model.get(&apos;something&apos;) // returns &apos;different&apos;
+this.model.get(&apos;bogus&apos;, &apos;default&apos;) // returns &apos;default&apos;
+
+@example &lt;caption&gt;Fetching data from a service&lt;/caption&gt;
+class ExampleModel extends DataModel {
+	get url() { return &apos;/api/example&apos; }
+}
+this.model = new ExampleModel()
+this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })
 */
 const DataModel = class extends DataObject {
 	/**
@@ -105,11 +117,14 @@ const DataModel = class extends DataObject {
 		/** @type {Object&lt;string,*&gt;} */
 		this.data = {}
 		/** @type {DataCollection|null} */
-		this.collection = null // set or unset by a DataCollection that claims or releases the model
+		this.collection = null // set or unset by a DataCollection that contains this model
 
 		this.setBatch(data)
 	}
 
+	/**
+	See {@link DataObject.cleanup} for details.
+	*/
 	cleanup() {
 		super.cleanup()
 		// TODO - need to clean up any sub-DataObjects

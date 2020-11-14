@@ -6,10 +6,11 @@ import EventHandler from './EventHandler.js'
 */
 const Component = class extends EventHandler {
 	/**
-	@param {DataObject} [dataObject]
-	@param {Object} [options]
-	@param {HTMLElement} [options.dom=div]
-	@param {string} [options.anchor=null]
+	@param {DataObject} [dataObject=null]
+	@param {Object} [options={}]
+	@param {HTMLElement} [options.dom=div] The HTML element that contains this Component's UI
+	@param {string} [options.anchor=null] A URL that to which the document will traverse if the `dom` is clicked.
+	@param {string} [options.name=null] If set, calls {@link Component.setName} with the value
 	*/
 	constructor(dataObject = null, options = {}) {
 		super()
@@ -33,7 +34,9 @@ const Component = class extends EventHandler {
 
 		// See the Binder class below for info
 		this._binder = new Binder(this)
+
 		this.addClass('component')
+
 		if (this.options.name) {
 			this.setName(this.options.name)
 		}
@@ -46,39 +49,67 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Called to dispose of any resources used by this component.
+	Called to dispose of any resources used by this component, including any listeners added via {@link Component.listenTo}.
 
-	Extending classes *should* override and clean any resources that they control.
+	Extending classes *should* override and release any resources that they control.
 
 	@return {Component} - the Component should not be used after this but the return is useful for chaining
 	*/
 	cleanup() {
 		if (this.cleanedUp) return
 		this.cleanedUp = true
-		super.cleanup()
-		this._binder.cleanup()
+		super.cleanup() // Cleans up the EventHandler
+		this._binder.cleanup() // Cleans up bindings from `listenTo`
 		return this
 	}
 
-	/** @type {HTMLElement} */
+	/**
+	The DOM object that contains this Component's UI.
+
+	You can override the default `dom` value from the constructor by passing an HTMLElement into the constructor's `options.dom`.
+
+	@example <caption>Use it like any normal DOM element</caption>
+	myComponent.dom.setAttribute('data-example', 'new-value')
+
+	@return {HTMLElement}
+	*/
 	get dom() {
 		return this._dom
 	}
 
 	/**
-	'appendComponent' adds the childComponent's dom to this Component's dom
+	A URL that to which the document will traverse if the `dom` is clicked, usually set via the constructor's `Option.anchor`
+
+	@return {?string}
+	*/
+	get anchor() {
+		return this._anchor
+	}
+
+	/**
+	@param {string} [value=null] - A URL string to which the document will traverse if the `dom` is clicked
+	*/
+	set anchor(value) {
+		this._anchor = value
+	}
+
+	/**
+	Adds the childComponent's `dom` as a child of this Component's `dom`
+
 	@param {Component} childComponent
-	@return {Component} returns `this` for chaining
+	@return {Component} returns `this` (not the child component) for chaining
 	*/
 	appendComponent(childComponent) {
 		this._dom.appendChild(childComponent.dom)
 		return this
 	}
+
 	/**
-	removeComponent removes the childComponent's dom from this Component's dom.
+	Removes the childComponent's `dom` from this Component's `dom`
+
 	@param {Component} childComponent
-	@param {boolean} [clean]
-	@return {Component} returns `this` for chaining
+	@param {boolean} [clean=true] if true, call {@link Component.cleanup} on the removed Component
+	@return {Component} returns `this` (not the childComponent) for chaining
 	*/
 	removeComponent(childComponent, clean = true) {
 		this._dom.removeChild(childComponent.dom)
@@ -88,10 +119,12 @@ const Component = class extends EventHandler {
 
 	/**
 	A handy method for quick creation and setting of a parent:
+
+	@example
 	this._fooComponent = new FooComponent().appendTo(parentComponent)
 
-	@param {Component} parentComponent
-	@return {Component} returns `this` for chaining
+	@param {Component} parentComponent - The component to which `this` is appended
+	@return {Component} returns `this` (not the parent component) for chaining
 	*/
 	appendTo(parentComponent) {
 		parentComponent.appendComponent(this)
@@ -99,7 +132,7 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Sets the data-name attribute on this component's dom
+	Sets the `data-name` attribute on this component's dom
 
 	@param {string} name
 	@return {Component} returns `this` for chaining
@@ -110,8 +143,9 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Add class attributes to this component's dom
-	@param {string[]} classNames
+	Add one or more classes to this component's dom `class` attribute without removing any existing classes
+
+	@param {...string} classNames
 	@return {Component} returns `this` for chaining
 	*/
 	addClass(...classNames) {
@@ -120,8 +154,9 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Remove class attributes on the dom
-	@param {string[]} classNames
+	Remove one or more classes from this component's dom `class` attribute without changing other classes
+
+	@param {...string} classNames
 	@return {Component} returns `this` for chaining
 	*/
 	removeClass(...classNames) {
@@ -130,7 +165,8 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Hides the dom by setting the 'hidden' class
+	Hides the dom by adding the `hidden` class
+
 	@return {Component} returns `this` for chaining
 	*/
 	hide() {
@@ -139,7 +175,8 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Shows the dom by removing the 'hidden' class
+	Shows the dom by removing the `hidden` class
+
 	@return {Component} returns `this` for chaining
 	*/
 	show() {
@@ -148,42 +185,78 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Listen to a DOM or Component event.
+	Listen to a DOM, {@link Component}, or {@link DataObject} event.
 
-	For example:
-		this.buttonDOM = dom.button()
-		this.listenTo('click', this.buttonDOM, this.handleClick)
+	The nice thing about using `listenTo` instead of directly adding event listeners is that {@link Component.cleanup} will remove all of those listeners to avoid leaking this object.
 
-		this.textComponent = new TextComponent(...)
-		this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })
+	@example
+	this.buttonDOM = dom.button('Click me')
+	this.listenTo('click', this.buttonDOM, (domEvent) => { ... })
+
+	@example
+	this.buttonComponent = new ButtonComponent(...).appendTo(this)
+	this.listenTo(ButtonComponent.ChangedEvent, this.buttonComponent, (eventName, ...params) => { ... })
+
+	@example
+	this.exampleModel = new DataModel({ someField: 42 })
+	this.listenTo('changed:someField', this.exampleModel, (eventName, ...params) => { ... })
 
 	@param {string} eventName
 	@param {HTMLElement or EventHandler} target
 	@param {function} callback
-	@param {boolean} [once] only listen to the first event, then unbind
+	@param {boolean} [once=false] only listen to the first event, then unbind
 	*/
 	listenTo(eventName, target, callback, once = false) {
 		this._binder.listenTo(eventName, target, callback, once)
 	}
 
 	/**
-	@param {string} dataField
-	@param {HTMLElement} target
-	@param {function} formatter
-	@param {DataModel} dataModel
+	Sets the `innerText` of the target DOM element to the value of `dataModel.get(dataField, '')`, even as it changes.
+
+	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
+
+	@example
+	this.component = new Component(
+		new DataModel({ description: 'Some example text' })
+	)
+	this.component.bindText(
+		'description', 		// dataField
+		this.component.dom,	// target
+		(value) => { return (typeof value === 'string') ? value.toUpperCase() : '' }
+	)
+	// Now any changes to the DataModel's `description` field will be displayed by the component
+
+	@param {string} dataField The name of the field to watch
+	@param {HTMLElement} target The DOM element whose `innerText` will be manipulated
+	@param {function(value: *): string} [formatter=null]
+	@param {DataModel} [dataModel=this.dataObject] defaults to this Component's `dataObject`
 	*/
 	bindText(dataField, target, formatter = null, dataModel = this.dataObject) {
 		this._binder.bindText(dataField, target, formatter, dataModel)
 	}
 
 	/**
-	Set an attribute of target DOM to the value of dataModel.get(dataField) as it changes
-	formatter defaults to the identity function but can be any function that accepts the value and returns a string
+	Sets an attribute of the target DOM element to the value of dataModel.get(dataField), even as it changes.
 
-	@param {string} dataField
-	@param {HTMLElement} target
-	@param {string} attributeName
-	@param {function} formatter
+	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
+
+	@example
+	this.component = new Component(
+		new DataModel({ isAmazing: false })
+	)
+	this.component.bindAttribute(
+		'isAmazing', 		// dataField
+		this.component.dom,	// target
+		'data-example',		// attributeName
+		(value) => { return value ? 'is-amazing' : 'not-amazing' }
+	)
+	// Now any changes to this.component.dataObject will change the `data-example` attribute
+	this.component.dataObject.set('isAmazing', true)
+
+	@param {string} dataField - The name of the field on the `DataModel`
+	@param {HTMLElement} target - The DOM element to manipulate 
+	@param {string} attributeName - The DOM element's attribute to change
+	@param {function(value: *): string} [formatter=null] - defaults to identity (no change to field data)
 	@param {DataModel} dataModel
 	*/
 	bindAttribute(dataField, target, attributeName, formatter = null, dataModel = this.dataObject) {
@@ -248,10 +321,25 @@ const Binder = class {
 	}
 
 	/**
-	@param {string} dataField
-	@param {HTMLElement or Object3D} target
-	@param {function} formatter
-	@param {DataModel} dataModel
+	Sets the `innerText` of the target DOM element to the value of dataModel.get(dataField), even as it changes.
+
+	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
+
+	@example
+	this.component = new Component(
+		new DataModel({ description: 'Some example text' })
+	)
+	this.component.bindText(
+		'description', 		// dataField
+		this.component.dom,	// target
+		(value) => { return (typeof value === 'string') ? value.toUpperCase() : '' }
+	)
+	// Now any changes to the DataModel's `description` field will be displayed by the component
+
+	@param {string} dataField The name of the field to watch
+	@param {HTMLElement} target The DOM element whose `innerText` will be manipulated
+	@param {function(value: *): string} [formatter=null]
+	@param {DataModel} [dataModel=this.dataObject] defaults to this Component's `dataObject`
 	*/
 	bindText(dataField, target, formatter = null, dataModel = this._component.dataObject) {
 		if (formatter === null) {
@@ -273,14 +361,28 @@ const Binder = class {
 		})
 	}
 
-	/*
-	Set the attributeName attribute of target DOM or SOM to the value of dataModel.get(dataField) as it changes
-	formatter defaults to the identity function but can be any function that accepts the value and returns a string
+	/**
+	Sets an attribute of the target DOM element to the value of dataModel.get(dataField), even as it changes.
 
-	@param {string} dataField
-	@param {HTMLElement or Object3D} target
-	@param {string} attributeName
-	@param {function} formatter
+	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
+
+	@example
+	this.component = new Component(
+		new DataModel({ isAmazing: false })
+	)
+	this.component.bindAttribute(
+		'isAmazing', 		// dataField
+		this.component.dom,	// target
+		'data-example',		// attributeName
+		(value) => { return value ? 'is-amazing' : 'not-amazing' }
+	)
+	// Now any changes to this.component.dataObject will change the `data-example` attribute
+	this.component.dataObject.set('isAmazing', true)
+
+	@param {string} dataField - The name of the field on the `DataModel`
+	@param {HTMLElement} target - The DOM element to manipulate 
+	@param {string} attributeName - The DOM element's attribute to change
+	@param {function(value: *): string} [formatter=null] - defaults to identity (no change to field data)
 	@param {DataModel} dataModel
 	*/
 	bindAttribute(dataField, target, attributeName, formatter = null, dataModel = this._component.dataObject) {

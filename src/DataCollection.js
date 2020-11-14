@@ -3,13 +3,31 @@ import DataObject from './DataObject.js'
 import EventHandler from './EventHandler.js'
 
 /**
-	`DataCollection` represents an ordered list of DataModel instances
+An ordered list of DataModel instances, either locally or [fetched](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) from a service.
+
+There are various ways to sort the collection, from {@link DataCollection.sort} to {@link DataCollection.keepSortedByField}.
+The comparator functions used in sorting should use the same return values (e.g. -1, 0, 1) as the [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) comparators.
+
+@example <caption>Constructed with data:</caption>
+this.collection = new DataCollection([
+	{ id: 0, title: 'first model'},
+	{ id: 1, title: 'second model'},
+	{ id: 3, title: 'third model'}
+])
+
+@example <caption>A custom class that is populated from a service:</caption>
+class ExampleCollection extends Collection {
+	get url() { return '/api/examples' }
+}
+this.collection = new ExampleCollection()
+this.collection.fetch().then(() => { ... }).catch((err) => { ... })
+
 */
 const DataCollection = class extends DataObject {
 	/**
-	@param {Array<Object>} [data=null] An array of data objects that are loaded into {@link DataModel}s
+	@param {Array<Object>} [data=[]] An array of data objects that are loaded into {@link DataModel}s
 	@param {Object} [options={}]
-	@param {class} [options.dataObject=null] the DataObject extending class to use to wrap each data item in this collection
+	@param {class} [options.dataObject=DataModel] the `class` of a `DataObject` type to use to wrap each data item in this collection
 	*/
 	constructor(data = [], options = {}) {
 		super(options)
@@ -35,7 +53,7 @@ const DataCollection = class extends DataObject {
 
 	/**
 	@param {int} index
-	@return {DataObject}
+	@return {DataObject} the DataObject at `index` in the internal list
 	@throws {Error} throw when index is out of range
 	*/
 	at(index) {
@@ -128,9 +146,18 @@ const DataCollection = class extends DataObject {
 	}
 
 	/**
-	@param {string} dataField - the name of the DataModel data field to look in
-	@param {*} value - the value of the field to match using `===`
-	@return {DataObject|null}
+	Find the first DataModel with a certain field value.
+
+	@example
+	this.collection = new DataCollection(...)
+	this.collection.fetch().then(() => {
+		console.log('DataModel with id 42:', this.collection.firstByField('id', 42)
+	})
+
+
+	@param {string} dataField - The name of the DataModel field in which to look
+	@param {*} value - The value of the field to match using `===`
+	@return {DataObject|null} The first matching DataModel or null if there is no match
 	*/
 	firstByField(dataField, value) {
 		for (const model of this) {
@@ -143,7 +170,7 @@ const DataCollection = class extends DataObject {
 
 	/**
 	@param {DataObject} dataObject
-	@return {DataCollection} returns `this` for easy chaining
+	@return {DataCollection} returns `this` (the collection) for easy chaining
 	*/
 	remove(dataObject) {
 		const index = this.indexOf(dataObject)
@@ -158,7 +185,9 @@ const DataCollection = class extends DataObject {
 	}
 
 	/**
-	@param {Array<Object>} data - used like the `data` parameter of the contructor to reset the state of the collection
+	Reset the state of the collection.
+
+	@param {Array<Object>} data - Used like the `data` parameter of the contructor to reset the state of the collection
 	*/
 	reset(data) {
 		this._inReset = true
@@ -176,7 +205,9 @@ const DataCollection = class extends DataObject {
 	}
 
 	/**
-	@param {function(dataObject1: DataObject, dataObject2: DataObject): boolean} comparator
+	Rearranges the order of the Collection using a specific sorting algorithm
+
+	@param {function(dataObject1: DataObject, dataObject2: DataObject): integer} comparator
 	*/
 	sort(comparator = DataCollection.defaultComparator) {
 		this.dataObjects.sort(comparator)
@@ -184,8 +215,10 @@ const DataCollection = class extends DataObject {
 	}
 
 	/**
+
+
 	@param {string} attributeName
-	@param {function(dataObject1: DataObject, dataObject2: DataObject): boolean} [comparator=DataCollection.defaultComparator]
+	@param {function(dataObject1: DataObject, dataObject2: DataObject): integer} [comparator=DataCollection.defaultComparator]
 	*/
 	sortByAttribute(attributeName, comparator = DataCollection.defaultComparator) {
 		this.sort((obj1, obj2) => {
@@ -195,7 +228,7 @@ const DataCollection = class extends DataObject {
 
 	/**
 	@param {string} dataField
-	@param {function(dataObject1: DataObject, dataObject2: DataObject): boolean} [comparator=DataCollection.defaultComparator]
+	@param {function(dataObject1: DataObject, dataObject2: DataObject): integer} [comparator=DataCollection.defaultComparator]
 	*/
 	keepSortedByField(dataField, comparator = DataCollection.defaultComparator) {
 		this._comparator = (obj1, obj2) => {
@@ -215,7 +248,11 @@ const DataCollection = class extends DataObject {
 		}
 	}
 
-	/** @type {int} */
+	/**
+	The number of data items in this collection
+
+	@type {int}
+	*/
 	get length() {
 		return this.dataObjects.length
 	}

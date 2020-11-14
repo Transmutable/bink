@@ -77,6 +77,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
 </ul>
@@ -110,7 +111,7 @@
 
   
   
-  <div class="description" data-ice="description"><p><code>DataObject</code> is the base class for DataModel and DataCollection.</p>
+  <div class="description" data-ice="description"><p><code>DataObject</code> is the base class for <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span> and <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span>.</p>
 <p>It holds the event handling and the generic function of fetching data from a remote service</p>
 </div>
   
@@ -149,8 +150,7 @@
       <div>
         
         
-        <div data-ice="description"><p>Fetch each DataObject and then wait for them all to return
-Note: this resolves when the fetches complete, regardless of whether they succeed or fail.</p>
+        <div data-ice="description"><p>Fetch each DataObject and then wait for them all to return</p>
 </div>
       </div>
     </td>
@@ -272,13 +272,14 @@ Note: this resolves when the fetches complete, regardless of whether they succee
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-get-isNew">isNew</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-get-isNew">isNew</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>True until a fetch (even a failed fetch) returns    </p>
+</div>
       </div>
     </td>
     <td>
@@ -334,7 +335,8 @@ Note: this resolves when the fetches complete, regardless of whether they succee
       <div>
         
         
-        
+        <div data-ice="description"><p>The URL (relative or full) as a string for the endpoint used by <span><a href="class/src/DataObject.js~DataObject.html#instance-method-fetch">DataObject.fetch</a></span>.</p>
+</div>
       </div>
     </td>
     <td>
@@ -369,7 +371,8 @@ Note: this resolves when the fetches complete, regardless of whether they succee
       <div>
         
         
-        
+        <div data-ice="description"><p>When models are no longer needed <code>cleanup</code> should be called to release resources like event listeners.</p>
+</div>
       </div>
     </td>
     <td>
@@ -454,7 +457,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
       <div>
         
         
-        <div data-ice="description"><p>Ask the server for data for this model or collection</p>
+        <div data-ice="description"><p>Ask the server for data for this model or collection.</p>
 </div>
       </div>
     </td>
@@ -746,15 +749,15 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber129">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber156">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Fetch each DataObject and then wait for them all to return
-Note: this resolves when the fetches complete, regardless of whether they succeed or fail.</p>
+  <div data-ice="description"><p>Fetch each DataObject and then wait for them all to return</p>
+<p>This resolves when the fetches complete, regardless of whether they succeed or fail.</p>
 </div>
 
   
@@ -846,7 +849,8 @@ Note: this resolves when the fetches complete, regardless of whether they succee
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"><ul><li>optional</li>
 <li>default: {}</li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Not used by DataObject but helpful for extending classes</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -928,7 +932,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber78">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber97">source</a></span></span>
     </span>
   </h3>
 
@@ -936,7 +940,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
   
   
   <div data-ice="description"><p>Extending classes can override this to add headers, methods, etc to the fetch call</p>
-<p>By default the only fetch options is to set <code>credentials</code> to &apos;same-origin&apos;</p>
+<p>By default the only fetch option set is `credentials: same-origin&apos;.</p>
 </div>
 
   
@@ -981,25 +985,38 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     
     
     
-    <span class="code" data-ice="name">isNew</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">isNew</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber30">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber36">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>True until a fetch (even a failed fetch) returns    </p>
+</div>
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1071,21 +1088,34 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber35">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber44">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The URL (relative or full) as a string for the endpoint used by <span><a href="class/src/DataObject.js~DataObject.html#instance-method-fetch">DataObject.fetch</a></span>.</p>
+</div>
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1117,14 +1147,15 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber22">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber24">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>When models are no longer needed <code>cleanup</code> should be called to release resources like event listeners.</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">EventHandler#cleanup</a></span></div>
 
@@ -1173,7 +1204,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber194">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber221">source</a></span></span>
     </span>
   </h3>
 
@@ -1228,7 +1259,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber50">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber59">source</a></span></span>
     </span>
   </h3>
 
@@ -1300,14 +1331,15 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber88">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber110">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Ask the server for data for this model or collection</p>
+  <div data-ice="description"><p>Ask the server for data for this model or collection.</p>
+<p>Depends on <span><a href="class/src/DataObject.js~DataObject.html#instance-get-url">DataObject.url</a></span>, <span><a href="class/src/DataObject.js~DataObject.html#instance-method-parse">DataObject.parse</a></span> and <span><a href="class/src/DataObject.js~DataObject.html#instance-method-reset">DataObject.reset</a></span>.</p>
 </div>
 
   
@@ -1356,7 +1388,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber58">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber77">source</a></span></span>
     </span>
   </h3>
 
@@ -1415,7 +1447,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber45">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber54">source</a></span></span>
     </span>
   </h3>
 
@@ -1487,7 +1519,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber40">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber49">source</a></span></span>
     </span>
   </h3>
 
@@ -1548,7 +1580,7 @@ Note: this resolves when the fetches complete, regardless of whether they succee
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber158">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DataObject.js.html#lineNumber185">source</a></span></span>
     </span>
   </h3>
 

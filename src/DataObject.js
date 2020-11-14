@@ -1,13 +1,13 @@
 import EventHandler from './EventHandler.js'
 
 /**
-`DataObject` is the base class for DataModel and DataCollection.
+`DataObject` is the base class for {@link DataModel} and {@link DataCollection}.
 
 It holds the event handling and the generic function of fetching data from a remote service
 */
 const DataObject = class extends EventHandler {
 	/**
-	@param {Object} [options={}]
+	@param {Object} [options={}] Not used by DataObject but helpful for extending classes
 	*/
 	constructor(options = {}) {
 		super()
@@ -17,6 +17,8 @@ const DataObject = class extends EventHandler {
 	}
 
 	/**
+	When models are no longer needed `cleanup` should be called to release resources like event listeners.
+
 	@return {DataObject} returns `this` for easy chaining
 	*/
 	cleanup() {
@@ -26,12 +28,19 @@ const DataObject = class extends EventHandler {
 		return this
 	}
 
-	/** @type {boolean} true until a fetch (even a failed fetch) returns */
+	/**
+	True until a fetch (even a failed fetch) returns	
+
+	@return {boolean}
+	*/
 	get isNew() {
 		return this._new
 	}
 
-	/** @type {string} the URL (relative or full) as a string for the endpoint used by this.fetch */
+	/**
+	The URL (relative or full) as a string for the endpoint used by {@link DataObject.fetch}.
+	@return {string} 
+	*/
 	get url() {
 		throw new Error('Extending classes must implement url()')
 	}
@@ -53,6 +62,16 @@ const DataObject = class extends EventHandler {
 
 	/*
 	If already reset, immediately call callback, otherwise wait until the first reset and then call callback
+
+	@example
+	class ExampleModel extends DataModel {
+		get url() { return '/api/example' }
+	}
+	const model = new ExampleModel()
+	model.onFirstReset((model) => { ... })
+	model.fetch()
+	// the callback passed to onFirstReset will be called when the fetch completes
+
 	@param {func(dataObject: DataObject)} callback
 	*/
 	onFirstReset(callback) {
@@ -71,7 +90,7 @@ const DataObject = class extends EventHandler {
 	/**
 	Extending classes can override this to add headers, methods, etc to the fetch call
 
-	By default the only fetch options is to set `credentials` to 'same-origin'
+	By default the only fetch option set is `credentials: same-origin'.
 
 	@return {Object}
 	*/
@@ -82,7 +101,10 @@ const DataObject = class extends EventHandler {
 	}
 
 	/**
-	Ask the server for data for this model or collection
+	Ask the server for data for this model or collection.
+
+	Depends on {@link DataObject.url}, {@link DataObject.parse} and {@link DataObject.reset}.
+
 	@return {Promise<DataObject, Error>}
 	*/
 	fetch() {
@@ -113,7 +135,8 @@ const DataObject = class extends EventHandler {
 	}
 
 	/**
-	Use this to override the use of window.fetch
+	This overrides the use of window.fetch, mostly during testing.
+
 	For example, MockService overrides this to intercept fetch calls and return its own responses for matched endpoints
 	*/
 	_innerFetch(...params) {
@@ -122,7 +145,11 @@ const DataObject = class extends EventHandler {
 
 	/**
 	Fetch each DataObject and then wait for them all to return
-	Note: this resolves when the fetches complete, regardless of whether they succeed or fail.
+
+	This resolves when the fetches complete, regardless of whether they succeed or fail.
+
+	
+
 	@param {Array<DataObject>} dataObjects
 	@return {Promise<Array<DataObjects>,Error>}
 	*/

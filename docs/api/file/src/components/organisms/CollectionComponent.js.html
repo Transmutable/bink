@@ -77,6 +77,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
 </ul>
@@ -109,14 +110,15 @@ const DefaultItemComponent = class extends Component {
 
 /**
 CollectionComponent provides a generic list UI for DataCollections.
-
-@param {DataObject} [dataObject=null]
-@param {Object} [options={}]
-@param {Component} [options.itemComponent=DefaultItemComponent] a Component class used to render each item in this list
-@param {Object} [options.itemOptions] a set of options to pass to each item Component
-@param {function} [options.onClick] a function to call with the dataObject whose item Component is clicked
 */
 const CollectionComponent = class extends Component {
+	/**
+	@param {DataObject} [dataObject=null]
+	@param {Object} [options={}]
+	@param {Component} [options.itemComponent=DefaultItemComponent] a Component class used to render each item in this list
+	@param {Object} [options.itemOptions] a set of options to pass to each item Component
+	@param {function} [options.onClick] a function to call with the dataObject whose item Component is clicked
+	*/
 	constructor(dataObject = null, options = {}) {
 		super(dataObject, Object.assign({ dom: dom.ul() }, options))
 		this.addClass(&apos;collection-component&apos;)
@@ -146,17 +148,29 @@ const CollectionComponent = class extends Component {
 			this.trigger(CollectionComponent.Reset, this)
 		}
 	}
+
+	/**
+	@param {int} index
+	@return {?Component} indexed `Component` or `null` if index is out of bounds
+	*/
 	at(index) {
-		// Returns the Component at index, or null if index is out of bounds
 		if (index &lt; 0) return null
 		if (index &gt;= this.children.length) return null
 		return this.children.item(index).component
 	}
+
+	/**
+	@param {DataObject} dataObject
+	@return {?Component}
+	*/
 	componentForDataObject(dataObject) {
 		return this._dataObjectComponents.get(dataObject.get(&apos;id&apos;))
 	}
+
+	/**
+	@param {function(model: DataModel): boolean} filterFn - returns true if the model should be shown
+	*/
 	filter(filterFn = null) {
-		// filterFn must accept a DataModel and return a boolean indicating whether it should be shown or hidden
 		for (const itemComponent of this._dataObjectComponents.values()) {
 			let display
 			if (typeof filterFn === &apos;function&apos;) {
@@ -171,6 +185,7 @@ const CollectionComponent = class extends Component {
 			}
 		}
 	}
+
 	_handleCollectionAdded(eventName, collection, dataObject) {
 		this._add(this._createItemComponent(dataObject))
 	}
@@ -251,7 +266,7 @@ CollectionComponent.Resetting = &apos;collection-component-resetting&apos;
 CollectionComponent.Reset = &apos;collection-component-reset&apos;
 
 export default CollectionComponent
-export { CollectionComponent }
+export { CollectionComponent, DefaultItemComponent }
 </code></pre>
 
 </div>

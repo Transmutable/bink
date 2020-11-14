@@ -51,6 +51,8 @@ function throttle(func, wait, leading = true, trailing = true) {
 
 /**
 A handy utility function for throttling console logging
+
+@param {*[]} params - The parameters to pass to `console.log`
 */
 const throttledConsoleLog = throttle(function (...params) {
 	console.log(...params)

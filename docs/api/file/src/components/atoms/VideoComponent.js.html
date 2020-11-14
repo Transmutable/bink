@@ -77,6 +77,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
 </ul>
@@ -133,16 +134,20 @@ const VideoComponent = class extends Component {
 		} else {
 			this._preview = dom.span(lt(&apos;Click to play&apos;)).appendTo(this.dom).addClass(&apos;preview&apos;)
 		}
-		this.listenTo(&apos;click&apos;, this._preview, ev =&gt; {
-			if (this._videoCanPlay === false){
+		this.listenTo(&apos;click&apos;, this._preview, (ev) =&gt; {
+			if (this._videoCanPlay === false) {
 				this.loadVideo() // Will nop if already requested
-				this.listenTo(VideoComponent.VIDEO_CAN_PLAY, this, () =&gt; {
-					this._video.play()
-				}, true)
+				this.listenTo(
+					VideoComponent.VIDEO_CAN_PLAY,
+					this,
+					() =&gt; {
+						this._video.play()
+					},
+					true
+				)
 			} else {
 				this._video.play()
 			}
-
 		})
 	}
 

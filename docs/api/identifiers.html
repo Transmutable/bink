@@ -77,6 +77,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
 </ul>
@@ -172,7 +173,7 @@
       <div>
         
         
-        <div data-ice="description"><p><code>DataCollection</code> represents an ordered list of DataModel instances</p>
+        <div data-ice="description"><p>An ordered list of DataModel instances, either locally or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetched</a> from a service.</p>
 </div>
       </div>
     </td>
@@ -201,7 +202,7 @@
       <div>
         
         
-        <div data-ice="description"><p><code>DataModel</code> holds a map of &lt;string, value&gt; pairs, sometimes fetched from or sent to a back-end server.</p>
+        <div data-ice="description"><p>Holds a map of &lt;string, value&gt; pairs, sometimes fetched from or sent to a back-end server.</p>
 </div>
       </div>
     </td>
@@ -230,7 +231,7 @@
       <div>
         
         
-        <div data-ice="description"><p><code>DataObject</code> is the base class for DataModel and DataCollection.</p>
+        <div data-ice="description"><p><code>DataObject</code> is the base class for <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span> and <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span>.</p>
 </div>
       </div>
     </td>
@@ -570,7 +571,7 @@
           <span data-ice="kind-icon" class="kind-variable">V</span>
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-throttledConsoleLog">throttledConsoleLog</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-throttledConsoleLog">throttledConsoleLog</a></span></span><span class="code" data-ice="signature">(params: <span><span>*</span><span>[]</span></span>): <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1468,13 +1469,42 @@
           <span data-ice="kind-icon" class="kind-class">C</span>
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span>
         </p>
       </div>
       <div>
         
         
         <div data-ice="description"><p>CollectionComponent provides a generic list UI for DataCollections.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          <span data-ice="kind-icon" class="kind-class">C</span>
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>DefaultItemComponent is used by CollectionComponent if no itemComponent option is passed</p>
 </div>
       </div>
     </td>
@@ -1507,7 +1537,6 @@
 <ul>
 <li>a brand Component</li>
 <li>a navigation MenuComponent</li>
-<li>a ModeSwitcherComponent</li>
 </ul>
 </div>
       </div>

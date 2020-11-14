@@ -11,8 +11,8 @@ const MediaGridComponent = class extends Component {
 	/**
 	@param {DataCollection} dataObject
 	@param {Object} [options={}]
-	@param {Component} [itemComponent=CardComponent] the options object to pass to the item class constructor
-	@param {Object} [itemOptions={}] the Component **class** used for each item in the DataCollection
+	@param {Component} [options.itemComponent=CardComponent] the options object to pass to the item class constructor
+	@param {Object} [options.itemOptions={}] the Component **class** used for each item in the DataCollection
 	*/
 	constructor(dataObject = null, options = {}) {
 		super(

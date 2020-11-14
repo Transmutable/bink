@@ -1,9 +1,20 @@
 import DataObject from './DataObject.js'
 
 /**
-	`DataModel` holds a map of <string, value> pairs, sometimes fetched from or sent to a back-end server.
+Holds a map of <string, value> pairs, sometimes fetched from or sent to a back-end server.
 
-	It fires events when values are changed so that {@link Component}s and other logic can react.
+@example <caption>Directly loading data</caption>
+this.model = new DataModel({ id: 42, something: 'different' })
+this.model.get('id') // returns 42
+this.model.get('something') // returns 'different'
+this.model.get('bogus', 'default') // returns 'default'
+
+@example <caption>Fetching data from a service</caption>
+class ExampleModel extends DataModel {
+	get url() { return '/api/example' }
+}
+this.model = new ExampleModel()
+this.model.fetch().then(() => { ... }).catch(err => { ... })
 */
 const DataModel = class extends DataObject {
 	/**
@@ -19,11 +30,14 @@ const DataModel = class extends DataObject {
 		/** @type {Object<string,*>} */
 		this.data = {}
 		/** @type {DataCollection|null} */
-		this.collection = null // set or unset by a DataCollection that claims or releases the model
+		this.collection = null // set or unset by a DataCollection that contains this model
 
 		this.setBatch(data)
 	}
 
+	/**
+	See {@link DataObject.cleanup} for details.
+	*/
 	cleanup() {
 		super.cleanup()
 		// TODO - need to clean up any sub-DataObjects

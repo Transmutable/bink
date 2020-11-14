@@ -23,14 +23,15 @@ const DefaultItemComponent = class extends Component {
 
 /**
 CollectionComponent provides a generic list UI for DataCollections.
-
-@param {DataObject} [dataObject=null]
-@param {Object} [options={}]
-@param {Component} [options.itemComponent=DefaultItemComponent] a Component class used to render each item in this list
-@param {Object} [options.itemOptions] a set of options to pass to each item Component
-@param {function} [options.onClick] a function to call with the dataObject whose item Component is clicked
 */
 const CollectionComponent = class extends Component {
+	/**
+	@param {DataObject} [dataObject=null]
+	@param {Object} [options={}]
+	@param {Component} [options.itemComponent=DefaultItemComponent] a Component class used to render each item in this list
+	@param {Object} [options.itemOptions] a set of options to pass to each item Component
+	@param {function} [options.onClick] a function to call with the dataObject whose item Component is clicked
+	*/
 	constructor(dataObject = null, options = {}) {
 		super(dataObject, Object.assign({ dom: dom.ul() }, options))
 		this.addClass('collection-component')
@@ -60,17 +61,29 @@ const CollectionComponent = class extends Component {
 			this.trigger(CollectionComponent.Reset, this)
 		}
 	}
+
+	/**
+	@param {int} index
+	@return {?Component} indexed `Component` or `null` if index is out of bounds
+	*/
 	at(index) {
-		// Returns the Component at index, or null if index is out of bounds
 		if (index < 0) return null
 		if (index >= this.children.length) return null
 		return this.children.item(index).component
 	}
+
+	/**
+	@param {DataObject} dataObject
+	@return {?Component}
+	*/
 	componentForDataObject(dataObject) {
 		return this._dataObjectComponents.get(dataObject.get('id'))
 	}
+
+	/**
+	@param {function(model: DataModel): boolean} filterFn - returns true if the model should be shown
+	*/
 	filter(filterFn = null) {
-		// filterFn must accept a DataModel and return a boolean indicating whether it should be shown or hidden
 		for (const itemComponent of this._dataObjectComponents.values()) {
 			let display
 			if (typeof filterFn === 'function') {
@@ -85,6 +98,7 @@ const CollectionComponent = class extends Component {
 			}
 		}
 	}
+
 	_handleCollectionAdded(eventName, collection, dataObject) {
 		this._add(this._createItemComponent(dataObject))
 	}
@@ -165,4 +179,4 @@ CollectionComponent.Resetting = 'collection-component-resetting'
 CollectionComponent.Reset = 'collection-component-reset'
 
 export default CollectionComponent
-export { CollectionComponent }
+export { CollectionComponent, DefaultItemComponent }

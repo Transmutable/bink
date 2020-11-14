@@ -11,7 +11,8 @@ import MenuComponent from '../molecules/MenuComponent.js'
 MastheadComponent contains:
 - a brand Component
 - a navigation MenuComponent
-- a ModeSwitcherComponent
+
+It's usually used at the top of a page to show the site brand and a navigation menu
 */
 const MastheadComponent = class extends Component {
 	/**
