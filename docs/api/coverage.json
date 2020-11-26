@@ -1,7 +1,7 @@
 {
-  "coverage": "44.24%",
-  "expectCount": 452,
-  "actualCount": 200,
+  "coverage": "46.11%",
+  "expectCount": 451,
+  "actualCount": 208,
   "files": {
     "src/App.js": {
       "expectCount": 12,
@@ -30,12 +30,12 @@
       "expectCount": 8,
       "actualCount": 2,
       "undocumentLines": [
-        120,
-        130,
-        266,
-        268,
-        275,
-        279
+        159,
+        169,
+        305,
+        307,
+        314,
+        318
       ]
     },
     "src/DataCollection.js": {
@@ -61,26 +61,24 @@
     },
     "src/DataObject.js": {
       "expectCount": 18,
-      "actualCount": 14,
+      "actualCount": 17,
       "undocumentLines": [
-        14,
-        15,
-        16,
-        77
+        16
       ]
     },
     "src/EventHandler.js": {
       "expectCount": 15,
-      "actualCount": 7,
+      "actualCount": 6,
       "undocumentLines": [
+        1,
+        2,
+        3,
+        4,
         5,
-        6,
         7,
-        8,
         10,
-        13,
-        21,
-        80
+        18,
+        89
       ]
     },
     "src/Localizer.js": {
@@ -92,57 +90,50 @@
         6,
         8,
         10,
-        21,
-        25,
-        26,
-        28,
+        29,
         30,
         31,
-        82,
-        237,
-        238,
-        242,
-        246
+        33,
+        35,
+        36,
+        93,
+        255,
+        256,
+        260,
+        264
       ]
     },
     "src/MockService.js": {
       "expectCount": 12,
       "actualCount": 0,
       "undocumentLines": [
-        15,
-        16,
         17,
-        23,
-        30,
-        47,
-        64,
-        65,
-        66,
-        67,
-        69,
-        72
-      ]
-    },
-    "src/Router.js": {
-      "expectCount": 16,
-      "actualCount": 0,
-      "undocumentLines": [
+        18,
+        19,
+        25,
+        32,
+        49,
         66,
         67,
         68,
         69,
-        70,
-        72,
-        21,
-        22,
-        24,
-        25,
-        26,
+        71,
+        74
+      ]
+    },
+    "src/Router.js": {
+      "expectCount": 15,
+      "actualCount": 6,
+      "undocumentLines": [
         29,
-        35,
         38,
-        41,
-        44
+        61,
+        64,
+        84,
+        85,
+        86,
+        87,
+        88
       ]
     },
     "src/components/atoms/AudioComponent.js": {

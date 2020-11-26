@@ -174,6 +174,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "bink/src/router.js~route",
+    "class/src/Router.js~Route.html",
+    "<span>Route</span> <span class=\"search-result-import-path\">bink/src/Router.js</span>",
+    "class"
+  ],
+  [
     "bink/src/router.js~router",
     "class/src/Router.js~Router.html",
     "<span>Router</span> <span class=\"search-result-import-path\">bink/src/Router.js</span>",
@@ -1062,12 +1068,6 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "src/eventhandler.js~eventhandler#listeners",
-    "class/src/EventHandler.js~EventHandler.html#instance-get-listeners",
-    "src/EventHandler.js~EventHandler#listeners",
-    "member"
-  ],
-  [
     "src/eventhandler.js~eventhandler#removelistener",
     "class/src/EventHandler.js~EventHandler.html#instance-method-removeListener",
     "src/EventHandler.js~EventHandler#removeListener",
@@ -1224,6 +1224,36 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/router.js~route#constructor",
+    "class/src/Router.js~Route.html#instance-constructor-constructor",
+    "src/Router.js~Route#constructor",
+    "method"
+  ],
+  [
+    "src/router.js~route#eventname",
+    "class/src/Router.js~Route.html#instance-member-eventName",
+    "src/Router.js~Route#eventName",
+    "member"
+  ],
+  [
+    "src/router.js~route#matches",
+    "class/src/Router.js~Route.html#instance-method-matches",
+    "src/Router.js~Route#matches",
+    "method"
+  ],
+  [
+    "src/router.js~route#parameters",
+    "class/src/Router.js~Route.html#instance-member-parameters",
+    "src/Router.js~Route#parameters",
+    "member"
+  ],
+  [
+    "src/router.js~route#regex",
+    "class/src/Router.js~Route.html#instance-member-regex",
+    "src/Router.js~Route#regex",
+    "member"
+  ],
+  [
     "src/router.js~router#addroute",
     "class/src/Router.js~Router.html#instance-method-addRoute",
     "src/Router.js~Router#addRoute",
@@ -1246,12 +1276,6 @@ window.esdocSearchIndex = [
     "class/src/Router.js~Router.html#instance-constructor-constructor",
     "src/Router.js~Router#constructor",
     "method"
-  ],
-  [
-    "src/router.js~router#hashlistener",
-    "class/src/Router.js~Router.html#instance-member-hashListener",
-    "src/Router.js~Router#hashListener",
-    "member"
   ],
   [
     "src/router.js~router#routes",

@@ -38,6 +38,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
@@ -85,13 +86,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Localizer from &apos;<span><a href="file/src/Localizer.js.html#lineNumber20">bink/src/Localizer.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Localizer from &apos;<span><a href="file/src/Localizer.js.html#lineNumber23">bink/src/Localizer.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/Localizer.js.html#lineNumber20">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/Localizer.js.html#lineNumber23">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -116,6 +117,7 @@
 <li>pick a string translation based on language</li>
 <li>format dates based on locale and time zone</li>
 </ul>
+<p>In most cases you should use <span><a href="class/src/Localizer.js~Localizer.html#static-get-Singleton">Localizer.Singleton</a></span> instead of creating your own Localizer.</p>
 </div>
   
 
@@ -147,13 +149,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html#static-get-Singleton">Singleton</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html#static-get-Singleton">Singleton</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>In almost all cases you should use this singleton instead of constructing your own <span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span>.</p>
+</div>
       </div>
     </td>
     <td>
@@ -189,7 +192,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>In most cases you should use <span><a href="class/src/Localizer.js~Localizer.html#static-get-Singleton">Localizer.Singleton</a></span> instead of creating your own Localizer.</p>
+</div>
       </div>
     </td>
     <td>
@@ -247,13 +251,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html#instance-get-defaultLocales">defaultLocales</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>DOMString</span>&gt;</span>
+          <span class="code" data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html#instance-get-defaultLocales">defaultLocales</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;: <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>A list of <a href="https://tools.ietf.org/html/bcp47">BCP 47</a> locale strings from <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages">navigator</a>.</p>
+</div>
       </div>
     </td>
     <td>
@@ -275,7 +280,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html#instance-get-defaultTimeZone">defaultTimeZone</a></span></span><span class="code" data-ice="signature">: <span>Intl.DateTimeFormat</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html#instance-get-defaultTimeZone">defaultTimeZone</a></span></span><span class="code" data-ice="signature">: <span>Intl.DateTimeFormat</span>: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -533,34 +538,6 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">get</span>
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-get-listeners">listeners</a></span></span><span class="code" data-ice="signature">: <span><span>EventListener</span><span>[]</span></span>: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
       
       
       <span class="override" data-ice="override"></span>
@@ -571,13 +548,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Adds a listener callback for a given event name.</p>
+</div>
       </div>
     </td>
     <td>
@@ -605,7 +583,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes all references to listener callbacks.</p>
+</div>
       </div>
     </td>
     <td>
@@ -627,13 +606,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span> | <span>EventHandler.ALL_EVENTS</span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes reference to a specific listener.</p>
+</div>
       </div>
     </td>
     <td>
@@ -655,7 +635,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span>*</span>, params: ...<span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>
         </p>
       </div>
       <div>
@@ -684,25 +664,38 @@
     
     
     
-    <span class="code" data-ice="name">Singleton</span><span class="code" data-ice="signature">: <span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span>
+    <span class="code" data-ice="name">Singleton</span><span class="code" data-ice="signature">: <span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber225">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber243">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>In almost all cases you should use this singleton instead of constructing your own <span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span>.</p>
+</div>
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -712,7 +705,14 @@
 
   
 
-  
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">Localizer.Singleton.formatDate(new Date())</code></pre>
+    </div>
+</div>
 
   
 
@@ -735,14 +735,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber27">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>In most cases you should use <span><a href="class/src/Localizer.js~Localizer.html#static-get-Singleton">Localizer.Singleton</a></span> instead of creating your own Localizer.</p>
+</div>
 
   
 
@@ -781,7 +782,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber134">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber145">source</a></span></span>
     </span>
   </h3>
 
@@ -821,25 +822,38 @@
     
     
     
-    <span class="code" data-ice="name">defaultLocales</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>DOMString</span>&gt;</span>
+    <span class="code" data-ice="name">defaultLocales</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber35">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber44">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>A list of <a href="https://tools.ietf.org/html/bcp47">BCP 47</a> locale strings from <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages">navigator</a>.</p>
+</div>
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -864,11 +878,11 @@
     
     
     
-    <span class="code" data-ice="name">defaultTimeZone</span><span class="code" data-ice="signature">: <span>Intl.DateTimeFormat</span></span>
+    <span class="code" data-ice="name">defaultTimeZone</span><span class="code" data-ice="signature">: <span>Intl.DateTimeFormat</span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber40">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber51">source</a></span></span>
     </span>
   </h3>
 
@@ -882,7 +896,19 @@
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>Intl.DateTimeFormat</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -911,7 +937,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber75">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber86">source</a></span></span>
     </span>
   </h3>
 
@@ -982,7 +1008,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber47">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber58">source</a></span></span>
     </span>
   </h3>
 
@@ -1025,7 +1051,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber55">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber66">source</a></span></span>
     </span>
   </h3>
 
@@ -1069,7 +1095,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber112">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber123">source</a></span></span>
     </span>
   </h3>
 
@@ -1115,7 +1141,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber191">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber202">source</a></span></span>
     </span>
   </h3>
 
@@ -1200,7 +1226,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber181">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber192">source</a></span></span>
     </span>
   </h3>
 
@@ -1278,7 +1304,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber208">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber219">source</a></span></span>
     </span>
   </h3>
 
@@ -1364,7 +1390,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber96">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Localizer.js.html#lineNumber107">source</a></span></span>
     </span>
   </h3>
 

@@ -38,6 +38,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
@@ -109,7 +110,7 @@
       <div>
         
         
-        <div data-ice="description"><p>Functions that generate Document Object Model (DOM) elements like dom.div(...) will live in el</p>
+        <div data-ice="description"><p>An object that provides helper functions that generate <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElements</a>, usually for populating <span><a href="class/src/Component.js~Component.html#instance-get-dom">Component.dom</a></span>.</p>
 </div>
       </div>
     </td>
@@ -164,14 +165,14 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/DOM.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/DOM.js.html#lineNumber43">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import dom from &apos;<span><a href="file/src/DOM.js.html#lineNumber4">bink/src/DOM.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import dom from &apos;<span><a href="file/src/DOM.js.html#lineNumber43">bink/src/DOM.js</a></span>&apos;</code></pre></div>
   
   
-  <div data-ice="description"><p>Functions that generate Document Object Model (DOM) elements like dom.div(...) will live in el</p>
+  <div data-ice="description"><p>An object that provides helper functions that generate <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElements</a>, usually for populating <span><a href="class/src/Component.js~Component.html#instance-get-dom">Component.dom</a></span>.</p>
 </div>
 
   
@@ -189,7 +190,53 @@
 
   
 
-  
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">dom.li()
+// returns an `li` HTMLElement: `&lt;li&gt;&lt;/li&gt;`
+
+dom.div()
+// returns a &apos;div&apos; HTMLElement: &apos;&lt;div&gt;&lt;/div&gt;&apos;
+
+dom.span(&apos;Some text&apos;)
+// `&lt;span&gt;Some text&lt;/span&gt;`</code></pre>
+    </div>
+<div class="example-doc" data-ice="exampleDoc">
+      <div class="example-caption" data-ice="exampleCaption">Text and dictionary parameters do handy things</div>
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">dom.a(&apos;Click me&apos;, { href: &apos;/some-url/&apos; })
+// `&lt;a href=&quot;/some-url/&quot;&gt;Click me&lt;/a&gt;`</code></pre>
+    </div>
+<div class="example-doc" data-ice="exampleDoc">
+      <div class="example-caption" data-ice="exampleCaption">Any parameter can be a string, a dictionary, or another element</div>
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">dom.button(
+{ type: &apos;button&apos;, class: &apos;my-button&apos; },
+dom.img({ src: &apos;image.jpg&apos; }),
+&apos;Click me&apos;
+)
+// `&lt;button type=&quot;button&quot; class=&quot;my-button&quot;&gt;&lt;img src=&quot;image.jpg&quot; /&gt;Click me&lt;/button&gt;`
+
+dom.ul(
+dom.li(&apos;First item&apos;),
+dom.li(&apos;Second item&apos;, { class: &apos;selected-item&apos; })
+)
+// &lt;ul&gt;
+// &lt;li&gt;First Item&lt;/li&gt;
+// &lt;li class: &quot;selected-item&quot;&gt;Second item&lt;/li&gt;
+// &lt;/ul&gt;</code></pre>
+    </div>
+<div class="example-doc" data-ice="exampleDoc">
+      <div class="example-caption" data-ice="exampleCaption">Populate a Component&apos;s UI</div>
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">class MyComponent extends Component {
+constructor(dataObject, options) {
+super(dataObject, options)
+this.dom.appendChild(dom.h1(&apos;This is a heading&apos;))
+}
+}</code></pre>
+    </div>
+</div>
 
   
 
@@ -208,11 +255,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/throttle.js.html#lineNumber57">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/throttle.js.html#lineNumber74">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {throttledConsoleLog} from &apos;<span><a href="file/src/throttle.js.html#lineNumber57">bink/src/throttle.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {throttledConsoleLog} from &apos;<span><a href="file/src/throttle.js.html#lineNumber74">bink/src/throttle.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>A handy utility function for throttling console logging</p>

@@ -8,20 +8,25 @@ let DateFieldOrder = null
 const TestDateMilliseconds = 1517385600000
 
 const GatheringCookieName = 'bink-localizer-gathering'
+
 /**
 `Localizer` provides the functionality necessary to:
 
 - pick a string translation based on language
 - format dates based on locale and time zone
 
+In most cases you should use {@link Localizer.Singleton} instead of creating your own Localizer.
+
 @todo detect language, locale, and timezone
 @todo load translations
 */
 const Localizer = class extends EventHandler {
+	/**
+	In most cases you should use {@link Localizer.Singleton} instead of creating your own Localizer.
+	*/
 	constructor() {
 		super()
-		/** @type {Map<{string},{Translation}>} */
-		this._translations = new Map()
+		this._translations = new Map() // <string, Translation>
 		this._defaultLocales = navigator.languages ? navigator.languages : [navigator.language]
 		this._defaultTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 
@@ -31,12 +36,18 @@ const Localizer = class extends EventHandler {
 		this._gatheredStrings = this._gathering ? [] : null
 	}
 
-	/** @type {Array<DOMString>} */
+	/**
+	A list of [BCP 47](https://tools.ietf.org/html/bcp47) locale strings from [navigator](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages).
+
+	@return {Array<string>}
+	*/
 	get defaultLocales() {
 		return this._defaultLocales
 	}
 
-	/** @type {Intl.DateTimeFormat} */
+	/**
+	@return {Intl.DateTimeFormat}
+	*/
 	get defaultTimeZone() {
 		return this._defaultTimeZone
 	}
@@ -221,7 +232,14 @@ const Localizer = class extends EventHandler {
 		)
 	}
 
-	/** @type {Localizer} */
+	/**
+	In almost all cases you should use this singleton instead of constructing your own {@link Localizer}.
+
+	@example
+	Localizer.Singleton.formatDate(new Date())
+
+	@return {Localizer}
+	*/
 	static get Singleton() {
 		if (Singleton === null) {
 			Singleton = new Localizer()

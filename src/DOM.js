@@ -1,5 +1,44 @@
 /**
-Functions that generate Document Object Model (DOM) elements like dom.div(...) will live in el
+An object that provides helper functions that generate [HTMLElements](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement), usually for populating {@link Component.dom}.
+
+@example
+dom.li()
+// returns an `li` HTMLElement: `<li></li>`
+
+dom.div()
+// returns a 'div' HTMLElement: '<div></div>'
+
+dom.span('Some text')
+// `<span>Some text</span>`
+
+@example <caption>Text and dictionary parameters do handy things</caption>
+dom.a('Click me', { href: '/some-url/' })
+// `<a href="/some-url/">Click me</a>`
+
+@example <caption>Any parameter can be a string, a dictionary, or another element</caption>
+dom.button(
+	{ type: 'button', class: 'my-button' },
+	dom.img({ src: 'image.jpg' }),
+	'Click me'
+)
+// `<button type="button" class="my-button"><img src="image.jpg" />Click me</button>`
+
+dom.ul(
+	dom.li('First item'),
+	dom.li('Second item', { class: 'selected-item' })
+)
+// <ul>
+// <li>First Item</li>
+// <li class: "selected-item">Second item</li>
+// </ul>
+
+@example <caption>Populate a Component's UI</caption>
+class MyComponent extends Component {
+	constructor(dataObject, options) {
+		super(dataObject, options)
+		this.dom.appendChild(dom.h1('This is a heading'))
+	}
+}
 */
 const dom = {}
 export default dom

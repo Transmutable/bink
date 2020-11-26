@@ -38,6 +38,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
@@ -85,13 +86,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import EventHandler from &apos;<span><a href="file/src/EventHandler.js.html#lineNumber31">bink/src/EventHandler.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import EventHandler from &apos;<span><a href="file/src/EventHandler.js.html#lineNumber29">bink/src/EventHandler.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/EventHandler.js.html#lineNumber31">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/EventHandler.js.html#lineNumber29">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -111,7 +112,7 @@
 
   
   
-  <div class="description" data-ice="description"><p><code>EventHandler</code> is the base class that implements event distribution</p>
+  <div class="description" data-ice="description"><p>The base class that implements event distribution for classes like <span><a href="class/src/Component.js~Component.html">Component</a></span>, <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span>, and <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span>.</p>
 </div>
   
 
@@ -127,41 +128,7 @@
 
 
 
-<div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
-  <tbody>
-  
-  <tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      <span class="kind" data-ice="kind">get</span>
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-get-listeners">listeners</a></span></span><span class="code" data-ice="signature">: <span><span>EventListener</span><span>[]</span></span>: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
+
 <div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
   <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
   <tbody>
@@ -180,13 +147,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Adds a listener callback for a given event name.</p>
+</div>
       </div>
     </td>
     <td>
@@ -214,7 +182,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes all references to listener callbacks.</p>
+</div>
       </div>
     </td>
     <td>
@@ -236,13 +205,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span> | <span>EventHandler.ALL_EVENTS</span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes reference to a specific listener.</p>
+</div>
       </div>
     </td>
     <td>
@@ -264,7 +234,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span>*</span>, params: ...<span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>
         </p>
       </div>
       <div>
@@ -288,64 +258,7 @@
 
 
 
-<div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
 
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-listeners">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">listeners</span><span class="code" data-ice="signature">: <span><span>EventListener</span><span>[]</span></span>: <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber78">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span><span>EventListener</span><span>[]</span></span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-</div>
 <div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
 
 <div class="detail" data-ice="detail">
@@ -356,18 +269,20 @@
     
     
     
-    <span class="code" data-ice="name">addListener</span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+    <span class="code" data-ice="name">addListener</span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber50">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber57">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Adds a listener callback for a given event name.</p>
+<p>If you pass <code>EventHandler.ALL_EVENTS</code> then the callback will receive all events, regardless of name.</p>
+</div>
 
   
 
@@ -388,7 +303,7 @@
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">callback</td>
-      <td data-ice="type" class="code"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span></td>
+      <td data-ice="type" class="code"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>often includes more parameters that are specific to the event</p>
 </td>
@@ -435,14 +350,16 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber88">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber101">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Removes all references to listener callbacks.</p>
+<p>This should be called by extending classes.</p>
+</div>
 
   
 
@@ -487,18 +404,19 @@
     
     
     
-    <span class="code" data-ice="name">removeListener</span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
+    <span class="code" data-ice="name">removeListener</span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span> | <span>EventHandler.ALL_EVENTS</span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber58">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber67">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Removes reference to a specific listener.</p>
+</div>
 
   
 
@@ -512,7 +430,7 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">eventName</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span> | <span>EventHandler.ALL_EVENTS</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
@@ -520,7 +438,8 @@
       <td data-ice="name" class="code" data-depth="0">callback</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the function originally passed into <span>EventhHandler.addListener</span>.</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -552,11 +471,11 @@
     
     
     
-    <span class="code" data-ice="name">trigger</span><span class="code" data-ice="signature">(eventName: <span>*</span>, params: ...<span>*</span>)</span>
+    <span class="code" data-ice="name">trigger</span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber33">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventHandler.js.html#lineNumber36">source</a></span></span>
     </span>
   </h3>
 
@@ -578,15 +497,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">eventName</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>an identifier for the event like &apos;changed:fieldName&apos; or &apos;deleted&apos;</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">params</td>
       <td data-ice="type" class="code">...<span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the parameters handed to the listeners</p>
+</td>
     </tr>
 </tbody>
   </table>

@@ -11,8 +11,10 @@ const DataObject = class extends EventHandler {
 	*/
 	constructor(options = {}) {
 		super()
+		/** @type {Object<string,*>} */
 		this.options = options
 		this._new = true // True until the first fetch returns, regardless of http status
+		/** True after {@link DataObject.cleanup} has been called. */
 		this.cleanedUp = false
 	}
 
@@ -60,7 +62,7 @@ const DataObject = class extends EventHandler {
 		return this === obj
 	}
 
-	/*
+	/**
 	If already reset, immediately call callback, otherwise wait until the first reset and then call callback
 
 	@example
@@ -148,10 +150,13 @@ const DataObject = class extends EventHandler {
 
 	This resolves when the fetches complete, regardless of whether they succeed or fail.
 
-	
+	@example
+	this.model = new DataModel()
+	this.collection = new DataCollection()
+	DataObject.fetchAll(model, collection).then((mod, col) => { ... })
 
-	@param {Array<DataObject>} dataObjects
-	@return {Promise<Array<DataObjects>,Error>}
+	@param {...DataObject} dataObjects
+	@return {Promise<...DataObjects>,Error>}
 	*/
 	static fetchAll(...dataObjects) {
 		const allAreFetched = () => {
@@ -179,7 +184,10 @@ const DataObject = class extends EventHandler {
 	}
 
 	/**
-	Tell the server to create (POST) or update (PUT) this model or collection
+	Tell the server to create (POST) or update (PUT) this model or collection.
+
+	If {@link DataObject.isNew} is true it will POST, otherwise it will PUT.
+
 	@return {Promise<DataObject,Error>}
 	*/
 	save() {
@@ -216,6 +224,8 @@ const DataObject = class extends EventHandler {
 	}
 
 	/**
+	Call `DELETE` on this object's remote endpoint.
+
 	@return {Promise<undefined,Error>}
 	*/
 	delete() {

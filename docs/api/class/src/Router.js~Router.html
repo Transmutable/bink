@@ -38,6 +38,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
@@ -85,13 +86,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Router from &apos;<span><a href="file/src/Router.js.html#lineNumber21">bink/src/Router.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Router from &apos;<span><a href="file/src/Router.js.html#lineNumber28">bink/src/Router.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/Router.js.html#lineNumber21">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/Router.js.html#lineNumber28">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -111,12 +112,38 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Router maps <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/history"><code>window.history</code></a> events and URL path fragments (the part after the <code>#</code> in <a href="https://example.com/path#one-two-three">https://example.com/path#one-two-three</a>) to events.</p>
+<p>This is usually used by an <span><a href="class/src/App.js~App.html">App</a></span> to show and hide <span><a href="class/src/Component.js~Component.html">Component</a></span>s based on the URL.</p>
+</div>
   
 
   
 
-  
+  <div data-ice="exampleDocs">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      <div class="example-caption" data-ice="exampleCaption">routing `/^blog\/([0-9]+)\/app\/([0-9a-z]+)$/` to an event with parameters for blog and app IDs</div>
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">let router = new Router()
+
+// Set up a couple of routes, each with a URL matching regexs and a route name
+
+// matches http://&lt;domain&gt;/&lt;path&gt; and http://&lt;domain&gt;/&lt;path&gt;#
+router.addRoute(/^$/, &apos;default&apos;)
+
+// matches http://&lt;domain&gt;/&lt;path&gt;#blog/1123/app/abc-123
+router.addRoute(/^blog\/([0-9]+)\/app\/([0-9a-z\-]+)$/, &apos;blog-app&apos;)
+
+// Listen for the route
+router.addListener(&apos;blog-app&apos;, (routeName, hash, ...regexMatches, ...parameters) =&gt; {
+// If this was an event triggered by routing to #blog/1123/app/abc-123 then:
+// `routeName` would be &apos;blog-app&apos;
+// `hash` would be &apos;blog/1123/app/abc-123&apos;
+// `regexMatches` would be [&apos;1123&apos;, &apos;abc-123&apos;]
+// `parameters` is empty in this example but could be any number of extra items in the route (see `addRoute`)
+})</code></pre>
+    </div>
+</div>
 
   
 
@@ -206,35 +233,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Router.js~Router.html#instance-member-hashListener">hashListener</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Router.js~Router.html#instance-member-routes">routes</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Router.js~Router.html#instance-member-routes">routes</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/Router.js~Router.html">Router</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -269,7 +268,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Router.js~Router.html#instance-method-addRoute">addRoute</a></span></span><span class="code" data-ice="signature">(regex: <span>*</span>, eventName: <span>*</span>, parameters: ...<span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/Router.js~Router.html#instance-method-addRoute">addRoute</a></span></span><span class="code" data-ice="signature">(regex: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></span>, eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, parameters: ...<span>*</span>)</span>
         </p>
       </div>
       <div>
@@ -331,7 +330,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>This must be called in order to start routing.</p>
+</div>
       </div>
     </td>
     <td>
@@ -351,34 +351,6 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">get</span>
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-get-listeners">listeners</a></span></span><span class="code" data-ice="signature">: <span><span>EventListener</span><span>[]</span></span>: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
       
       
       <span class="override" data-ice="override"></span>
@@ -389,13 +361,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Adds a listener callback for a given event name.</p>
+</div>
       </div>
     </td>
     <td>
@@ -423,7 +396,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes all references to listener callbacks.</p>
+</div>
       </div>
     </td>
     <td>
@@ -445,13 +419,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span> | <span>EventHandler.ALL_EVENTS</span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes reference to a specific listener.</p>
+</div>
       </div>
     </td>
     <td>
@@ -473,7 +448,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span>*</span>, params: ...<span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>
         </p>
       </div>
       <div>
@@ -508,7 +483,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber22">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
@@ -554,50 +529,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber24">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-member-hashListener">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">hashListener</span><span class="code" data-ice="signature">: <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber26">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
@@ -636,11 +568,11 @@
     
     
     
-    <span class="code" data-ice="name">routes</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">routes</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/Router.js~Router.html">Router</a></span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber34">source</a></span></span>
     </span>
   </h3>
 
@@ -682,11 +614,11 @@
     
     
     
-    <span class="code" data-ice="name">addRoute</span><span class="code" data-ice="signature">(regex: <span>*</span>, eventName: <span>*</span>, parameters: ...<span>*</span>)</span>
+    <span class="code" data-ice="name">addRoute</span><span class="code" data-ice="signature">(regex: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></span>, eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, parameters: ...<span>*</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber35">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber49">source</a></span></span>
     </span>
   </h3>
 
@@ -707,21 +639,24 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">regex</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The regular expression that matches the incoming hash changes</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">eventName</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The event name used when triggering</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">parameters</td>
       <td data-ice="type" class="code">...<span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Parameters passed without modification to listeners after the event name and matches</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -757,14 +692,16 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber29">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber38">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Removes all references to listener callbacks.</p>
+<p>This should be called by extending classes.</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-cleanup">EventHandler#cleanup</a></span></div>
 
@@ -800,14 +737,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber38">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Router.js.html#lineNumber57">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>This must be called in order to start routing.</p>
+</div>
 
   
 

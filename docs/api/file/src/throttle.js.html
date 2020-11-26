@@ -38,6 +38,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
@@ -89,6 +90,23 @@
 `throttle` will rate limit a function call.
 
 This code is cribbed from https://github.com/jashkenas/underscore
+
+@example &lt;caption&gt;Throttling rendering info&lt;/caption&gt;
+
+var count = 0 // This will be incremented in every animation frame
+
+// We want to call this in every animation frame but only run it once a second (1000 ms)
+const throttledDebug = throttle(() =&gt; { 
+	console.log(&apos;Render count&apos;, count)
+}, 1000)
+
+// This is the function that is called in every animation frame
+function render() {
+	count += 1
+	throttledDebug() // Called every frame but run only once a second
+	window.requestAnimationFrame(render)
+}
+window.requestAnimationFrame(render)
 
 @param {function} func
 @param {int} wait - the minimum number of milliseconds between calls.

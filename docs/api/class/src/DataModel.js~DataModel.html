@@ -38,6 +38,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
@@ -516,34 +517,6 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">get</span>
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-get-listeners">listeners</a></span></span><span class="code" data-ice="signature">: <span><span>EventListener</span><span>[]</span></span>: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
       
       
       <span class="override" data-ice="override"></span>
@@ -554,13 +527,14 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, eventSource: <span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-addListener">addListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, callback: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Adds a listener callback for a given event name.</p>
+</div>
       </div>
     </td>
     <td>
@@ -588,7 +562,8 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes all references to listener callbacks.</p>
+</div>
       </div>
     </td>
     <td>
@@ -610,13 +585,14 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-removeListener">removeListener</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span> | <span>EventHandler.ALL_EVENTS</span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes reference to a specific listener.</p>
+</div>
       </div>
     </td>
     <td>
@@ -638,7 +614,7 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span>*</span>, params: ...<span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html#instance-method-trigger">trigger</a></span></span><span class="code" data-ice="signature">(eventName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: ...<span>*</span>)</span>
         </p>
       </div>
       <div>
@@ -674,7 +650,7 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#static-method-fetchAll">fetchAll</a></span></span><span class="code" data-ice="signature">(dataObjects: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>&gt;): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>DataObjects</span>&gt;, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#static-method-fetchAll">fetchAll</a></span></span><span class="code" data-ice="signature">(dataObjects: ...<span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span><...<span>DataObjects&gt;, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</...<span></span>
         </p>
       </div>
       <div>
@@ -796,7 +772,8 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
       <div>
         
         
-        
+        <div data-ice="description"><p>True after <span><a href="class/src/DataObject.js~DataObject.html#instance-method-cleanup">DataObject.cleanup</a></span> has been called.</p>
+</div>
       </div>
     </td>
     <td>
@@ -818,7 +795,7 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-member-options">options</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-member-options">options</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, <span>*</span>&gt;</span>
         </p>
       </div>
       <div>
@@ -881,7 +858,8 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
       <div>
         
         
-        
+        <div data-ice="description"><p>Call <code>DELETE</code> on this object&apos;s remote endpoint.</p>
+</div>
       </div>
     </td>
     <td>
@@ -961,13 +939,14 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-onFirstReset">onFirstReset</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html#instance-method-onFirstReset">onFirstReset</a></span></span><span class="code" data-ice="signature">(callback: <span>func(dataObject: DataObject)</span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>If already reset, immediately call callback, otherwise wait until the first reset and then call callback</p>
+</div>
       </div>
     </td>
     <td>
@@ -1053,7 +1032,7 @@ this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })</code></pre>
       <div>
         
         
-        <div data-ice="description"><p>Tell the server to create (POST) or update (PUT) this model or collection</p>
+        <div data-ice="description"><p>Tell the server to create (POST) or update (PUT) this model or collection.</p>
 </div>
       </div>
     </td>

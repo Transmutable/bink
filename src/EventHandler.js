@@ -1,6 +1,3 @@
-/**
-EventListener holds information about listeners on an object with the EventHandler
-*/
 const EventListener = class {
 	constructor(eventName, callback, once = false) {
 		this.eventName = eventName
@@ -26,10 +23,16 @@ const EventListener = class {
 }
 
 /**
-`EventHandler` is the base class that implements event distribution
+The base class that implements event distribution for classes like {@link Component}, {@link DataModel}, and {@link DataCollection}.
+
 */
 const EventHandler = class {
-	/** Send an event to listeners */
+	/**
+	Send an event to listeners
+
+	@param {string} eventName - an identifier for the event like 'changed:fieldName' or 'deleted'
+	@param {...*} params - the parameters handed to the listeners
+	*/
 	trigger(eventName, ...params) {
 		const listenersToRemove = []
 		for (const listener of this.listeners) {
@@ -43,8 +46,12 @@ const EventHandler = class {
 	}
 
 	/**
+	Adds a listener callback for a given event name.
+
+	If you pass `EventHandler.ALL_EVENTS` then the callback will receive all events, regardless of name.
+
 	@param {Object|Symbol} [eventName] a string or Symbol indicating the event to watch
-	@param {function(eventName: string, eventSource: EventHandler): undefined} callback often includes more parameters that are specific to the event
+	@param {function(eventName: string, params: ...*): undefined} callback often includes more parameters that are specific to the event
 	@param {boolean} [once=false] If true then the listener is removed after receiving one event
 	*/
 	addListener(eventName, callback, once = false) {
@@ -52,8 +59,10 @@ const EventHandler = class {
 	}
 
 	/**
-	@param {string} eventName
-	@param {function} callback
+	Removes reference to a specific listener.
+
+	@param {string|Symbol|EventHandler.ALL_EVENTS} eventName
+	@param {function} callback - the function originally passed into {@link EventhHandler.addListener}.
 	*/
 	removeListener(eventName, callback) {
 		let remove = false
@@ -74,7 +83,7 @@ const EventHandler = class {
 		}
 	}
 
-	/** @return {EventListener[]} */
+	/** @private */
 	get listeners() {
 		if (typeof this._listeners == 'undefined') {
 			this._listeners = []
@@ -83,6 +92,10 @@ const EventHandler = class {
 	}
 
 	/**
+	Removes all references to listener callbacks.
+
+	This should be called by extending classes.
+
 	@return {EventHandler} returns `this` for chaining
 	*/
 	cleanup() {

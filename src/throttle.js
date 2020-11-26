@@ -3,6 +3,23 @@
 
 This code is cribbed from https://github.com/jashkenas/underscore
 
+@example <caption>Throttling rendering info</caption>
+
+var count = 0 // This will be incremented in every animation frame
+
+// We want to call this in every animation frame but only run it once a second (1000 ms)
+const throttledDebug = throttle(() => { 
+	console.log('Render count', count)
+}, 1000)
+
+// This is the function that is called in every animation frame
+function render() {
+	count += 1
+	throttledDebug() // Called every frame but run only once a second
+	window.requestAnimationFrame(render)
+}
+window.requestAnimationFrame(render)
+
 @param {function} func
 @param {int} wait - the minimum number of milliseconds between calls.
 @param {boolean} [leading=true] - if true, the first call to the throttled function is immediately called.
@@ -50,7 +67,7 @@ function throttle(func, wait, leading = true, trailing = true) {
 }
 
 /**
-A handy utility function for throttling console logging
+A handy utility function for throttling console logging to once per second
 
 @param {*[]} params - The parameters to pass to `console.log`
 */
