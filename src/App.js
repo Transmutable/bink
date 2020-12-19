@@ -13,14 +13,16 @@ import EventHandler from './EventHandler.js'
  */
 const App = class extends EventHandler {
 	/**
-	@param {Object} [options={}] - not used by App but handy for extending classes	
+	@param {Object} [options={}]
+	@param {HTMLElement} [options.dom=div]
 	*/
 	constructor(options = {}) {
 		super()
 		this._options = options
 		this._router = new Router()
 
-		this._dom = dom.div({ class: 'app' })
+		this._dom = this._options.dom || dom.div()
+		this._dom.addClass('app')
 	}
 
 	/** @type {Router} */
