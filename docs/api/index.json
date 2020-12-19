@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/App.js",
-    "content": "import dom from './DOM.js'\nimport Router from './Router.js'\nimport Component from './Component.js'\nimport Localizer from './Localizer.js'\nimport EventHandler from './EventHandler.js'\n\n/**\n * `App` contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.\n *\n * App communicates these changes to {@link Component}s via events so that they may react.\n *\n * The [hello-world example](https://github.com/Transmutable/bink/blob/main/examples/hello-world/site.js) has the most basic App and the [components example](https://github.com/Transmutable/bink/blob/main/examples/components/site.js) is more complex.\n */\nconst App = class extends EventHandler {\n\t/**\n\t@param {Object} [options={}] - not used by App but handy for extending classes\t\n\t*/\n\tconstructor(options = {}) {\n\t\tsuper()\n\t\tthis._options = options\n\t\tthis._router = new Router()\n\n\t\tthis._dom = dom.div({ class: 'app' })\n\t}\n\n\t/** @type {Router} */\n\tget router() {\n\t\treturn this._router\n\t}\n\t/** @type {HTMLElement} */\n\tget dom() {\n\t\treturn this._dom\n\t}\n\n\t/**\n\tAdds the childComponent's `dom` to this Component's `dom`.\n\n\t@param {Component} childComponent\n\t@return {App} - this App, handy for chaining\n\t*/\n\tappendComponent(childComponent) {\n\t\tthis._dom.appendChild(childComponent.dom)\n\t\treturn this\n\t}\n\n\t/**\n\tRemoves the childComponent's `dom` from this Component's `dom`.\n\n\t@param {Component} childComponent\n\t@return {App} - this App, handy for chaining\n\t*/\n\tremoveComponent(childComponent) {\n\t\tthis._dom.removeChild(childComponent.dom)\n\t\treturn this\n\t}\n\n\t/**\n\t@param {boolean} shouldGather - true if the {@link Localizer} should be tracking translations\n\t*/\n\tset localizerGathering(shouldGather) {\n\t\tLocalizer.Singleton.gathering = shouldGather\n\t}\n\n\t/** @type {boolean} */\n\tget localizerGathering() {\n\t\treturn Localizer.Singleton.gathering\n\t}\n\n\t/** @type {boolean} */\n\tget localizerGatheredData() {\n\t\treturn Localizer.Singleton.gatheredData\n\t}\n}\n\nexport default App\nexport { App }\n",
+    "content": "import dom from './DOM.js'\nimport Router from './Router.js'\nimport Component from './Component.js'\nimport Localizer from './Localizer.js'\nimport EventHandler from './EventHandler.js'\n\n/**\n * `App` contains the orchestration logic for the entirety of what is being displayed for a given app, including the app chrome like navigation.\n *\n * App communicates these changes to {@link Component}s via events so that they may react.\n *\n * The [hello-world example](https://github.com/Transmutable/bink/blob/main/examples/hello-world/site.js) has the most basic App and the [components example](https://github.com/Transmutable/bink/blob/main/examples/components/site.js) is more complex.\n */\nconst App = class extends EventHandler {\n\t/**\n\t@param {Object} [options={}]\n\t@param {HTMLElement} [options.dom=div]\n\t*/\n\tconstructor(options = {}) {\n\t\tsuper()\n\t\tthis._options = options\n\t\tthis._router = new Router()\n\n\t\tthis._dom = this._options.dom || dom.div()\n\t\tthis._dom.addClass('app')\n\t}\n\n\t/** @type {Router} */\n\tget router() {\n\t\treturn this._router\n\t}\n\t/** @type {HTMLElement} */\n\tget dom() {\n\t\treturn this._dom\n\t}\n\n\t/**\n\tAdds the childComponent's `dom` to this Component's `dom`.\n\n\t@param {Component} childComponent\n\t@return {App} - this App, handy for chaining\n\t*/\n\tappendComponent(childComponent) {\n\t\tthis._dom.appendChild(childComponent.dom)\n\t\treturn this\n\t}\n\n\t/**\n\tRemoves the childComponent's `dom` from this Component's `dom`.\n\n\t@param {Component} childComponent\n\t@return {App} - this App, handy for chaining\n\t*/\n\tremoveComponent(childComponent) {\n\t\tthis._dom.removeChild(childComponent.dom)\n\t\treturn this\n\t}\n\n\t/**\n\t@param {boolean} shouldGather - true if the {@link Localizer} should be tracking translations\n\t*/\n\tset localizerGathering(shouldGather) {\n\t\tLocalizer.Singleton.gathering = shouldGather\n\t}\n\n\t/** @type {boolean} */\n\tget localizerGathering() {\n\t\treturn Localizer.Singleton.gathering\n\t}\n\n\t/** @type {boolean} */\n\tget localizerGatheredData() {\n\t\treturn Localizer.Singleton.gatheredData\n\t}\n}\n\nexport default App\nexport { App }\n",
     "static": true,
     "longname": "/Users/trevor/Documents/Transmutable/Products/Bink/Code/bink/src/App.js",
     "access": "public",
@@ -603,7 +603,7 @@
     "longname": "src/App.js~App#constructor",
     "access": "public",
     "description": "",
-    "lineNumber": 18,
+    "lineNumber": 19,
     "params": [
       {
         "nullable": null,
@@ -615,7 +615,19 @@
         "defaultValue": "{}",
         "defaultRaw": {},
         "name": "options",
-        "description": "not used by App but handy for extending classes"
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "div",
+        "defaultRaw": "div",
+        "name": "options.dom",
+        "description": ""
       }
     ]
   },
@@ -628,7 +640,7 @@
     "longname": "src/App.js~App#_options",
     "access": "private",
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 21,
     "undocument": true,
     "ignore": true,
     "type": {
@@ -646,7 +658,7 @@
     "longname": "src/App.js~App#_router",
     "access": "private",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 22,
     "undocument": true,
     "ignore": true,
     "type": {
@@ -664,7 +676,7 @@
     "longname": "src/App.js~App#_dom",
     "access": "private",
     "description": null,
-    "lineNumber": 23,
+    "lineNumber": 24,
     "undocument": true,
     "ignore": true,
     "type": {
@@ -684,7 +696,7 @@
     "longname": "src/App.js~App#router",
     "access": "public",
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 29,
     "type": {
       "nullable": null,
       "types": [
@@ -705,7 +717,7 @@
     "longname": "src/App.js~App#dom",
     "access": "public",
     "description": null,
-    "lineNumber": 31,
+    "lineNumber": 33,
     "type": {
       "nullable": null,
       "types": [
@@ -726,7 +738,7 @@
     "longname": "src/App.js~App#appendComponent",
     "access": "public",
     "description": "Adds the childComponent's `dom` to this Component's `dom`.",
-    "lineNumber": 41,
+    "lineNumber": 43,
     "params": [
       {
         "nullable": null,
@@ -759,7 +771,7 @@
     "longname": "src/App.js~App#removeComponent",
     "access": "public",
     "description": "Removes the childComponent's `dom` from this Component's `dom`.",
-    "lineNumber": 52,
+    "lineNumber": 54,
     "params": [
       {
         "nullable": null,
@@ -792,7 +804,7 @@
     "longname": "src/App.js~App#localizerGathering",
     "access": "public",
     "description": "",
-    "lineNumber": 60,
+    "lineNumber": 62,
     "params": [
       {
         "nullable": null,
@@ -817,7 +829,7 @@
     "longname": "src/App.js~App#localizerGathering",
     "access": "public",
     "description": null,
-    "lineNumber": 65,
+    "lineNumber": 67,
     "type": {
       "nullable": null,
       "types": [
@@ -838,7 +850,7 @@
     "longname": "src/App.js~App#localizerGatheredData",
     "access": "public",
     "description": null,
-    "lineNumber": 70,
+    "lineNumber": 72,
     "type": {
       "nullable": null,
       "types": [

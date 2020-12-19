@@ -7,9 +7,9 @@
       "expectCount": 12,
       "actualCount": 9,
       "undocumentLines": [
-        20,
         21,
-        23
+        22,
+        24
       ]
     },
     "src/Component.js": {
