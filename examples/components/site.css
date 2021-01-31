@@ -1,0 +1,52 @@
+
+@import '../../style/base.css';
+@import '../../style/components.css';
+
+body {
+	margin: 20px;
+}
+
+.section-heading {
+	font-size: var(--font-size-3);
+	margin-top: calc(2 * var(--inner-element-padding));
+}
+
+
+.view-component > .heading-component:first-child {
+	margin-bottom: var(--inner-element-padding);
+}
+
+.view-component.media-grid-component > .collection-component > .component-card-component {
+	position: relative;
+	overflow: hidden;
+}
+
+.view-component.media-grid-component > .collection-component > .component-card-component > .card-title-component {
+	font-size: var(--font-size-base);
+}
+
+.view-component.media-grid-component > .collection-component > .component-card-component > .main-component {
+	display: block;
+	min-height: 200px;
+	position: relative;
+}
+
+.view-component.media-grid-component > .collection-component > .component-card-component > .main-component > .menu-component {
+	position: absolute;
+	top: var(--inner-element-padding);
+	right: calc(var(--inner-element-padding) * 2);
+}
+
+
+.view-component.media-grid-component > .collection-component > .component-card-component > .main-component > :first-child {
+	max-width: 100%;
+}
+
+.view-component.media-grid-component > .collection-component > .component-card-component > .main-component > .collection-component:first-child > .collection-item {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.view-component.media-grid-component img {
+	max-height: 200px;
+}

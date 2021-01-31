@@ -1,0 +1,434 @@
+{
+  "coverage": "53.25%",
+  "expectCount": 445,
+  "actualCount": 237,
+  "files": {
+    "src/App.js": {
+      "expectCount": 12,
+      "actualCount": 9,
+      "undocumentLines": [
+        81,
+        82,
+        84
+      ]
+    },
+    "src/Component.js": {
+      "expectCount": 32,
+      "actualCount": 24,
+      "undocumentLines": [
+        313,
+        314,
+        315,
+        318,
+        68,
+        69,
+        70,
+        73
+      ]
+    },
+    "src/DOM.js": {
+      "expectCount": 8,
+      "actualCount": 2,
+      "undocumentLines": [
+        159,
+        169,
+        305,
+        307,
+        314,
+        318
+      ]
+    },
+    "src/DataCollection.js": {
+      "expectCount": 24,
+      "actualCount": 16,
+      "undocumentLines": [
+        280,
+        37,
+        38,
+        39,
+        46,
+        116,
+        234,
+        260
+      ]
+    },
+    "src/DataModel.js": {
+      "expectCount": 15,
+      "actualCount": 14,
+      "undocumentLines": [
+        129
+      ]
+    },
+    "src/DataObject.js": {
+      "expectCount": 18,
+      "actualCount": 17,
+      "undocumentLines": [
+        16
+      ]
+    },
+    "src/EventHandler.js": {
+      "expectCount": 15,
+      "actualCount": 6,
+      "undocumentLines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        18,
+        89
+      ]
+    },
+    "src/Localizer.js": {
+      "expectCount": 36,
+      "actualCount": 20,
+      "undocumentLines": [
+        4,
+        5,
+        6,
+        8,
+        10,
+        29,
+        30,
+        31,
+        33,
+        35,
+        36,
+        93,
+        255,
+        256,
+        260,
+        264
+      ]
+    },
+    "src/MockService.js": {
+      "expectCount": 12,
+      "actualCount": 0,
+      "undocumentLines": [
+        17,
+        18,
+        19,
+        25,
+        32,
+        49,
+        66,
+        67,
+        68,
+        69,
+        71,
+        74
+      ]
+    },
+    "src/Router.js": {
+      "expectCount": 15,
+      "actualCount": 6,
+      "undocumentLines": [
+        29,
+        38,
+        61,
+        64,
+        84,
+        85,
+        86,
+        87,
+        88
+      ]
+    },
+    "src/components/atoms/AudioComponent.js": {
+      "expectCount": 5,
+      "actualCount": 3,
+      "undocumentLines": [
+        40,
+        49
+      ]
+    },
+    "src/components/atoms/ButtonComponent.js": {
+      "expectCount": 5,
+      "actualCount": 4,
+      "undocumentLines": [
+        40
+      ]
+    },
+    "src/components/atoms/HeadingComponent.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/components/atoms/ImageComponent.js": {
+      "expectCount": 6,
+      "actualCount": 4,
+      "undocumentLines": [
+        40,
+        63
+      ]
+    },
+    "src/components/atoms/LabelComponent.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/components/atoms/MultiComponent.js": {
+      "expectCount": 8,
+      "actualCount": 4,
+      "undocumentLines": [
+        31,
+        32,
+        39,
+        43
+      ]
+    },
+    "src/components/atoms/ProgressComponent.js": {
+      "expectCount": 9,
+      "actualCount": 4,
+      "undocumentLines": [
+        37,
+        38,
+        43,
+        71,
+        76
+      ]
+    },
+    "src/components/atoms/SelectionComponent.js": {
+      "expectCount": 4,
+      "actualCount": 2,
+      "undocumentLines": [
+        57,
+        61
+      ]
+    },
+    "src/components/atoms/SliderComponent.js": {
+      "expectCount": 26,
+      "actualCount": 7,
+      "undocumentLines": [
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        43,
+        49,
+        50,
+        51,
+        96,
+        99,
+        108,
+        113,
+        123,
+        131
+      ]
+    },
+    "src/components/atoms/SwitchComponent.js": {
+      "expectCount": 8,
+      "actualCount": 2,
+      "undocumentLines": [
+        33,
+        35,
+        54,
+        58,
+        67,
+        73
+      ]
+    },
+    "src/components/atoms/TextComponent.js": {
+      "expectCount": 6,
+      "actualCount": 4,
+      "undocumentLines": [
+        38,
+        60
+      ]
+    },
+    "src/components/atoms/TextInputComponent.js": {
+      "expectCount": 9,
+      "actualCount": 2,
+      "undocumentLines": [
+        53,
+        58,
+        59,
+        79,
+        83,
+        86,
+        96
+      ]
+    },
+    "src/components/atoms/ToggleComponent.js": {
+      "expectCount": 7,
+      "actualCount": 6,
+      "undocumentLines": [
+        35
+      ]
+    },
+    "src/components/atoms/VideoComponent.js": {
+      "expectCount": 24,
+      "actualCount": 9,
+      "undocumentLines": [
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        54,
+        75,
+        79,
+        83,
+        87,
+        92,
+        181,
+        193
+      ]
+    },
+    "src/components/molecules/AudioPlayerComponent.js": {
+      "expectCount": 6,
+      "actualCount": 2,
+      "undocumentLines": [
+        31,
+        36,
+        56,
+        60
+      ]
+    },
+    "src/components/molecules/CardComponent.js": {
+      "expectCount": 8,
+      "actualCount": 6,
+      "undocumentLines": [
+        62,
+        70
+      ]
+    },
+    "src/components/molecules/FormComponent.js": {
+      "expectCount": 34,
+      "actualCount": 15,
+      "undocumentLines": [
+        60,
+        65,
+        104,
+        185,
+        187,
+        193,
+        199,
+        220,
+        254,
+        270,
+        277,
+        284,
+        167,
+        125,
+        138,
+        148,
+        347,
+        362,
+        368
+      ]
+    },
+    "src/components/molecules/ImageCardComponent.js": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        49
+      ]
+    },
+    "src/components/molecules/MenuComponent.js": {
+      "expectCount": 17,
+      "actualCount": 12,
+      "undocumentLines": [
+        36,
+        37,
+        39,
+        52,
+        148
+      ]
+    },
+    "src/components/molecules/PaginationComponent.js": {
+      "expectCount": 12,
+      "actualCount": 6,
+      "undocumentLines": [
+        41,
+        42,
+        44,
+        52,
+        54,
+        88
+      ]
+    },
+    "src/components/molecules/ToolTipComponent.js": {
+      "expectCount": 4,
+      "actualCount": 3,
+      "undocumentLines": [
+        36
+      ]
+    },
+    "src/components/molecules/VideoPlayerComponent.js": {
+      "expectCount": 10,
+      "actualCount": 4,
+      "undocumentLines": [
+        36,
+        40,
+        53,
+        57,
+        65,
+        85
+      ]
+    },
+    "src/components/molecules/WaitComponent.js": {
+      "expectCount": 14,
+      "actualCount": 4,
+      "undocumentLines": [
+        128,
+        130,
+        132,
+        33,
+        34,
+        35,
+        74,
+        84,
+        93,
+        99
+      ]
+    },
+    "src/components/organisms/CollectionComponent.js": {
+      "expectCount": 18,
+      "actualCount": 6,
+      "undocumentLines": [
+        73,
+        74,
+        149,
+        152,
+        158,
+        172,
+        178,
+        195,
+        201,
+        208,
+        17,
+        24
+      ]
+    },
+    "src/components/organisms/MastheadComponent.js": {
+      "expectCount": 6,
+      "actualCount": 4,
+      "undocumentLines": [
+        53,
+        68
+      ]
+    },
+    "src/components/organisms/MediaGridComponent.js": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        43
+      ]
+    },
+    "src/throttle.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    }
+  }
+}

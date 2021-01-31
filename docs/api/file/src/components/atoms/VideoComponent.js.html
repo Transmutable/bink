@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/components/atoms/VideoComponent.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-throttle">throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-throttledConsoleLog">throttledConsoleLog</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-atoms">components/atoms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/AudioComponent.js~AudioComponent.html">AudioComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ButtonComponent.js~ButtonComponent.html">ButtonComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SliderComponent.js~SliderComponent.html">SliderComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SwitchComponent.js~SwitchComponent.html">SwitchComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html">TextComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextInputComponent.js~TextInputComponent.html">TextInputComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ToggleComponent.js~ToggleComponent.html">ToggleComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/VideoComponent.js~VideoComponent.html">VideoComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-molecules">components/molecules</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/AudioPlayerComponent.js~AudioPlayerComponent.html">AudioPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/CardComponent.js~CardComponent.html">CardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~DateFieldComponent.html">DateFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormComponent.html">FormComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormFieldComponent.html">FormFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SelectionFieldComponent.html">SelectionFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SwitchFieldComponent.html">SwitchFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~TextInputFieldComponent.html">TextInputFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ImageCardComponent.js~ImageCardComponent.html">ImageCardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/MenuComponent.js~MenuComponent.html">MenuComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/PaginationComponent.js~PaginationComponent.html">PaginationComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ToolTipComponent.js~ToolTipComponent.html">ToolTipComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/components/atoms/VideoComponent.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;../../DOM.js&apos;
+import Component from &apos;../../Component.js&apos;
+import { lt, ld, ldt } from &apos;../../Localizer.js&apos;
+
+/**
+VideoComponent displays a single video.
+
+If you want to display controls, use {@link VideoPlayerComponent}.
+
+@example
+const component = new VideoComponent(undefined, {
+	preview: &apos;/static/preview-image.png&apos;,
+	video: &apos;/static/video.mp4&apos;,
+	mimeType: &apos;video/mp4&apos;
+})
+
+*/
+const VideoComponent = class extends Component {
+	/**
+	@param {DataObject} [dataObject=null]
+	@param {Object} [options={}]
+	@param {string} [options.preview=null] the URL to a still image to show until the user plays the video
+	@param {string} [options.video=null] - the URL to a video
+	@param {string} [options.mimeType=null] - the mimeType for the video
+
+	*/
+	constructor(dataObject = null, options = {}) {
+		super(
+			dataObject,
+			Object.assign(
+				{
+					preview: null,
+					video: null,
+					mimeType: null,
+				},
+				options
+			)
+		)
+		this.addClass(&apos;video-component&apos;)
+		this.setName(&apos;VideoComponent&apos;)
+		this._handleVideoCanPlay = this._handleVideoCanPlay.bind(this)
+		this._videoCanPlay = false // False until the video is loaded
+
+		this._videoRequested = false // False until the video is asked to load or play
+		this._source = null
+		this._video = null
+
+		this._heightScale = 0.01
+		this._widthScale = null
+		this._ratio = null
+		this.resize(VideoComponent.RATIO_16x9)
+
+		if (this.options.preview) {
+			this._preview = dom.img({ src: this.options.preview }).appendTo(this.dom).addClass(&apos;preview&apos;)
+		} else {
+			this._preview = dom.span(lt(&apos;Click to play&apos;)).appendTo(this.dom).addClass(&apos;preview&apos;)
+		}
+		this.listenTo(&apos;click&apos;, this._preview, (ev) =&gt; {
+			if (this._videoCanPlay === false) {
+				this.loadVideo() // Will nop if already requested
+				this.listenTo(
+					VideoComponent.VideoCanPlayEvent,
+					this,
+					() =&gt; {
+						this._video.play()
+					},
+					true
+				)
+			} else {
+				this._video.play()
+			}
+		})
+	}
+
+	cleanup() {
+		if (this._video) this._video.removeEventListener(&apos;canplay&apos;, this._handleVideoCanPlay, false)
+	}
+
+	get source() {
+		return this._source
+	}
+
+	get video() {
+		return this._video
+	}
+
+	get paused() {
+		if (this._videoRequested === false) return true
+		return this._video.paused
+	}
+
+	get currentTime() {
+		if (this._videoRequested === false) return 0
+		return this._video.currentTime
+	}
+
+	/**
+	@val {float} the time at the current frame in seconds
+	*/
+	set currentTime(val) {
+		if (this._videoRequested === false) return
+		this._video.currentTime = val
+	}
+
+	/**
+	@return {float} the total duration of the video in seconds or 0 if it isn&apos;t yet loaded
+	*/
+	get duration() {
+		if (this._videoRequested === false) return 0
+		return this._video.duration
+	}
+
+	/**
+	Play the video, loading it if it isn&apos;t already.
+	*/
+	play() {
+		if (this._videoRequested === false) this.loadVideo()
+		this._video.play()
+	}
+
+	/**
+	Pause the video, loading it if it isn&apos;t already.
+	*/
+	pause() {
+		if (this._videoRequested === false) this.loadVideo()
+		this._video.pause()
+	}
+
+	/**
+	Call this to switch between playing and paused states.
+	*/
+	toggle() {
+		if (this._videoRequested === false) this.loadVideo()
+		if (this.paused) {
+			this.play()
+		} else {
+			this.pause()
+		}
+	}
+
+	/**
+	Call this to start loading the video
+	*/
+	loadVideo() {
+		if (this._videoRequested) return false
+		this._videoRequested = true
+
+		this._source = dom.source({
+			src: this.options.video,
+			type: this.options.mimeType,
+		})
+		this._video = dom.video(this._source)
+
+		this.dom.removeChild(this._preview)
+		this.dom.appendChild(this._video)
+
+		this._video.crossOrigin = &apos;anonymous&apos;
+		this._video.addEventListener(&apos;canplay&apos;, this._handleVideoCanPlay, false)
+		this._video.load()
+
+		this.trigger(VideoComponent.VideoInitializedEvent, this)
+		return true
+	}
+
+	/**
+	Sets the attributes on the `video` HTMLElement.
+	@param {string} url - the relative or full URL to the video
+	@param {string} mimeType - a mime type like &apos;video/mp4&apos;
+	*/
+	setSourceAttributes(url, mimeType) {
+		this.options.video = url
+		this.options.mimeType = mimeType
+		if (this._videoRequested) {
+			// the video elements are already created so reset video
+			this._source.setAttribute(&apos;src&apos;, url)
+			this._source.setAttribute(&apos;type&apos;, mimeType)
+			this._video.load()
+		}
+	}
+
+	_handleVideoCanPlay(ev) {
+		const videoWidth = ev.target.videoWidth
+		const videoHeight = ev.target.videoHeight
+		if (videoWidth &lt;= 0 || videoHeight &lt;= 0) {
+			console.error(&apos;Could not read the video dimensions&apos;, ev)
+			return
+		}
+		this.resize(videoWidth / videoHeight)
+		this._videoCanPlay = true
+		this.trigger(VideoComponent.VideoCanPlayEvent, this)
+	}
+
+	resize(ratio) {
+		this._ratio = ratio
+		this._widthScale = this._heightScale * this._ratio
+		// TODO resize
+	}
+}
+
+VideoComponent.VideoCanPlayEvent = Symbol(&apos;vc-video-can-play&apos;)
+VideoComponent.VideoInitializedEvent = Symbol(&apos;vc-video-component-initialized&apos;)
+
+VideoComponent.RATIO_16x9 = 16 / 9
+VideoComponent.RATIO_1x1 = 1
+
+export default VideoComponent
+export { VideoComponent }
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

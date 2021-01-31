@@ -1,0 +1,37 @@
+/*** MastheadComponent ***/
+
+.masthead-component {
+	display: block;
+	position: relative;
+	border-bottom: dashed 1px var(--secondary-color);
+	z-index: 6;
+}
+
+.masthead-component > .heading-component {
+	display: inline-block;
+	margin-top: 0;
+	padding: var(--outer-container-padding);
+	padding-bottom: calc(var(--outer-container-padding) - 8px);
+	background-color: var(--background-color);
+}
+
+.masthead-component > .menu-component {
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	top: 18px;
+	right: var(--outer-container-padding);
+}
+
+.masthead-component > .mode-switcher-component {
+	text-align: right;
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	transform: translate(0, -3px);
+}
+
+.portal-dom.heading-component.brand-component {
+	background-color: inherit;
+	border-bottom: dashed var(--container-border-width);
+}

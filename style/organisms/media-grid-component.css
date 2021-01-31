@@ -1,0 +1,38 @@
+/*** MediaGridComponent ***/
+
+.media-grid-component {
+	width: 100%;
+}
+
+.media-grid-component > .collection-component {
+	margin-top: 0;
+	display: grid;
+	grid-template: auto / 1fr;
+	gap: var(--inner-element-gap);
+}
+
+.media-grid-component > .collection-component > .collection-item .main {
+	min-height: 180px;
+}
+
+.media-grid-component > .collection-component > .image-card-component img {
+	max-height: 180px;
+}
+
+@media (min-width: 576px){
+	.media-grid-component > .collection-component {
+		grid-template: auto / 1fr 1fr;
+	}
+}
+
+@media (min-width: 768px){
+	.media-grid-component > .collection-component {
+		grid-template: auto / 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 992px){
+	.media-grid-component > .collection-component {
+		grid-template: auto / auto auto auto auto;
+	}
+}

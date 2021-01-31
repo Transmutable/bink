@@ -1,0 +1,16 @@
+{
+	"brand": {
+		"title": "Bink",
+		"description": "A sleek and reactive framework for web pages",
+		"repository": "https://github.com/Transmutable/bink",
+		"author": "https://trevor.smith.name/"
+	},
+	"source": "./src",
+	"destination": "./docs/api",
+	"plugins": [{
+		"name": "esdoc-standard-plugin",
+		"option": {
+			"accessor": { "access": ["public", "protected"] }
+		}
+	}]
+}

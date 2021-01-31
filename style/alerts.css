@@ -1,0 +1,11 @@
+/* Alerts */ 
+
+@keyframes primary-alert-keyframes {
+	0% { background: var(--primary-color); }
+	50% { background: var(--alert-color); }
+	100% { background: var(--primary-color); }
+}
+
+.primary-alert {
+	animation: primary-alert-keyframes 1s;
+}

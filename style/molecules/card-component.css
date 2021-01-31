@@ -1,0 +1,44 @@
+/*** CardComponent ***/
+
+.card-component {
+	background-color: var(--background-color);
+	border: solid var(--container-border-width) var(--light-secondary-color);
+	border-radius: var(--container-border-radius);
+}
+
+.card-component > .main-component,
+.card-component > .card-title-component,
+.card-component > .card-caption-component {
+	padding-top: var(--inner-element-padding);
+	padding-left: var(--inner-element-padding);
+	padding-right: var(--inner-element-padding);
+}
+
+.card-component > .main-component {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(100% - (var(--inner-element-padding) * 2));
+	padding-bottom: var(--inner-element-padding);
+	max-height: 75vw;
+}
+
+.card-component > .main-component img {
+	max-width: 100%;
+}
+
+.card-component > .card-title-component,
+.card-component > .card-caption-component {
+	display: block;
+}
+
+.card-component > .card-title-component {
+	border-top: dashed 1px var(--light-secondary-color);
+	font-size: var(--font-size-base);
+}
+
+.card-component > .card-caption-component {
+	font-weight: var(--font-size-base);
+	padding-bottom: var(--inner-element-padding);
+	min-height: 2em;
+}

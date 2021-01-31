@@ -1,0 +1,14 @@
+/* ToggleComponent */
+
+.toggle-component {
+	width: 25px;
+	height: 26px;
+	font-size: 24px;
+	cursor: pointer;
+	user-select: none;
+	color: var(--primary-color);
+}
+
+.toggle-component.open {
+	transform: rotate(-90deg) translate(5px, 0px);
+}

@@ -1,0 +1,75 @@
+{
+	"name": "bink",
+	"version": "0.1.0",
+	"description": "A sleek and reactive framework for web pages",
+	"main": "src/index.js",
+	"scripts": {
+		"docs": "./node_modules/.bin/esdoc",
+		"lint": "eslint src",
+		"lint-fix": "eslint src --fix",
+		"prettier": "prettier --write src/*.js src/*/*.js src/*/*/*.js",
+		"examples": "http-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Transmutable/bink.git"
+	},
+	"keywords": [
+		"javascript-framework",
+		"responsive-web"
+	],
+	"author": "Trevor F. Smith <trevor@transmutable.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Transmutable/bink/issues"
+	},
+	"homepage": "https://github.com/Transmutable/bink#readme",
+	"prettier": {
+		"semi": false,
+		"useTabs": true,
+		"printWidth": 120,
+		"singleQuote": true
+	},
+	"eslintConfig": {
+		"parserOptions": {
+			"ecmaVersion": 2017,
+			"sourceType": "module"
+		},
+		"plugins": [
+			"prettier"
+		],
+		"extends": [
+			"prettier"
+		],
+		"rules": {
+			"prettier/prettier": "error",
+			"prefer-const": "error",
+			"no-var": "error"
+		}
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.js": [
+			"esdoc",
+			"prettier --write",
+			"eslint --fix"
+		]
+	},
+	"devDependencies": {
+		"cross-env": "^7.0.2",
+		"esdoc": "^1.1.0",
+		"esdoc-standard-plugin": "^1.0.0",
+		"eslint": "^7.11.0",
+		"eslint-config-prettier": "^6.14.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"http-server": "^0.12.3",
+		"husky": "^4.3.0",
+		"lint-staged": "^10.4.2",
+		"prettier": "^2.1.2"
+	},
+	"dependencies": {}
+}

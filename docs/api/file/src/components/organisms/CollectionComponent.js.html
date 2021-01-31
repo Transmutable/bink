@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/components/organisms/CollectionComponent.js | bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-throttle">throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-throttledConsoleLog">throttledConsoleLog</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-atoms">components/atoms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/AudioComponent.js~AudioComponent.html">AudioComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ButtonComponent.js~ButtonComponent.html">ButtonComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SliderComponent.js~SliderComponent.html">SliderComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SwitchComponent.js~SwitchComponent.html">SwitchComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html">TextComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextInputComponent.js~TextInputComponent.html">TextInputComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ToggleComponent.js~ToggleComponent.html">ToggleComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/VideoComponent.js~VideoComponent.html">VideoComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-molecules">components/molecules</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/AudioPlayerComponent.js~AudioPlayerComponent.html">AudioPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/CardComponent.js~CardComponent.html">CardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~DateFieldComponent.html">DateFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormComponent.html">FormComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormFieldComponent.html">FormFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SelectionFieldComponent.html">SelectionFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SwitchFieldComponent.html">SwitchFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~TextInputFieldComponent.html">TextInputFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ImageCardComponent.js~ImageCardComponent.html">ImageCardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/MenuComponent.js~MenuComponent.html">MenuComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/PaginationComponent.js~PaginationComponent.html">PaginationComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ToolTipComponent.js~ToolTipComponent.html">ToolTipComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/components/organisms/CollectionComponent.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dom from &apos;../../DOM.js&apos;
+import Component from &apos;../../Component.js&apos;
+import { lt, ld } from &apos;../../Localizer.js&apos;
+import DataObject from &apos;../../DataObject.js&apos;
+import DataCollection from &apos;../../DataCollection.js&apos;
+
+import LabelComponent from &apos;../atoms/LabelComponent.js&apos;
+
+/**
+DefaultItemComponent is used by {@link CollectionComponent} if no &apos;itemComponent&apos; option is passed.
+
+The only thing in this {@link Component} is a {@link LabelComponent} with the first field that exists of: &apos;title&apos;, &apos;name&apos;, or &apos;text&apos;.
+
+You&apos;ll usually want to pass an `itemComponent` option to `CollectionComponent` to present a custom item.
+*/
+const DefaultItemComponent = class extends Component {
+	constructor(dataObject = null, options = {}) {
+		super(dataObject, Object.assign({ dom: dom.li() }, options))
+		if (dataObject instanceof DataObject === false) throw new Error(&apos;DefaultItemComponent requires a dataObject&apos;)
+		this.addClass(&apos;default-item-component&apos;)
+		this.setName(&apos;DefaultItemComponent&apos;)
+
+		const itemName = dataObject.getFirst(&apos;title&apos;, &apos;name&apos;, &apos;text&apos;) || new String(dataObject)
+		this._labelComponent = new LabelComponent(undefined, { text: lt(&apos;Item: &apos;) + itemName }).appendTo(this)
+	}
+}
+
+/**
+CollectionComponent provides a generic list UI for {@link DataCollection}s.
+
+@todo Add rearrangement via drag and drop
+@todo Add pagination support once {@link DataCollection} supports it
+
+@example &lt;caption&gt;Use the DefaultItemComponent&lt;/caption&gt;
+const myCollection = new DataCollection(...snip...)
+const collectionComponent = new CollectionComponent(myCollection)
+
+@example &lt;caption&gt;Use a custom item Component&lt;/caption&gt;
+const myCollection = new DataCollection(...snip...)
+class CustomItemComponent extends Component {
+	constructor(dataObject=null, options={}) {
+		// Set up your item UI here
+	}
+}
+const collectionComponent = new CollectionComponent(myCollection, {
+	itemComponent: CustomItemComponent, // the class, not an instance
+	itemOptions: { someKey: &apos;someValue&apos; } // passed as options to item component constructors
+})
+
+@example &lt;caption&gt;Responding to clicks on items&lt;/caption&gt;
+const myCollection = new DataCollection(...snip...)
+const collectionComponent = new CollectionComponent(myCollection, {
+	onClick: (dataModel) =&gt; {
+		// Do something with the DataModel whose item has been clicked
+	}
+})
+
+*/
+const CollectionComponent = class extends Component {
+	/**
+	@param {DataObject} [dataObject=null]
+	@param {Object} [options={}]
+	@param {Component} [options.itemComponent=DefaultItemComponent] a Component class used to render each item in this list
+	@param {Object} [options.itemOptions] a set of options to pass to each item Component
+	@param {function(obj: DataObject)} [options.onClick] a function to call with the dataObject whose item Component is clicked
+	*/
+	constructor(dataObject = null, options = {}) {
+		super(dataObject, Object.assign({ dom: dom.ul() }, options))
+		this.addClass(&apos;collection-component&apos;)
+		this.setName(&apos;CollectionComponent&apos;)
+
+		if (dataObject instanceof DataCollection === false) throw &apos;CollectionComponent requires a DataCollection dataObject&apos;
+		this._inGroupChange = false // True while resetting or other group change
+		this._dataObjectComponents = new Map() // dataObject.id -&gt; Component
+
+		this.listenTo(DataObject.ResetEvent, this.dataObject, (...params) =&gt; {
+			this._handleCollectionReset(...params)
+		})
+		this.listenTo(DataObject.AddedEvent, this.dataObject, (...params) =&gt; {
+			this._handleCollectionAdded(...params)
+		})
+		this.listenTo(DataObject.RemovedEvent, this.dataObject, (...params) =&gt; {
+			this._handleCollectionRemoved(...params)
+		})
+		if (this.dataObject.isNew === false) {
+			this._handleCollectionReset()
+		} else if (this.dataObject.length &gt; 0) {
+			this._inGroupChange = true
+			for (const dataObject of this.dataObject) {
+				this._add(this._createItemComponent(dataObject), false)
+			}
+			this._inGroupChange = false
+			this.trigger(CollectionComponent.Reset, this)
+		}
+	}
+
+	/**
+	@param {int} index
+	@return {?Component} indexed `Component` or `null` if index is out of bounds
+	*/
+	at(index) {
+		if (index &lt; 0) return null
+		if (index &gt;= this.children.length) return null
+		return this.children.item(index).component
+	}
+
+	/**
+	@param {DataObject} dataObject
+	@return {?Component}
+	*/
+	componentForDataObject(dataObject) {
+		return this._dataObjectComponents.get(dataObject.get(&apos;id&apos;))
+	}
+
+	/**
+	Call this to change whether item Components are show or hidden based on the result of a function.
+
+	A common pattern is to listen to Collection events like fetched or reset and then re-run a filter.
+
+	@example
+	const collectionComponent = new CollectionComponent(...snip...)
+
+	// Only show items for DataModels with an &apos;active&apos; field that is true
+	collectionComponent.filter((dataModel) =&gt; {
+		return dataModel.get(&apos;active&apos;) === true
+	})
+
+	// Show all items by passing a null filter
+	collectionComponent.filter(null)
+
+	@param {function(model: DataObject): boolean} filterFn - returns true if the DataObject&apos;s item Component should be shown
+	*/
+	filter(filterFn = null) {
+		for (const itemComponent of this._dataObjectComponents.values()) {
+			let display
+			if (typeof filterFn === &apos;function&apos;) {
+				display = filterFn(itemComponent.dataObject)
+			} else {
+				display = true
+			}
+			if (display) {
+				itemComponent.show()
+			} else {
+				itemComponent.hide()
+			}
+		}
+	}
+
+	_handleCollectionAdded(eventName, collection, dataObject) {
+		this._add(this._createItemComponent(dataObject))
+	}
+	_handleCollectionRemoved(eventName, collection, dataObject) {
+		const component = this.componentForDataObject(dataObject)
+		if (component) {
+			this._remove(component)
+		}
+	}
+	_handleCollectionReset(eventName, target) {
+		if (target !== this.dataObject) return // It was a reset for an item in the collection, not the collection itself
+		this._inGroupChange = true
+		this.trigger(CollectionComponent.Resetting, this)
+		for (const itemComponent of this._dataObjectComponents.values()) {
+			this._remove(itemComponent)
+		}
+		this._dataObjectComponents.clear()
+		for (const dataObject of this.dataObject) {
+			this._add(this._createItemComponent(dataObject))
+		}
+		this._inGroupChange = false
+		this.trigger(CollectionComponent.Reset, this)
+	}
+	_handleItemClick(ev, itemComponent) {
+		if (this.options.onClick) {
+			ev.preventDefault()
+			this.options.onClick(itemComponent.dataObject)
+		}
+	}
+	_add(itemComponent, checkForDoubles = true) {
+		/** @todo this assumes the PK is called &apos;id&apos; */
+		if (checkForDoubles &amp;&amp; this._dataObjectComponents.get(itemComponent.dataObject.get(&apos;id&apos;))) {
+			// Already have it, ignore the add
+			return
+		}
+		this._dataObjectComponents.set(itemComponent.dataObject.get(&apos;id&apos;), itemComponent)
+
+		this.appendComponent(itemComponent)
+
+		if (this.options.onClick) {
+			this.listenTo(&apos;click&apos;, itemComponent.dom, (ev) =&gt; {
+				this._handleItemClick(ev, itemComponent)
+			})
+		}
+		this.listenTo(&apos;deleted&apos;, itemComponent.dataObject, this._handleDeleted.bind(this), true)
+	}
+	_remove(itemComponent) {
+		this._dataObjectComponents.delete(itemComponent.dataObject.get(&apos;id&apos;))
+		this.removeComponent(itemComponent)
+		itemComponent.removeEventListener(&apos;click&apos;, null)
+		itemComponent.cleanup()
+	}
+	_handleDeleted(eventName, dataObject, error) {
+		if (error) return
+		const component = this._dataObjectComponents.get(dataObject.get(&apos;id&apos;))
+		if (component) {
+			this._remove(component)
+		}
+	}
+	_createItemComponent(itemDataObject) {
+		let options
+		if (this.options.itemOptions) {
+			options = Object.assign({}, this.options.itemOptions)
+		} else {
+			options = {}
+		}
+		let itemComponent
+		if (this.options.itemComponent) {
+			itemComponent = new this.options.itemComponent(itemDataObject, options)
+		} else {
+			itemComponent = new DefaultItemComponent(itemDataObject, options)
+		}
+		itemComponent.addClass(&apos;collection-item&apos;)
+		return itemComponent
+	}
+}
+CollectionComponent.Resetting = &apos;collection-component-resetting&apos;
+CollectionComponent.Reset = &apos;collection-component-reset&apos;
+
+export default CollectionComponent
+export { CollectionComponent, DefaultItemComponent }
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

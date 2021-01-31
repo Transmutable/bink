@@ -1,0 +1,11 @@
+/* VideoComponent */
+
+.video-component > video {
+	max-width: 100%;
+	position: relative;
+}
+
+.video-component > .preview {
+	width: 100%;
+	cursor: pointer;
+}

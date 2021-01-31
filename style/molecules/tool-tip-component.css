@@ -1,0 +1,21 @@
+/*** ToolTipComponent ***/
+
+.tool-tip-component {
+	position: relative;
+	min-width: 8em;
+	max-width: 100%;
+	min-height: 2em;
+	padding: 30px 1em 1em 1em;
+	border: solid var(--container-border-width) var(--primary-color);
+	border-radius: var(--container-border-radius);
+	background-color: var(--background-color);
+}
+
+.tool-tip-component .label-component.close-component {
+	top: 9px;
+	right: 9px;
+	margin: 0;
+	cursor: pointer;
+	position: absolute;
+}
+

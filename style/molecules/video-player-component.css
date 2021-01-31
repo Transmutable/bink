@@ -1,0 +1,27 @@
+/*** VideoPlayerComponent ***/
+
+.video-player-component > .backdrop-component {
+	width: 100%;
+	display: block;
+	border: solid var(--container-border-width) #DDD;
+	border-radius: var(--container-border-radius);
+	text-align: center;
+}
+
+.video-player-component > .backdrop-component > .video-component {
+	display: block;
+	max-width: 100%;
+}
+
+.video-player-component > .video-player-controls {
+	margin-top: 10px;
+	display: grid;
+	gap: 10px;
+	grid-template: 40px / 1fr 5fr;
+}
+
+.video-player-component > .video-player-controls > .toggle-button-component {
+	height: 100%;
+	width: 100%;
+	min-width: 6em;
+}

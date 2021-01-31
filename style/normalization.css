@@ -1,0 +1,48 @@
+/* Normalization */
+
+html, body,
+div, section,
+h1, h2, h3, h4, h5,
+ul, li {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: var(--font-family);
+	font-weight: var(--font-weight-base);
+	color: var(--base-color);
+	font-size: var(--font-size-base);
+	background-color: var(--background-color);
+}
+
+button, input[type="reset"], input[type="button"], input[type="submit"] {
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+}
+
+li {
+	list-style: none;
+	margin-bottom: 0.5em;
+}
+
+h1 {
+	font-size: var(--font-size-4);
+	font-weight: var(--font-weight-4);
+	line-height: var(--line-height-4);
+	letter-spacing: var(--letter-spacing-4);
+}
+
+h2 {
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-3);
+	line-height: var(--line-height-3);
+	letter-spacing: var(--letter-spacing-3);
+}
+
+h3 {
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-2);
+	line-height: var(--line-height-2);
+	letter-spacing: var(--letter-spacing-2);
+}
