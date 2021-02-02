@@ -33,6 +33,11 @@ The [API docs](https://transmutable.github.io/bink/api/) have a lot of info and 
 
 A web page's script element instantiates a Bink [`App`](https://transmutable.github.io/bink/api/class/src/App.js~App.html) that orchestrates views made up of [`Component`](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html)s that reactively update the DOM based on information and events in [`DataModel`](https://transmutable.github.io/bink/api/class/src/DataModel.js~DataModel.html)s and [`DataCollection`](https://transmutable.github.io/bink/api/class/src/DataCollection.js~DataCollection.html)s as well as events from user actions.
 
+### Examples
+
+- Hello World: [html](https://github.com/Transmutable/bink/blob/main/examples/hello-world/index.html) and [JavaScript](https://github.com/Transmutable/bink/blob/main/examples/hello-world/site.js) for a basic page
+- Components: [html](https://github.com/Transmutable/bink/blob/main/examples/components/index.html) and [JavaScript](https://github.com/Transmutable/bink/blob/main/examples/components/site.js) showing each included [Component](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html).
+
 ### What `App` provides:
 
 - Page-level orchestration of views

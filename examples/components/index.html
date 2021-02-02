@@ -2,11 +2,17 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./site.css" type='text/css'>
 		<title>Components | Bink example</title>
+		<link rel="stylesheet" href="./site.css" type='text/css'>
+
+		<!-- initialize Bink -->
+		<script type="module" src="./site.js"></script>
 	</head>
 	<body>
+		<!-- This is only shown until site.js clears it and initializes Bink -->
 		<h1>Loading...</h1>
+		<noscript>
+			Sadly, you've reached a page that only works with JavaScript.
+		</noscript>
 	</body>
-	<script type="module" src="./site.js"></script>
 </html>
