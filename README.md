@@ -35,8 +35,12 @@ A web page's script element instantiates a Bink [`App`](https://transmutable.git
 
 ### Examples
 
-- Hello World: [html](https://github.com/Transmutable/bink/blob/main/examples/hello-world/index.html) and [JavaScript](https://github.com/Transmutable/bink/blob/main/examples/hello-world/site.js) for a basic page
-- Components: [html](https://github.com/Transmutable/bink/blob/main/examples/components/index.html) and [JavaScript](https://github.com/Transmutable/bink/blob/main/examples/components/site.js) showing each included [Component](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html).
+#### Remix on Glitch
+
+These examples are [in the repo](https://github.com/Transmutable/bink/tree/main/examples) but here they are as Glitch projects for immediate satisfaction. Glitch lets you view the code and then remix it with no fuss.
+
+- [Hello, world](https://glitch.com/edit/#!/northern-tricky-brook) is a bare bones page.
+- [Components](https://glitch.com/edit/#!/valiant-agate-acoustic) shows the [Component](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html)s that are included with Bink and a bit more complex use of [App](https://transmutable.github.io/bink/api/class/src/App.js~App.html).
 
 ### What `App` provides:
 
