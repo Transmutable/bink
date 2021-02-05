@@ -33,9 +33,7 @@ The [API docs](https://transmutable.github.io/bink/api/) have a lot of info and 
 
 A web page's script element instantiates a Bink [`App`](https://transmutable.github.io/bink/api/class/src/App.js~App.html) that orchestrates views made up of [`Component`](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html)s that reactively update the DOM based on information and events in [`DataModel`](https://transmutable.github.io/bink/api/class/src/DataModel.js~DataModel.html)s and [`DataCollection`](https://transmutable.github.io/bink/api/class/src/DataCollection.js~DataCollection.html)s as well as events from user actions.
 
-### Examples
-
-#### Remix on Glitch
+### Examples on Glitch
 
 These examples are [in the repo](https://github.com/Transmutable/bink/tree/main/examples) but here they are as Glitch projects for immediate satisfaction. Glitch lets you view the code and then remix it with no fuss.
 
@@ -61,3 +59,15 @@ Bink ships with a library of `Component`s.
 - Manage a shared data structure for key/value maps (models) and ordered lists (collections)
 - Wrap logic for communicating with services like remote APIs or local storage
 - Provide data change events so that the UI can react
+
+## Use Bink in your projects
+
+Bink is designed to be easy to use without an ecosystem like [npm]( https://www.npmjs.com/).
+
+The quickest way to get started is to download the latest source code release zip from the [Releases page](https://github.com/Transmutable/bink/releases) and copy the `/src/` and `/style/` directories into your project's doc root. That's how the examples mentioned above work. ☝️
+
+If you are stuck using `npm` (perhaps via [yarn](https://yarnpkg.com/)) and need to use Bink that way (dang it) then it's available as [@transmutable/bink]( https://www.npmjs.com/package/@transmutable/bink).
+
+## Who made Bink?
+
+Bink is the result of two+ decades of work on and with browsers by [Trevor Flowers](https://trevor.smith.name/) who leads [Transmutable](https://transmutable.com/) and is [@TrevorFSmith](https://twitter.com/trevorfsmith) on Twitter.
