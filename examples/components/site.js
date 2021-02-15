@@ -29,6 +29,13 @@ class AtomsComponent extends MediaGridComponent {
 				options: { text: lt('This is a label') }
 			},
 			{
+				clazz: components.LinkComponent,
+				options: {
+					text: lt('This is a link'),
+					url: '#nowhere'
+				}
+			},
+			{
 				clazz: components.ProgressComponent,
 				data: new DataModel({
 					value: 0.25
@@ -83,7 +90,10 @@ class MoleculesComponent extends MediaGridComponent {
 	constructor(dataObject=null, options={}) {
 		super(new DataCollection([
 			{
-				clazz: components.AudioPlayerComponent
+				clazz: components.AudioPlayerComponent,
+				options: {
+					audio: '/examples/media/test-sound.mp3'
+				}
 			},
 			{
 				clazz: components.FormComponent // TODO add field Components

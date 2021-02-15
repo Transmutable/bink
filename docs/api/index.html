@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl">
-  <title data-ice="title">Home | bink</title>
+  <title data-ice="title">Home | @transmutable/bink</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@transmutable/bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -52,6 +52,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LinkComponent.js~LinkComponent.html">LinkComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
@@ -112,6 +113,11 @@
 </ul>
 <h2 id="overview-of-bink">Overview of Bink</h2><p>The <a href="https://transmutable.github.io/bink/api/">API docs</a> have a lot of info and example code but in general: </p>
 <p>A web page&apos;s script element instantiates a Bink <a href="https://transmutable.github.io/bink/api/class/src/App.js~App.html"><code>App</code></a> that orchestrates views made up of <a href="https://transmutable.github.io/bink/api/class/src/Component.js~Component.html"><code>Component</code></a>s that reactively update the DOM based on information and events in <a href="https://transmutable.github.io/bink/api/class/src/DataModel.js~DataModel.html"><code>DataModel</code></a>s and <a href="https://transmutable.github.io/bink/api/class/src/DataCollection.js~DataCollection.html"><code>DataCollection</code></a>s as well as events from user actions.</p>
+<h3 id="examples-on-glitch">Examples on Glitch</h3><p>These examples are <a href="https://github.com/Transmutable/bink/tree/main/examples">in the repo</a> but here they are as Glitch projects for immediate satisfaction. Glitch lets you view the code and then remix it with no fuss.</p>
+<ul>
+<li><a href="https://glitch.com/edit/#!/northern-tricky-brook">Hello, world</a> is a bare bones page.</li>
+<li><a href="https://glitch.com/edit/#!/valiant-agate-acoustic">Components</a> shows the <a href="https://transmutable.github.io/bink/api/class/src/Component.js~Component.html">Component</a>s that are included with Bink and a bit more complex use of <a href="https://transmutable.github.io/bink/api/class/src/App.js~App.html">App</a>.</li>
+</ul>
 <h3 id="what--code-app--code--provides-">What <code>App</code> provides:</h3><ul>
 <li>Page-level orchestration of views</li>
 <li>URL routing</li>
@@ -128,6 +134,10 @@
 <li>Wrap logic for communicating with services like remote APIs or local storage</li>
 <li>Provide data change events so that the UI can react</li>
 </ul>
+<h2 id="use-bink-in-your-projects">Use Bink in your projects</h2><p>Bink is designed to be easy to use without an ecosystem like <a href="https://www.npmjs.com/">npm</a>.</p>
+<p>The quickest way to get started is to download the latest source code release zip from the <a href="https://github.com/Transmutable/bink/releases">Releases page</a> and copy the <code>/src/</code> and <code>/style/</code> directories into your project&apos;s doc root. That&apos;s how the examples mentioned above work. &#x261D;&#xFE0F;</p>
+<p>If you are stuck using <code>npm</code> (perhaps via <a href="https://yarnpkg.com/">yarn</a>) and need to use Bink that way (dang it) then it&apos;s available as <a href="https://www.npmjs.com/package/@transmutable/bink">@transmutable/bink</a>.</p>
+<h2 id="who-made-bink-">Who made Bink?</h2><p>Bink is the result of two+ decades of work on and with browsers by <a href="https://trevor.smith.name/">Trevor Flowers</a> who leads <a href="https://transmutable.com/">Transmutable</a> and is <a href="https://twitter.com/trevorfsmith">@TrevorFSmith</a> on Twitter.</p>
 </div>
 </div>
 

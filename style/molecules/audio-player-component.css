@@ -1,11 +1,9 @@
-/* AudioPlayerComponent */
+/*
+AudioPlayerComponent
+
+See the todo in AudioPlayerComponent.js. This should eventually have more controls.
 
 .audio-player-component {
-	display: grid;
-	grid-template: 44px 30px / 60px;
-	gap: var(--inner-element-padding);
 }
 
-.audio-player-component > .audio-component {
-	width: 60px;
-}
+*/

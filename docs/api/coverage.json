@@ -1,7 +1,7 @@
 {
-  "coverage": "53.25%",
-  "expectCount": 445,
-  "actualCount": 237,
+  "coverage": "53.58%",
+  "expectCount": 446,
+  "actualCount": 239,
   "files": {
     "src/App.js": {
       "expectCount": 12,
@@ -16,10 +16,10 @@
       "expectCount": 32,
       "actualCount": 24,
       "undocumentLines": [
-        313,
-        314,
-        315,
+        317,
         318,
+        319,
+        322,
         68,
         69,
         70,
@@ -32,10 +32,10 @@
       "undocumentLines": [
         159,
         169,
-        305,
-        307,
-        314,
-        318
+        306,
+        308,
+        315,
+        319
       ]
     },
     "src/DataCollection.js": {
@@ -125,30 +125,29 @@
       "expectCount": 15,
       "actualCount": 6,
       "undocumentLines": [
-        29,
-        38,
-        61,
-        64,
-        84,
-        85,
+        31,
+        40,
+        63,
+        66,
         86,
         87,
-        88
+        88,
+        89,
+        90
       ]
     },
     "src/components/atoms/AudioComponent.js": {
-      "expectCount": 5,
+      "expectCount": 4,
       "actualCount": 3,
       "undocumentLines": [
-        40,
-        49
+        40
       ]
     },
     "src/components/atoms/ButtonComponent.js": {
       "expectCount": 5,
       "actualCount": 4,
       "undocumentLines": [
-        40
+        48
       ]
     },
     "src/components/atoms/HeadingComponent.js": {
@@ -165,6 +164,11 @@
       ]
     },
     "src/components/atoms/LabelComponent.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/components/atoms/LinkComponent.js": {
       "expectCount": 2,
       "actualCount": 2,
       "undocumentLines": []
@@ -250,10 +254,10 @@
         53,
         58,
         59,
-        79,
-        83,
-        86,
-        96
+        80,
+        84,
+        87,
+        97
       ]
     },
     "src/components/atoms/ToggleComponent.js": {

@@ -15,7 +15,15 @@ buttonComponent.text // 'Click me'
 buttonComponent.text = 'Do it'
 buttonComponent.text // 'Do it'
 
-@todo Catch input events and relay them as Bink events
+// Listen for the button activation (This is usually what you want)
+buttonComponent.addEventListener(ButtonComponent.ActivatedEvent, (eventName) => {
+	console.log('Button was activated')
+})
+
+// Listen for changes to state (You usually want ButtonComponent.ActivatedEvent)
+buttonComponent.addEventListener(ButtonComponent.ChangedEvent, (eventName, isDown) => {
+	console.log('Button is pressed:', isDown)
+})
 
 */
 const ButtonComponent = class extends Component {
@@ -37,10 +45,18 @@ const ButtonComponent = class extends Component {
 		this.addClass('button-component')
 		this.setName('ButtonComponent')
 
-		this._text = ''
-
-		// TODO implement events
+		this._text = null
 		this.text = this.options.text || ''
+
+		this.listenTo('mousedown', this.dom, () => {
+			this.trigger(ButtonComponent.ChangedEvent, true)
+		})
+		this.listenTo('mouseup', this.dom, () => {
+			this.trigger(ButtonComponent.ChangedEvent, false)
+		})
+		this.listenTo('click', this.dom, () => {
+			this.trigger(ButtonComponent.ActivatedEvent)
+		})
 	}
 
 	/** @type {string} */
@@ -55,7 +71,8 @@ const ButtonComponent = class extends Component {
 		this.dom.innerText = this._text
 	}
 }
-ButtonComponent.ChangedEvent = 'button-changed'
+ButtonComponent.ChangedEvent = Symbol('button-changed') // Called for mouseup and mousedown
+ButtonComponent.ActivatedEvent = Symbol('button-activated') // Called on click
 
 export default ButtonComponent
 export { ButtonComponent }

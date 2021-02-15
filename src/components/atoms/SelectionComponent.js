@@ -50,7 +50,7 @@ const SelectionComponent = class extends Component {
 		})
 
 		this.listenTo('input', this.dom, (ev) => {
-			this.selectedIndex = this.selectedIndex
+			this.trigger(SelectionComponent.SelectionIndexChangedEvent, this.dom.selectedIndex)
 		})
 	}
 

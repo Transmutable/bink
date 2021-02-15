@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../../">
-  <title data-ice="title">AudioComponent | @transmutable/bink</title>
+  <title data-ice="title">LinkComponent | @transmutable/bink</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -85,23 +85,23 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import AudioComponent from &apos;<span><a href="file/src/components/atoms/AudioComponent.js.html#lineNumber18">@transmutable/bink/src/components/atoms/AudioComponent.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import LinkComponent from &apos;<span><a href="file/src/components/atoms/LinkComponent.js.html#lineNumber22">@transmutable/bink/src/components/atoms/LinkComponent.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/components/atoms/AudioComponent.js.html#lineNumber18">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/components/atoms/LinkComponent.js.html#lineNumber22">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
-  <h1 data-ice="name">AudioComponent</h1>
+  <h1 data-ice="name">LinkComponent</h1>
 
   
 
   
   
-  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span> &#x2192; <span><a href="class/src/Component.js~Component.html">Component</a></span> &#x2192; AudioComponent</div></div>
+  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span> &#x2192; <span><a href="class/src/Component.js~Component.html">Component</a></span> &#x2192; <span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html">TextComponent</a></span> &#x2192; LinkComponent</div></div>
   
   
   
@@ -111,8 +111,8 @@
 
   
   
-  <div class="description" data-ice="description"><p>AudioComponent contains a sound source and shows an icon.</p>
-<p>If you want to display controls, use {AudioPlayerComponent}.</p>
+  <div class="description" data-ice="description"><p>LinkComponent displays an <code>a</code> element containing static text or text that is bound to a field in the dataObject.</p>
+<p>This class is meant to be used where you&apos;d include an inline text link. See the <span><a href="class/src/Component.js~Component.html#instance-constructor-constructor">Component.constructor</a></span>&apos;s <code>option.anchor</code> parameter if you want click events on a Component&apos;s DOM element to trigger navigation. </p>
 </div>
   
 
@@ -122,16 +122,24 @@
     <h4>Example:</h4>
     
   <div class="example-doc" data-ice="exampleDoc">
-      
-      <pre class="prettyprint source-code"><code data-ice="exampleCode">const audioComponent = new AudioComponent(undefined, {
-audio: &apos;/media/sound.wav&apos;
+      <div class="example-caption" data-ice="exampleCaption">Use static text</div>
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">const component = new LinkComponent(undefined, {
+text: &apos;Click me&apos;,
+url: &apos;/some-other-page/&apos;
+})</code></pre>
+    </div>
+<div class="example-doc" data-ice="exampleDoc">
+      <div class="example-caption" data-ice="exampleCaption">Use bound text</div>
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">const component = new LinkComponent(yourDataModel, {
+dataField: &apos;name&apos;,
+url: &apos;#some-other-view&apos;
 })</code></pre>
     </div>
 </div>
 
   
 
-  <div data-ice="todo"><h4>TODO:</h4><ul><li><span>Actually display the icon</span></li></ul></div>
+  
 </div>
 
 
@@ -154,7 +162,7 @@ audio: &apos;/media/sound.wav&apos;
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/components/atoms/AudioComponent.js~AudioComponent.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/components/atoms/LinkComponent.js~LinkComponent.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(dataObject: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
@@ -171,41 +179,7 @@ audio: &apos;/media/sound.wav&apos;
 </tbody>
 </table>
 </div>
-<div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
-  <tbody>
-  
-  <tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      <span class="kind" data-ice="kind">get</span>
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/components/atoms/AudioComponent.js~AudioComponent.html#instance-get-audio">audio</a></span></span><span class="code" data-ice="signature">: <span>HTMLAudioElement</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
+
 
 
 <div class="inherited-summary" data-ice="inheritedSummary"><h2>Inherited Summary</h2><table class="summary" data-ice="summary">
@@ -858,6 +832,69 @@ audio: &apos;/media/sound.wav&apos;
   </tr>
 </tbody>
 </table>
+
+<table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3"><span class="toggle closed"></span> From class <span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html">TextComponent</a></span></td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html#instance-get-text">text</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">set</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html#instance-set-text">text</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
 </div>
 
 
@@ -876,7 +913,7 @@ audio: &apos;/media/sound.wav&apos;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/components/atoms/AudioComponent.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/components/atoms/LinkComponent.js.html#lineNumber28">source</a></span></span>
     </span>
   </h3>
 
@@ -885,7 +922,7 @@ audio: &apos;/media/sound.wav&apos;
   
   
 
-  <div data-ice="override"><h4>Override:</h4><span><a href="class/src/Component.js~Component.html#instance-constructor-constructor">Component#constructor</a></span></div>
+  <div data-ice="override"><h4>Override:</h4><span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html#instance-constructor-constructor">TextComponent#constructor</a></span></div>
 
   <div data-ice="properties"><div data-ice="properties">
   <h4 data-ice="title">Params:</h4>
@@ -898,29 +935,24 @@ audio: &apos;/media/sound.wav&apos;
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">dataObject</td>
       <td data-ice="type" class="code"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: null</li></ul></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">options</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" class="code" data-depth="1">options.audio</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"><ul><li>optional</li>
-<li>default: null</li></ul></td>
-      <td data-ice="description"><p>a URL to an audio file</p>
+<li>default: {}</li></ul></td>
+      <td data-ice="description"><p>See the <span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html#instance-constructor-constructor">TextComponent.constructor</a></span> options, including dynamic text formatting.</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="1">
-      <td data-ice="name" class="code" data-depth="1">options.audioDOM</td>
-      <td data-ice="type" class="code"><span>HTMLElement</span></td>
+      <td data-ice="name" class="code" data-depth="1">options.url</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"><ul><li>optional</li>
-<li>default: null</li></ul></td>
-      <td data-ice="description"><p>an HTML <code>audio</code> element to use as a source</p>
+<li>default: &apos;&apos;</li></ul></td>
+      <td data-ice="description"><p>The URL to which the link should anchor. This can conflict with the <code>options.anchor</code> passed to Component.constructor.</p>
 </td>
     </tr>
 </tbody>
@@ -946,52 +978,7 @@ audio: &apos;/media/sound.wav&apos;
   
 </div>
 </div>
-<div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
 
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-audio">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">audio</span><span class="code" data-ice="signature">: <span>HTMLAudioElement</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/components/atoms/AudioComponent.js.html#lineNumber51">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-</div>
 
 </div>
 

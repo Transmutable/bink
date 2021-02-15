@@ -73,17 +73,17 @@ const CollectionComponent = class extends Component {
 		this._inGroupChange = false // True while resetting or other group change
 		this._dataObjectComponents = new Map() // dataObject.id -> Component
 
-		this.listenTo(DataObject.ResetEvent, this.dataObject, (...params) => {
-			this._handleCollectionReset(...params)
+		this.listenTo(DataObject.ResetEvent, this.dataObject, (eventName, target) => {
+			this._handleCollectionReset(target)
 		})
-		this.listenTo(DataObject.AddedEvent, this.dataObject, (...params) => {
-			this._handleCollectionAdded(...params)
+		this.listenTo(DataObject.AddedEvent, this.dataObject, (eventName, collection, dataObject) => {
+			this._handleCollectionAdded(collection, dataObject)
 		})
-		this.listenTo(DataObject.RemovedEvent, this.dataObject, (...params) => {
-			this._handleCollectionRemoved(...params)
+		this.listenTo(DataObject.RemovedEvent, this.dataObject, (eventName, collection, dataObject) => {
+			this._handleCollectionRemoved(collection, dataObject)
 		})
 		if (this.dataObject.isNew === false) {
-			this._handleCollectionReset()
+			this._handleCollectionReset(this.dataObject)
 		} else if (this.dataObject.length > 0) {
 			this._inGroupChange = true
 			for (const dataObject of this.dataObject) {
@@ -146,16 +146,16 @@ const CollectionComponent = class extends Component {
 		}
 	}
 
-	_handleCollectionAdded(eventName, collection, dataObject) {
+	_handleCollectionAdded(collection, dataObject) {
 		this._add(this._createItemComponent(dataObject))
 	}
-	_handleCollectionRemoved(eventName, collection, dataObject) {
+	_handleCollectionRemoved(collection, dataObject) {
 		const component = this.componentForDataObject(dataObject)
 		if (component) {
 			this._remove(component)
 		}
 	}
-	_handleCollectionReset(eventName, target) {
+	_handleCollectionReset(target) {
 		if (target !== this.dataObject) return // It was a reset for an item in the collection, not the collection itself
 		this._inGroupChange = true
 		this.trigger(CollectionComponent.Resetting, this)

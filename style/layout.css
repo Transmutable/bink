@@ -25,3 +25,6 @@
 	--inner-element-border:						solid var(--container-border-width) var(--primary-color);
 	--inner-element-padding:					12px;
 }
+
+/* Used by Component.hide() and Component.show() */
+.hidden { display: none; }

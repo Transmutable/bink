@@ -4,6 +4,7 @@
 @import './atoms/button-component.css';
 @import './atoms/heading-component.css';
 @import './atoms/image-component.css';
+@import './atoms/link-component.css';
 @import './atoms/multi-component.css';
 @import './atoms/progress-component.css';
 @import './atoms/selection-component.css';

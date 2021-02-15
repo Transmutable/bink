@@ -1,10 +1,5 @@
 /* AudioComponent */
 
 .audio-component {
-	width: 35px;
 	display: inline;
-}
-
-.audio-component > .audio-image {
-	max-width: 100%;
 }

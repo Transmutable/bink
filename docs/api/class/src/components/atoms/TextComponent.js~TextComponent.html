@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../../">
-  <title data-ice="title">TextComponent | bink</title>
+  <title data-ice="title">TextComponent | @transmutable/bink</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@transmutable/bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -52,6 +52,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LinkComponent.js~LinkComponent.html">LinkComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
@@ -84,7 +85,7 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import TextComponent from &apos;<span><a href="file/src/components/atoms/TextComponent.js.html#lineNumber25">bink/src/components/atoms/TextComponent.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import TextComponent from &apos;<span><a href="file/src/components/atoms/TextComponent.js.html#lineNumber25">@transmutable/bink/src/components/atoms/TextComponent.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
@@ -101,7 +102,7 @@
   
   
   <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span> &#x2192; <span><a href="class/src/Component.js~Component.html">Component</a></span> &#x2192; TextComponent</div></div>
-  <div class="flat-list" data-ice="directSubclass"><h4>Direct Subclass:</h4><div><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span>, <span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></div></div>
+  <div class="flat-list" data-ice="directSubclass"><h4>Direct Subclass:</h4><div><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span>, <span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span>, <span><a href="class/src/components/atoms/LinkComponent.js~LinkComponent.html">LinkComponent</a></span></div></div>
   <div class="flat-list" data-ice="indirectSubclass"><h4>Indirect Subclass:</h4><div><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></div></div>
   
   
@@ -566,7 +567,8 @@ dataFieldFormatter: (value) =&gt; { return value === true ? &apos;Is active&apos
       <div>
         
         
-        <div data-ice="description"><p>Add one or more classes to this component&apos;s dom <code>class</code> attribute without removing any existing classes</p>
+        <div data-ice="description"><p>Add one or more classes to this component&apos;s dom <code>class</code> attribute without removing any existing classes.</p>
+<p>This is optional but the best practice is to add a unique name for classes that extend <code>Component</code>.</p>
 </div>
       </div>
     </td>
@@ -856,7 +858,8 @@ dataFieldFormatter: (value) =&gt; { return value === true ? &apos;Is active&apos
       <div>
         
         
-        <div data-ice="description"><p>Sets the <code>data-name</code> attribute on this component&apos;s dom</p>
+        <div data-ice="description"><p>Sets the <code>name</code> attribute on this component&apos;s <code>dom.dataset</code> attribute.</p>
+<p>This is optional but it can be useful during debugging.</p>
 </div>
       </div>
     </td>

@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../../">
-  <title data-ice="title">src/components/atoms/ButtonComponent.js | bink</title>
+  <title data-ice="title">src/components/atoms/ButtonComponent.js | @transmutable/bink</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@transmutable/bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -52,6 +52,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LinkComponent.js~LinkComponent.html">LinkComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
@@ -101,7 +102,15 @@ buttonComponent.text // &apos;Click me&apos;
 buttonComponent.text = &apos;Do it&apos;
 buttonComponent.text // &apos;Do it&apos;
 
-@todo Catch input events and relay them as Bink events
+// Listen for the button activation (This is usually what you want)
+buttonComponent.addEventListener(ButtonComponent.ActivatedEvent, (eventName) =&gt; {
+	console.log(&apos;Button was activated&apos;)
+})
+
+// Listen for changes to state (You usually want ButtonComponent.ActivatedEvent)
+buttonComponent.addEventListener(ButtonComponent.ChangedEvent, (eventName, isDown) =&gt; {
+	console.log(&apos;Button is pressed:&apos;, isDown)
+})
 
 */
 const ButtonComponent = class extends Component {
@@ -123,10 +132,18 @@ const ButtonComponent = class extends Component {
 		this.addClass(&apos;button-component&apos;)
 		this.setName(&apos;ButtonComponent&apos;)
 
-		this._text = &apos;&apos;
-
-		// TODO implement events
+		this._text = null
 		this.text = this.options.text || &apos;&apos;
+
+		this.listenTo(&apos;mousedown&apos;, this.dom, () =&gt; {
+			this.trigger(ButtonComponent.ChangedEvent, true)
+		})
+		this.listenTo(&apos;mouseup&apos;, this.dom, () =&gt; {
+			this.trigger(ButtonComponent.ChangedEvent, false)
+		})
+		this.listenTo(&apos;click&apos;, this.dom, () =&gt; {
+			this.trigger(ButtonComponent.ActivatedEvent)
+		})
 	}
 
 	/** @type {string} */
@@ -141,7 +158,8 @@ const ButtonComponent = class extends Component {
 		this.dom.innerText = this._text
 	}
 }
-ButtonComponent.ChangedEvent = &apos;button-changed&apos;
+ButtonComponent.ChangedEvent = Symbol(&apos;button-changed&apos;) // Called for mouseup and mousedown
+ButtonComponent.ActivatedEvent = Symbol(&apos;button-activated&apos;) // Called on click
 
 export default ButtonComponent
 export { ButtonComponent }

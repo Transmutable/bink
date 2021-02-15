@@ -3,6 +3,7 @@ import { ButtonComponent } from './atoms/ButtonComponent.js'
 import { HeadingComponent } from './atoms/HeadingComponent.js'
 import { ImageComponent } from './atoms/ImageComponent.js'
 import { LabelComponent } from './atoms/LabelComponent.js'
+import { LinkComponent } from './atoms/LinkComponent.js'
 import { MultiComponent } from './atoms/MultiComponent.js'
 import { ProgressComponent } from './atoms/ProgressComponent.js'
 import { SelectionComponent } from './atoms/SelectionComponent.js'
@@ -34,6 +35,7 @@ export {
 	HeadingComponent,
 	ImageComponent,
 	LabelComponent,
+	LinkComponent,
 	MultiComponent,
 	ProgressComponent,
 	SelectionComponent,

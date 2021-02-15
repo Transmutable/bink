@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../../">
-  <title data-ice="title">src/components/organisms/CollectionComponent.js | bink</title>
+  <title data-ice="title">src/components/organisms/CollectionComponent.js | @transmutable/bink</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@transmutable/bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -52,6 +52,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LinkComponent.js~LinkComponent.html">LinkComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
@@ -159,17 +160,17 @@ const CollectionComponent = class extends Component {
 		this._inGroupChange = false // True while resetting or other group change
 		this._dataObjectComponents = new Map() // dataObject.id -&gt; Component
 
-		this.listenTo(DataObject.ResetEvent, this.dataObject, (...params) =&gt; {
-			this._handleCollectionReset(...params)
+		this.listenTo(DataObject.ResetEvent, this.dataObject, (eventName, target) =&gt; {
+			this._handleCollectionReset(target)
 		})
-		this.listenTo(DataObject.AddedEvent, this.dataObject, (...params) =&gt; {
-			this._handleCollectionAdded(...params)
+		this.listenTo(DataObject.AddedEvent, this.dataObject, (eventName, collection, dataObject) =&gt; {
+			this._handleCollectionAdded(collection, dataObject)
 		})
-		this.listenTo(DataObject.RemovedEvent, this.dataObject, (...params) =&gt; {
-			this._handleCollectionRemoved(...params)
+		this.listenTo(DataObject.RemovedEvent, this.dataObject, (eventName, collection, dataObject) =&gt; {
+			this._handleCollectionRemoved(collection, dataObject)
 		})
 		if (this.dataObject.isNew === false) {
-			this._handleCollectionReset()
+			this._handleCollectionReset(this.dataObject)
 		} else if (this.dataObject.length &gt; 0) {
 			this._inGroupChange = true
 			for (const dataObject of this.dataObject) {
@@ -232,16 +233,16 @@ const CollectionComponent = class extends Component {
 		}
 	}
 
-	_handleCollectionAdded(eventName, collection, dataObject) {
+	_handleCollectionAdded(collection, dataObject) {
 		this._add(this._createItemComponent(dataObject))
 	}
-	_handleCollectionRemoved(eventName, collection, dataObject) {
+	_handleCollectionRemoved(collection, dataObject) {
 		const component = this.componentForDataObject(dataObject)
 		if (component) {
 			this._remove(component)
 		}
 	}
-	_handleCollectionReset(eventName, target) {
+	_handleCollectionReset(target) {
 		if (target !== this.dataObject) return // It was a reset for an item in the collection, not the collection itself
 		this._inGroupChange = true
 		this.trigger(CollectionComponent.Resetting, this)

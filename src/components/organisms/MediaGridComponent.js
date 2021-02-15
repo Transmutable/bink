@@ -43,6 +43,7 @@ const MediaGridComponent = class extends Component {
 		this._collectionComponent = new CollectionComponent(dataObject, {
 			itemComponent: this.options.itemComponent,
 			itemOptions: this.options.itemOptions,
+			onClick: this.options.onClick,
 		}).appendTo(this)
 	}
 }

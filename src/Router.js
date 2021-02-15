@@ -24,6 +24,8 @@ router.addListener('blog-app', (routeName, hash, ...regexMatches, ...parameters)
 	// `regexMatches` would be ['1123', 'abc-123']
 	// `parameters` is empty in this example but could be any number of extra items in the route (see `addRoute`)
 })
+
+router.start()
 */
 const Router = class extends EventHandler {
 	constructor() {

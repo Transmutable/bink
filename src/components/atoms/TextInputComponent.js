@@ -59,7 +59,7 @@ const TextInputComponent = class extends Component {
 		this._shifted = false
 
 		this.listenTo('input', this.dom, (ev) => {
-			this.text = this.value
+			this.text = this.dom.value
 		})
 		this.listenTo('keyup', this.dom, (ev) => {
 			if (this.options.submitOnEnter && ev.keyCode === 13) {
@@ -74,6 +74,7 @@ const TextInputComponent = class extends Component {
 		} else {
 			this.text = this.options.text
 		}
+		this.dom.value = this.text
 	}
 
 	_handleModelChange() {

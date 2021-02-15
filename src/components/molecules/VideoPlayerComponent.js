@@ -58,7 +58,7 @@ const VideoPlayerComponent = class extends Component {
 			.appendTo(this._controlsComponent)
 			.addClass('toggle-button-component')
 			.setName('ToggleButtonComponent')
-		this.listenTo('click', this._toggleButtonComponent.dom, (ev) => {
+		this.listenTo(ButtonComponent.ActivatedEvent, this._toggleButtonComponent, (eventName) => {
 			this._videoComponent.toggle()
 		})
 

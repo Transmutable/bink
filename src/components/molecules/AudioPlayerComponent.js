@@ -9,7 +9,7 @@ import ButtonComponent from '../atoms/ButtonComponent.js'
 /**
 AudioPlayerComponent shows an {@link AudioComponent} along with play/pause controls.
 
-@todo Add an optional progress component
+@todo Add an optional progress/shuttle component
 @todo Make this reactive to a DataModel
 
 @example
@@ -37,8 +37,7 @@ const AudioPlayerComponent = class extends Component {
 			.appendTo(this)
 			.addClass('toggle-button-component')
 			.setName('ToggleButtonComponent')
-		this.listenTo(ButtonComponent.ChangedEvent, this._toggleButton, (eventName, active) => {
-			if (active === false) return
+		this.listenTo(ButtonComponent.ActivatedEvent, this._toggleButton, (eventName) => {
 			if (this.audio.paused) {
 				this.audio.play()
 			} else {
@@ -49,6 +48,7 @@ const AudioPlayerComponent = class extends Component {
 		this.listenTo('playing', this.audio, this._updateDisplay)
 		this.listenTo('pause', this.audio, this._updateDisplay)
 		this.listenTo('ended', this.audio, this._updateDisplay)
+		this.listenTo('emptied', this.audio, this._updateDisplay)
 
 		this._updateDisplay()
 	}

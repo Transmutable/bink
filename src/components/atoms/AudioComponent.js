@@ -45,12 +45,6 @@ const AudioComponent = class extends Component {
 				})
 			)
 		}
-
-		this._domImage = new ImageComponent(undefined, {
-			// @TODO define an audio image
-		}).appendTo(this)
-		this._domImage.addClass('audio-image')
-		this._domImage.setName('AudioImage')
 	}
 
 	/** @type {HTMLAudioElement} */

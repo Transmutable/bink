@@ -169,7 +169,9 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Sets the `data-name` attribute on this component's dom
+	Sets the `name` attribute on this component's `dom.dataset` attribute.
+
+	This is optional but it can be useful during debugging.
 
 	@param {string} name
 	@return {Component} returns `this` for chaining
@@ -180,7 +182,9 @@ const Component = class extends EventHandler {
 	}
 
 	/**
-	Add one or more classes to this component's dom `class` attribute without removing any existing classes
+	Add one or more classes to this component's dom `class` attribute without removing any existing classes.
+
+	This is optional but the best practice is to add a unique name for classes that extend `Component`.
 
 	@param {...string} classNames
 	@return {Component} returns `this` for chaining
@@ -232,7 +236,7 @@ const Component = class extends EventHandler {
 
 	@example
 	this.buttonComponent = new ButtonComponent(...).appendTo(this)
-	this.listenTo(ButtonComponent.ChangedEvent, this.buttonComponent, (eventName, ...params) => { ... })
+	this.listenTo(ButtonComponent.ActivatedEvent, this.buttonComponent, (eventName) => { ... })
 
 	@example
 	this.exampleModel = new DataModel({ someField: 42 })
