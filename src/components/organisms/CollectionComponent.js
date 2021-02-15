@@ -83,7 +83,7 @@ const CollectionComponent = class extends Component {
 			this._handleCollectionRemoved(...params)
 		})
 		if (this.dataObject.isNew === false) {
-			this._handleCollectionReset()
+			this._handleCollectionReset(undefined, this.dataObject)
 		} else if (this.dataObject.length > 0) {
 			this._inGroupChange = true
 			for (const dataObject of this.dataObject) {

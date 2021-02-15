@@ -37,7 +37,7 @@ const AudioPlayerComponent = class extends Component {
 			.appendTo(this)
 			.addClass('toggle-button-component')
 			.setName('ToggleButtonComponent')
-		this.listenTo(ButtonComponent.ChangedEvent, this._toggleButton, (eventName, active) => {
+		this.listenTo('click', this._toggleButton.dom, (eventName, active) => {
 			if (active === false) return
 			if (this.audio.paused) {
 				this.audio.play()
@@ -49,6 +49,7 @@ const AudioPlayerComponent = class extends Component {
 		this.listenTo('playing', this.audio, this._updateDisplay)
 		this.listenTo('pause', this.audio, this._updateDisplay)
 		this.listenTo('ended', this.audio, this._updateDisplay)
+		this.listenTo('emptied', this.audio, this._updateDisplay)
 
 		this._updateDisplay()
 	}
