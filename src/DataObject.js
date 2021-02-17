@@ -137,9 +137,9 @@ const DataObject = class extends EventHandler {
 	}
 
 	/**
-	This overrides the use of window.fetch, mostly during testing.
+	This can be overridden to use something other than `window.fetch` during internal testing.
 
-	For example, MockService overrides this to intercept fetch calls and return its own responses for matched endpoints
+	Extending classes should override `fetch` if they're not using `window.fetch`
 	*/
 	_innerFetch(...params) {
 		return fetch(...params)

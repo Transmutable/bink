@@ -32,7 +32,7 @@ class ClickMeButton extends ButtonComponent {
 /*
 App instances run the entire single page app by orchestrating DataObjects and Components.
 
-This App simply loads a single HeadingComponent that reads a static string: "Hello, world".
+This App simply loads a single HeadingComponent and the ClickMeButton from above
 */
 class SplashApp extends App {
 	constructor(options={}) {

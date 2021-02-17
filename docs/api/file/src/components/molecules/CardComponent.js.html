@@ -111,7 +111,7 @@ const cardComponent = new CardComponent(
 	{ titleField: &apos;name&apos;, captionField: &apos;description&apos; }
 )
 // Add an image as an example (though we&apos;d really use ImageCardComponent for this)
-cardComponent.mainComponent.appendComponent(
+cardComponent.mainComponent.append(
 	new ImageComponent(
 		model,
 		{ dataField: &apos;image&apos; }

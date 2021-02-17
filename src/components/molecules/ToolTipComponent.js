@@ -41,7 +41,7 @@ const ToolTipComponent = class extends Component {
 
 		if (this.options.component) {
 			options.component.addClass('info-component')
-			this.appendComponent(this.options.component)
+			this.append(this.options.component)
 		}
 	}
 

@@ -51,8 +51,15 @@ const Component = class extends EventHandler {
 	*/
 	constructor(dataObject = null, options = {}) {
 		super()
-		/** @type {DataObject} */
-		this.dataObject = dataObject // a DataModel or DataCollection
+
+		/**
+		`Component.dataObject` can be null or any class that extends {@link DataObject}.
+
+		By default, that's {@link DataModel} and {@link DataCollection} but coders may create their own DataObject extension.
+
+		@return {?DataObject}
+		*/
+		this.dataObject = dataObject
 
 		/**
 		@type {Object}
@@ -136,7 +143,7 @@ const Component = class extends EventHandler {
 	@param {Component} childComponent
 	@return {Component} returns `this` (not the child component) for chaining
 	*/
-	appendComponent(childComponent) {
+	append(childComponent) {
 		this._dom.appendChild(childComponent.dom)
 		return this
 	}
@@ -164,7 +171,7 @@ const Component = class extends EventHandler {
 	@return {Component} returns `this` (not the parent component) for chaining
 	*/
 	appendTo(parentComponent) {
-		parentComponent.appendComponent(this)
+		parentComponent.append(this)
 		return this
 	}
 
@@ -333,18 +340,55 @@ const Binder = class {
 	}
 
 	/**
-	Listen to a DOM or EventHandler event.
-	For example:
-		this.buttonDOM = dom.button()
-		this.listenTo('click', this.buttonDOM, this.handleClick)
+	Listen to events from a DOM element or {@link EventHandler} in a way that they can be automatically cleaned up.
 
-		this.textComponent = new TextComponent(...)
-		this.listenTo(Component.TextInputEvent, this.textComponent, (eventName, ...params) => { ... })
+	Inside of a `Component`'s implementation you should use `listenTo` instead of directly listening using `HTMLElement.addListener` or {@link EventHandler.addListener}.
 
-	@param {string} eventName
-	@param {HTMLElement or EventHandler} target
-	@param {function} callback
-	@param {boolean} [once]
+	The advantage of using `Component.listenTo` is that `Component` will keep track of these events and listener functions and then clean them up in {@link Component.cleanup}.
+
+	@example <caption>Listen to DOM element events</caption>
+	class MyComponent extends Component {
+		constructor(dataObject=null, options={}) {
+			super(dataObject, options)
+
+			// Listen to the Component's DOM fragment root:
+			this.listenTo('click', this.dom, (domClickEvent) => {
+				// Handle the entire Component's DOM click events
+			})
+
+			// Listen to events on a child DOM element
+			const buttonEl = dom.button('Click me').appendTo(this.dom)
+			this.listenTo('click', buttonEl, (ev) => {
+				// Handle the button's DOM click event	
+			})
+		}
+	}
+
+	@example <caption>Listen to a sub-Component's events</caption>
+	class AnotherComponent extends Component {
+		constructor(dataObject=null, options={}) {
+			super(dataObject, options)
+
+			this.buttonComponent = new ButtonComponent(undefined,
+				{ text: 'Click me' }
+			).appendTo(this)
+			this.listenTo(
+				ButtonComponent.ActivatedEvent,
+				this.buttonComponent,
+				(eventName) => {
+					// Handle the button's activated event
+				}
+			)
+		}
+	}	
+	
+
+
+	@param {string|Symbol} eventName - for DOM elements this will be a string like 'click' and for `Components` it will be a Symbol like `ButtonComponent.ActivatedEvent` 
+	@param {HTMLElement|EventHandler} target - the object whose events should be listened to
+	@param {function} callback - the function that is called when a matching event arrives
+	@param {boolean} [once=false] - if true, the listener will be automatically removed when its first event arrives
+	@return {Component} - return `this` for chaining
 	*/
 	listenTo(eventName, target, callback, once = false) {
 		const info = {
@@ -359,6 +403,7 @@ const Binder = class {
 			target.addEventListener(eventName, info.callback)
 		}
 		this._eventCallbacks.push(info)
+		return this
 	}
 
 	/**

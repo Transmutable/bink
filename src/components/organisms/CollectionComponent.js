@@ -50,8 +50,8 @@ const collectionComponent = new CollectionComponent(myCollection, {
 @example <caption>Responding to clicks on items</caption>
 const myCollection = new DataCollection(...snip...)
 const collectionComponent = new CollectionComponent(myCollection, {
-	onClick: (dataModel) => {
-		// Do something with the DataModel whose item has been clicked
+	onClick: (dataObject) => {
+		// Do something with the DataObject (probably a DataModel) whose item has been clicked
 	}
 })
 
@@ -121,8 +121,9 @@ const CollectionComponent = class extends Component {
 	const collectionComponent = new CollectionComponent(...snip...)
 
 	// Only show items for DataModels with an 'active' field that is true
-	collectionComponent.filter((dataModel) => {
-		return dataModel.get('active') === true
+	collectionComponent.filter((dataObject) => {
+		// Assuming that the dataObject is a DataModel and not a sub-DataCollection
+		return dataObject.get('active') === true
 	})
 
 	// Show all items by passing a null filter
@@ -183,7 +184,7 @@ const CollectionComponent = class extends Component {
 		}
 		this._dataObjectComponents.set(itemComponent.dataObject.get('id'), itemComponent)
 
-		this.appendComponent(itemComponent)
+		this.append(itemComponent)
 
 		if (this.options.onClick) {
 			this.listenTo('click', itemComponent.dom, (ev) => {

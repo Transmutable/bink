@@ -100,7 +100,7 @@ const App = class extends EventHandler {
 	@param {Component} childComponent
 	@return {App} - this App, handy for chaining
 	*/
-	appendComponent(childComponent) {
+	append(childComponent) {
 		this._dom.appendChild(childComponent.dom)
 		return this
 	}

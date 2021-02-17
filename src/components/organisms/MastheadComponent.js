@@ -63,7 +63,7 @@ const MastheadComponent = class extends Component {
 		}
 		this._brandComponent.addClass('brand-component')
 		this._brandComponent.setName('BrandComponent')
-		this.appendComponent(this._brandComponent)
+		this.append(this._brandComponent)
 
 		this._menuComponent = new MenuComponent().appendTo(this)
 		if (this.options.menuItems) {

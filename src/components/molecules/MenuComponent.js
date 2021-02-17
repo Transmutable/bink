@@ -125,7 +125,7 @@ const MenuComponent = class extends Component {
 	*/
 	appendMenuItem(component) {
 		this._menuItems.push(component)
-		this._menuItemsComponent.appendComponent(component)
+		this._menuItemsComponent.append(component)
 		component.addClass('menu-item')
 		if (this._menuItems.length === 1) {
 			this.selectedIndex = 0

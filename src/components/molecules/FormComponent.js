@@ -28,8 +28,8 @@ FormComponent holds:
 
 @example
 class SignInComponent extends FormComponent {
-	constructor(dataModel=null, options={}) {
-		super(dataModel, Object.assign({
+	constructor(dataObject=null, options={}) {
+		super(dataObject, Object.assign({
 			heading: 'Sign-in:'
 		}, options))
 		this.addClass('sign-in-component')
@@ -206,13 +206,13 @@ const DateFieldComponent = class extends FormFieldComponent {
 		Localizer.Singleton.dateFieldOrder.forEach((fieldName) => {
 			switch (fieldName) {
 				case 'month':
-					this.appendComponent(this._monthInputComponent)
+					this.append(this._monthInputComponent)
 					break
 				case 'day':
-					this.appendComponent(this._dayInputComponent)
+					this.append(this._dayInputComponent)
 					break
 				case 'year':
-					this.appendComponent(this._yearInputComponent)
+					this.append(this._yearInputComponent)
 					break
 			}
 		})

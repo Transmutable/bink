@@ -53,7 +53,7 @@ const MultiComponent = class extends Component {
 		if (index < 0 || index >= this._components.length) return false
 		if (this._currentComponent) this.removeComponent(this._currentComponent)
 		this._currentComponent = this._components[index]
-		this.appendComponent(this._currentComponent)
+		this.append(this._currentComponent)
 		return true
 	}
 

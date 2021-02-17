@@ -16,26 +16,26 @@
       "expectCount": 32,
       "actualCount": 24,
       "undocumentLines": [
-        317,
-        318,
-        319,
-        322,
-        68,
-        69,
-        70,
-        73
+        324,
+        325,
+        326,
+        329,
+        75,
+        76,
+        77,
+        80
       ]
     },
     "src/DOM.js": {
       "expectCount": 8,
       "actualCount": 2,
       "undocumentLines": [
-        159,
-        169,
-        306,
-        308,
-        315,
-        319
+        158,
+        168,
+        305,
+        307,
+        314,
+        318
       ]
     },
     "src/DataCollection.js": {
@@ -56,7 +56,7 @@
       "expectCount": 15,
       "actualCount": 14,
       "undocumentLines": [
-        129
+        133
       ]
     },
     "src/DataObject.js": {
@@ -402,14 +402,14 @@
       "undocumentLines": [
         73,
         74,
-        149,
-        152,
-        158,
-        172,
-        178,
-        195,
-        201,
-        208,
+        150,
+        153,
+        159,
+        173,
+        179,
+        196,
+        202,
+        209,
         17,
         24
       ]

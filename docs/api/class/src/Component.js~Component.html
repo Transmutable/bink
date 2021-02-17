@@ -300,13 +300,14 @@ dataField: this.options.dataField
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-member-dataObject">dataObject</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-member-dataObject">dataObject</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p><code>Component.dataObject</code> can be null or any class that extends <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>.</p>
+</div>
       </div>
     </td>
     <td>
@@ -423,7 +424,7 @@ dataField: this.options.dataField
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-appendComponent">appendComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/Component.js~Component.html#instance-method-append">append</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
         </p>
       </div>
       <div>
@@ -967,7 +968,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber122">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber129">source</a></span></span>
     </span>
   </h3>
 
@@ -1023,7 +1024,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber129">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber136">source</a></span></span>
     </span>
   </h3>
 
@@ -1066,7 +1067,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber68">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber75">source</a></span></span>
     </span>
   </h3>
 
@@ -1105,25 +1106,39 @@ dataField: this.options.dataField
     
     
     
-    <span class="code" data-ice="name">dataObject</span><span class="code" data-ice="signature">: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span>
+    <span class="code" data-ice="name">dataObject</span><span class="code" data-ice="signature">: <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber55">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber62">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p><code>Component.dataObject</code> can be null or any class that extends <span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span>.</p>
+<p>By default, that&apos;s <span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span> and <span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span> but coders may create their own DataObject extension.</p>
+</div>
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span> (nullable: true)</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1152,7 +1167,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber113">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber120">source</a></span></span>
     </span>
   </h3>
 
@@ -1216,7 +1231,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber61">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber68">source</a></span></span>
     </span>
   </h3>
 
@@ -1279,7 +1294,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber192">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber199">source</a></span></span>
     </span>
   </h3>
 
@@ -1342,18 +1357,18 @@ dataField: this.options.dataField
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-appendComponent">
+  <h3 data-ice="anchor" id="instance-method-append">
     <span class="access" data-ice="access">public</span>
     
     
     
     
     
-    <span class="code" data-ice="name">appendComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
+    <span class="code" data-ice="name">append</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/Component.js~Component.html">Component</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber139">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber146">source</a></span></span>
     </span>
   </h3>
 
@@ -1426,7 +1441,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber166">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber173">source</a></span></span>
     </span>
   </h3>
 
@@ -1507,7 +1522,7 @@ dataField: this.options.dataField
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber303">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber310">source</a></span></span>
     </span>
   </h3>
 
@@ -1614,7 +1629,7 @@ this.component.dataObject.set(&apos;isAmazing&apos;, true)</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber275">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber282">source</a></span></span>
     </span>
   </h3>
 
@@ -1713,7 +1728,7 @@ this.component.dom,	// target
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber95">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber102">source</a></span></span>
     </span>
   </h3>
 
@@ -1771,7 +1786,7 @@ this.component.dom,	// target
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber213">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber220">source</a></span></span>
     </span>
   </h3>
 
@@ -1828,7 +1843,7 @@ this.component.dom,	// target
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber250">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber257">source</a></span></span>
     </span>
   </h3>
 
@@ -1927,7 +1942,7 @@ this.listenTo(&apos;changed:someField&apos;, this.exampleModel, (eventName, ...p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber203">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber210">source</a></span></span>
     </span>
   </h3>
 
@@ -2000,7 +2015,7 @@ this.listenTo(&apos;changed:someField&apos;, this.exampleModel, (eventName, ...p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber151">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber158">source</a></span></span>
     </span>
   </h3>
 
@@ -2081,7 +2096,7 @@ this.listenTo(&apos;changed:someField&apos;, this.exampleModel, (eventName, ...p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber179">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber186">source</a></span></span>
     </span>
   </h3>
 
@@ -2155,7 +2170,7 @@ this.listenTo(&apos;changed:someField&apos;, this.exampleModel, (eventName, ...p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber223">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Component.js.html#lineNumber230">source</a></span></span>
     </span>
   </h3>
 
