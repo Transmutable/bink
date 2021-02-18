@@ -9,18 +9,18 @@ MenuComponent holds a set of menu item {@link Component}s and a {@link ToggleCom
 This class is often used as a base class and in the extending constructor it loads its menu items but it's also possible to use it directly (see below).
 
 @example <caption>Directly create a three item menu</caption>
-const menuComponent = new MenuComponent()
-menuComponent.appendMenuItem(new MyMenuItemComponent(...))
-menuComponent.appendMenuItem(new MyMenuItemComponent(...))
-menuComponent.appendMenuItem(new MyMenuItemComponent(...))
-
-menuComponent.addListener(MenuComponent.SelectedEvent, (eventName, menuComponent, selectedIndex) => {
-	const menuItemComponent = menuComponent.menuItems[selectedIndex]
-})
-
-menuComponent.addListener(ToggleComponent.ToggleEvent, (eventName, menuComponent, isOpen) => {
-	// react to the change here
-})
+* const menuComponent = new MenuComponent()
+* menuComponent.appendMenuItem(new MyMenuItemComponent(...))
+* menuComponent.appendMenuItem(new MyMenuItemComponent(...))
+* menuComponent.appendMenuItem(new MyMenuItemComponent(...))
+* 
+* menuComponent.addListener(MenuComponent.SelectedEvent, (eventName, menuComponent, selectedIndex) => {
+* 	const menuItemComponent = menuComponent.menuItems[selectedIndex]
+* })
+* 
+* menuComponent.addListener(ToggleComponent.ToggleEvent, (eventName, menuComponent, isOpen) => {
+* 	// react to the change here
+* })
 
 */
 const MenuComponent = class extends Component {

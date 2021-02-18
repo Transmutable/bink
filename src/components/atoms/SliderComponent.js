@@ -6,10 +6,10 @@ import Component from '../../Component.js'
 SliderComponent gives the user the ability to choose from a range of values by dragging a handle from side to side of a bar.
 
 @example
-const sliderComponent = new SliderComponent()
-sliderComponent.addListener(SliderComponent.ValueChangeViaInputEvent, (eventName, valueFraction) => {
-	console.log('New slider fraction (from 0 to 1)', valueFraction)
-})
+* const sliderComponent = new SliderComponent()
+* sliderComponent.addListener(SliderComponent.ValueChangeViaInputEvent, (eventName, valueFraction) => {
+* 	console.log('New slider fraction (from 0 to 1)', valueFraction)
+* })
 
 @todo Allow min and max values other than 0 and 1
 @todo Add granularity or "snapping" for example only allowing tenths.

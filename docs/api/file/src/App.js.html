@@ -99,63 +99,63 @@ App communicates these changes to {@link Component}s via events so that they may
 The [hello-world example](https://github.com/Transmutable/bink/blob/main/examples/hello-world/site.js) has the most basic App and the [components example](https://github.com/Transmutable/bink/blob/main/examples/components/site.js) is more complex.
 
 @example &lt;caption&gt;Set up a basic user administration page&lt;/caption&gt;
-import { AdminApp } from &apos;{some path}/App.js&apos;
-import { UpdateBioComponent } from &apos;./UpdateBioComponent.js&apos;
-import { ResetPasswordComponent } from &apos;./ResetPasswordComponent.js&apos;
-import { UpdatePortraitComponent } from &apos;./UpdatePortraitComponent.js&apos;
-import { UserModel } from &apos;./UserModel.js&apos;
-
-class AdminApp extends App {
-	constructor(){
-		// Get user model (see DataObject, DataModel, and DataCollection docs)
-		this.dataObject = new UserModel()
-		this.dataObject.fetch().catch(err =&gt; { ... handle error ... })
-
-		// Set up the masthead
-		this._masthead = new MastheadComponent(
-			undefined,
-			{
-				brand: &apos;Your Brand&apos;,
-				brandAnchor: &apos;/&apos;,
-				menuItems: [
-					{ name: &apos;Bio&apos;, anchor: &apos;#&apos; },
-					{ name: &apos;Password&apos;, anchor: &apos;#password&apos; },
-					{ name: &apos;Portrait&apos;, anchor: &apos;#portrait&apos; }
-				]
-			}	
-		).appendTo(this)
-
-		// Set up three sub-views with Components (see Component docs)
-		this._bioComponent = new UpdateBioComponent(this.dataObject).appendTo(this)
-		this._passwordComponent = new ResetPasswordComponent(this.dataObject).appendTo(this)
-		this._portraitComponent = new UpdatePortraitComponent(this.dataObject).appendTo(this)
-
-		// Set up the Router (see Router docs)
-		this._router = new Router()
-		this._router.addRoute(/^$/, &apos;default&apos;)
-		this._router.addRoute(/^password$/, &apos;password&apos;)
-		this._router.addRoute(/^portait$/, &apos;portrait&apos;)
-		router.addListener(&apos;blog-app&apos;, (routeName) =&gt; {
-			switch (routeName) {
-				case &apos;default&apos;:
-					this._bioComponent.show()
-					this._passwordComponent.hide()
-					this._portraitComponent.hide()
-					break
-				case &apos;password&apos;:
-					this._bioComponent.hide()
-					this._passwordComponent.show()
-					this._portraitComponent.hide()
-					break
-				case &apos;portrait&apos;
-					this._bioComponent.hide()
-					this._passwordComponent.hide()
-					this._portraitComponent.show()
-					break
-			}
-		})
-	}	
-}
+* import { AdminApp } from &apos;{some path}/App.js&apos;
+* import { UpdateBioComponent } from &apos;./UpdateBioComponent.js&apos;
+* import { ResetPasswordComponent } from &apos;./ResetPasswordComponent.js&apos;
+* import { UpdatePortraitComponent } from &apos;./UpdatePortraitComponent.js&apos;
+* import { UserModel } from &apos;./UserModel.js&apos;
+* 
+* class AdminApp extends App {
+* 	constructor(){
+* 		// Get user model (see DataObject, DataModel, and DataCollection docs)
+* 		this.dataObject = new UserModel()
+* 		this.dataObject.fetch().catch(err =&gt; { ... handle error ... })
+* 
+* 		// Set up the masthead
+* 		this._masthead = new MastheadComponent(
+* 			undefined,
+* 			{
+* 				brand: &apos;Your Brand&apos;,
+* 				brandAnchor: &apos;/&apos;,
+* 				menuItems: [
+* 					{ name: &apos;Bio&apos;, anchor: &apos;#&apos; },
+* 					{ name: &apos;Password&apos;, anchor: &apos;#password&apos; },
+* 					{ name: &apos;Portrait&apos;, anchor: &apos;#portrait&apos; }
+* 				]
+* 			}
+* 		).appendTo(this)
+* 
+* 		// Set up three sub-views with Components (see Component docs)
+* 		this._bioComponent = new UpdateBioComponent(this.dataObject).appendTo(this)
+* 		this._passwordComponent = new ResetPasswordComponent(this.dataObject).appendTo(this)
+* 		this._portraitComponent = new UpdatePortraitComponent(this.dataObject).appendTo(this)
+* 
+* 		// Set up the Router (see Router docs)
+* 		this._router = new Router()
+* 		this._router.addRoute(/^$/, &apos;default&apos;)
+* 		this._router.addRoute(/^password$/, &apos;password&apos;)
+* 		this._router.addRoute(/^portait$/, &apos;portrait&apos;)
+* 		router.addListener(&apos;blog-app&apos;, (routeName) =&gt; {
+* 			switch (routeName) {
+* 				case &apos;default&apos;:
+* 					this._bioComponent.show()
+* 					this._passwordComponent.hide()
+* 					this._portraitComponent.hide()
+* 					break
+* 				case &apos;password&apos;:
+* 					this._bioComponent.hide()
+* 					this._passwordComponent.show()
+* 					this._portraitComponent.hide()
+* 					break
+* 				case &apos;portrait&apos;
+* 					this._bioComponent.hide()
+* 					this._passwordComponent.hide()
+* 					this._portraitComponent.show()
+* 					break
+* 			}
+* 		})
+* 	}	
+* }
 
 */
 const App = class extends EventHandler {

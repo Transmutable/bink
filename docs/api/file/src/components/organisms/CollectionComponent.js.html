@@ -119,28 +119,28 @@ CollectionComponent provides a generic list UI for {@link DataCollection}s.
 @todo Add pagination support once {@link DataCollection} supports it
 
 @example &lt;caption&gt;Use the DefaultItemComponent&lt;/caption&gt;
-const myCollection = new DataCollection(...snip...)
-const collectionComponent = new CollectionComponent(myCollection)
+* const myCollection = new DataCollection(...snip...)
+* const collectionComponent = new CollectionComponent(myCollection)
 
 @example &lt;caption&gt;Use a custom item Component&lt;/caption&gt;
-const myCollection = new DataCollection(...snip...)
-class CustomItemComponent extends Component {
-	constructor(dataObject=null, options={}) {
-		// Set up your item UI here
-	}
-}
-const collectionComponent = new CollectionComponent(myCollection, {
-	itemComponent: CustomItemComponent, // the class, not an instance
-	itemOptions: { someKey: &apos;someValue&apos; } // passed as options to item component constructors
-})
+* const myCollection = new DataCollection(...snip...)
+* class CustomItemComponent extends Component {
+* 	constructor(dataObject=null, options={}) {
+* 		// Set up your item UI here
+* 	}
+* }
+* const collectionComponent = new CollectionComponent(myCollection, {
+* 	itemComponent: CustomItemComponent, // the class, not an instance
+* 	itemOptions: { someKey: &apos;someValue&apos; } // passed as options to item component constructors
+* })
 
 @example &lt;caption&gt;Responding to clicks on items&lt;/caption&gt;
-const myCollection = new DataCollection(...snip...)
-const collectionComponent = new CollectionComponent(myCollection, {
-	onClick: (dataObject) =&gt; {
-		// Do something with the DataObject (probably a DataModel) whose item has been clicked
-	}
-})
+* const myCollection = new DataCollection(...snip...)
+* const collectionComponent = new CollectionComponent(myCollection, {
+* 	onClick: (dataObject) =&gt; {
+* 		// Do something with the DataObject (probably a DataModel) whose item has been clicked
+* 	}
+* })
 
 */
 const CollectionComponent = class extends Component {

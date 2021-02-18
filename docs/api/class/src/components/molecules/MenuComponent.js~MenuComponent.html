@@ -129,11 +129,11 @@ menuComponent.appendMenuItem(new MyMenuItemComponent(...))
 menuComponent.appendMenuItem(new MyMenuItemComponent(...))
 
 menuComponent.addListener(MenuComponent.SelectedEvent, (eventName, menuComponent, selectedIndex) =&gt; {
-const menuItemComponent = menuComponent.menuItems[selectedIndex]
+	const menuItemComponent = menuComponent.menuItems[selectedIndex]
 })
 
 menuComponent.addListener(ToggleComponent.ToggleEvent, (eventName, menuComponent, isOpen) =&gt; {
-// react to the change here
+	// react to the change here
 })</code></pre>
     </div>
 </div>

@@ -1424,7 +1424,7 @@ DataObject.fetchAll(model, collection).then((mod, col) =&gt; { ... })</code></pr
   <div class="example-doc" data-ice="exampleDoc">
       
       <pre class="prettyprint source-code"><code data-ice="exampleCode">class ExampleModel extends DataModel {
-get url() { return &apos;/api/example&apos; }
+	get url() { return &apos;/api/example&apos; }
 }
 const model = new ExampleModel()
 model.onFirstReset((model) =&gt; { ... })

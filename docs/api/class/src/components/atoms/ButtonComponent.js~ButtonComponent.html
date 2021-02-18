@@ -123,7 +123,7 @@
   <div class="example-doc" data-ice="exampleDoc">
       
       <pre class="prettyprint source-code"><code data-ice="exampleCode">const buttonComponent = new ButtonComponent(undefined, {
-text: &apos;Click me&apos;
+	text: &apos;Click me&apos;
 })
 
 // Read and set the text
@@ -133,12 +133,12 @@ buttonComponent.text // &apos;Do it&apos;
 
 // Listen for the button activation (This is usually what you want)
 buttonComponent.addEventListener(ButtonComponent.ActivatedEvent, (eventName) =&gt; {
-console.log(&apos;Button was activated&apos;)
+	console.log(&apos;Button was activated&apos;)
 })
 
 // Listen for changes to state (You usually want ButtonComponent.ActivatedEvent)
 buttonComponent.addEventListener(ButtonComponent.ChangedEvent, (eventName, isDown) =&gt; {
-console.log(&apos;Button is pressed:&apos;, isDown)
+	console.log(&apos;Button is pressed:&apos;, isDown)
 })</code></pre>
     </div>
 </div>

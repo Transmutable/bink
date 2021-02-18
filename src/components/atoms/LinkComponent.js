@@ -8,16 +8,17 @@ LinkComponent displays an `a` element containing static text or text that is bou
 This class is meant to be used where you'd include an inline text link. See the {@link Component.constructor}'s `option.anchor` parameter if you want click events on a Component's DOM element to trigger navigation. 
 
 @example <caption>Use static text</caption>
-const component = new LinkComponent(undefined, {
-	text: 'Click me',
-	url: '/some-other-page/'
-})
+* const component = new LinkComponent(undefined, {
+* 	text: 'Click me',
+* 	url: '/some-other-page/'
+* })
 
 @example <caption>Use bound text</caption>
-const component = new LinkComponent(yourDataModel, {
-	dataField: 'name',
-	url: '#some-other-view'
-})
+* const component = new LinkComponent(yourDataModel, {
+* 	dataField: 'name',
+* 	url: '#some-other-view'
+* })
+
 */
 const LinkComponent = class extends TextComponent {
 	/**

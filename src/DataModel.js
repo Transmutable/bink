@@ -10,11 +10,12 @@ this.model.get('something') // returns 'different'
 this.model.get('bogus', 'default') // returns 'default'
 
 @example <caption>Fetching data from a service</caption>
-class ExampleModel extends DataModel {
-	get url() { return '/api/example' }
-}
-this.model = new ExampleModel()
-this.model.fetch().then(() => { ... }).catch(err => { ... })
+* class ExampleModel extends DataModel {
+* 	get url() { return '/api/example' }
+* }
+* this.model = new ExampleModel()
+* this.model.fetch().then(() => { ... }).catch(err => { ... })
+
 */
 const DataModel = class extends DataObject {
 	/**

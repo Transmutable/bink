@@ -93,14 +93,15 @@ import TextComponent from &apos;./TextComponent.js&apos;
 LabelComponent displays a single line of text
 
 @example &lt;caption&gt;Use static text&lt;/caption&gt;
-const component = new LabelComponent(undefined, {
-	text: &apos;Example&apos;
-})
+* const component = new LabelComponent(undefined, {
+* 	text: &apos;Example&apos;
+* })
 
 @example &lt;caption&gt;Use bound text&lt;/caption&gt;
-const component = new LabelComponent(yourDataModel, {
-	dataField: &apos;title&apos;
-})
+* const component = new LabelComponent(yourDataModel, {
+* 	dataField: &apos;title&apos;
+* })
+
 */
 const LabelComponent = class extends TextComponent {
 	/**

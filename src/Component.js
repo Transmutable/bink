@@ -10,35 +10,34 @@ It also tracks listeners so that on `cleanup` it can deregister itself to preven
 
 Bink comes with a library of components so be sure to check the API docs before implementing a common basic view. They are also pretty good examples of how to write Components.
 
-@example <caption>A toggle with a label</caption>
-class BinaryComponent extends Component {
-	constructor(dataObject=null, options={}) {
-		super(dataObject, Object.assign(options, {
-			label: null,
-			dataField: null,
-			dom: dom.span() // Default to a `span` DOM element
-		})
-		this.addClass('binary-component')
-
-		// Check that we have the info we need
-		if (typeof this.options.dataField !== 'string') {
-			throw new Error('BinaryComponent requires a `dataField` option')
-		}
-		if (this.dataObject instanceof DataModel === false) {
-			throw new Error('BinaryComponent requires a DataModel')
-		}
-
-		// Use a few sub-Components for UI
-		this._labelComponent = new LabelComponent(undefined, {
-				text: this.options.label || lt('No label')
-		}).appendTo(this)
-
-		this._toggleComponent = new SwitchComponent( this.dataObject, {
-			dataField: this.options.dataField
-		}).appendTo(this)
-	}
-}
-
+* @example <caption>A toggle with a label</caption>
+* class BinaryComponent extends Component {
+* 	constructor(dataObject=null, options={}) {
+* 		super(dataObject, Object.assign(options, {
+* 			label: null,
+* 			dataField: null,
+* 			dom: dom.span() // Default to a `span` DOM element
+* 		})
+* 		this.addClass('binary-component')
+* 
+* 		// Check that we have the info we need
+* 		if (typeof this.options.dataField !== 'string') {
+* 			throw new Error('BinaryComponent requires a `dataField` option')
+* 		}
+* 		if (this.dataObject instanceof DataModel === false) {
+* 			throw new Error('BinaryComponent requires a DataModel')
+* 		}
+* 
+* 		// Use a few sub-Components for UI
+* 		this._labelComponent = new LabelComponent(undefined, {
+* 				text: this.options.label || lt('No label')
+* 		}).appendTo(this)
+* 
+* 		this._toggleComponent = new SwitchComponent( this.dataObject, {
+* 			dataField: this.options.dataField
+* 		}).appendTo(this)
+* 	}
+* }
 
 */
 const Component = class extends EventHandler {
@@ -264,14 +263,14 @@ const Component = class extends EventHandler {
 	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
 
 	@example
-	this.component = new Component(
-		new DataModel({ description: 'Some example text' })
-	)
-	this.component.bindText(
-		'description', 		// dataField
-		this.component.dom,	// target
-		(value) => { return (typeof value === 'string') ? value.toUpperCase() : '' }
-	)
+	* this.component = new Component(
+	* 	new DataModel({ description: 'Some example text' })
+	* )
+	* this.component.bindText(
+	* 	'description', 		// dataField
+	* 	this.component.dom,	// target
+	* 	(value) => { return (typeof value === 'string') ? value.toUpperCase() : '' }
+	* )
 	// Now any changes to the DataModel's `description` field will be displayed by the component
 
 	@param {string} dataField The name of the field to watch
@@ -289,17 +288,17 @@ const Component = class extends EventHandler {
 	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
 
 	@example
-	this.component = new Component(
-		new DataModel({ isAmazing: false })
-	)
-	this.component.bindAttribute(
-		'isAmazing', 		// dataField
-		this.component.dom,	// target
-		'data-example',		// attributeName
-		(value) => { return value ? 'is-amazing' : 'not-amazing' }
-	)
-	// Now any changes to this.component.dataObject will change the `data-example` attribute
-	this.component.dataObject.set('isAmazing', true)
+	* this.component = new Component(
+	* 	new DataModel({ isAmazing: false })
+	* )
+	* this.component.bindAttribute(
+	* 	'isAmazing', 		// dataField
+	* 	this.component.dom,	// target
+	* 	'data-example',		// attributeName
+	* 	(value) => { return value ? 'is-amazing' : 'not-amazing' }
+	* )
+	* // Now any changes to this.component.dataObject will change the `data-example` attribute
+	* this.component.dataObject.set('isAmazing', true)
 
 	@param {string} dataField - The name of the field on the `DataModel`
 	@param {HTMLElement} target - The DOM element to manipulate 
@@ -347,42 +346,40 @@ const Binder = class {
 	The advantage of using `Component.listenTo` is that `Component` will keep track of these events and listener functions and then clean them up in {@link Component.cleanup}.
 
 	@example <caption>Listen to DOM element events</caption>
-	class MyComponent extends Component {
-		constructor(dataObject=null, options={}) {
-			super(dataObject, options)
-
-			// Listen to the Component's DOM fragment root:
-			this.listenTo('click', this.dom, (domClickEvent) => {
-				// Handle the entire Component's DOM click events
-			})
-
-			// Listen to events on a child DOM element
-			const buttonEl = dom.button('Click me').appendTo(this.dom)
-			this.listenTo('click', buttonEl, (ev) => {
-				// Handle the button's DOM click event	
-			})
-		}
-	}
+	* class MyComponent extends Component {
+	* 	constructor(dataObject=null, options={}) {
+	* 		super(dataObject, options)
+	*
+	* 		// Listen to the Component's DOM fragment root:
+	* 		this.listenTo('click', this.dom, (domClickEvent) => {
+	* 			// Handle the entire Component's DOM click events
+	* 		})
+	*
+	* 		// Listen to events on a child DOM element
+	* 		const buttonEl = dom.button('Click me').appendTo(this.dom)
+	* 		this.listenTo('click', buttonEl, (ev) => {
+	* 			// Handle the button's DOM click event
+	* 		})
+	* 	}
+	* }
 
 	@example <caption>Listen to a sub-Component's events</caption>
-	class AnotherComponent extends Component {
-		constructor(dataObject=null, options={}) {
-			super(dataObject, options)
-
-			this.buttonComponent = new ButtonComponent(undefined,
-				{ text: 'Click me' }
-			).appendTo(this)
-			this.listenTo(
-				ButtonComponent.ActivatedEvent,
-				this.buttonComponent,
-				(eventName) => {
-					// Handle the button's activated event
-				}
-			)
-		}
-	}	
-	
-
+	*class AnotherComponent extends Component {
+	*	constructor(dataObject=null, options={}) {
+	*		super(dataObject, options)
+	*
+	*		this.buttonComponent = new ButtonComponent(undefined,
+	*			{ text: 'Click me' }
+	*		).appendTo(this)
+	*		this.listenTo(
+	*			ButtonComponent.ActivatedEvent,
+	*			this.buttonComponent,
+	*			(eventName) => {
+	*				// Handle the button's activated event
+	*			}
+	*		)
+	*	}
+	*}
 
 	@param {string|Symbol} eventName - for DOM elements this will be a string like 'click' and for `Components` it will be a Symbol like `ButtonComponent.ActivatedEvent` 
 	@param {HTMLElement|EventHandler} target - the object whose events should be listened to
@@ -412,14 +409,14 @@ const Binder = class {
 	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
 
 	@example
-	this.component = new Component(
-		new DataModel({ description: 'Some example text' })
-	)
-	this.component.bindText(
-		'description', 		// dataField
-		this.component.dom,	// target
-		(value) => { return (typeof value === 'string') ? value.toUpperCase() : '' }
-	)
+	* this.component = new Component(
+	* 	new DataModel({ description: 'Some example text' })
+	* )
+	* this.component.bindText(
+	* 	'description', 		// dataField
+	* 	this.component.dom,	// target
+	* 	(value) => { return (typeof value === 'string') ? value.toUpperCase() : '' }
+	* )
 	// Now any changes to the DataModel's `description` field will be displayed by the component
 
 	@param {string} dataField The name of the field to watch
@@ -453,17 +450,17 @@ const Binder = class {
 	`formatter` defaults to the identity function but can be any function that accepts the value and returns a string.
 
 	@example
-	this.component = new Component(
-		new DataModel({ isAmazing: false })
-	)
-	this.component.bindAttribute(
-		'isAmazing', 		// dataField
-		this.component.dom,	// target
-		'data-example',		// attributeName
-		(value) => { return value ? 'is-amazing' : 'not-amazing' }
-	)
-	// Now any changes to this.component.dataObject will change the `data-example` attribute
-	this.component.dataObject.set('isAmazing', true)
+	* this.component = new Component(
+	* 	new DataModel({ isAmazing: false })
+	* )
+	* this.component.bindAttribute(
+	* 	'isAmazing', 		// dataField
+	* 	this.component.dom,	// target
+	* 	'data-example',		// attributeName
+	* 	(value) => { return value ? 'is-amazing' : 'not-amazing' }
+	* )
+	* // Now any changes to this.component.dataObject will change the `data-example` attribute
+	* this.component.dataObject.set('isAmazing', true)
 
 	@param {string} dataField - The name of the field on the `DataModel`
 	@param {HTMLElement} target - The DOM element to manipulate 

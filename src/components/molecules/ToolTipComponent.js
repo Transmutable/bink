@@ -11,15 +11,15 @@ If possible, it's better to use the [title](https://developer.mozilla.org/en-US/
 @todo Replace the hacky 'X' close widget with something better
 
 @example
-const tipInfoComponent = new MyInfoComponent(...) // The tool tip info
-const toolTipComponent = new ToolTipComponent(null, {
-	component: tipInfoComponent
-})
-
-const targetComponent = new MyComponent(...) // The component which needs a tool tip
-
-// On some user action, show the tool tip next to some Component
-toolTipComponent.show(targetComponent)
+* const tipInfoComponent = new MyInfoComponent(...) // The tool tip info
+* const toolTipComponent = new ToolTipComponent(null, {
+* 	component: tipInfoComponent
+* })
+* 
+* const targetComponent = new MyComponent(...) // The component which needs a tool tip
+* 
+* // On some user action, show the tool tip next to some Component
+* toolTipComponent.show(targetComponent)
 
 */
 const ToolTipComponent = class extends Component {

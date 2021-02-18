@@ -15,14 +15,14 @@ MastheadComponent contains:
 This is usually placed at the top of a page to show the site brand and a navigation menu. Then a {@link Router} is used to respond to document.location changes.
 
 @example
-const mastheadComponent = new MastheadComponent(undefined, {
-	brand: 'Bink', // 'brand' could also be a Component like an ImageComponent
-	menuItems: [
-		{ name: 'Home', anchor: '/' },
-		{ name: 'About', anchor: '/#about' },
-		{ name: 'Account', anchor: '/#account' },
-	]
-})
+* const mastheadComponent = new MastheadComponent(undefined, {
+* 	brand: 'Bink', // 'brand' could also be a Component like an ImageComponent
+* 	menuItems: [
+* 		{ name: 'Home', anchor: '/' },
+* 		{ name: 'About', anchor: '/#about' },
+* 		{ name: 'Account', anchor: '/#account' },
+* 	]
+* })
 */
 const MastheadComponent = class extends Component {
 	/**

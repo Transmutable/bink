@@ -94,17 +94,18 @@ ImageCardComponent is a {@link CardComponent} extension that shows a single imag
 It shows the image along with an optional title and caption from the `CardComponent`.
 
 @example &lt;caption&gt;Use a DataModel to drive the image card.&lt;/caption&gt;
-const model = new DataModel({
-	image: &apos;//static/image.png&apos;,
-	name: &apos;Great Image&apos;,
-	description: &apos;You will love it&apos;
-})
+* const model = new DataModel({
+* 	image: &apos;//static/image.png&apos;,
+* 	name: &apos;Great Image&apos;,
+* 	description: &apos;You will love it&apos;
+* })
+* 
+* const imageCardComponent = new ImageCardComponent(model, {
+* 	dataField: &apos;image&apos;,
+* 	titleField: &apos;name&apos;,
+* 	captionField: &apos;description&apos;
+* })
 
-const imageCardComponent = new ImageCardComponent(model, {
-	dataField: &apos;image&apos;,
-	titleField: &apos;name&apos;,
-	captionField: &apos;description&apos;
-})
 */
 export default class ImageCardComponent extends CardComponent {
 	/**

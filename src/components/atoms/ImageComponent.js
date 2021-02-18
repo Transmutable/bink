@@ -6,14 +6,15 @@ import Component from '../../Component.js'
 ImageComponent handles the display of a single image.
 
 @example <caption>Use a static URL</caption>
-const component = new ImageComponent(undefined, {
-	image: '/static/image.png'
-})
+* const component = new ImageComponent(undefined, {
+* 	image: '/static/image.png'
+* })
 
 @example <caption>Use a bound URL</caption>
-const component = new ImageComponent(myDataModel, {
-	dataField: 'image'
-})
+* const component = new ImageComponent(myDataModel, {
+* 	dataField: 'image'
+* })
+
 */
 const ImageComponent = class extends Component {
 	/**

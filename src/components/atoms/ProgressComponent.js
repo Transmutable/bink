@@ -6,9 +6,9 @@ import Component from '../../Component.js'
 ProgressComponent tracks change of a process and displays a progress bar
 
 @example <caption>Watch a DataModel's field</caption>
-const progressComponent = new ProgressComponent(myDataModel, {
-	dataField: 'completion'
-})
+* const progressComponent = new ProgressComponent(myDataModel, {
+* 	dataField: 'completion'
+* })
 
 @todo make it watch a field on the dataObject with a filter function that maps to 'starting'|'complete'|'failed'|[0,1]
 */

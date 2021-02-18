@@ -6,24 +6,24 @@ import Component from '../../Component.js'
 ButtonComponent displays a button, natch.
 
 @example
-const buttonComponent = new ButtonComponent(undefined, {
-	text: 'Click me'
-})
-
-// Read and set the text
-buttonComponent.text // 'Click me'
-buttonComponent.text = 'Do it'
-buttonComponent.text // 'Do it'
-
-// Listen for the button activation (This is usually what you want)
-buttonComponent.addEventListener(ButtonComponent.ActivatedEvent, (eventName) => {
-	console.log('Button was activated')
-})
-
-// Listen for changes to state (You usually want ButtonComponent.ActivatedEvent)
-buttonComponent.addEventListener(ButtonComponent.ChangedEvent, (eventName, isDown) => {
-	console.log('Button is pressed:', isDown)
-})
+* const buttonComponent = new ButtonComponent(undefined, {
+* 	text: 'Click me'
+* })
+* 
+* // Read and set the text
+* buttonComponent.text // 'Click me'
+* buttonComponent.text = 'Do it'
+* buttonComponent.text // 'Do it'
+* 
+* // Listen for the button activation (This is usually what you want)
+* buttonComponent.addEventListener(ButtonComponent.ActivatedEvent, (eventName) => {
+* 	console.log('Button was activated')
+* })
+* 
+* // Listen for changes to state (You usually want ButtonComponent.ActivatedEvent)
+* buttonComponent.addEventListener(ButtonComponent.ChangedEvent, (eventName, isDown) => {
+* 	console.log('Button is pressed:', isDown)
+* })
 
 */
 const ButtonComponent = class extends Component {

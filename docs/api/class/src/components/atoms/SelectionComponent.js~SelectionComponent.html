@@ -123,14 +123,14 @@
   <div class="example-doc" data-ice="exampleDoc">
       
       <pre class="prettyprint source-code"><code data-ice="exampleCode">const selectionComponent = new SelectionComponent(undefined, {
-items: [
-{ name: &apos;First option&apos;, &apos;first_option&apos;},
-{ name: &apos;Second option&apos;, &apos;second_option&apos;}
-]
+	items: [
+		{ name: &apos;First option&apos;, &apos;first_option&apos;},
+		{ name: &apos;Second option&apos;, &apos;second_option&apos;}
+	]
 })
 // Listen for selection changes
 selectionComponent.addListener(SelectionComponent.SelectionIndexChangedEvent, (eventName, itemIndex) =&gt; {
-console.log(&apos;Selected changed&apos;, itemIndex)
+	console.log(&apos;Selected changed&apos;, itemIndex)
 })</code></pre>
     </div>
 </div>

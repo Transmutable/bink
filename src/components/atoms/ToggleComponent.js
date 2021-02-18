@@ -8,10 +8,10 @@ ToggleComponent shows a triangle and represents an open or closed state.
 The user can change the toggle state by clicking the toggle.
 
 @example
-const component = new ToggleComponent()
-component.listenTo(ToggleComponent.ToggleEvent, (eventName, toggleComponent, isOpen) => {
-	console.log('Toggle is open', isOpen)
-})
+* const component = new ToggleComponent()
+* component.listenTo(ToggleComponent.ToggleEvent, (eventName, toggleComponent, isOpen) => {
+* 	console.log('Toggle is open', isOpen)
+* })
 
 @todo Allow the use of different emoji or even images
 */

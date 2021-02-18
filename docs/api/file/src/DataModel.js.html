@@ -97,11 +97,12 @@ this.model.get(&apos;something&apos;) // returns &apos;different&apos;
 this.model.get(&apos;bogus&apos;, &apos;default&apos;) // returns &apos;default&apos;
 
 @example &lt;caption&gt;Fetching data from a service&lt;/caption&gt;
-class ExampleModel extends DataModel {
-	get url() { return &apos;/api/example&apos; }
-}
-this.model = new ExampleModel()
-this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })
+* class ExampleModel extends DataModel {
+* 	get url() { return &apos;/api/example&apos; }
+* }
+* this.model = new ExampleModel()
+* this.model.fetch().then(() =&gt; { ... }).catch(err =&gt; { ... })
+
 */
 const DataModel = class extends DataObject {
 	/**

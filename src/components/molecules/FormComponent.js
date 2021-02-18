@@ -27,24 +27,25 @@ FormComponent holds:
 @todo Add default Submit/Reset/Clear controls
 
 @example
-class SignInComponent extends FormComponent {
-	constructor(dataObject=null, options={}) {
-		super(dataObject, Object.assign({
-			heading: 'Sign-in:'
-		}, options))
-		this.addClass('sign-in-component')
+* class SignInComponent extends FormComponent {
+* 	constructor(dataObject=null, options={}) {
+* 		super(dataObject, Object.assign({
+* 			heading: 'Sign-in:'
+* 		}, options))
+* 		this.addClass('sign-in-component')
+* 
+* 		this._usernameComponent = new TextInputFieldComponent(
+* 			this.dataObject,
+* 			{ label: lt('username'), placeholder: lt('Enter your account username') }
+* 		).appendTo(this.fieldsComponent)
+* 
+* 		this._passwordComponent = new PasswordInputFieldComponent(
+* 			this.dataObject,
+* 			{ label: lt('password'), placeholder: lt('Enter your account password') }
+* 		).appendTo(this.fieldsComponent)
+* 	}
+* }
 
-		this._usernameComponent = new TextInputFieldComponent(
-			this.dataObject,
-			{ label: lt('username'), placeholder: lt('Enter your account username') }
-		).appendTo(this.fieldsComponent)
-
-		this._passwordComponent = new PasswordInputFieldComponent(
-			this.dataObject,
-			{ label: lt('password'), placeholder: lt('Enter your account password') }
-		).appendTo(this.fieldsComponent)
-	}
-}
 */
 const FormComponent = class extends Component {
 	/**

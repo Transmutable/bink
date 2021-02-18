@@ -12,11 +12,11 @@ It uses a {@link CollectionComponent} with the `itemComponent` option set to a {
 @todo Support pagination once 'CollectionComponent' supports it
 
 @example
-const dataCollection = new DataCollection(...snip...)
-const mediaGridComponent = new MediaGridComponent(dataCollection, {
-	itemComponent: ImageCardComponent,
-	itemOptions: { someKey: 'someValue' }
-})
+* const dataCollection = new DataCollection(...snip...)
+* const mediaGridComponent = new MediaGridComponent(dataCollection, {
+* 	itemComponent: ImageCardComponent,
+* 	itemOptions: { someKey: 'someValue' }
+* })
 
 */
 const MediaGridComponent = class extends Component {

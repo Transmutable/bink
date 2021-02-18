@@ -123,11 +123,11 @@
   <div class="example-doc" data-ice="exampleDoc">
       
       <pre class="prettyprint source-code"><code data-ice="exampleCode">const multiComponent = new MultiComponent(undefined, {
-components: [
-new EditProfileComponent(...),
-new EditEmailComponent(...),
-new EditBioComponent(...)
-]
+	components: [
+		new EditProfileComponent(...),
+		new EditEmailComponent(...),
+		new EditBioComponent(...)
+	]
 })
 // Now multiComponent is showing just the first component, EditProfileComponent
 multiComponent.showAt(1) // Hide EditProfileComponent and show EditEmailComponent</code></pre>

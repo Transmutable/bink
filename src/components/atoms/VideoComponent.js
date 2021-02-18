@@ -8,11 +8,11 @@ VideoComponent displays a single video.
 If you want to display controls, use {@link VideoPlayerComponent}.
 
 @example
-const component = new VideoComponent(undefined, {
-	preview: '/static/preview-image.png',
-	video: '/static/video.mp4',
-	mimeType: 'video/mp4'
-})
+* const component = new VideoComponent(undefined, {
+* 	preview: '/static/preview-image.png',
+* 	video: '/static/video.mp4',
+* 	mimeType: 'video/mp4'
+* })
 
 */
 const VideoComponent = class extends Component {

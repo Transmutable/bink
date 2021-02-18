@@ -8,16 +8,16 @@ import ToggleComponent from './ToggleComponent.js'
 SelectionComponent offers the user a set of choices for single or multiple selection.
 
 @example
-const selectionComponent = new SelectionComponent(undefined, {
-	items: [
-		{ name: 'First option', 'first_option'},
-		{ name: 'Second option', 'second_option'}
-	]
-})
-// Listen for selection changes
-selectionComponent.addListener(SelectionComponent.SelectionIndexChangedEvent, (eventName, itemIndex) => {
-	console.log('Selected changed', itemIndex)
-})
+* const selectionComponent = new SelectionComponent(undefined, {
+* 	items: [
+* 		{ name: 'First option', 'first_option'},
+* 		{ name: 'Second option', 'second_option'}
+* 	]
+* })
+* // Listen for selection changes
+* selectionComponent.addListener(SelectionComponent.SelectionIndexChangedEvent, (eventName, itemIndex) => {
+* 	console.log('Selected changed', itemIndex)
+* })
 
 */
 const SelectionComponent = class extends Component {

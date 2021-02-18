@@ -11,9 +11,9 @@ If you want to display controls, use {AudioPlayerComponent}.
 @todo Actually display the icon
 
 @example
-const audioComponent = new AudioComponent(undefined, {
-	audio: '/media/sound.wav'
-})
+* const audioComponent = new AudioComponent(undefined, {
+* 	audio: '/media/sound.wav'
+* })
 */
 const AudioComponent = class extends Component {
 	/**

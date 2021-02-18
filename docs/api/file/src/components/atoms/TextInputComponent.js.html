@@ -92,25 +92,25 @@ import Component from &apos;../../Component.js&apos;
 TextInputComponent shows the user a field or area in which to enter text.
 
 @example &lt;caption&gt;Set `TextInputComponent.text` to user&apos;s input (no DataModel)&lt;/caption&gt;
-const component = new TextInputComponent(undefined, {
-	text: &apos;Starting text&apos;,
-	placeholder: &apos;Enter some text here&apos; // Shown when no text had been entered
-})
-// Listen for text changes
-component.listenTo(TextInputComponent.TextChangeEvent, (eventName, textValue) =&gt; {
-	console.log(&apos;Text was input&apos;, textValue)
-})
+* const component = new TextInputComponent(undefined, {
+* 	text: &apos;Starting text&apos;,
+* 	placeholder: &apos;Enter some text here&apos; // Shown when no text had been entered
+* })
+* // Listen for text changes
+* component.listenTo(TextInputComponent.TextChangeEvent, (eventName, textValue) =&gt; {
+* 	console.log(&apos;Text was input&apos;, textValue)
+* })
 
 @example &lt;caption&gt;Bind text input to a DataModel field&lt;/caption&gt;
-const component = new TextInputComponent(myDataModel, {
-	textField: &apos;biography&apos;,
-	placeholder: &apos;Tell us who you are&apos;, // Shown when no text had been entered
-	submitOnEnter: true
-})
-// Listen for text submission, usually by pressing the &apos;Enter&apos; key
-component.listenTo(TextInputComponent.TextSubmitEvent, (eventName, newValue) =&gt; {
-	console.log(&apos;New text was submitted&apos;, newValue)
-})
+* const component = new TextInputComponent(myDataModel, {
+* 	textField: &apos;biography&apos;,
+* 	placeholder: &apos;Tell us who you are&apos;, // Shown when no text had been entered
+* 	submitOnEnter: true
+* })
+* // Listen for text submission, usually by pressing the &apos;Enter&apos; key
+* component.listenTo(TextInputComponent.TextSubmitEvent, (eventName, newValue) =&gt; {
+* 	console.log(&apos;New text was submitted&apos;, newValue)
+* })
 
 */
 const TextInputComponent = class extends Component {

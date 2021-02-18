@@ -66,13 +66,13 @@ const DataObject = class extends EventHandler {
 	If already reset, immediately call callback, otherwise wait until the first reset and then call callback
 
 	@example
-	class ExampleModel extends DataModel {
-		get url() { return '/api/example' }
-	}
-	const model = new ExampleModel()
-	model.onFirstReset((model) => { ... })
-	model.fetch()
-	// the callback passed to onFirstReset will be called when the fetch completes
+	* class ExampleModel extends DataModel {
+	* 	get url() { return '/api/example' }
+	* }
+	* const model = new ExampleModel()
+	* model.onFirstReset((model) => { ... })
+	* model.fetch()
+	* // the callback passed to onFirstReset will be called when the fetch completes
 
 	@param {func(dataObject: DataObject)} callback
 	*/

@@ -126,20 +126,20 @@
   <div class="example-doc" data-ice="exampleDoc">
       
       <pre class="prettyprint source-code"><code data-ice="exampleCode">const model = new DataModel({
-name: &apos;Pimsler Particle&apos;,
-description: &apos;This can decrease the distance between molecules.&apos;,
-image: &apos;/static/image.jpeg&apos;
+	name: &apos;Pimsler Particle&apos;,
+	description: &apos;This can decrease the distance between molecules.&apos;,
+	image: &apos;/static/image.jpeg&apos;
 })
 const cardComponent = new CardComponent(
-model,
-{ titleField: &apos;name&apos;, captionField: &apos;description&apos; }
+	model,
+	{ titleField: &apos;name&apos;, captionField: &apos;description&apos; }
 )
 // Add an image as an example (though we&apos;d really use ImageCardComponent for this)
 cardComponent.mainComponent.append(
-new ImageComponent(
-model,
-{ dataField: &apos;image&apos; }
-)
+	new ImageComponent(
+		model,
+		{ dataField: &apos;image&apos; }
+	)
 )</code></pre>
     </div>
 </div>

@@ -12,7 +12,6 @@ This is used mostly in testing but is occasionally useful for offline situations
 		return new Response(blob, { "status" : 200 , "statusText" : "OK" })
 	})
 	service.attachToDataObject()
-
 */
 export default class MockService {
 	constructor() {
@@ -45,6 +44,9 @@ export default class MockService {
 
 	/*
 	Take over DataObject.protocol._innerFetch to intercept fetches and service with endpoints if possible
+
+	Note: Classes that extend DataObject (or DataModel or DataCollection) should *NOT* override _innerFetch.
+	Instead, override {@link DataObject.fetch} and/or {@link DataObject.parse}.
 	*/
 	attachToDataObject() {
 		DataObject.prototype._innerFetch = (url, ...params) => {
