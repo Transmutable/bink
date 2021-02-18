@@ -125,15 +125,15 @@ The comparator functions used in sorting should use the same return values (e.g.
   <div class="example-doc" data-ice="exampleDoc">
       <div class="example-caption" data-ice="exampleCaption">Constructed with data:</div>
       <pre class="prettyprint source-code"><code data-ice="exampleCode">this.collection = new DataCollection([
-{ id: 0, title: &apos;first model&apos;},
-{ id: 1, title: &apos;second model&apos;},
-{ id: 3, title: &apos;third model&apos;}
+	{ id: 0, title: &apos;first model&apos;},
+	{ id: 1, title: &apos;second model&apos;},
+	{ id: 3, title: &apos;third model&apos;}
 ])</code></pre>
     </div>
 <div class="example-doc" data-ice="exampleDoc">
       <div class="example-caption" data-ice="exampleCaption">A custom class that is populated from a service:</div>
       <pre class="prettyprint source-code"><code data-ice="exampleCode">class ExampleCollection extends Collection {
-get url() { return &apos;/api/examples&apos; }
+	get url() { return &apos;/api/examples&apos; }
 }
 this.collection = new ExampleCollection()
 this.collection.fetch().then(() =&gt; { ... }).catch((err) =&gt; { ... })</code></pre>
@@ -1807,7 +1807,7 @@ this.collection.fetch().then(() =&gt; { ... }).catch((err) =&gt; { ... })</code>
       
       <pre class="prettyprint source-code"><code data-ice="exampleCode">this.collection = new DataCollection(...)
 this.collection.fetch().then(() =&gt; {
-console.log(&apos;DataModel with id 42:&apos;, this.collection.firstByField(&apos;id&apos;, 42)
+	console.log(&apos;DataModel with id 42:&apos;, this.collection.firstByField(&apos;id&apos;, 42)
 })</code></pre>
     </div>
 </div>

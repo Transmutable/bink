@@ -587,11 +587,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/throttle.js.html#lineNumber29">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/throttle.js.html#lineNumber26">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {throttle} from &apos;<span><a href="file/src/throttle.js.html#lineNumber29">@transmutable/bink/src/throttle.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {throttle} from &apos;<span><a href="file/src/throttle.js.html#lineNumber26">@transmutable/bink/src/throttle.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p><code>throttle</code> will rate limit a function call.</p>
@@ -670,19 +670,16 @@
     
   <div class="example-doc" data-ice="exampleDoc">
       <div class="example-caption" data-ice="exampleCaption">Throttling rendering info</div>
-      <pre class="prettyprint source-code"><code data-ice="exampleCode">
-var count = 0 // This will be incremented in every animation frame
-
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">var count = 0 // This will be incremented in every animation frame
 // We want to call this in every animation frame but only run it once a second (1000 ms)
 const throttledDebug = throttle(() =&gt; { 
-console.log(&apos;Render count&apos;, count)
+	console.log(&apos;Render count&apos;, count)
 }, 1000)
-
 // This is the function that is called in every animation frame
 function render() {
-count += 1
-throttledDebug() // Called every frame but run only once a second
-window.requestAnimationFrame(render)
+	count += 1
+	throttledDebug() // Called every frame but run only once a second
+	window.requestAnimationFrame(render)
 }
 window.requestAnimationFrame(render)</code></pre>
     </div>

@@ -53,3 +53,7 @@ body {
 .view-component.media-grid-component img {
 	max-height: 200px;
 }
+
+.view-component.media-grid-component > .collection-component > .component-card-component > .card-caption-component > .link-component {
+	margin-right: 10px;
+}

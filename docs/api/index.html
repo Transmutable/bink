@@ -112,12 +112,54 @@
 <li>Your leadership is rewarded for &quot;<a href="https://en.wikipedia.org/wiki/Fear,_uncertainty,_and_doubt">choosing IBM</a>&quot;.</li>
 </ul>
 <h2 id="overview-of-bink">Overview of Bink</h2><p>The <a href="https://transmutable.github.io/bink/api/">API docs</a> have a lot of info and example code but in general: </p>
-<p>A web page&apos;s script element instantiates a Bink <a href="https://transmutable.github.io/bink/api/class/src/App.js~App.html"><code>App</code></a> that orchestrates views made up of <a href="https://transmutable.github.io/bink/api/class/src/Component.js~Component.html"><code>Component</code></a>s that reactively update the DOM based on information and events in <a href="https://transmutable.github.io/bink/api/class/src/DataModel.js~DataModel.html"><code>DataModel</code></a>s and <a href="https://transmutable.github.io/bink/api/class/src/DataCollection.js~DataCollection.html"><code>DataCollection</code></a>s as well as events from user actions.</p>
+<p>A web page&apos;s script element instantiates a Bink <a href="https://transmutable.github.io/bink/api/class/src/App.js~App.html"><code>App</code></a> that coordinates dynamic user interface elements made up of <a href="https://transmutable.github.io/bink/api/class/src/Component.js~Component.html"><code>Component</code></a>s that reactively update the DOM based on information and events in <a href="https://transmutable.github.io/bink/api/class/src/DataModel.js~DataModel.html"><code>DataModel</code></a>s and <a href="https://transmutable.github.io/bink/api/class/src/DataCollection.js~DataCollection.html"><code>DataCollection</code></a>s as well as events from user actions.</p>
 <h3 id="examples-on-glitch">Examples on Glitch</h3><p>These examples are <a href="https://github.com/Transmutable/bink/tree/main/examples">in the repo</a> but here they are as Glitch projects for immediate satisfaction. Glitch lets you view the code and then remix it with no fuss.</p>
 <ul>
-<li><a href="https://glitch.com/edit/#!/northern-tricky-brook">Hello, world</a> is a bare bones page.</li>
-<li><a href="https://glitch.com/edit/#!/valiant-agate-acoustic">Components</a> shows the <a href="https://transmutable.github.io/bink/api/class/src/Component.js~Component.html">Component</a>s that are included with Bink and a bit more complex use of <a href="https://transmutable.github.io/bink/api/class/src/App.js~App.html">App</a>.</li>
+<li><a href="https://glitch.com/edit/#!/northern-tricky-brook">Hello, world</a> is a bare bones page but it does demonstrate a custom App and a custom Component.</li>
+<li><a href="https://glitch.com/edit/#!/valiant-agate-acoustic">Components</a> shows every <a href="https://transmutable.github.io/bink/api/class/src/Component.js~Component.html">Component</a>s that is included with Bink and a bit more complex use of <a href="https://transmutable.github.io/bink/api/class/src/App.js~App.html">App</a>.</li>
 </ul>
+<h3 id="a-quick-code-sample-from--a-href--https---github-com-transmutable-bink-tree-main-examples-hello-world--hello-world--a-">A quick code sample from <a href="https://github.com/Transmutable/bink/tree/main/examples/hello-world">Hello World</a></h3><p>Here&apos;s a small snippet of code to give you a flavor of Bink.</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">/*
+This Component simply asks to be clicked and then changes its message when that happens.
+*/
+class ClickMeButton extends ButtonComponent {
+    constructor(dataObject=null, options={}) {
+        super(dataObject, Object.assign({
+            text: lt(&apos;Click me&apos;) // `lt` is the `Localizer` translation method
+        }, options))
+
+        // Add to the existing `class` attribute on `this.dom`. This is good practice but still optional.
+        this.addClass(&apos;click-me-button-component&apos;)
+
+        // Setting the name sets `this.dom.data[name]` for use during debugging. This is optional but handy.
+        this.setName(&apos;ClickMeButtonComponent&apos;)
+
+        // ButtonComponent has an event type, ActivatedEvent that we listen to
+        this.listenTo(ButtonComponent.ActivatedEvent, this, (eventName) =&gt; {
+            this.text = lt(&apos;You Clicked Me&apos;)
+        })
+        // Because we used `this.listenTo` the event listener will be automatically cleaned up when `Component.cleanup` is called.
+    }
+}
+
+/*
+App instances run the entire single page app by coordinating DataObjects and Components.
+
+This App simply loads a HeadingComponent and the custom ClickMeButton from above
+*/
+class SplashApp extends App {
+    constructor(options={}) {
+        super(options)
+
+        // A Component renders something to the DOM, in this case an &apos;h1&apos; element
+        this._headingComponent = new HeadingComponent(undefined, {
+            text: lt(&apos;Hello, world&apos;)
+        }).appendTo(this)
+
+        this._clickMeButton = new ClickMeButton().appendTo(this)
+    }
+}</code>
+</code></pre>
 <h3 id="what--code-app--code--provides-">What <code>App</code> provides:</h3><ul>
 <li>Page-level orchestration of views</li>
 <li>URL routing</li>
@@ -129,9 +171,10 @@
 <li>Track and clean up listeners and data binding</li>
 </ul>
 <p>Bink ships with a library of <code>Component</code>s.</p>
-<h3 id="what--code-datamodel--code--and--code-datacollection--code--provide-">What <code>DataModel</code> and <code>DataCollection</code> provide:</h3><ul>
+<h3 id="what--code-datamodel--code--and--code-datacollection--code--provide-">What <code>DataModel</code> and <code>DataCollection</code> provide:</h3><p>The code snippet above doesn&apos;t use dynamic data so it doesn&apos;t need <code>DataModel</code> or <code>DataCollection</code>. Here&apos;s what those classes do:</p>
+<ul>
 <li>Manage a shared data structure for key/value maps (models) and ordered lists (collections)</li>
-<li>Wrap logic for communicating with services like remote APIs or local storage</li>
+<li>Wrap logic for communicating with services like remote web APIs or local storage</li>
 <li>Provide data change events so that the UI can react</li>
 </ul>
 <h2 id="use-bink-in-your-projects">Use Bink in your projects</h2><p>Bink is designed to be easy to use without an ecosystem like <a href="https://www.npmjs.com/">npm</a>.</p>

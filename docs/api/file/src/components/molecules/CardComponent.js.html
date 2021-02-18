@@ -101,22 +101,22 @@ This is often used in a {@link CollectionComponent} or a {@link MediaGridCompone
 The three child `Component`s are available via getters for `mainComponent`, `titleComponent`, and `captionComponent`.
 
 @example
-const model = new DataModel({
-	name: &apos;Pimsler Particle&apos;,
-	description: &apos;This can decrease the distance between molecules.&apos;,
-	image: &apos;/static/image.jpeg&apos;
-})
-const cardComponent = new CardComponent(
-	model,
-	{ titleField: &apos;name&apos;, captionField: &apos;description&apos; }
-)
-// Add an image as an example (though we&apos;d really use ImageCardComponent for this)
-cardComponent.mainComponent.appendComponent(
-	new ImageComponent(
-		model,
-		{ dataField: &apos;image&apos; }
-	)
-)
+* const model = new DataModel({
+* 	name: &apos;Pimsler Particle&apos;,
+* 	description: &apos;This can decrease the distance between molecules.&apos;,
+* 	image: &apos;/static/image.jpeg&apos;
+* })
+* const cardComponent = new CardComponent(
+* 	model,
+* 	{ titleField: &apos;name&apos;, captionField: &apos;description&apos; }
+* )
+* // Add an image as an example (though we&apos;d really use ImageCardComponent for this)
+* cardComponent.mainComponent.append(
+* 	new ImageComponent(
+* 		model,
+* 		{ dataField: &apos;image&apos; }
+* 	)
+* )
 
 */
 const CardComponent = class extends Component {

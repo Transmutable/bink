@@ -31,14 +31,62 @@ Do not choose Bink when:
 
 The [API docs](https://transmutable.github.io/bink/api/) have a lot of info and example code but in general: 
 
-A web page's script element instantiates a Bink [`App`](https://transmutable.github.io/bink/api/class/src/App.js~App.html) that orchestrates views made up of [`Component`](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html)s that reactively update the DOM based on information and events in [`DataModel`](https://transmutable.github.io/bink/api/class/src/DataModel.js~DataModel.html)s and [`DataCollection`](https://transmutable.github.io/bink/api/class/src/DataCollection.js~DataCollection.html)s as well as events from user actions.
+A web page's script element instantiates a Bink [`App`](https://transmutable.github.io/bink/api/class/src/App.js~App.html) that coordinates dynamic user interface elements made up of [`Component`](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html)s that reactively update the DOM based on information and events in [`DataModel`](https://transmutable.github.io/bink/api/class/src/DataModel.js~DataModel.html)s and [`DataCollection`](https://transmutable.github.io/bink/api/class/src/DataCollection.js~DataCollection.html)s as well as events from user actions.
 
 ### Examples on Glitch
 
 These examples are [in the repo](https://github.com/Transmutable/bink/tree/main/examples) but here they are as Glitch projects for immediate satisfaction. Glitch lets you view the code and then remix it with no fuss.
 
-- [Hello, world](https://glitch.com/edit/#!/northern-tricky-brook) is a bare bones page.
-- [Components](https://glitch.com/edit/#!/valiant-agate-acoustic) shows the [Component](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html)s that are included with Bink and a bit more complex use of [App](https://transmutable.github.io/bink/api/class/src/App.js~App.html).
+- [Hello, world](https://glitch.com/edit/#!/northern-tricky-brook) is a bare bones page but it does demonstrate a custom App and a custom Component.
+- [Components](https://glitch.com/edit/#!/valiant-agate-acoustic) shows every [Component](https://transmutable.github.io/bink/api/class/src/Component.js~Component.html)s that is included with Bink and a bit more complex use of [App](https://transmutable.github.io/bink/api/class/src/App.js~App.html).
+
+### A quick code sample from [Hello World](https://github.com/Transmutable/bink/tree/main/examples/hello-world)
+
+Here's a small snippet of code to give you a flavor of Bink.
+
+
+```javascript
+/*
+This Component simply asks to be clicked and then changes its message when that happens.
+*/
+class ClickMeButton extends ButtonComponent {
+	constructor(dataObject=null, options={}) {
+		super(dataObject, Object.assign({
+			text: lt('Click me') // `lt` is the `Localizer` translation method
+		}, options))
+
+		// Add to the existing `class` attribute on `this.dom`. This is good practice but still optional.
+		this.addClass('click-me-button-component')
+
+		// Setting the name sets `this.dom.data[name]` for use during debugging. This is optional but handy.
+		this.setName('ClickMeButtonComponent')
+
+		// ButtonComponent has an event type, ActivatedEvent that we listen to
+		this.listenTo(ButtonComponent.ActivatedEvent, this, (eventName) => {
+			this.text = lt('You Clicked Me')
+		})
+		// Because we used `this.listenTo` the event listener will be automatically cleaned up when `Component.cleanup` is called.
+	}
+}
+
+/*
+App instances run the entire single page app by coordinating DataObjects and Components.
+
+This App simply loads a HeadingComponent and the custom ClickMeButton from above
+*/
+class SplashApp extends App {
+	constructor(options={}) {
+		super(options)
+
+		// A Component renders something to the DOM, in this case an 'h1' element
+		this._headingComponent = new HeadingComponent(undefined, {
+			text: lt('Hello, world')
+		}).appendTo(this)
+
+		this._clickMeButton = new ClickMeButton().appendTo(this)
+	}
+}
+```
 
 ### What `App` provides:
 
@@ -56,8 +104,10 @@ Bink ships with a library of `Component`s.
 
 ### What `DataModel` and `DataCollection` provide:
 
+The code snippet above doesn't use dynamic data so it doesn't need `DataModel` or `DataCollection`. Here's what those classes do:
+
 - Manage a shared data structure for key/value maps (models) and ordered lists (collections)
-- Wrap logic for communicating with services like remote APIs or local storage
+- Wrap logic for communicating with services like remote web APIs or local storage
 - Provide data change events so that the UI can react
 
 ## Use Bink in your projects

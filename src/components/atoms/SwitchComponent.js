@@ -6,9 +6,9 @@ SwitchComponent gives the user the ability to flip a switch.
 The switch may be on/off or momentary with push-to-break or push-to-make options.
 
 @example <caption>Allow the user to change a boolean data field</caption>
-const switchComponent = new SwitchComponent(myDataModel, {
-	dataField: 'activated'
-})
+* const switchComponent = new SwitchComponent(myDataModel, {
+* 	dataField: 'activated'
+* })
 
 @todo Add a Bink event on switch change (DataModel 'changed:fieldName' events work, of course)
 */

@@ -92,21 +92,21 @@ import Component from &apos;../../Component.js&apos;
 TextComponent holds a string which may include paragraphs but not other media.
 
 @example &lt;caption&gt;Show static text&lt;/caption&gt;
-const textComponent = new TextComponent(undefined, {
-	text: &apos;Static text goes here&apos;
-})
+* const textComponent = new TextComponent(undefined, {
+* 	text: &apos;Static text goes here&apos;
+* })
 
 @example &lt;caption&gt;Show dynamically bound text&lt;/caption&gt;
-const textComponent = new TextComponent(myDataModel, {
-	dataField: &apos;title&apos;
-})
+* const textComponent = new TextComponent(myDataModel, {
+* 	dataField: &apos;title&apos;
+* })
 
 @example &lt;caption&gt;Show dynamically bound and formatted text&lt;/caption&gt;
-// Displays either &apos;Is active&apos; or &apos;Is not active&apos;, depending on the data field
-const textComponent = new TextComponent(myDataModel, {
-	dataField: &apos;isActive&apos;, // a boolean field
-	dataFieldFormatter: (value) =&gt; { return value === true ? &apos;Is active&apos; : &apos;Is not active&apos; }
-})
+* // Displays either &apos;Is active&apos; or &apos;Is not active&apos;, depending on the data field
+* const textComponent = new TextComponent(myDataModel, {
+* 	dataField: &apos;isActive&apos;, // a boolean field
+* 	dataFieldFormatter: (value) =&gt; { return value === true ? &apos;Is active&apos; : &apos;Is not active&apos; }
+* })
 
 */
 const TextComponent = class extends Component {

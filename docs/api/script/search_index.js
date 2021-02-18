@@ -594,9 +594,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/app.js~app#appendcomponent",
-    "class/src/App.js~App.html#instance-method-appendComponent",
-    "src/App.js~App#appendComponent",
+    "src/app.js~app#append",
+    "class/src/App.js~App.html#instance-method-append",
+    "src/App.js~App#append",
     "method"
   ],
   [
@@ -666,9 +666,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "src/component.js~component#appendcomponent",
-    "class/src/Component.js~Component.html#instance-method-appendComponent",
-    "src/Component.js~Component#appendComponent",
+    "src/component.js~component#append",
+    "class/src/Component.js~Component.html#instance-method-append",
+    "src/Component.js~Component#append",
     "method"
   ],
   [
@@ -892,12 +892,6 @@ window.esdocSearchIndex = [
     "class/src/DataModel.js~DataModel.html#instance-constructor-constructor",
     "src/DataModel.js~DataModel#constructor",
     "method"
-  ],
-  [
-    "src/datamodel.js~datamodel#data",
-    "class/src/DataModel.js~DataModel.html#instance-member-data",
-    "src/DataModel.js~DataModel#data",
-    "member"
   ],
   [
     "src/datamodel.js~datamodel#delete",

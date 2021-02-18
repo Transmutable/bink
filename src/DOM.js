@@ -8,40 +8,39 @@ dom.li()
 dom.div()
 // returns a 'div' HTMLElement: '<div></div>'
 
-dom.span('Some text')
+dom.span(lt('Some text'))
 // `<span>Some text</span>`
 
 @example <caption>Text and dictionary parameters do handy things</caption>
-dom.a('Click me', { href: '/some-url/' })
+dom.a(lt('Click me'), { href: '/some-url/' })
 // `<a href="/some-url/">Click me</a>`
 
 @example <caption>Any parameter can be a string, a dictionary, or another element</caption>
-dom.button(
-	{ type: 'button', class: 'my-button' },
-	dom.img({ src: 'image.jpg' }),
-	'Click me'
-)
-// `<button type="button" class="my-button"><img src="image.jpg" />Click me</button>`
-
-dom.ul(
-	dom.li('First item'),
-	dom.li('Second item', { class: 'selected-item' })
-)
-// <ul>
-// <li>First Item</li>
-// <li class: "selected-item">Second item</li>
-// </ul>
+* dom.button(
+* 	{ type: 'button', class: 'my-button' },
+* 	dom.img({ src: 'image.jpg' }),
+* 	lt('Click me')
+* )
+* // `<button type="button" class="my-button"><img src="image.jpg" />Click me</button>`
+*
+* dom.ul(
+* 	dom.li(lt('First item')),
+* 	dom.li(lt('Second item'), { class: 'selected-item' }) // Attribute dicts can be in any parameter
+* )
+* // <ul>
+* // <li>First Item</li>
+* // <li class: "selected-item">Second item</li>
+* // </ul>
 
 @example <caption>Populate a Component's UI</caption>
-class MyComponent extends Component {
-	constructor(dataObject, options) {
-		super(dataObject, options)
-		this.dom.appendChild(dom.h1('This is a heading'))
-	}
-}
+* class MyComponent extends Component {
+* 	constructor(dataObject, options) {
+* 		super(dataObject, options)
+* 		this.dom.appendChild(dom.h1(lt('This is a heading')))
+* 	}
+* }
 */
 const dom = {}
-export default dom
 
 /**
 domElementFunction is the behind the scenes logic for the functions like dom.div(...)
@@ -319,3 +318,6 @@ dom.setCookie = function (cookieName, value) {
 dom.removeCookie = function (cookieName) {
 	document.cookie = `${encodeURIComponent(cookieName)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT`
 }
+
+export default dom
+export { dom }

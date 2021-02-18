@@ -6,15 +6,15 @@ import Component from '../../Component.js'
 MultiComponent holds a set of {@link Component}s and shows one at a time.
 
 @example
-const multiComponent = new MultiComponent(undefined, {
-	components: [
-		new EditProfileComponent(...),
-		new EditEmailComponent(...),
-		new EditBioComponent(...)
-	]
-})
-// Now multiComponent is showing just the first component, EditProfileComponent
-multiComponent.showAt(1) // Hide EditProfileComponent and show EditEmailComponent
+* const multiComponent = new MultiComponent(undefined, {
+* 	components: [
+* 		new EditProfileComponent(...),
+* 		new EditEmailComponent(...),
+* 		new EditBioComponent(...)
+* 	]
+* })
+* // Now multiComponent is showing just the first component, EditProfileComponent
+* multiComponent.showAt(1) // Hide EditProfileComponent and show EditEmailComponent
 
 */
 const MultiComponent = class extends Component {
@@ -53,7 +53,7 @@ const MultiComponent = class extends Component {
 		if (index < 0 || index >= this._components.length) return false
 		if (this._currentComponent) this.removeComponent(this._currentComponent)
 		this._currentComponent = this._components[index]
-		this.appendComponent(this._currentComponent)
+		this.append(this._currentComponent)
 		return true
 	}
 

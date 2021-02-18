@@ -131,55 +131,55 @@ import { UpdatePortraitComponent } from &apos;./UpdatePortraitComponent.js&apos;
 import { UserModel } from &apos;./UserModel.js&apos;
 
 class AdminApp extends App {
-constructor(){
-// Get user model (see DataObject, DataModel, and DataCollection docs)
-this.dataObject = new UserModel()
-this.dataObject.fetch().catch(err =&gt; { ... handle error ... })
+	constructor(){
+		// Get user model (see DataObject, DataModel, and DataCollection docs)
+		this.dataObject = new UserModel()
+		this.dataObject.fetch().catch(err =&gt; { ... handle error ... })
 
-// Set up the masthead
-this._masthead = new MastheadComponent(
-undefined,
-{
-brand: &apos;Your Brand&apos;,
-brandAnchor: &apos;/&apos;,
-menuItems: [
-{ name: &apos;Bio&apos;, anchor: &apos;#&apos; },
-{ name: &apos;Password&apos;, anchor: &apos;#password&apos; },
-{ name: &apos;Portrait&apos;, anchor: &apos;#portrait&apos; }
-]
-}	
-).appendTo(this)
+		// Set up the masthead
+		this._masthead = new MastheadComponent(
+			undefined,
+			{
+				brand: &apos;Your Brand&apos;,
+				brandAnchor: &apos;/&apos;,
+				menuItems: [
+					{ name: &apos;Bio&apos;, anchor: &apos;#&apos; },
+					{ name: &apos;Password&apos;, anchor: &apos;#password&apos; },
+					{ name: &apos;Portrait&apos;, anchor: &apos;#portrait&apos; }
+				]
+			}
+		).appendTo(this)
 
-// Set up three sub-views with Components (see Component docs)
-this._bioComponent = new UpdateBioComponent(this.dataObject).appendTo(this)
-this._passwordComponent = new ResetPasswordComponent(this.dataObject).appendTo(this)
-this._portraitComponent = new UpdatePortraitComponent(this.dataObject).appendTo(this)
+		// Set up three sub-views with Components (see Component docs)
+		this._bioComponent = new UpdateBioComponent(this.dataObject).appendTo(this)
+		this._passwordComponent = new ResetPasswordComponent(this.dataObject).appendTo(this)
+		this._portraitComponent = new UpdatePortraitComponent(this.dataObject).appendTo(this)
 
-// Set up the Router (see Router docs)
-this._router = new Router()
-this._router.addRoute(/^$/, &apos;default&apos;)
-this._router.addRoute(/^password$/, &apos;password&apos;)
-this._router.addRoute(/^portait$/, &apos;portrait&apos;)
-router.addListener(&apos;blog-app&apos;, (routeName) =&gt; {
-switch (routeName) {
-case &apos;default&apos;:
-this._bioComponent.show()
-this._passwordComponent.hide()
-this._portraitComponent.hide()
-break
-case &apos;password&apos;:
-this._bioComponent.hide()
-this._passwordComponent.show()
-this._portraitComponent.hide()
-break
-case &apos;portrait&apos;
-this._bioComponent.hide()
-this._passwordComponent.hide()
-this._portraitComponent.show()
-break
-}
-})
-}	
+		// Set up the Router (see Router docs)
+		this._router = new Router()
+		this._router.addRoute(/^$/, &apos;default&apos;)
+		this._router.addRoute(/^password$/, &apos;password&apos;)
+		this._router.addRoute(/^portait$/, &apos;portrait&apos;)
+		router.addListener(&apos;blog-app&apos;, (routeName) =&gt; {
+			switch (routeName) {
+				case &apos;default&apos;:
+					this._bioComponent.show()
+					this._passwordComponent.hide()
+					this._portraitComponent.hide()
+					break
+				case &apos;password&apos;:
+					this._bioComponent.hide()
+					this._passwordComponent.show()
+					this._portraitComponent.hide()
+					break
+				case &apos;portrait&apos;
+					this._bioComponent.hide()
+					this._passwordComponent.hide()
+					this._portraitComponent.show()
+					break
+			}
+		})
+	}	
 }</code></pre>
     </div>
 </div>
@@ -391,7 +391,7 @@ break
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-method-appendComponent">appendComponent</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/App.js~App.html#instance-method-append">append</a></span></span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
         </p>
       </div>
       <div>
@@ -856,14 +856,14 @@ break
 <div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
 
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-appendComponent">
+  <h3 data-ice="anchor" id="instance-method-append">
     <span class="access" data-ice="access">public</span>
     
     
     
     
     
-    <span class="code" data-ice="name">appendComponent</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
+    <span class="code" data-ice="name">append</span><span class="code" data-ice="signature">(childComponent: <span><a href="class/src/Component.js~Component.html">Component</a></span>): <span><a href="class/src/App.js~App.html">App</a></span></span>
     <span class="right-info">
       
       

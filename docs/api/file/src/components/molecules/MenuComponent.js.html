@@ -96,18 +96,18 @@ MenuComponent holds a set of menu item {@link Component}s and a {@link ToggleCom
 This class is often used as a base class and in the extending constructor it loads its menu items but it&apos;s also possible to use it directly (see below).
 
 @example &lt;caption&gt;Directly create a three item menu&lt;/caption&gt;
-const menuComponent = new MenuComponent()
-menuComponent.appendMenuItem(new MyMenuItemComponent(...))
-menuComponent.appendMenuItem(new MyMenuItemComponent(...))
-menuComponent.appendMenuItem(new MyMenuItemComponent(...))
-
-menuComponent.addListener(MenuComponent.SelectedEvent, (eventName, menuComponent, selectedIndex) =&gt; {
-	const menuItemComponent = menuComponent.menuItems[selectedIndex]
-})
-
-menuComponent.addListener(ToggleComponent.ToggleEvent, (eventName, menuComponent, isOpen) =&gt; {
-	// react to the change here
-})
+* const menuComponent = new MenuComponent()
+* menuComponent.appendMenuItem(new MyMenuItemComponent(...))
+* menuComponent.appendMenuItem(new MyMenuItemComponent(...))
+* menuComponent.appendMenuItem(new MyMenuItemComponent(...))
+* 
+* menuComponent.addListener(MenuComponent.SelectedEvent, (eventName, menuComponent, selectedIndex) =&gt; {
+* 	const menuItemComponent = menuComponent.menuItems[selectedIndex]
+* })
+* 
+* menuComponent.addListener(ToggleComponent.ToggleEvent, (eventName, menuComponent, isOpen) =&gt; {
+* 	// react to the change here
+* })
 
 */
 const MenuComponent = class extends Component {
@@ -212,7 +212,7 @@ const MenuComponent = class extends Component {
 	*/
 	appendMenuItem(component) {
 		this._menuItems.push(component)
-		this._menuItemsComponent.appendComponent(component)
+		this._menuItemsComponent.append(component)
 		component.addClass(&apos;menu-item&apos;)
 		if (this._menuItems.length === 1) {
 			this.selectedIndex = 0

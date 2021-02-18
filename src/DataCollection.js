@@ -9,18 +9,18 @@ There are various ways to sort the collection, from {@link DataCollection.sort} 
 The comparator functions used in sorting should use the same return values (e.g. -1, 0, 1) as the [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) comparators.
 
 @example <caption>Constructed with data:</caption>
-this.collection = new DataCollection([
-	{ id: 0, title: 'first model'},
-	{ id: 1, title: 'second model'},
-	{ id: 3, title: 'third model'}
-])
+* this.collection = new DataCollection([
+* 	{ id: 0, title: 'first model'},
+* 	{ id: 1, title: 'second model'},
+* 	{ id: 3, title: 'third model'}
+* ])
 
 @example <caption>A custom class that is populated from a service:</caption>
-class ExampleCollection extends Collection {
-	get url() { return '/api/examples' }
-}
-this.collection = new ExampleCollection()
-this.collection.fetch().then(() => { ... }).catch((err) => { ... })
+* class ExampleCollection extends Collection {
+* 	get url() { return '/api/examples' }
+* }
+* this.collection = new ExampleCollection()
+* this.collection.fetch().then(() => { ... }).catch((err) => { ... })
 
 */
 const DataCollection = class extends DataObject {
@@ -149,10 +149,10 @@ const DataCollection = class extends DataObject {
 	Find the first DataModel with a certain field value.
 
 	@example
-	this.collection = new DataCollection(...)
-	this.collection.fetch().then(() => {
-		console.log('DataModel with id 42:', this.collection.firstByField('id', 42)
-	})
+	* this.collection = new DataCollection(...)
+	* this.collection.fetch().then(() => {
+	* 	console.log('DataModel with id 42:', this.collection.firstByField('id', 42)
+	* })
 
 
 	@param {string} dataField - The name of the DataModel field in which to look

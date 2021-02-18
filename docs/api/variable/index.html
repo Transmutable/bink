@@ -200,26 +200,26 @@
 dom.div()
 // returns a &apos;div&apos; HTMLElement: &apos;&lt;div&gt;&lt;/div&gt;&apos;
 
-dom.span(&apos;Some text&apos;)
+dom.span(lt(&apos;Some text&apos;))
 // `&lt;span&gt;Some text&lt;/span&gt;`</code></pre>
     </div>
 <div class="example-doc" data-ice="exampleDoc">
       <div class="example-caption" data-ice="exampleCaption">Text and dictionary parameters do handy things</div>
-      <pre class="prettyprint source-code"><code data-ice="exampleCode">dom.a(&apos;Click me&apos;, { href: &apos;/some-url/&apos; })
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">dom.a(lt(&apos;Click me&apos;), { href: &apos;/some-url/&apos; })
 // `&lt;a href=&quot;/some-url/&quot;&gt;Click me&lt;/a&gt;`</code></pre>
     </div>
 <div class="example-doc" data-ice="exampleDoc">
       <div class="example-caption" data-ice="exampleCaption">Any parameter can be a string, a dictionary, or another element</div>
       <pre class="prettyprint source-code"><code data-ice="exampleCode">dom.button(
-{ type: &apos;button&apos;, class: &apos;my-button&apos; },
-dom.img({ src: &apos;image.jpg&apos; }),
-&apos;Click me&apos;
+	{ type: &apos;button&apos;, class: &apos;my-button&apos; },
+	dom.img({ src: &apos;image.jpg&apos; }),
+	lt(&apos;Click me&apos;)
 )
 // `&lt;button type=&quot;button&quot; class=&quot;my-button&quot;&gt;&lt;img src=&quot;image.jpg&quot; /&gt;Click me&lt;/button&gt;`
 
 dom.ul(
-dom.li(&apos;First item&apos;),
-dom.li(&apos;Second item&apos;, { class: &apos;selected-item&apos; })
+	dom.li(lt(&apos;First item&apos;)),
+	dom.li(lt(&apos;Second item&apos;), { class: &apos;selected-item&apos; }) // Attribute dicts can be in any parameter
 )
 // &lt;ul&gt;
 // &lt;li&gt;First Item&lt;/li&gt;
@@ -229,10 +229,10 @@ dom.li(&apos;Second item&apos;, { class: &apos;selected-item&apos; })
 <div class="example-doc" data-ice="exampleDoc">
       <div class="example-caption" data-ice="exampleCaption">Populate a Component&apos;s UI</div>
       <pre class="prettyprint source-code"><code data-ice="exampleCode">class MyComponent extends Component {
-constructor(dataObject, options) {
-super(dataObject, options)
-this.dom.appendChild(dom.h1(&apos;This is a heading&apos;))
-}
+	constructor(dataObject, options) {
+		super(dataObject, options)
+		this.dom.appendChild(dom.h1(lt(&apos;This is a heading&apos;)))
+	}
 }</code></pre>
     </div>
 </div>
@@ -254,11 +254,11 @@ this.dom.appendChild(dom.h1(&apos;This is a heading&apos;))
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/throttle.js.html#lineNumber74">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/throttle.js.html#lineNumber71">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {throttledConsoleLog} from &apos;<span><a href="file/src/throttle.js.html#lineNumber74">@transmutable/bink/src/throttle.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {throttledConsoleLog} from &apos;<span><a href="file/src/throttle.js.html#lineNumber71">@transmutable/bink/src/throttle.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>A handy utility function for throttling console logging to once per second</p>

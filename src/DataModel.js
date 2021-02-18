@@ -10,11 +10,12 @@ this.model.get('something') // returns 'different'
 this.model.get('bogus', 'default') // returns 'default'
 
 @example <caption>Fetching data from a service</caption>
-class ExampleModel extends DataModel {
-	get url() { return '/api/example' }
-}
-this.model = new ExampleModel()
-this.model.fetch().then(() => { ... }).catch(err => { ... })
+* class ExampleModel extends DataModel {
+* 	get url() { return '/api/example' }
+* }
+* this.model = new ExampleModel()
+* this.model.fetch().then(() => { ... }).catch(err => { ... })
+
 */
 const DataModel = class extends DataObject {
 	/**
@@ -28,7 +29,7 @@ const DataModel = class extends DataObject {
 			this.options.fieldDataObjects = {}
 		}
 		/** @type {Object<string,*>} */
-		this.data = {}
+		this._data = {}
 		/** @type {DataCollection|null} */
 		this.collection = null // set or unset by a DataCollection that contains this model
 
@@ -41,7 +42,7 @@ const DataModel = class extends DataObject {
 	cleanup() {
 		super.cleanup()
 		// TODO - need to clean up any sub-DataObjects
-		this.data = null
+		this._data = null
 	}
 
 	/**
@@ -49,7 +50,7 @@ const DataModel = class extends DataObject {
 	@return {boolean} true if this model contains a field with the name of `dataField`
 	*/
 	has(dataField) {
-		return typeof this.data[dataField] !== 'undefined'
+		return typeof this._data[dataField] !== 'undefined'
 	}
 
 	/**
@@ -60,10 +61,14 @@ const DataModel = class extends DataObject {
 	@return {*} may be native types or, if mapped by options.fieldDataObjects, another DataObject
 	*/
 	get(dataField, defaultValue = null) {
-		if (typeof this.data[dataField] === 'undefined' || this.data[dataField] === null || this.data[dataField] === '') {
+		if (
+			typeof this._data[dataField] === 'undefined' ||
+			this._data[dataField] === null ||
+			this._data[dataField] === ''
+		) {
 			return defaultValue
 		}
-		return this.data[dataField]
+		return this._data[dataField]
 	}
 
 	/**
@@ -121,7 +126,7 @@ const DataModel = class extends DataObject {
 	@return {*} the new value of the field
 	*/
 	increment(dataField, amount = 1) {
-		const currentVal = dataField in this.data ? this.data[dataField] : 0
+		const currentVal = dataField in this._data ? this._data[dataField] : 0
 		this.set(dataField, currentVal + amount)
 		return this.get(dataField)
 	}
@@ -129,28 +134,28 @@ const DataModel = class extends DataObject {
 	_set(dataField, data) {
 		// _set does not fire any events, so you probably want to use set or setBatch
 		if (data instanceof DataObject) {
-			if (this.data[dataField] instanceof DataObject) {
-				this.data[dataField].reset(data.data)
+			if (this._data[dataField] instanceof DataObject) {
+				this._data[dataField].reset(data._data)
 			} else {
-				this.data[dataField] = data
+				this._data[dataField] = data
 			}
 		} else if (this.options.fieldDataObjects[dataField]) {
-			if (this.data[dataField]) {
-				this.data[dataField].reset(data)
+			if (this._data[dataField]) {
+				this._data[dataField].reset(data)
 			} else {
-				this.data[dataField] = new this.options.fieldDataObjects[dataField](data)
+				this._data[dataField] = new this.options.fieldDataObjects[dataField](data)
 			}
 		} else {
-			if (this.data[dataField] === data) {
+			if (this._data[dataField] === data) {
 				return DataObject._NO_CHANGE
 			}
-			if (this.data[dataField] instanceof DataObject) {
-				this.data[dataField].reset(data)
+			if (this._data[dataField] instanceof DataObject) {
+				this._data[dataField].reset(data)
 			} else {
-				this.data[dataField] = data
+				this._data[dataField] = data
 			}
 		}
-		return this.data[dataField]
+		return this._data[dataField]
 	}
 
 	/**
@@ -177,9 +182,9 @@ const DataModel = class extends DataObject {
 	@param {Object} [data={}]
 	*/
 	reset(data = {}) {
-		for (const key in this.data) {
+		for (const key in this._data) {
 			if (typeof data[key] === 'undefined') {
-				this.data[key] = null
+				this._data[key] = null
 			}
 		}
 		this.setBatch(data)
