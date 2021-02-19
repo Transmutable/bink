@@ -41,7 +41,7 @@ const EventHandler = class {
 			}
 		}
 		for (const listener of listenersToRemove) {
-			this.removeListener(listener.callback, listener.eventName)
+			this.removeListener(listener.eventName, listener.callback)
 		}
 	}
 
@@ -55,6 +55,10 @@ const EventHandler = class {
 	@param {boolean} [once=false] If true then the listener is removed after receiving one event
 	*/
 	addListener(eventName, callback, once = false) {
+		if (typeof eventName === 'function') {
+			console.error('EventHandler.addListener call parameters can not start with a function: ', eventName, callback)
+			return
+		}
 		this.listeners.push(new EventListener(eventName, callback, once))
 	}
 

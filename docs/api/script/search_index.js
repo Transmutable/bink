@@ -144,9 +144,15 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "@transmutable/bink/src/mockservice.js~mockservice",
-    "class/src/MockService.js~MockService.html",
-    "<span>MockService</span> <span class=\"search-result-import-path\">@transmutable/bink/src/MockService.js</span>",
+    "@transmutable/bink/src/test/mockresponse.js~mockresponse",
+    "class/src/test/MockResponse.js~MockResponse.html",
+    "<span>MockResponse</span> <span class=\"search-result-import-path\">@transmutable/bink/src/test/MockResponse.js</span>",
+    "class"
+  ],
+  [
+    "@transmutable/bink/src/test/mockservice.js~mockservice",
+    "class/src/test/MockService.js~MockService.html",
+    "<span>MockService</span> <span class=\"search-result-import-path\">@transmutable/bink/src/test/MockService.js</span>",
     "class"
   ],
   [
@@ -180,6 +186,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "@transmutable/bink/src/test/runner.js~runner",
+    "class/src/test/Runner.js~Runner.html",
+    "<span>Runner</span> <span class=\"search-result-import-path\">@transmutable/bink/src/test/Runner.js</span>",
+    "class"
+  ],
+  [
     "@transmutable/bink/src/components/atoms/selectioncomponent.js~selectioncomponent",
     "class/src/components/atoms/SelectionComponent.js~SelectionComponent.html",
     "<span>SelectionComponent</span> <span class=\"search-result-import-path\">@transmutable/bink/src/components/atoms/SelectionComponent.js</span>",
@@ -207,6 +219,24 @@ window.esdocSearchIndex = [
     "@transmutable/bink/src/components/molecules/formcomponent.js~switchfieldcomponent",
     "class/src/components/molecules/FormComponent.js~SwitchFieldComponent.html",
     "<span>SwitchFieldComponent</span> <span class=\"search-result-import-path\">@transmutable/bink/src/components/molecules/FormComponent.js</span>",
+    "class"
+  ],
+  [
+    "@transmutable/bink/src/test/synchronouspromise.js~synchronouspromise",
+    "class/src/test/SynchronousPromise.js~SynchronousPromise.html",
+    "<span>SynchronousPromise</span> <span class=\"search-result-import-path\">@transmutable/bink/src/test/SynchronousPromise.js</span>",
+    "class"
+  ],
+  [
+    "@transmutable/bink/src/test/test.js~test",
+    "class/src/test/Test.js~Test.html",
+    "<span>Test</span> <span class=\"search-result-import-path\">@transmutable/bink/src/test/Test.js</span>",
+    "class"
+  ],
+  [
+    "@transmutable/bink/src/test/testresultsrenderer.js~testresultsrenderer",
+    "class/src/test/TestResultsRenderer.js~TestResultsRenderer.html",
+    "<span>TestResultsRenderer</span> <span class=\"search-result-import-path\">@transmutable/bink/src/test/TestResultsRenderer.js</span>",
     "class"
   ],
   [
@@ -1176,42 +1206,6 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "src/mockservice.js",
-    "file/src/MockService.js.html",
-    "src/MockService.js",
-    "file"
-  ],
-  [
-    "src/mockservice.js~mockservice#addendpoint",
-    "class/src/MockService.js~MockService.html#instance-method-addEndpoint",
-    "src/MockService.js~MockService#addEndpoint",
-    "method"
-  ],
-  [
-    "src/mockservice.js~mockservice#addjsonendpoint",
-    "class/src/MockService.js~MockService.html#instance-method-addJSONEndpoint",
-    "src/MockService.js~MockService#addJSONEndpoint",
-    "method"
-  ],
-  [
-    "src/mockservice.js~mockservice#attachtodataobject",
-    "class/src/MockService.js~MockService.html#instance-method-attachToDataObject",
-    "src/MockService.js~MockService#attachToDataObject",
-    "method"
-  ],
-  [
-    "src/mockservice.js~mockservice#constructor",
-    "class/src/MockService.js~MockService.html#instance-constructor-constructor",
-    "src/MockService.js~MockService#constructor",
-    "method"
-  ],
-  [
-    "src/mockservice.js~mockservice#endpoints",
-    "class/src/MockService.js~MockService.html#instance-member-endpoints",
-    "src/MockService.js~MockService#endpoints",
-    "member"
-  ],
-  [
     "src/router.js",
     "file/src/Router.js.html",
     "src/Router.js",
@@ -2104,6 +2098,258 @@ window.esdocSearchIndex = [
     "file/src/index.js.html",
     "src/index.js",
     "file"
+  ],
+  [
+    "src/test/mockresponse.js",
+    "file/src/test/MockResponse.js.html",
+    "src/test/MockResponse.js",
+    "file"
+  ],
+  [
+    "src/test/mockresponse.js~mockresponse#blob",
+    "class/src/test/MockResponse.js~MockResponse.html#instance-member-blob",
+    "src/test/MockResponse.js~MockResponse#blob",
+    "member"
+  ],
+  [
+    "src/test/mockresponse.js~mockresponse#constructor",
+    "class/src/test/MockResponse.js~MockResponse.html#instance-constructor-constructor",
+    "src/test/MockResponse.js~MockResponse#constructor",
+    "method"
+  ],
+  [
+    "src/test/mockresponse.js~mockresponse#json",
+    "class/src/test/MockResponse.js~MockResponse.html#instance-method-json",
+    "src/test/MockResponse.js~MockResponse#json",
+    "method"
+  ],
+  [
+    "src/test/mockresponse.js~mockresponse#responsedata",
+    "class/src/test/MockResponse.js~MockResponse.html#instance-member-responseData",
+    "src/test/MockResponse.js~MockResponse#responseData",
+    "member"
+  ],
+  [
+    "src/test/mockresponse.js~mockresponse#status",
+    "class/src/test/MockResponse.js~MockResponse.html#instance-member-status",
+    "src/test/MockResponse.js~MockResponse#status",
+    "member"
+  ],
+  [
+    "src/test/mockservice.js",
+    "file/src/test/MockService.js.html",
+    "src/test/MockService.js",
+    "file"
+  ],
+  [
+    "src/test/mockservice.js~mockservice#addendpoint",
+    "class/src/test/MockService.js~MockService.html#instance-method-addEndpoint",
+    "src/test/MockService.js~MockService#addEndpoint",
+    "method"
+  ],
+  [
+    "src/test/mockservice.js~mockservice#addjsonendpoint",
+    "class/src/test/MockService.js~MockService.html#instance-method-addJSONEndpoint",
+    "src/test/MockService.js~MockService#addJSONEndpoint",
+    "method"
+  ],
+  [
+    "src/test/mockservice.js~mockservice#attachtodataobject",
+    "class/src/test/MockService.js~MockService.html#instance-method-attachToDataObject",
+    "src/test/MockService.js~MockService#attachToDataObject",
+    "method"
+  ],
+  [
+    "src/test/mockservice.js~mockservice#constructor",
+    "class/src/test/MockService.js~MockService.html#instance-constructor-constructor",
+    "src/test/MockService.js~MockService#constructor",
+    "method"
+  ],
+  [
+    "src/test/mockservice.js~mockservice#endpoints",
+    "class/src/test/MockService.js~MockService.html#instance-member-endpoints",
+    "src/test/MockService.js~MockService#endpoints",
+    "member"
+  ],
+  [
+    "src/test/runner.js",
+    "file/src/test/Runner.js.html",
+    "src/test/Runner.js",
+    "file"
+  ],
+  [
+    "src/test/runner.js~runner#run",
+    "class/src/test/Runner.js~Runner.html#instance-method-run",
+    "src/test/Runner.js~Runner#run",
+    "method"
+  ],
+  [
+    "src/test/runner.js~runner#runandlog",
+    "class/src/test/Runner.js~Runner.html#instance-method-runAndLog",
+    "src/test/Runner.js~Runner#runAndLog",
+    "method"
+  ],
+  [
+    "src/test/runner.js~runner#runandtap",
+    "class/src/test/Runner.js~Runner.html#instance-method-runAndTAP",
+    "src/test/Runner.js~Runner#runAndTAP",
+    "method"
+  ],
+  [
+    "src/test/synchronousfetchmap.js",
+    "file/src/test/SynchronousFetchMap.js.html",
+    "src/test/SynchronousFetchMap.js",
+    "file"
+  ],
+  [
+    "src/test/synchronouspromise.js",
+    "file/src/test/SynchronousPromise.js.html",
+    "src/test/SynchronousPromise.js",
+    "file"
+  ],
+  [
+    "src/test/synchronouspromise.js~synchronouspromise#catch",
+    "class/src/test/SynchronousPromise.js~SynchronousPromise.html#instance-method-catch",
+    "src/test/SynchronousPromise.js~SynchronousPromise#catch",
+    "method"
+  ],
+  [
+    "src/test/synchronouspromise.js~synchronouspromise#constructor",
+    "class/src/test/SynchronousPromise.js~SynchronousPromise.html#instance-constructor-constructor",
+    "src/test/SynchronousPromise.js~SynchronousPromise#constructor",
+    "method"
+  ],
+  [
+    "src/test/synchronouspromise.js~synchronouspromise#rejectfunction",
+    "class/src/test/SynchronousPromise.js~SynchronousPromise.html#instance-member-rejectFunction",
+    "src/test/SynchronousPromise.js~SynchronousPromise#rejectFunction",
+    "member"
+  ],
+  [
+    "src/test/synchronouspromise.js~synchronouspromise#resolvefunction",
+    "class/src/test/SynchronousPromise.js~SynchronousPromise.html#instance-member-resolveFunction",
+    "src/test/SynchronousPromise.js~SynchronousPromise#resolveFunction",
+    "member"
+  ],
+  [
+    "src/test/synchronouspromise.js~synchronouspromise#then",
+    "class/src/test/SynchronousPromise.js~SynchronousPromise.html#instance-method-then",
+    "src/test/SynchronousPromise.js~SynchronousPromise#then",
+    "method"
+  ],
+  [
+    "src/test/test.js",
+    "file/src/test/Test.js.html",
+    "src/test/Test.js",
+    "file"
+  ],
+  [
+    "src/test/test.js~test#assertequal",
+    "class/src/test/Test.js~Test.html#instance-method-assertEqual",
+    "src/test/Test.js~Test#assertEqual",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#assertinstanceof",
+    "class/src/test/Test.js~Test.html#instance-method-assertInstanceOf",
+    "src/test/Test.js~Test#assertInstanceOf",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#assertnotequal",
+    "class/src/test/Test.js~Test.html#instance-method-assertNotEqual",
+    "src/test/Test.js~Test#assertNotEqual",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#assertnull",
+    "class/src/test/Test.js~Test.html#instance-method-assertNull",
+    "src/test/Test.js~Test#assertNull",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#assertregexpmatchcount",
+    "class/src/test/Test.js~Test.html#instance-method-assertRegExpMatchCount",
+    "src/test/Test.js~Test#assertRegExpMatchCount",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#assertregexpmatches",
+    "class/src/test/Test.js~Test.html#instance-method-assertRegExpMatches",
+    "src/test/Test.js~Test#assertRegExpMatches",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#asserttrue",
+    "class/src/test/Test.js~Test.html#instance-method-assertTrue",
+    "src/test/Test.js~Test#assertTrue",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#asserttype",
+    "class/src/test/Test.js~Test.html#instance-method-assertType",
+    "src/test/Test.js~Test#assertType",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#assertioncount",
+    "class/src/test/Test.js~Test.html#instance-member-assertionCount",
+    "src/test/Test.js~Test#assertionCount",
+    "member"
+  ],
+  [
+    "src/test/test.js~test#constructor",
+    "class/src/test/Test.js~Test.html#instance-constructor-constructor",
+    "src/test/Test.js~Test#constructor",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#name",
+    "class/src/test/Test.js~Test.html#instance-member-name",
+    "src/test/Test.js~Test#name",
+    "member"
+  ],
+  [
+    "src/test/test.js~test#run",
+    "class/src/test/Test.js~Test.html#instance-method-run",
+    "src/test/Test.js~Test#run",
+    "method"
+  ],
+  [
+    "src/test/test.js~test#setupfunction",
+    "class/src/test/Test.js~Test.html#instance-member-setupFunction",
+    "src/test/Test.js~Test#setupFunction",
+    "member"
+  ],
+  [
+    "src/test/test.js~test#teardownfunction",
+    "class/src/test/Test.js~Test.html#instance-member-teardownFunction",
+    "src/test/Test.js~Test#teardownFunction",
+    "member"
+  ],
+  [
+    "src/test/test.js~test#testfunction",
+    "class/src/test/Test.js~Test.html#instance-member-testFunction",
+    "src/test/Test.js~Test#testFunction",
+    "member"
+  ],
+  [
+    "src/test/testresultsrenderer.js",
+    "file/src/test/TestResultsRenderer.js.html",
+    "src/test/TestResultsRenderer.js",
+    "file"
+  ],
+  [
+    "src/test/testresultsrenderer.js~testresultsrenderer#constructor",
+    "class/src/test/TestResultsRenderer.js~TestResultsRenderer.html#instance-constructor-constructor",
+    "src/test/TestResultsRenderer.js~TestResultsRenderer#constructor",
+    "method"
+  ],
+  [
+    "src/test/testresultsrenderer.js~testresultsrenderer#el",
+    "class/src/test/TestResultsRenderer.js~TestResultsRenderer.html#instance-get-el",
+    "src/test/TestResultsRenderer.js~TestResultsRenderer#el",
+    "member"
   ],
   [
     "src/throttle.js",

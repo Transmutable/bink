@@ -25,6 +25,7 @@ router.addListener('blog-app', (routeName, hash, ...regexMatches, ...parameters)
 	// `parameters` is empty in this example but could be any number of extra items in the route (see `addRoute`)
 })
 
+// Start must be called in order to begin routing
 router.start()
 */
 const Router = class extends EventHandler {
@@ -58,6 +59,7 @@ const Router = class extends EventHandler {
 	*/
 	start() {
 		this._checkHash()
+		// This event is triggered after the hash check (and its subsequent event) so that listeners are notified when in a fully started state
 		this.trigger(Router.StartedRoutingEvent, this)
 	}
 	_checkHash() {
@@ -76,9 +78,9 @@ const Router = class extends EventHandler {
 	}
 }
 
-Router.RouteAddedEvent = 'route-added'
-Router.StartedRoutingEvent = 'started-routing'
-Router.UnknownRouteEvent = 'unknown-route'
+Router.RouteAddedEvent = Symbol('route-added')
+Router.StartedRoutingEvent = Symbol('started-routing')
+Router.UnknownRouteEvent = Symbol('unknown-route')
 
 /*
 	Route tracks URL routes for {@link Router}

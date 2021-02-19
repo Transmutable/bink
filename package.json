@@ -6,9 +6,9 @@
 	"main": "src/index.js",
 	"scripts": {
 		"docs": "./node_modules/.bin/esdoc",
-		"lint": "eslint src",
-		"lint-fix": "eslint src --fix",
-		"prettier": "prettier --write src/*.js src/*/*.js src/*/*/*.js",
+		"lint": "eslint src tests",
+		"lint-fix": "eslint src tests --fix",
+		"prettier": "prettier --write src/*.js src/*/*.js src/*/*/*.js tests/*.js",
 		"examples": "http-server"
 	},
 	"repository": {

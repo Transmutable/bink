@@ -37,7 +37,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
@@ -80,6 +79,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#test">test</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockResponse.js~MockResponse.html">MockResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Runner.js~Runner.html">Runner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/SynchronousPromise.js~SynchronousPromise.html">SynchronousPromise</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Test.js~Test.html">Test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/TestResultsRenderer.js~TestResultsRenderer.html">TestResultsRenderer</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -180,6 +185,9 @@ class SplashApp extends App {
 <h2 id="use-bink-in-your-projects">Use Bink in your projects</h2><p>Bink is designed to be easy to use without an ecosystem like <a href="https://www.npmjs.com/">npm</a>.</p>
 <p>The quickest way to get started is to download the latest source code release zip from the <a href="https://github.com/Transmutable/bink/releases">Releases page</a> and copy the <code>/src/</code> and <code>/style/</code> directories into your project&apos;s doc root. That&apos;s how the examples mentioned above work. &#x261D;&#xFE0F;</p>
 <p>If you are stuck using <code>npm</code> (perhaps via <a href="https://yarnpkg.com/">yarn</a>) and need to use Bink that way (dang it) then it&apos;s available as <a href="https://www.npmjs.com/package/@transmutable/bink">@transmutable/bink</a>.</p>
+<h2 id="testing">Testing</h2><p>Bink includes a <a href="./src/test/">basic testing harness</a> and uses that harness to <a href="./tests/tests.js">test itself</a>. JavaScript testing frameworks are a huge topic and generally come with huge dependency trees, so it might be worth your time to see how this one works and decide whether a basic framework is all that you need.</p>
+<p>To run the Bink tests execute <code>npm run examples</code> and then point a browser at:</p>
+<p><a href="http://127.0.0.1:8000/tests/">http://127.0.0.1:8000/tests/</a></p>
 <h2 id="who-made-bink-">Who made Bink?</h2><p>Bink is the result of two+ decades of work on and with browsers by <a href="https://trevor.smith.name/">Trevor Flowers</a> who leads <a href="https://transmutable.com/">Transmutable</a> and is <a href="https://twitter.com/trevorfsmith">@TrevorFSmith</a> on Twitter.</p>
 </div>
 </div>

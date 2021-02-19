@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 565,
+  "end": 579,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 565,
+    "end": 579,
     "loc": {
       "start": {
         "line": 1,
@@ -600,7 +600,7 @@
       {
         "type": "ImportDeclaration",
         "start": 286,
-        "end": 328,
+        "end": 330,
         "loc": {
           "start": {
             "line": 9,
@@ -608,14 +608,14 @@
           },
           "end": {
             "line": 9,
-            "column": 42
+            "column": 44
           }
         },
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
             "start": 293,
-            "end": 304,
+            "end": 305,
             "loc": {
               "start": {
                 "line": 9,
@@ -623,13 +623,13 @@
               },
               "end": {
                 "line": 9,
-                "column": 18
+                "column": 19
               }
             },
             "local": {
               "type": "Identifier",
               "start": 293,
-              "end": 304,
+              "end": 305,
               "loc": {
                 "start": {
                   "line": 9,
@@ -637,39 +637,39 @@
                 },
                 "end": {
                   "line": 9,
-                  "column": 18
+                  "column": 19
                 },
-                "identifierName": "MockService"
+                "identifierName": "EventHandler"
               },
-              "name": "MockService"
+              "name": "EventHandler"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 310,
-          "end": 328,
+          "start": 311,
+          "end": 330,
           "loc": {
             "start": {
               "line": 9,
-              "column": 24
+              "column": 25
             },
             "end": {
               "line": 9,
-              "column": 42
+              "column": 44
             }
           },
           "extra": {
-            "rawValue": "./MockService.js",
-            "raw": "'./MockService.js'"
+            "rawValue": "./EventHandler.js",
+            "raw": "'./EventHandler.js'"
           },
-          "value": "./MockService.js"
+          "value": "./EventHandler.js"
         }
       },
       {
         "type": "ImportDeclaration",
-        "start": 329,
-        "end": 377,
+        "start": 331,
+        "end": 379,
         "loc": {
           "start": {
             "line": 10,
@@ -683,8 +683,8 @@
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
-            "start": 336,
-            "end": 350,
+            "start": 338,
+            "end": 352,
             "loc": {
               "start": {
                 "line": 10,
@@ -697,8 +697,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 336,
-              "end": 350,
+              "start": 338,
+              "end": 352,
               "loc": {
                 "start": {
                   "line": 10,
@@ -716,8 +716,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 356,
-          "end": 377,
+          "start": 358,
+          "end": 379,
           "loc": {
             "start": {
               "line": 10,
@@ -739,9 +739,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * This is used by rollup to create a handy all-in-one ES module\n ",
-            "start": 379,
-            "end": 451,
+            "value": "*\nThis index.js file is handy for importing all core classes in one statement.\n",
+            "start": 381,
+            "end": 464,
             "loc": {
               "start": {
                 "line": 12,
@@ -749,7 +749,7 @@
               },
               "end": {
                 "line": 14,
-                "column": 3
+                "column": 2
               }
             }
           }
@@ -757,8 +757,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 453,
-        "end": 564,
+        "start": 466,
+        "end": 578,
         "loc": {
           "start": {
             "line": 16,
@@ -766,15 +766,15 @@
           },
           "end": {
             "line": 16,
-            "column": 111
+            "column": 112
           }
         },
         "declaration": null,
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 462,
-            "end": 465,
+            "start": 475,
+            "end": 478,
             "loc": {
               "start": {
                 "line": 16,
@@ -787,8 +787,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 462,
-              "end": 465,
+              "start": 475,
+              "end": 478,
               "loc": {
                 "start": {
                   "line": 16,
@@ -805,8 +805,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 462,
-              "end": 465,
+              "start": 475,
+              "end": 478,
               "loc": {
                 "start": {
                   "line": 16,
@@ -824,8 +824,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 467,
-            "end": 470,
+            "start": 480,
+            "end": 483,
             "loc": {
               "start": {
                 "line": 16,
@@ -838,8 +838,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 467,
-              "end": 470,
+              "start": 480,
+              "end": 483,
               "loc": {
                 "start": {
                   "line": 16,
@@ -855,8 +855,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 467,
-              "end": 470,
+              "start": 480,
+              "end": 483,
               "loc": {
                 "start": {
                   "line": 16,
@@ -873,8 +873,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 472,
-            "end": 478,
+            "start": 485,
+            "end": 491,
             "loc": {
               "start": {
                 "line": 16,
@@ -887,8 +887,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 472,
-              "end": 478,
+              "start": 485,
+              "end": 491,
               "loc": {
                 "start": {
                   "line": 16,
@@ -904,8 +904,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 472,
-              "end": 478,
+              "start": 485,
+              "end": 491,
               "loc": {
                 "start": {
                   "line": 16,
@@ -922,8 +922,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 480,
-            "end": 488,
+            "start": 493,
+            "end": 501,
             "loc": {
               "start": {
                 "line": 16,
@@ -936,8 +936,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 480,
-              "end": 488,
+              "start": 493,
+              "end": 501,
               "loc": {
                 "start": {
                   "line": 16,
@@ -953,8 +953,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 480,
-              "end": 488,
+              "start": 493,
+              "end": 501,
               "loc": {
                 "start": {
                   "line": 16,
@@ -971,8 +971,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 490,
-            "end": 499,
+            "start": 503,
+            "end": 512,
             "loc": {
               "start": {
                 "line": 16,
@@ -985,8 +985,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 490,
-              "end": 499,
+              "start": 503,
+              "end": 512,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1002,8 +1002,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 490,
-              "end": 499,
+              "start": 503,
+              "end": 512,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1020,8 +1020,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 501,
-            "end": 510,
+            "start": 514,
+            "end": 523,
             "loc": {
               "start": {
                 "line": 16,
@@ -1034,8 +1034,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 501,
-              "end": 510,
+              "start": 514,
+              "end": 523,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1051,8 +1051,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 501,
-              "end": 510,
+              "start": 514,
+              "end": 523,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1069,8 +1069,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 512,
-            "end": 521,
+            "start": 525,
+            "end": 534,
             "loc": {
               "start": {
                 "line": 16,
@@ -1083,8 +1083,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 512,
-              "end": 521,
+              "start": 525,
+              "end": 534,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1100,8 +1100,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 512,
-              "end": 521,
+              "start": 525,
+              "end": 534,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1118,8 +1118,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 523,
-            "end": 533,
+            "start": 536,
+            "end": 546,
             "loc": {
               "start": {
                 "line": 16,
@@ -1132,8 +1132,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 523,
-              "end": 533,
+              "start": 536,
+              "end": 546,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1149,8 +1149,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 523,
-              "end": 533,
+              "start": 536,
+              "end": 546,
               "loc": {
                 "start": {
                   "line": 16,
@@ -1167,8 +1167,8 @@
           },
           {
             "type": "ExportSpecifier",
-            "start": 535,
-            "end": 546,
+            "start": 548,
+            "end": 560,
             "loc": {
               "start": {
                 "line": 16,
@@ -1176,70 +1176,70 @@
               },
               "end": {
                 "line": 16,
-                "column": 93
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 535,
-              "end": 546,
-              "loc": {
-                "start": {
-                  "line": 16,
-                  "column": 82
-                },
-                "end": {
-                  "line": 16,
-                  "column": 93
-                },
-                "identifierName": "MockService"
-              },
-              "name": "MockService"
-            },
-            "exported": {
-              "type": "Identifier",
-              "start": 535,
-              "end": 546,
-              "loc": {
-                "start": {
-                  "line": 16,
-                  "column": 82
-                },
-                "end": {
-                  "line": 16,
-                  "column": 93
-                },
-                "identifierName": "MockService"
-              },
-              "name": "MockService"
-            }
-          },
-          {
-            "type": "ExportSpecifier",
-            "start": 548,
-            "end": 562,
-            "loc": {
-              "start": {
-                "line": 16,
-                "column": 95
-              },
-              "end": {
-                "line": 16,
-                "column": 109
+                "column": 94
               }
             },
             "local": {
               "type": "Identifier",
               "start": 548,
-              "end": 562,
+              "end": 560,
               "loc": {
                 "start": {
                   "line": 16,
-                  "column": 95
+                  "column": 82
                 },
                 "end": {
                   "line": 16,
-                  "column": 109
+                  "column": 94
+                },
+                "identifierName": "EventHandler"
+              },
+              "name": "EventHandler"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 548,
+              "end": 560,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 82
+                },
+                "end": {
+                  "line": 16,
+                  "column": 94
+                },
+                "identifierName": "EventHandler"
+              },
+              "name": "EventHandler"
+            }
+          },
+          {
+            "type": "ExportSpecifier",
+            "start": 562,
+            "end": 576,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 96
+              },
+              "end": {
+                "line": 16,
+                "column": 110
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 562,
+              "end": 576,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 96
+                },
+                "end": {
+                  "line": 16,
+                  "column": 110
                 },
                 "identifierName": "DataCollection"
               },
@@ -1247,16 +1247,16 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 548,
-              "end": 562,
+              "start": 562,
+              "end": 576,
               "loc": {
                 "start": {
                   "line": 16,
-                  "column": 95
+                  "column": 96
                 },
                 "end": {
                   "line": 16,
-                  "column": 109
+                  "column": 110
                 },
                 "identifierName": "DataCollection"
               },
@@ -1268,9 +1268,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * This is used by rollup to create a handy all-in-one ES module\n ",
-            "start": 379,
-            "end": 451,
+            "value": "*\nThis index.js file is handy for importing all core classes in one statement.\n",
+            "start": 381,
+            "end": 464,
             "loc": {
               "start": {
                 "line": 12,
@@ -1278,7 +1278,7 @@
               },
               "end": {
                 "line": 14,
-                "column": 3
+                "column": 2
               }
             }
           }
@@ -1290,9 +1290,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * This is used by rollup to create a handy all-in-one ES module\n ",
-      "start": 379,
-      "end": 451,
+      "value": "*\nThis index.js file is handy for importing all core classes in one statement.\n",
+      "start": 381,
+      "end": 464,
       "loc": {
         "start": {
           "line": 12,
@@ -1300,7 +1300,7 @@
         },
         "end": {
           "line": 14,
-          "column": 3
+          "column": 2
         }
       }
     }
@@ -2252,9 +2252,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "MockService",
+      "value": "EventHandler",
       "start": 293,
-      "end": 304,
+      "end": 305,
       "loc": {
         "start": {
           "line": 9,
@@ -2262,7 +2262,7 @@
         },
         "end": {
           "line": 9,
-          "column": 18
+          "column": 19
         }
       }
     },
@@ -2279,16 +2279,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 305,
-      "end": 309,
+      "start": 306,
+      "end": 310,
       "loc": {
         "start": {
           "line": 9,
-          "column": 19
+          "column": 20
         },
         "end": {
           "line": 9,
-          "column": 23
+          "column": 24
         }
       }
     },
@@ -2305,17 +2305,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./MockService.js",
-      "start": 310,
-      "end": 328,
+      "value": "./EventHandler.js",
+      "start": 311,
+      "end": 330,
       "loc": {
         "start": {
           "line": 9,
-          "column": 24
+          "column": 25
         },
         "end": {
           "line": 9,
-          "column": 42
+          "column": 44
         }
       }
     },
@@ -2334,8 +2334,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 329,
-      "end": 335,
+      "start": 331,
+      "end": 337,
       "loc": {
         "start": {
           "line": 10,
@@ -2360,8 +2360,8 @@
         "binop": null
       },
       "value": "DataCollection",
-      "start": 336,
-      "end": 350,
+      "start": 338,
+      "end": 352,
       "loc": {
         "start": {
           "line": 10,
@@ -2386,8 +2386,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 351,
-      "end": 355,
+      "start": 353,
+      "end": 357,
       "loc": {
         "start": {
           "line": 10,
@@ -2413,8 +2413,8 @@
         "updateContext": null
       },
       "value": "./DataCollection.js",
-      "start": 356,
-      "end": 377,
+      "start": 358,
+      "end": 379,
       "loc": {
         "start": {
           "line": 10,
@@ -2428,9 +2428,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * This is used by rollup to create a handy all-in-one ES module\n ",
-      "start": 379,
-      "end": 451,
+      "value": "*\nThis index.js file is handy for importing all core classes in one statement.\n",
+      "start": 381,
+      "end": 464,
       "loc": {
         "start": {
           "line": 12,
@@ -2438,7 +2438,7 @@
         },
         "end": {
           "line": 14,
-          "column": 3
+          "column": 2
         }
       }
     },
@@ -2457,8 +2457,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 453,
-      "end": 459,
+      "start": 466,
+      "end": 472,
       "loc": {
         "start": {
           "line": 16,
@@ -2482,8 +2482,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 460,
-      "end": 461,
+      "start": 473,
+      "end": 474,
       "loc": {
         "start": {
           "line": 16,
@@ -2508,8 +2508,8 @@
         "binop": null
       },
       "value": "App",
-      "start": 462,
-      "end": 465,
+      "start": 475,
+      "end": 478,
       "loc": {
         "start": {
           "line": 16,
@@ -2534,8 +2534,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 465,
-      "end": 466,
+      "start": 478,
+      "end": 479,
       "loc": {
         "start": {
           "line": 16,
@@ -2560,8 +2560,8 @@
         "binop": null
       },
       "value": "dom",
-      "start": 467,
-      "end": 470,
+      "start": 480,
+      "end": 483,
       "loc": {
         "start": {
           "line": 16,
@@ -2586,8 +2586,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 470,
-      "end": 471,
+      "start": 483,
+      "end": 484,
       "loc": {
         "start": {
           "line": 16,
@@ -2612,8 +2612,8 @@
         "binop": null
       },
       "value": "Router",
-      "start": 472,
-      "end": 478,
+      "start": 485,
+      "end": 491,
       "loc": {
         "start": {
           "line": 16,
@@ -2638,8 +2638,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 478,
-      "end": 479,
+      "start": 491,
+      "end": 492,
       "loc": {
         "start": {
           "line": 16,
@@ -2664,8 +2664,8 @@
         "binop": null
       },
       "value": "throttle",
-      "start": 480,
-      "end": 488,
+      "start": 493,
+      "end": 501,
       "loc": {
         "start": {
           "line": 16,
@@ -2690,8 +2690,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 488,
-      "end": 489,
+      "start": 501,
+      "end": 502,
       "loc": {
         "start": {
           "line": 16,
@@ -2716,8 +2716,8 @@
         "binop": null
       },
       "value": "Component",
-      "start": 490,
-      "end": 499,
+      "start": 503,
+      "end": 512,
       "loc": {
         "start": {
           "line": 16,
@@ -2742,8 +2742,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 499,
-      "end": 500,
+      "start": 512,
+      "end": 513,
       "loc": {
         "start": {
           "line": 16,
@@ -2768,8 +2768,8 @@
         "binop": null
       },
       "value": "DataModel",
-      "start": 501,
-      "end": 510,
+      "start": 514,
+      "end": 523,
       "loc": {
         "start": {
           "line": 16,
@@ -2794,8 +2794,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 510,
-      "end": 511,
+      "start": 523,
+      "end": 524,
       "loc": {
         "start": {
           "line": 16,
@@ -2820,8 +2820,8 @@
         "binop": null
       },
       "value": "Localizer",
-      "start": 512,
-      "end": 521,
+      "start": 525,
+      "end": 534,
       "loc": {
         "start": {
           "line": 16,
@@ -2846,8 +2846,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 521,
-      "end": 522,
+      "start": 534,
+      "end": 535,
       "loc": {
         "start": {
           "line": 16,
@@ -2872,8 +2872,8 @@
         "binop": null
       },
       "value": "DataObject",
-      "start": 523,
-      "end": 533,
+      "start": 536,
+      "end": 546,
       "loc": {
         "start": {
           "line": 16,
@@ -2898,8 +2898,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 533,
-      "end": 534,
+      "start": 546,
+      "end": 547,
       "loc": {
         "start": {
           "line": 16,
@@ -2923,9 +2923,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "MockService",
-      "start": 535,
-      "end": 546,
+      "value": "EventHandler",
+      "start": 548,
+      "end": 560,
       "loc": {
         "start": {
           "line": 16,
@@ -2933,7 +2933,7 @@
         },
         "end": {
           "line": 16,
-          "column": 93
+          "column": 94
         }
       }
     },
@@ -2950,16 +2950,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 546,
-      "end": 547,
+      "start": 560,
+      "end": 561,
       "loc": {
         "start": {
           "line": 16,
-          "column": 93
+          "column": 94
         },
         "end": {
           "line": 16,
-          "column": 94
+          "column": 95
         }
       }
     },
@@ -2976,16 +2976,16 @@
         "binop": null
       },
       "value": "DataCollection",
-      "start": 548,
-      "end": 562,
+      "start": 562,
+      "end": 576,
       "loc": {
         "start": {
           "line": 16,
-          "column": 95
+          "column": 96
         },
         "end": {
           "line": 16,
-          "column": 109
+          "column": 110
         }
       }
     },
@@ -3001,16 +3001,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 563,
-      "end": 564,
+      "start": 577,
+      "end": 578,
       "loc": {
         "start": {
           "line": 16,
-          "column": 110
+          "column": 111
         },
         "end": {
           "line": 16,
-          "column": 111
+          "column": 112
         }
       }
     },
@@ -3027,8 +3027,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 565,
-      "end": 565,
+      "start": 579,
+      "end": 579,
       "loc": {
         "start": {
           "line": 17,
