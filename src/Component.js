@@ -73,6 +73,9 @@ const Component = class extends EventHandler {
 		)
 		this.cleanedUp = false
 		this._dom = this.options.dom || dom.div()
+		if (typeof this._dom.addClass === 'undefined') {
+			this._dom = dom.enhanceElement(this._dom)
+		}
 		this._anchor = this.options.anchor
 
 		// See the Binder class below for info
@@ -327,11 +330,11 @@ const Binder = class {
 
 	cleanup() {
 		for (const bindInfo of this._boundCallbacks) {
-			bindInfo.dataObject.removeListener(bindInfo.callback)
+			bindInfo.dataObject.removeListener(EventHandler.ALL_EVENTS, bindInfo.callback)
 		}
 		for (const info of this._eventCallbacks) {
 			if (info.target instanceof EventHandler) {
-				info.target.removeListener(info.callback, info.eventName)
+				info.target.removeListener(info.eventName, info.callback)
 			} else {
 				info.target.removeEventListener(info.eventName, info.callback)
 			}

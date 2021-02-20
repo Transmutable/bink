@@ -37,7 +37,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
@@ -80,6 +79,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#test">test</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockResponse.js~MockResponse.html">MockResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Runner.js~Runner.html">Runner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/SynchronousPromise.js~SynchronousPromise.html">SynchronousPromise</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Test.js~Test.html">Test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/TestResultsRenderer.js~TestResultsRenderer.html">TestResultsRenderer</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -129,14 +134,7 @@ dom.a(lt(&apos;Click me&apos;), { href: &apos;/some-url/&apos; })
 */
 const dom = {}
 
-/**
-domElementFunction is the behind the scenes logic for the functions like dom.div(...)
-Below you will find the loop that uses domElementFunction
-*/
-dom.domElementFunction = function (tagName, ...params) {
-	// Create a boring DOM element
-	const element = document.createElement(tagName)
-
+dom.enhanceElement = function (element) {
 	// A convenience function to allow chaining like `let fooDiv = dom.div().appendTo(document.body)`
 	element.appendTo = function (parent) {
 		parent.appendChild(this)
@@ -233,8 +231,15 @@ dom.domElementFunction = function (tagName, ...params) {
 		}
 		return this
 	}
+	return element
+}
 
-	// Append the children parameters
+/**
+domElementFunction is the behind the scenes logic for the functions like dom.div(...)
+Below you will find the loop that uses domElementFunction
+*/
+dom.domElementFunction = function (tagName, ...params) {
+	const element = dom.enhanceElement(document.createElement(tagName))
 	for (const child of params) {
 		element.append(child)
 	}

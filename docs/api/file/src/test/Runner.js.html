@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/test/Runner.js | @transmutable/bink</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A sleek and reactive framework for web pages"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@transmutable/bink"><meta property="twitter:description" content="A sleek and reactive framework for web pages"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/Transmutable/bink"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Component.js~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataCollection.js~DataCollection.html">DataCollection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataModel.js~DataModel.html">DataModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DataObject.js~DataObject.html">DataObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldo">ldo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ldt">ldt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-lt">lt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-throttle">throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dom">dom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-throttledConsoleLog">throttledConsoleLog</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-atoms">components/atoms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/AudioComponent.js~AudioComponent.html">AudioComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ButtonComponent.js~ButtonComponent.html">ButtonComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/HeadingComponent.js~HeadingComponent.html">HeadingComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ImageComponent.js~ImageComponent.html">ImageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LabelComponent.js~LabelComponent.html">LabelComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/LinkComponent.js~LinkComponent.html">LinkComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/MultiComponent.js~MultiComponent.html">MultiComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ProgressComponent.js~ProgressComponent.html">ProgressComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SelectionComponent.js~SelectionComponent.html">SelectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SliderComponent.js~SliderComponent.html">SliderComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/SwitchComponent.js~SwitchComponent.html">SwitchComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextComponent.js~TextComponent.html">TextComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/TextInputComponent.js~TextInputComponent.html">TextInputComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/ToggleComponent.js~ToggleComponent.html">ToggleComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/atoms/VideoComponent.js~VideoComponent.html">VideoComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-molecules">components/molecules</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/AudioPlayerComponent.js~AudioPlayerComponent.html">AudioPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/CardComponent.js~CardComponent.html">CardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~DateFieldComponent.html">DateFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormComponent.html">FormComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~FormFieldComponent.html">FormFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SelectionFieldComponent.html">SelectionFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~SwitchFieldComponent.html">SwitchFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/FormComponent.js~TextInputFieldComponent.html">TextInputFieldComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ImageCardComponent.js~ImageCardComponent.html">ImageCardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/MenuComponent.js~MenuComponent.html">MenuComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/PaginationComponent.js~PaginationComponent.html">PaginationComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/ToolTipComponent.js~ToolTipComponent.html">ToolTipComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/VideoPlayerComponent.js~VideoPlayerComponent.html">VideoPlayerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/molecules/WaitComponent.js~WaitComponent.html">WaitComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organisms">components/organisms</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~CollectionComponent.html">CollectionComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#test">test</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockResponse.js~MockResponse.html">MockResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Runner.js~Runner.html">Runner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/SynchronousPromise.js~SynchronousPromise.html">SynchronousPromise</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Test.js~Test.html">Test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/TestResultsRenderer.js~TestResultsRenderer.html">TestResultsRenderer</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/test/Runner.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Test from &apos;./Test.js&apos;
+import EventHandler from &apos;../EventHandler.js&apos;
+
+/**
+Runner is responsible for running {@link Test}s and returning the results
+It also emits a series of events that test harnesses can use to render status as tests are run
+*/
+const Runner = class extends EventHandler {
+	/**
+	Run tests and return a data structure of results
+	@param {Test[]} tests
+	@return {Object[]} - Object attributes: {bool} passed, {Test} test, {string} message
+	@property {number} passedCount
+	@property {number} failedCount
+	@property {number} assertionCount
+	*/
+	async run(tests) {
+		this.trigger(this.events.RunStarted, this, tests)
+		const results = []
+		results.passedCount = 0
+		results.failedCount = 0
+		results.assertionCount = 0
+
+		for (let i = 0; i &lt; tests.length; i++) {
+			const test = tests[i]
+			this._listenToTest(i, test)
+			const { passed, context } = await test.run()
+			results.push({
+				test: test,
+				passed: passed,
+				context: context,
+			})
+			if (passed) {
+				results.passedCount += 1
+			} else {
+				results.failedCount += 1
+			}
+			results.assertionCount += test.assertionCount
+		}
+
+		this.trigger(this.events.RunEnded, this, results)
+		return results
+	}
+
+	/**
+	Run tests and print a summary to the console
+	*/
+	async runAndLog(tests) {
+		const results = await Runner.run(tests)
+		console.log(
+			`total: ${results.length}  passed: ${results.passedCount}  failed: ${results.failedCount} assertions: ${results.assertionCount}`
+		)
+	}
+
+	/**
+	Run tests and return TAP formatted results
+	@param {Test[]} tests
+	@return {string} - TAP formatted results
+	*/
+	async runAndTAP(tests) {
+		return TAPFormatter.formatTestResults(await Runner.run(tests))
+	}
+
+	_listenToTest(index, test) {
+		// Proxies test events into runner events with a test index
+		test.addListener(Test.Started, (eventName, test) =&gt; {
+			this.trigger(this.events.Started, index, test)
+		})
+
+		test.addListener(Test.SetupSucceeded, (eventName, test, context) =&gt; {
+			this.trigger(this.events.SetupSucceeded, index, test, context)
+		})
+
+		test.addListener(Test.SetupFailed, (eventName, test, context) =&gt; {
+			this.trigger(this.events.SetupFailed, index, test, context)
+		})
+
+		test.addListener(Test.Passed, (eventName, test, context) =&gt; {
+			this.trigger(this.events.Passed, index, test, context)
+		})
+
+		test.addListener(Test.Failed, (eventName, test, context) =&gt; {
+			this.trigger(this.events.Failed, index, test, context)
+		})
+
+		test.addListener(Test.TeardownSucceeded, (eventName, test, context) =&gt; {
+			this.trigger(this.events.TeardownSucceeded, index, test, context)
+		})
+
+		test.addListener(Test.TeardownFailed, (eventName, test, context) =&gt; {
+			this.trigger(this.events.TeardownFailed, index, test, context)
+		})
+	}
+}
+
+// Events
+const events = {
+	RunStarted: Symbol(&apos;run-started&apos;),
+	RunEnded: Symbol(&apos;run-ended&apos;),
+	Started: Symbol(&apos;test-started&apos;),
+	SetupSucceeded: Symbol(&apos;test-setup-succeeded&apos;),
+	SetupFailed: Symbol(&apos;test-setup-failed&apos;),
+	Passed: Symbol(&apos;test-passed&apos;),
+	Failed: Symbol(&apos;test-failed&apos;),
+	TeardownSucceeded: Symbol(&apos;test-teardown-succeeded&apos;),
+	TeardownFailed: Symbol(&apos;test-teardown-failed&apos;),
+}
+
+Runner.prototype.events = events
+
+/**
+Implements formatting of test results into TAP v13
+http://testanything.org/tap-version-13-specification.html
+*/
+const TAPFormatter = class {
+	/**
+	@param {Object[]} testResults - data returned from Runner.run(...)
+	@return {string} - TAP formatted results
+	*/
+	static formatTestResults(testResults) {
+		const tapLines = [] // An array of lines of text
+		tapLines.push(&apos;TAP version 13&apos;)
+		tapLines.push(`1..${testResults.length}`)
+		for (let i = 0; i &lt; testResults.length; i++) {
+			tapLines.push(...TAPFormatter.formatTestResult(i + 1, testResults[i]))
+		}
+		return tapLines.join(&apos;\n&apos;)
+	}
+
+	static formatTestResult(testNumber, testResult) {
+		const tapLines = []
+		const status = testResult.passed ? &apos;ok&apos; : &apos;not ok&apos;
+		tapLines.push(`${status} ${testNumber} ${testResult.test.name}`)
+		if (testResult.context !== null &amp;&amp; Object.keys(testResult.context).length &gt; 0) {
+			tapLines.push(&apos;\t---&apos;)
+			for (const key of Object.keys(testResult.context)) {
+				tapLines.push(`\t${key}: ${testResult.context[key]}`)
+			}
+			tapLines.push(&apos;\t...&apos;)
+		}
+		return tapLines
+	}
+}
+
+export default Runner
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

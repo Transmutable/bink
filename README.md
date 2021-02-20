@@ -118,6 +118,15 @@ The quickest way to get started is to download the latest source code release zi
 
 If you are stuck using `npm` (perhaps via [yarn](https://yarnpkg.com/)) and need to use Bink that way (dang it) then it's available as [@transmutable/bink]( https://www.npmjs.com/package/@transmutable/bink).
 
+## Testing
+
+Bink includes a [basic testing harness](https://github.com/Transmutable/bink/tree/main/src/test) and uses that harness to [test itself](https://github.com/Transmutable/bink/tree/main/tests/tests.js). JavaScript testing frameworks are a huge topic and generally come with huge dependency trees. It might be worth your time to see how Bink's works and perhaps decide that a basic framework is all that you need.
+
+To run the Bink tests, start the test server `npm run examples` and then point a browser at:
+
+http://127.0.0.1:8000/tests/
+
+
 ## Who made Bink?
 
 Bink is the result of two+ decades of work on and with browsers by [Trevor Flowers](https://trevor.smith.name/) who leads [Transmutable](https://transmutable.com/) and is [@TrevorFSmith](https://twitter.com/trevorfsmith) on Twitter.

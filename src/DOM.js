@@ -42,14 +42,7 @@ dom.a(lt('Click me'), { href: '/some-url/' })
 */
 const dom = {}
 
-/**
-domElementFunction is the behind the scenes logic for the functions like dom.div(...)
-Below you will find the loop that uses domElementFunction
-*/
-dom.domElementFunction = function (tagName, ...params) {
-	// Create a boring DOM element
-	const element = document.createElement(tagName)
-
+dom.enhanceElement = function (element) {
 	// A convenience function to allow chaining like `let fooDiv = dom.div().appendTo(document.body)`
 	element.appendTo = function (parent) {
 		parent.appendChild(this)
@@ -146,8 +139,15 @@ dom.domElementFunction = function (tagName, ...params) {
 		}
 		return this
 	}
+	return element
+}
 
-	// Append the children parameters
+/**
+domElementFunction is the behind the scenes logic for the functions like dom.div(...)
+Below you will find the loop that uses domElementFunction
+*/
+dom.domElementFunction = function (tagName, ...params) {
+	const element = dom.enhanceElement(document.createElement(tagName))
 	for (const child of params) {
 		element.append(child)
 	}

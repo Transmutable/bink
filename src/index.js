@@ -6,11 +6,11 @@ import DataModel from './DataModel.js'
 import Localizer from './Localizer.js'
 import { throttle } from './throttle.js'
 import DataObject from './DataObject.js'
-import MockService from './MockService.js'
+import EventHandler from './EventHandler.js'
 import DataCollection from './DataCollection.js'
 
 /**
- * This is used by rollup to create a handy all-in-one ES module
- */
+This index.js file is handy for importing all core classes in one statement.
+*/
 
-export { App, dom, Router, throttle, Component, DataModel, Localizer, DataObject, MockService, DataCollection }
+export { App, dom, Router, throttle, Component, DataModel, Localizer, DataObject, EventHandler, DataCollection }

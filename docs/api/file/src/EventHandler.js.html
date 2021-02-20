@@ -37,7 +37,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventHandler.js~EventHandler.html">EventHandler</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Localizer.html">Localizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Localizer.js~Translation.html">Translation</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MockService.js~MockService.html">MockService</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Router.js~Router.html">Router</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ld">ld</a></span></span></li>
@@ -80,6 +79,12 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/CollectionComponent.js~DefaultItemComponent.html">DefaultItemComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MastheadComponent.js~MastheadComponent.html">MastheadComponent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/organisms/MediaGridComponent.js~MediaGridComponent.html">MediaGridComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#test">test</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockResponse.js~MockResponse.html">MockResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/MockService.js~MockService.html">MockService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Runner.js~Runner.html">Runner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/SynchronousPromise.js~SynchronousPromise.html">SynchronousPromise</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/Test.js~Test.html">Test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/test/TestResultsRenderer.js~TestResultsRenderer.html">TestResultsRenderer</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -128,7 +133,7 @@ const EventHandler = class {
 			}
 		}
 		for (const listener of listenersToRemove) {
-			this.removeListener(listener.callback, listener.eventName)
+			this.removeListener(listener.eventName, listener.callback)
 		}
 	}
 
@@ -142,6 +147,10 @@ const EventHandler = class {
 	@param {boolean} [once=false] If true then the listener is removed after receiving one event
 	*/
 	addListener(eventName, callback, once = false) {
+		if (typeof eventName === &apos;function&apos;) {
+			console.error(&apos;EventHandler.addListener call parameters can not start with a function: &apos;, eventName, callback)
+			return
+		}
 		this.listeners.push(new EventListener(eventName, callback, once))
 	}
 

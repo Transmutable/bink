@@ -1,17 +1,17 @@
-import DataObject from './DataObject.js'
+import DataObject from '../DataObject.js'
 
-/*
-`MockService` attaches itself to DataObject and will service fetches if it has a matching endpoint, otherwise it uses window.fetch.
+/**
+MockService attaches itself to DataObject and will service fetches if it has a matching endpoint, otherwise it uses window.fetch.
 
-This is used mostly in testing but is occasionally useful for offline situations.
+@example
+* let service = new MockService()
+* service.addEndpoint(/^blog\/([0-9a-z]+)$/, (...params) => {
+* 	var debug = {hello: "world"}
+* 	let blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'});
+* 	return new Response(blob, { "status" : 200 , "statusText" : "OK" })
+* })
+* service.attachToDataObject()
 
-	let service = new MockService()
-	service.addEndpoint(/^blog\/([0-9a-z]+)$/, (...params) => {
-		var debug = {hello: "world"}
-		let blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'});
-		return new Response(blob, { "status" : 200 , "statusText" : "OK" })
-	})
-	service.attachToDataObject()
 */
 export default class MockService {
 	constructor() {

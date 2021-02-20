@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./tests.css" type='text/css'>
+		<title>Bink tests</title>
+	</head>
+	<body>
+		<h1>Bink tests</h1>
+		<div id="results"></div>
+
+		<script type="module">
+			import {tests, Runner, Renderer} from './tests.js'
+
+			let resultsDOM = document.getElementById('results')
+			let resultsRenderer = null
+
+			function init(){
+				const runner = new Runner()
+				resultsRenderer = new Renderer(runner)
+				resultsDOM.appendChild(resultsRenderer.el)
+				runner.run(tests).catch(err => {
+					console.error('Error', err)
+				})
+			}
+			window.addEventListener('DOMContentLoaded', init)
+		</script>
+
+	</body>
+</html>
