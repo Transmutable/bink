@@ -120,9 +120,9 @@ If you are stuck using `npm` (perhaps via [yarn](https://yarnpkg.com/)) and need
 
 ## Testing
 
-Bink includes a [basic testing harness](./src/test/) and uses that harness to [test itself](./tests/tests.js). JavaScript testing frameworks are a huge topic and generally come with huge dependency trees, so it might be worth your time to see how this one works and decide whether a basic framework is all that you need.
+Bink includes a [basic testing harness](https://github.com/Transmutable/bink/tree/main/src/test) and uses that harness to [test itself](https://github.com/Transmutable/bink/tree/main/tests/tests.js). JavaScript testing frameworks are a huge topic and generally come with huge dependency trees. It might be worth your time to see how Bink's works and perhaps decide that a basic framework is all that you need.
 
-To run the Bink tests execute `npm run examples` and then point a browser at:
+To run the Bink tests, start the test server `npm run examples` and then point a browser at:
 
 http://127.0.0.1:8000/tests/
 
