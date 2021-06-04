@@ -69,14 +69,10 @@ const MastheadComponent = class extends Component {
 		if (this.options.menuItems) {
 			for (const item of this.options.menuItems) {
 				this._menuComponent.appendMenuItem(
-					new LabelComponent(
-						null,
-						{
-							text: item.name,
-							anchor: item.anchor,
-						},
-						this.inheritedOptions
-					)
+					new LabelComponent(null, {
+						text: item.name,
+						anchor: item.anchor,
+					})
 				)
 			}
 		}

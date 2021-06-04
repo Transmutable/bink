@@ -159,6 +159,13 @@ const DataModel = class extends DataObject {
 	}
 
 	/**
+	@return {string} The model data as a JSON-formatted string
+	*/
+	stringify() {
+		return JSON.stringify(this._data)
+	}
+
+	/**
 	Calls the DELETE method on the service resource
 	@return {Promise}
 	*/
@@ -202,6 +209,9 @@ const DataModel = class extends DataObject {
 		return false
 	}
 }
+
+DataModel.SavingEvent = Symbol('do-saving')
+DataModel.SavedEvent = Symbol('do-saved')
 
 export default DataModel
 export { DataModel }

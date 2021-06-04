@@ -1,6 +1,6 @@
 {
 	"name": "@transmutable/bink",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"author": "Trevor F. Smith <trevor@transmutable.com> (https://transmutable.com/)",
 	"description": "A sleek and reactive framework for web pages",
 	"main": "src/index.js",

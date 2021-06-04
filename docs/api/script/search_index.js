@@ -900,6 +900,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/datacollection.js~datacollection#stringify",
+    "class/src/DataCollection.js~DataCollection.html#instance-method-stringify",
+    "src/DataCollection.js~DataCollection#stringify",
+    "method"
+  ],
+  [
     "src/datamodel.js",
     "file/src/DataModel.js.html",
     "src/DataModel.js",
@@ -975,6 +981,12 @@ window.esdocSearchIndex = [
     "src/datamodel.js~datamodel#setbatch",
     "class/src/DataModel.js~DataModel.html#instance-method-setBatch",
     "src/DataModel.js~DataModel#setBatch",
+    "method"
+  ],
+  [
+    "src/datamodel.js~datamodel#stringify",
+    "class/src/DataModel.js~DataModel.html#instance-method-stringify",
+    "src/DataModel.js~DataModel#stringify",
     "method"
   ],
   [
@@ -1059,6 +1071,12 @@ window.esdocSearchIndex = [
     "src/dataobject.js~dataobject#save",
     "class/src/DataObject.js~DataObject.html#instance-method-save",
     "src/DataObject.js~DataObject#save",
+    "method"
+  ],
+  [
+    "src/dataobject.js~dataobject#stringify",
+    "class/src/DataObject.js~DataObject.html#instance-method-stringify",
+    "src/DataObject.js~DataObject#stringify",
     "method"
   ],
   [

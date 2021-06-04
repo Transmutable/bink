@@ -52,6 +52,13 @@ const DataCollection = class extends DataObject {
 	}
 
 	/**
+	@return {string} a JSON-formatted version of this collection's data
+	*/
+	stringify() {
+		throw new Error('Extending DataCollections must implement their own stringify')
+	}
+
+	/**
 	@param {int} index
 	@return {DataObject} the DataObject at `index` in the internal list
 	@throws {Error} throw when index is out of range
@@ -201,7 +208,7 @@ const DataCollection = class extends DataObject {
 		if (this._comparator) {
 			this.sort(this._comparator)
 		}
-		this.trigger(DataCollection.ResetEvent, this)
+		this.trigger(DataObject.ResetEvent, this)
 	}
 
 	/**
@@ -271,10 +278,8 @@ const DataCollection = class extends DataObject {
 }
 
 DataCollection.ChangedEventPrefix = 'changed:'
-
 DataCollection.AddedEvent = Symbol('dc-added')
 DataCollection.RemovedEvent = Symbol('dc-removed')
-DataCollection.ResetEvent = Symbol('dc-reset')
 DataCollection.SortedEvent = Symbol('dc-sorted')
 
 DataCollection.defaultComparator = function (dataObject1, dataObject2) {

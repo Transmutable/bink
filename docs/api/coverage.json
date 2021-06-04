@@ -1,7 +1,7 @@
 {
-  "coverage": "49.5%",
-  "expectCount": 503,
-  "actualCount": 249,
+  "coverage": "49.8%",
+  "expectCount": 506,
+  "actualCount": 252,
   "files": {
     "src/App.js": {
       "expectCount": 12,
@@ -40,29 +40,29 @@
       ]
     },
     "src/DataCollection.js": {
-      "expectCount": 24,
-      "actualCount": 16,
+      "expectCount": 25,
+      "actualCount": 17,
       "undocumentLines": [
-        280,
+        285,
         37,
         38,
         39,
         46,
-        116,
-        234,
-        260
+        123,
+        241,
+        267
       ]
     },
     "src/DataModel.js": {
-      "expectCount": 15,
-      "actualCount": 14,
+      "expectCount": 16,
+      "actualCount": 15,
       "undocumentLines": [
         134
       ]
     },
     "src/DataObject.js": {
-      "expectCount": 18,
-      "actualCount": 17,
+      "expectCount": 19,
+      "actualCount": 18,
       "undocumentLines": [
         16
       ]
