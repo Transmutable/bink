@@ -155,6 +155,13 @@ const DataObject = class extends EventHandler {
 	}
 
 	/**
+	@return {string} Extending classes must return a JSON-formatted version of their data
+	*/
+	stringify() {
+		throw new Error(&apos;Extending classes must implement stringify&apos;)
+	}
+
+	/**
 	If already reset, immediately call callback, otherwise wait until the first reset and then call callback
 
 	@example
@@ -285,14 +292,14 @@ const DataObject = class extends EventHandler {
 	save() {
 		return new Promise(
 			function (resolve, reject) {
-				this.trigger(DataObject.SavedEvent, this)
+				this.trigger(DataObject.SavingEvent, this)
 				const options = Object.assign({}, this.fetchOptions)
 				if (this.isNew) {
 					options.method = &apos;post&apos;
 				} else {
 					options.method = &apos;put&apos;
 				}
-				options.body = JSON.stringify(this.data)
+				options.body = this.stringify()
 				this._innerFetch(this.url, options)
 					.then((response) =&gt; {
 						if (response.status != 200) {
@@ -345,8 +352,9 @@ const DataObject = class extends EventHandler {
 
 DataObject.FetchingEvent = Symbol(&apos;do-fetching&apos;)
 DataObject.FetchedEvent = Symbol(&apos;do-fetched&apos;)
+DataObject.ResetEvent = Symbol(&apos;do-reset&apos;)
+DataObject.SavingEvent = Symbol(&apos;do-saving&apos;)
 DataObject.SavedEvent = Symbol(&apos;do-saved&apos;)
-DataObject.NoChangeEvent = Symbol(&apos;do-no-change&apos;)
 DataObject.DeletingEvent = Symbol(&apos;no-deleting&apos;)
 DataObject.DeletedEvent = Symbol(&apos;no-deleted&apos;)
 

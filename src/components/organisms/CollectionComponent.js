@@ -76,10 +76,10 @@ const CollectionComponent = class extends Component {
 		this.listenTo(DataObject.ResetEvent, this.dataObject, (eventName, target) => {
 			this._handleCollectionReset(target)
 		})
-		this.listenTo(DataObject.AddedEvent, this.dataObject, (eventName, collection, dataObject) => {
+		this.listenTo(DataCollection.AddedEvent, this.dataObject, (eventName, collection, dataObject) => {
 			this._handleCollectionAdded(collection, dataObject)
 		})
-		this.listenTo(DataObject.RemovedEvent, this.dataObject, (eventName, collection, dataObject) => {
+		this.listenTo(DataCollection.RemovedEvent, this.dataObject, (eventName, collection, dataObject) => {
 			this._handleCollectionRemoved(collection, dataObject)
 		})
 		if (this.dataObject.isNew === false) {
@@ -196,7 +196,7 @@ const CollectionComponent = class extends Component {
 	_remove(itemComponent) {
 		this._dataObjectComponents.delete(itemComponent.dataObject.get('id'))
 		this.removeComponent(itemComponent)
-		itemComponent.removeEventListener('click', null)
+		itemComponent.removeListener('click', null)
 		itemComponent.cleanup()
 	}
 	_handleDeleted(eventName, dataObject, error) {

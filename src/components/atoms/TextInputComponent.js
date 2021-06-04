@@ -16,7 +16,7 @@ TextInputComponent shows the user a field or area in which to enter text.
 
 @example <caption>Bind text input to a DataModel field</caption>
 * const component = new TextInputComponent(myDataModel, {
-* 	textField: 'biography',
+* 	dataField: 'biography',
 * 	placeholder: 'Tell us who you are', // Shown when no text had been entered
 * 	submitOnEnter: true
 * })
